@@ -1,0 +1,24 @@
+footer{
+  z-index: +9999;
+  background-color: #fff;
+  opacity: .9;
+  position:relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 4rem;
+}
+
+.localizacion-idi {
+  display: grid;
+}
+
+.social-media {
+  display: grid;
+}
+
+.textos-legales {
+  display: grid;
+}

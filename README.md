@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Cookie management
+
+The cookies are managed by vanilla-cookieconsent CookieConsent v3
+
+## Bootstrap
+
+using ng-bootstrap/ng-bootstrap
+
+## Multilingual
+
+using @ngx-translate/core and  @ngx-translate/http-loader

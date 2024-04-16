@@ -1,0 +1,48 @@
+header {
+  background-color: #d5d5d5;
+  display: grid;
+  grid-template-areas: "navLeft navTop" "navLeft navBottom";
+  margin-bottom: 4rem;
+}
+
+.nav-bar-left{
+  grid-area: navLeft;
+}
+.nav-bar-top{
+  grid-area: navTop;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: flex-end;
+  gap: .5rem;
+  padding: .5rem;
+}
+
+.nav-bar-bottom{
+  grid-area: navBottom;
+}
+
+.nav-bar-top-language{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: .25rem;
+  gap: .25rem;
+  text-align: center;
+}
+
+.nav-bar-top-sede-elect{
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+}
+
+button {
+  background-color: #053747;
+  border-radius: 0;
+  margin-right: .5rem;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #ec9e37;
+  color: #000;
+}

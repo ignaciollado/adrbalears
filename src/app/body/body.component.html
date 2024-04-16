@@ -1,0 +1,42 @@
+<main class="jumbotron">
+  <div class="container">
+    <ngb-alert type="success" [dismissible]="false">
+      Bootstrap is working!
+    </ngb-alert>
+
+    <ngb-carousel
+      #carousel
+      [interval]="10000"
+      [pauseOnHover]="pauseOnHover"
+      [pauseOnFocus]="pauseOnFocus"
+      (slide)="onSlide($event)"
+      >
+      @for (img of images; track img; let i = $index) {
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>10 seconds between slides...</h3>
+            <p>This carousel uses customized default values.</p>
+          </div>
+        </ng-template>
+        
+      }
+    </ngb-carousel>
+
+    <div ngbAccordion>
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>First</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>Content for the first item</ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

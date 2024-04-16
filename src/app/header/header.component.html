@@ -1,0 +1,83 @@
+<header>
+
+  <nav class='nav-bar-left'>
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="ADR Balears" width="30" height="24">
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg nav-bar-top">
+    <div class="nav-bar-top-language"><button ngbDropdownItem>cat</button><button ngbDropdownItem>cas</button></div>
+    <div class="nav-bar-top-sede-elect"><button ngbDropdownItem>Sede electrónica</button></div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg nav-bar-bottom">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
+              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+                <button ngbDropdownItem>Quienes somos</button>
+                <button ngbDropdownItem>Noticias / Agenda</button>
+                <button ngbDropdownItem>Buscador de puntos de atención</button>
+                <button ngbDropdownItem>Transparencia</button>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Nuestros Proyectos</button>
+              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+                <button ngbDropdownItem>Palma International Boat Show</button>
+                <button ngbDropdownItem>Emblemàtics Balers</button>
+                <button ngbDropdownItem>Iempren</button>
+                <button ngbDropdownItem>Industria local sostenible</button>
+                <button ngbDropdownItem>Loop disseny</button>
+                <button ngbDropdownItem>Pa d'aquí</button>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
+              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+                <button ngbDropdownItem>Quiero asesorarme</button>
+                <button ngbDropdownItem>Quiero emprender</button>
+                <button ngbDropdownItem>Quiero consolidarme</button>
+                <button ngbDropdownItem>Quiro crecer</button>
+                <button ngbDropdownItem>Quiro internacionalizarme</button>
+                <button ngbDropdownItem>Quiro financiarme</button>
+                <button ngbDropdownItem>Buscador de Coworkings</button>
+                <button ngbDropdownItem>Quiro de parcelas y naves</button>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
+              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+                <button ngbDropdownItem>Solicitar asesoramiento</button>
+                <button ngbDropdownItem>Solicitar ayudas</button>
+                <button ngbDropdownItem>Solicitar formaciones</button>
+                <button ngbDropdownItem>Pedir cita</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" 
+          [ngbTooltip]="tipContent"
+          type="submit">Search</button>
+          
+        </form>
+        <ng-template #tipContent>Search in <b>ADR Balears</b>!</ng-template>
+      </div>
+    </div>
+  </nav>
+</header>

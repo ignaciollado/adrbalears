@@ -1,0 +1,67 @@
+<footer class="grid-item">
+    
+  <div class="logo-idi">
+    <a class="nav-link" routerLink=""> 
+      <img width="74" height="72.41" alt="logotipo de la ADR Balears" title="logotipo de la Agencia de Desarrollo Regional de las Islas Baleares" src="../assets/images/logos/logo-idi.svg">
+    </a>
+  </div>
+
+  <div class="localizacion-idi">
+    <strong>{{'ADRLine_1' | translate}}</strong><br>
+    <strong>{{'ADRLine_2' | translate}}</strong><br>
+    <strong>{{'ADRLine_3' | translate}}</strong><br>
+    Plaça de Son Castelló, 1<br>
+    07009 - Palma de Mallorca<br>
+    Illes Balears<br>
+    <a href="tel:971176161">Tel: 971 17 61 61</a>
+  </div>
+
+  <div class="social-media">
+    <a href="http://www.facebook.com/IDI.Institutinnovacio" id="red_social_facebook" >Facebook</a>
+    <a href="https://www.linkedin.com/company/idi-istitut-innovaci-empresarial-illes-balears/?viewAsMember=true" id="red_social_linkedIn" >LinkedIn</a>
+    <a href="http://twitter.com/IDIbalears" id="red_social_twitter" class="twitter">X</a>
+    <a href="http://www.youtube.com/user/InstitutInnovacio?feature=mhee" id="red_social_youTube" class="youtube">Youtube</a>
+    <a href="https://www.instagram.com/idi_balears/" id="red_social_instagram" class="instagram">Instagram</a>
+  </div>
+
+  <div class="textos-legales">
+    <div><a routerLink="/accesibilidad/348" aria-label="accesibilidad">{{'Accesibilidad' | translate}}</a></div>
+    <div><a routerLink="/aviso-legal/350" aria-label="aviso legal">{{'AvisoLegal' | translate}}</a></div>
+    <div><a routerLink="/contacta" aria-label="contacta con nosotros">{{'Contacta' | translate}}</a></div>      
+    <div><a routerLink="/politica-de-cookies/349" aria-label="política de cookies">{{'PoliticaCookies' | translate}}</a></div>
+    <div><a routerLink="/politica-de-privacidad/351" aria-label="política de privacidad">{{'PoliticaPrivacidad' | translate}}</a></div>      
+  </div>
+
+
+  
+  <div class='logo-feder-izq'>
+    <a *ngIf="currentLang ==='ca-ES'" routerLink="/feder-detail/1523">
+      <img width="151.84" height="40.08" src="../assets/images/logos/logos-feder-webidi grisos3-04.jpg" width="100%" title="Fons Europeu de desenvolupament regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+    
+    <a *ngIf="currentLang ==='es-ES'" routerLink="/feder-detail/1522">
+      <img width="151.84" height="40.08" src="../assets/images/logos/logos-feder-webidi grisos3-04.jpg" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+  </div>
+
+  <div class='logo-feder'>
+    <a *ngIf="currentLang ==='ca-ES'" routerLink="/feder-detail/1523">
+      <img width="196.33" height="64.72" src="../assets/images/logos/logos-feder-webidi grisos3-02.jpg" width="100%" title="Fons Europeu de desenvolupament regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+    
+    <a *ngIf="currentLang ==='es-ES'" routerLink="/feder-detail/1522">
+      <img width="196.33" height="64.72" src="../assets/images/logos/logos-feder-webidi grisos3-02.jpg" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+  </div>
+
+  <div class='logo-feder-dcha'>
+    <a *ngIf="currentLang ==='ca-ES'" routerLink="/feder-detail/1523">
+      <img width="115.2" height="94.77" src="../assets/images/logos/logos-feder-webidi grisos3-03.jpg" width="100%" title="Fons Europeu de desenvolupament regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+    
+    <a *ngIf="currentLang ==='es-ES'" routerLink="/feder-detail/1522">
+      <img width="115.2" height="94.77" src="../assets/images/logos/logos-feder-webidi grisos3-03.jpg" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+    </a>
+  </div>
+  <div class='cuadro-vacio-dcha'></div>
+</footer>
