@@ -2,3 +2,7 @@ main{
   width: auto;
   height: 80dvh;
 }
+
+main > div {
+  margin-top: 2rem;
+}
