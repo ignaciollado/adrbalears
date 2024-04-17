@@ -13,6 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
+import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
+
+import { MatDialogModule} from '@angular/material/dialog';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -26,13 +29,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    PopUpDialogComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
