@@ -46,3 +46,11 @@ button:hover {
   background-color: #ec9e37;
   color: #000;
 }
+
+@media screen and (max-width: 991px) {
+  header {
+   
+    grid-template-areas: "navLeft" "navTop" "navBottom";
+    margin-bottom: 1rem;
+  }
+}
