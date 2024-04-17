@@ -9,7 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ADR alears';
+  title:string = 'ADR alears';
+  show:boolean = true
   private modalService = inject(NgbModal);
 
   constructor( translate: TranslateService ){
@@ -20,5 +21,10 @@ export class AppComponent {
 
   openBackDropCustomClass(content: TemplateRef<any>) {
 		this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
+	}
+
+  close() {
+		this.show = false;
+		setTimeout(() => (this.show = true), 3000);
 	}
 }

@@ -2,15 +2,16 @@ header {
   background-color: #d5d5d5;
   display: grid;
   grid-template-areas: "navLeft navTop" "navLeft navBottom";
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .mobile-menu-button {
   display: none;
 }
 
-.nav-bar-left{
+.nav-bar-left-logo{
   grid-area: navLeft;
+  padding: .25rem;
 }
 .nav-bar-top{
   grid-area: navTop;

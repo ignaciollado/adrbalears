@@ -1,9 +1,4 @@
-<main class="container">
-    <ngb-alert type="success" [dismissible]="false">
-      ADR Balears is working!
-    </ngb-alert>
-
-    <ngb-carousel
+<ngb-carousel
       #carousel
       [interval]="10000"
       [pauseOnHover]="pauseOnHover"
@@ -21,9 +16,9 @@
           </div>
         </ng-template> 
       }
-    </ngb-carousel>
+</ngb-carousel>
 
-    <div ngbAccordion #accordion="ngbAccordion">
+<div ngbAccordion #accordion="ngbAccordion">
       <div ngbAccordionItem="first">
         <h2 ngbAccordionHeader>
           <button ngbAccordionButton>First panel</button>
@@ -58,27 +53,28 @@
           </div>
         </div>
       </div>
-    </div>
+</div>
+  
+<hr />
     
-    <hr />
-    
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Toggle first</button>
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Toggle second</button>
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Expand all</button>
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Collapse all</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Ver el primero</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Ver el segundo</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Verlo todo</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Cerrarlo todo</button>
 
-    <p>You need a width on the immediate child element for the animation to work correctly.</p>
-    <p>
-      <button
+<!-- <p>You need a width on the immediate child element for the animation to work correctly.</p> -->
+<hr />
+<p>
+  <button
         type="button"
         class="btn btn-outline-primary"
         (click)="collapse.toggle()"
         [attr.aria-expanded]="!isCollapsed"
         aria-controls="collapseExample"
       >
-        Toggle
-      </button>
-    </p>
+        Info
+    </button>
+</p>
     <div style="min-height: 100px">
       <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" style="max-width: 300px">
         <div class="card" style="width: 300px">
@@ -86,5 +82,5 @@
         </div>
       </div>
     </div>
-  </main>
+    <app-call-to-action></app-call-to-action>
 
