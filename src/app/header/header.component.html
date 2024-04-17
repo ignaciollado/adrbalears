@@ -11,8 +11,12 @@
     <div class="nav-bar-top-sede-elect"><button ngbDropdownItem>Sede electrónica</button></div>
   </nav>
 
+  <button class="btn btn-lg btn-outline-primary mb-2 me-2 mobile-menu-button" (click)="openCustomPanelClass(content)">
+    <span class='navbar-toggler-icon'></span>
+  </button>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary mb-3 nav-bar-bottom">
-    <div class="container">
+    <!-- <div class="container"> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -78,6 +82,70 @@
         </form>
         <ng-template #tipContent>Search in <b>ADR Balears</b>!</ng-template>
       </div>
-    </div>
+    <!-- </div> -->
   </nav>
 </header>
+
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title">ADR Balears</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
+          <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+            <button ngbDropdownItem>Quienes somos</button>
+            <button ngbDropdownItem>Noticias / Agenda</button>
+            <button ngbDropdownItem>Buscador de puntos de atención</button>
+            <button ngbDropdownItem>Transparencia</button>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Nuestros Proyectos</button>
+          <div ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
+            <button ngbDropdownItem>Palma International Boat Show</button>
+            <button ngbDropdownItem>Emblemàtics Balers</button>
+            <button ngbDropdownItem>Iempren</button>
+            <button ngbDropdownItem>Industria local sostenible</button>
+            <button ngbDropdownItem>Loop disseny</button>
+            <button ngbDropdownItem>Pa d'aquí</button>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potencia tu proyecto</button>
+          <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
+            <button ngbDropdownItem>Quiero asesorarme</button>
+            <button ngbDropdownItem>Quiero emprender</button>
+            <button ngbDropdownItem>Quiero consolidarme</button>
+            <button ngbDropdownItem>Quiro crecer</button>
+            <button ngbDropdownItem>Quiro internacionalizarme</button>
+            <button ngbDropdownItem>Quiro financiarme</button>
+            <button ngbDropdownItem>Buscador de Coworkings</button>
+            <button ngbDropdownItem>Quiro de parcelas y naves</button>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button>
+          <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
+            <button ngbDropdownItem>Solicitar asesoramiento</button>
+            <button ngbDropdownItem>Solicitar ayudas</button>
+            <button ngbDropdownItem>Solicitar formaciones</button>
+            <button ngbDropdownItem>Pedir cita</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+		<div class="text-end">
+			<button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
+		</div>
+	</div>
+</ng-template>

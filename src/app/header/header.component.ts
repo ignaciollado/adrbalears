@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, inject, TemplateRef } from '@angular/core';
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import * as CookieConsent from 'vanilla-cookieconsent';
 
 @Component({
@@ -7,7 +8,7 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+private offcanvasService = inject(NgbOffcanvas);
   ngAfterViewInit(): void{
     CookieConsent.run({
 
@@ -99,6 +100,10 @@ export class HeaderComponent {
           }
       }
   });
+}
+
+openCustomPanelClass(content: TemplateRef<any>) {
+    this.offcanvasService.open(content, { panelClass: 'bg-info' });
 }
 
 }

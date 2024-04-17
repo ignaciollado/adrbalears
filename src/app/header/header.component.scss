@@ -5,6 +5,10 @@ header {
   margin-bottom: 4rem;
 }
 
+.mobile-menu-button {
+  display: none;
+}
+
 .nav-bar-left{
   grid-area: navLeft;
 }
@@ -49,8 +53,13 @@ button:hover {
 
 @media screen and (max-width: 991px) {
   header {
-   
     grid-template-areas: "navLeft" "navTop" "navBottom";
     margin-bottom: 1rem;
+  }
+  .navbar {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
   }
 }
