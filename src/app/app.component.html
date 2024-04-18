@@ -1,7 +1,7 @@
 
 <app-header></app-header>
 
-<button class="btn btn-outline-primary mb-2 me-2" (click)="openBackDropCustomClass(content)">
+<button class="btn btn-outline-primary mb-2 me-2" (click)="openHomePopUp(content)">
 	Pop-up que se mostrará al entrar en la página
 </button>
 
@@ -18,7 +18,7 @@
 
 <router-outlet />
 
-<ng-template #content let-modal id="popUpContent">
+<ng-template #content let-modal>
 	<div class="modal-header">
 		<h2>Personalice su experiencia</h2>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>

@@ -20,9 +20,10 @@ export class AppComponent {
     translate.setDefaultLang('cas')
     translate.use('cas')
     /* this.modalService.open(document.getElementById("popUpContent")) */
+    this.openDialog('3000', '1000', 'Personalice su experiencia', 'texto del tooltip', 'doc1.pdf', 'doc2.pdf')
   }
 
-  openBackDropCustomClass(content: TemplateRef<any>) {
+  openHomePopUp(content: TemplateRef<any>) {
 		this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
 	}
 

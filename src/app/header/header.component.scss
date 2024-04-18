@@ -3,6 +3,7 @@ header {
   display: grid;
   grid-template-areas: "navLeft navTop" "navLeft navBottom";
   margin-bottom: 3rem;
+
 }
 
 .mobile-menu-button {
@@ -18,12 +19,12 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
-  gap: .5rem;
-  padding: .5rem;
 }
 
 .nav-bar-bottom{
   grid-area: navBottom;
+  display: grid;
+  justify-content: flex-end;
 }
 
 .nav-bar-top-language{
