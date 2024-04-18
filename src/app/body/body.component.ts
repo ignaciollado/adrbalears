@@ -6,9 +6,10 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } fro
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
+
 export class BodyComponent {
 	isCollapsed = true;
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/1296/500`);
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/870/500`);
 
 	paused = false;
 	unpauseOnArrow = false;

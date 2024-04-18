@@ -7,8 +7,8 @@
   </nav>
 
   <nav class="navbar navbar-expand-lg nav-bar-top">
-    <div class="nav-bar-top-language"><button ngbDropdownItem>cat</button><button ngbDropdownItem>cas</button></div>
-    <div class="nav-bar-top-sede-elect"><button ngbDropdownItem>Sede electrónica</button></div>
+    <div class="nav-bar-top-language"><button class="btn">cat</button><button class="btn">cas</button></div>
+    <div class="nav-bar-top-sede-elect"><button class="btn" (click)="sedeElectronica()">Sede electrónica</button></div>
   </nav>
 
   <button class="btn btn-lg btn-outline-primary mb-2 me-2 mobile-menu-button" (click)="openCustomPanelClass(content)">
@@ -73,14 +73,7 @@
             </div>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" 
-          [ngbTooltip]="tipContent"
-          type="submit">Search</button>
-          
-        </form>
-        <ng-template #tipContent>Search in <b>ADR Balears</b>!</ng-template>
+     
       </div>
     <!-- </div> -->
   </nav>

@@ -1,4 +1,5 @@
 import { Component, inject, TemplateRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import * as CookieConsent from 'vanilla-cookieconsent';
 
@@ -8,10 +9,13 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+
+constructor(private router: Router,) {}
+    
 private offcanvasService = inject(NgbOffcanvas);
   ngAfterViewInit(): void{
     CookieConsent.run({
-
       categories: {
           necessary: {
               enabled: true,  // this category is enabled by default
@@ -105,5 +109,10 @@ private offcanvasService = inject(NgbOffcanvas);
 openCustomPanelClass(content: TemplateRef<any>) {
     this.offcanvasService.open(content, { panelClass: 'bg-info' });
 }
+
+sedeElectronica(): void {
+    /* Navega a nuestra sede electrónica */
+    window.open('https://pre-idi.sedipualba.es', '_blank');
+  }
 
 }

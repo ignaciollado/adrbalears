@@ -1,22 +1,50 @@
-<ngb-carousel
-      #carousel
-      [interval]="10000"
-      [pauseOnHover]="pauseOnHover"
-      [pauseOnFocus]="pauseOnFocus"
-      (slide)="onSlide($event)"
-      >
-      @for (img of images; track img; let i = $index) {
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide" />
-          </div>
-          <div class="carousel-caption">
-            <h3>10 seconds between slides...</h3>
-            <p>This carousel uses customized default values.</p>
-          </div>
-        </ng-template> 
-      }
-</ngb-carousel>
+<div class="body-main">
+  <ngb-carousel
+  #carousel
+  [interval]="10000"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  (slide)="onSlide($event)"
+  >
+  @for (img of images; track img; let i = $index) {
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>10 seconds between slides...</h3>
+        <p>This carousel uses customized default values.</p>
+      </div>
+    </ng-template> 
+  }
+  </ngb-carousel>
+
+  <div class="filter-area">
+    <form role="search">
+      <input class="form-control" type="search" placeholder="Buscador con filtros" aria-label="Search">
+      <button class="btn" [ngbTooltip]="tipContent" type="submit">Search</button>
+      <ng-template #tipContent>Search in <b>ADR Balears</b>!</ng-template>
+    </form>
+    <a href=''><small>filter 1</small></a>
+    <a href=''><small>filter 2</small></a>
+    <a href=''><small>filter 3</small></a>
+    <a href=''><small>filter 4</small></a>
+    <a href=''><small>filter 5</small></a>
+    <a href=''><small>filter 6</small></a>  
+  </div>
+
+  <div class='pre-defined-filter-area'>
+    <h4>Sección filtrable (pregunta 2)</h4>
+    <h5>Accesos rápidos según el filtro seleccionado</h5>
+    <ul>
+      <li><small>Enlace 1 a sección con contenido relacionado</small></li>
+      <li><small>Enlace 2 a sección con contenido relacionado</small></li>
+      <li><small>Enlace 3 a sección con contenido relacionado</small></li>
+      <li><small>Enlace 4 a sección con contenido relacionado</small></li>
+      <li><small>Enlace 5 a sección con contenido relacionado</small></li>
+    </ul>
+  </div>
+</div>
 
 <div ngbAccordion #accordion="ngbAccordion">
       <div ngbAccordionItem="first">
@@ -75,12 +103,12 @@
         Info
     </button>
 </p>
-    <div style="min-height: 100px">
-      <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" style="max-width: 300px">
-        <div class="card" style="width: 300px">
-          <div class="card-body">You can collapse horizontally this card by clicking Toggle</div>
-        </div>
-      </div>
+<div style="min-height: 100px">
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" style="max-width: 300px">
+    <div class="card" style="width: 300px">
+      <div class="card-body">You can collapse horizontally this card by clicking Toggle</div>
     </div>
-    <app-call-to-action></app-call-to-action>
+  </div>
+</div>
+<app-call-to-action></app-call-to-action>
 

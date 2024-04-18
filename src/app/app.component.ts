@@ -19,7 +19,7 @@ export class AppComponent {
     translate.addLangs(['cas', 'cat'])
     translate.setDefaultLang('cas')
     translate.use('cas')
-    this.modalService.open(document.getElementById("popUpContent"))
+    /* this.modalService.open(document.getElementById("popUpContent")) */
   }
 
   openBackDropCustomClass(content: TemplateRef<any>) {

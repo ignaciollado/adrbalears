@@ -1,12 +1,41 @@
-/* main{
-  width: auto;
-  height: 80dvh;
+.body-main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "carousel formulario" "carousel preDefinedFilter";
+  gap: .2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
 }
 
-main > div {
-  margin-top: 2rem;
-} */
-
-ngb-carousel{
- margin-bottom: 3rem;
+ngb-carousel {
+  grid-area: carousel;
 }
+
+.filter-area {
+  grid-area: formulario;
+  text-align: right;
+  background-color: #d5d5d5;
+  margin-bottom: .1rem;
+  padding: .2rem;
+}
+
+input[type=search] {
+  width: 80%;
+}
+
+.pre-defined-filter-area {
+  grid-area: preDefinedFilter;
+  background-color: #5274f6;
+  color: #fff;
+  padding: .2rem;
+}
+
+button {
+  background-color: #053747;
+  border-radius: 0;
+  margin-right: .5rem;
+  color: #fff;
+}
+
+
