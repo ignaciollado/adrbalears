@@ -6,3 +6,12 @@
   margin-bottom: 3rem;
   padding: 1rem;
 }
+
+@media screen and (max-width: 795px) {
+  .cta-home {
+       grid-template-columns: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+  }
+}

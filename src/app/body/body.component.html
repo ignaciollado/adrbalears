@@ -46,6 +46,15 @@
   </div>
 </div>
 
+<hr />
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Ver el primero</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Ver el segundo</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Verlo todo</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Cerrarlo todo</button>
+
+<!-- <p>You need a width on the immediate child element for the animation to work correctly.</p> -->
+<hr />
+
 <div ngbAccordion #accordion="ngbAccordion">
       <div ngbAccordionItem="first">
         <h2 ngbAccordionHeader>
@@ -84,31 +93,7 @@
 </div>
   
 <hr />
-    
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Ver el primero</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Ver el segundo</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Verlo todo</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Cerrarlo todo</button>
 
-<!-- <p>You need a width on the immediate child element for the animation to work correctly.</p> -->
-<hr />
 
-  <button
-        type="button"
-        class="btn btn-outline-primary"
-        (click)="collapse.toggle()"
-        [attr.aria-expanded]="!isCollapsed"
-        aria-controls="collapseExample"
-      >
-        Info
-    </button>
-
-<div style="min-height: 100px">
-  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" style="max-width: 300px">
-    <div class="card" style="width: 300px">
-      <div class="card-body">You can collapse horizontally this card by clicking Toggle</div>
-    </div>
-  </div>
-</div>
 <app-call-to-action></app-call-to-action>
 
