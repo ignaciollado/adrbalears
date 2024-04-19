@@ -56,6 +56,13 @@ input {
   border-radius: 0;
 }
 
+.form-control:focus {
+  border-color: #053747;
+  outline: none;
+  box-shadow: none;
+  color: #053747;
+}
+
 .accordion-item{
   margin-bottom: .5rem;
   box-shadow: none;

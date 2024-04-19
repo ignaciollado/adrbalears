@@ -1,12 +1,12 @@
 <app-header></app-header>
 <div class='area-cta'>
 	<button class="btn btn-warning" (click)="openHomePopUp(content)" [ngbTooltip]="tipContent">
-		Personaliza tu experiencia
+		Personalice su experiencia
 	</button>
 </div>
 
-<ng-template #tipContent>Cunmplimentando este breve formulario<br>te permitirá seleccionar tus
-	preferencias durante la navegación en el sitio de <b>ADR Balears</b></ng-template>
+<ng-template #tipContent>Cunmplimentando este breve formulario<br>podrá fijar sus
+	preferencias durante la navegación en nuestro sitio web de <b>ADR Balears</b></ng-template>
 
 <app-body></app-body>
 <app-footer></app-footer>
@@ -25,26 +25,26 @@
 					<ol class = "pop-up-main-ol">
 							<li><div class="note">¿Cuál describe mejor su situación actual?</div>
 									<ol> 
-											<li><label class="container"><input name="situacion-actual" type="radio"><span class="checkmark"></span>Pensando en empezar</label></li>
-											<li><label class="container"><input name="situacion-actual" type="radio"><span class="checkmark"></span>Emprendedor en fase inicial</label></li>
-											<li><label class="container"><input name="situacion-actual" type="radio"><span class="checkmark"></span>Dueño de una PYME</label></li>
-											<li><label class="container"><input name="situacion-actual" type="radio"><span class="checkmark"></span>Gestor en una gran empresa</label></li>
+											<li class="form-check form-switch"><label ><input name="situacion-actual" id="situacion-actual1" class="form-check-input" type="radio"> Pensando en empezar</label></li>
+											<li class="form-check form-switch"><label ><input name="situacion-actual" id="situacion-actual2" class="form-check-input" type="radio"> Emprendedor en fase inicial</label></li>
+											<li class="form-check form-switch"><label ><input name="situacion-actual" id="situacion-actual3" class="form-check-input" type="radio"> Dueño de una PYME</label></li>
+											<li class="form-check form-switch"><label ><input name="situacion-actual" id="situacion-actual4" class="form-check-input" type="radio"> Gestor en una gran empresa</label></li>
 									</ol>
 							</li>
 							<li><div class="note">¿Qué es lo que más le interesa?</div>
 									<ol>
-											<li><label class="container"><input name="interesado-en" type="radio"><span class="checkmark"></span>Obtener financiación</label></li>
-											<li><label class="container"><input name="interesado-en" type="radio"><span class="checkmark"></span>Expandir mi red</label></li>
-											<li><label class="container"><input name="interesado-en" type="radio"><span class="checkmark"></span>Aprender nuevas habilidades</label></li>
-											<li><label class="container"><input name="interesado-en" type="radio"><span class="checkmark"></span>Explorar oportunidades de mercado</label></li>
+											<li class="form-check form-switch"><label ><input name="interesado-en" class="form-check-input" type="radio"> Obtener financiación</label></li>
+											<li class="form-check form-switch"><label ><input name="interesado-en" class="form-check-input" type="radio"> Expandir mi red</label></li>
+											<li class="form-check form-switch"><label ><input name="interesado-en" class="form-check-input" type="radio"> Aprender nuevas habilidades</label></li>
+											<li class="form-check form-switch"><label ><input name="interesado-en" class="form-check-input" type="radio"> Explorar oportunidades de mercado</label></li>
 									</ol>
 							</li>
 							<li><div class="note">¿Cuál es su objetivo principal actual?</div>
 									<ol>
-											<li><label class="container"><input name="objetivo-principal" type="radio"><span class="checkmark"></span>Iniciar un negocio</label></li>
-											<li><label class="container"><input name="objetivo-principal" type="radio"><span class="checkmark"></span>Hacer crecer mi negocio</label></li>
-											<li><label class="container"><input name="objetivo-principal" type="radio"><span class="checkmark"></span>Internacionalizar</label></li>
-											<li><label class="container"><input name="objetivo-principal" type="radio"><span class="checkmark"></span>Innovar en procesos o productos</label></li>
+											<li class="form-check form-switch"><label ><input name="objetivo-principal" class="form-check-input" type="radio"> Iniciar un negocio</label></li>
+											<li class="form-check form-switch"><label ><input name="objetivo-principal" class="form-check-input" type="radio"> Hacer crecer mi negocio</label></li>
+											<li class="form-check form-switch"><label ><input name="objetivo-principal" class="form-check-input" type="radio"> Internacionalizar</label></li>
+											<li class="form-check form-switch"><label ><input name="objetivo-principal" class="form-check-input" type="radio"> Innovar en procesos o productos</label></li>
 									</ol>
 							</li>
 					</ol>
