@@ -1,30 +1,37 @@
 header {
   background-color: #d5d5d5;
   display: grid;
-  grid-template-areas: "navLeft navTop" "navLeft navBottom";
+  grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   margin-bottom: 3rem;
-
+  /* border: 1px solid red; */
 }
 
 .mobile-menu-button {
+  grid-area: mobileMenu;
   display: none;
+  /* border: 1px solid darkmagenta; */
+  margin: .2rem;
 }
 
 .nav-bar-left-logo{
-  grid-area: navLeft;
+  grid-area: navLogo;
   padding: .25rem;
+  /* border: 1px solid darkgreen; */
 }
 .nav-bar-top{
-  grid-area: navTop;
+  grid-area: navLangSede;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
+  /* border: 1px solid darkblue; */
+  margin: .2rem;
 }
 
 .nav-bar-bottom{
   grid-area: navBottom;
   display: grid;
   justify-content: flex-end;
+  /* border: 1px solid black; */
 }
 
 .nav-bar-top-language{
@@ -41,7 +48,7 @@ header {
   text-align: center;
 }
 
-button {
+.button-header-menu {
   background-color: #053747;
   border-radius: 0;
   margin-right: .5rem;
@@ -53,12 +60,12 @@ button:hover {
   color: #000;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 795px) {
   header {
-    grid-template-areas: "navLeft" "navTop" "navBottom";
+    grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
   }
-  .navbar {
+  .nav-bar-bottom {
     display: none;
   }
   .mobile-menu-button {

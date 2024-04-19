@@ -1,30 +1,25 @@
 <header>
-
+  
   <nav class='nav-bar-left-logo'>
     <a class="navbar-brand" href="#">
       <img src="../assets/images/logo-adr-balears.webp" alt="ADR Balears" title="ADR Balears" width="100px" height="auto">
     </a>
   </nav>
 
-  <nav class="navbar navbar-expand-lg nav-bar-top">
-    <div class="nav-bar-top-language"><button class="btn">cat</button><button class="btn">cas</button></div>
-    <div class="nav-bar-top-sede-elect"><button class="btn" (click)="sedeElectronica()">Sede electrónica</button></div>
+  <nav class="navbar nav-bar-top">
+    <div class="nav-bar-top-language"><button class="btn button-header-menu">cat</button><button class="btn button-header-menu">cas</button></div>
+    <div class="nav-bar-top-sede-elect"><button class="btn button-header-menu" (click)="sedeElectronica()">Sede electrónica</button></div>
   </nav>
 
-  <button class="btn btn-lg btn-outline-primary mb-2 me-2 mobile-menu-button" (click)="openCustomPanelClass(content)">
-    Menú
-  </button>
-
-  <nav class="navbar navbar-expand-lg  mb-3 nav-bar-bottom">
-    <!-- <div class="container"> -->
+  <nav class="navbar navbar-expand nav-bar-bottom">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
-              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
+              <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button ngbDropdownItem>Quienes somos</button>
                 <button ngbDropdownItem>Noticias / Agenda</button>
@@ -35,7 +30,7 @@
           </li>
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
-              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Nuestros Proyectos</button>
+              <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Nuestros Proyectos</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button ngbDropdownItem>Palma International Boat Show</button>
                 <button ngbDropdownItem>Emblemàtics Balers</button>
@@ -48,7 +43,7 @@
           </li>
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
-              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
+              <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button ngbDropdownItem>Quiero asesorarme</button>
                 <button ngbDropdownItem>Quiero emprender</button>
@@ -63,7 +58,7 @@
           </li>
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
-              <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
+              <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button ngbDropdownItem>Solicitar asesoramiento</button>
                 <button ngbDropdownItem>Solicitar ayudas</button>
@@ -73,10 +68,13 @@
             </div>
           </li>
         </ul>
-     
       </div>
-    <!-- </div> -->
   </nav>
+
+  <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
+    <i class="bi bi-menu-button"></i>
+  </button>
+
 </header>
 
 <ng-template #content let-offcanvas>
