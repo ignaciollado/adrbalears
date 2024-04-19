@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef, ViewEncapsulation } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -15,12 +15,14 @@ export class AppComponent {
   show:boolean = true
   private modalService = inject(NgbModal)
 
+  @ViewChild('content') infoDialog = {} as TemplateRef<string>;
+
   constructor( translate: TranslateService, public dialog: MatDialog ){
     translate.addLangs(['cas', 'cat'])
     translate.setDefaultLang('cas')
     translate.use('cas')
-    /* this.modalService.open(document.getElementById("popUpContent")) */
-    this.openDialog('3000', '1000', 'Personalice su experiencia', 'texto del tooltip', 'doc1.pdf', 'doc2.pdf')
+    
+    /* this.openDialog('3000', '1000', 'Personalice su experiencia', 'texto del tooltip', 'doc1.pdf', 'doc2.pdf') */
   }
 
   openHomePopUp(content: TemplateRef<any>) {
@@ -39,11 +41,10 @@ export class AppComponent {
     dialogConfig.autoFocus = true
     dialogConfig.panelClass = "dialog-customization"
     dialogConfig.backdropClass = "popupBackdropClass"
-    dialogConfig.position = {
-      'top': '2rem',
-      'right': '5rem'
-    };
-    dialogConfig.width='100%',
+ /*    dialogConfig.height = "100%"
+    dialogConfig.width = "100%" */
+   /*  dialogConfig.position = { 'top': '-50', 'right': '-50' }; */
+    
     dialogConfig.data = {
       questionText: questionText, toolTipText: toolTipText, doc1: doc1, doc2: doc2
     };

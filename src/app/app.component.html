@@ -1,18 +1,19 @@
 
 <app-header></app-header>
 
-<button class="btn btn-outline-primary mb-2 me-2" (click)="openHomePopUp(content)">
-	Pop-up que se mostrará al entrar en la página
+<button class="btn btn-warning" (click)="openHomePopUp(content)" [ngbTooltip]="tipContent">
+	Personaliza tu experiencia
 </button>
-
-@if (show) {
+<ng-template #tipContent>Pop-up interactivo<br>que permite al usuario seleccionar sus
+	preferencias en <b>ADR Balears</b><br>a través de preguntas clave </ng-template>
+<!-- @if (show) {
 	<ngb-toast header="Click my close icon →" [autohide]="false" (hidden)="close()">
 		If you close me, I will automatically re-appear after a few seconds.
 	</ngb-toast>
 	
 } @else {
 	<p>Muchas gracias</p>
-}
+} -->
 <app-body></app-body>
 <app-footer></app-footer>
 

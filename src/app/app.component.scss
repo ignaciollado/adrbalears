@@ -18,10 +18,10 @@
 
 .pop-up-main-ol{
    z-index: 9999;
-  position: sticky;
- display: grid;
- grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
- cursor: pointer;
+   position: sticky;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   cursor: pointer;
    padding-left: 3rem;
    padding-right: 3rem;
    padding-top: 1rem;
@@ -75,10 +75,7 @@ ol ol {
    margin-bottom: .2rem;
 }
 
-/* .btn {
-   width: 250px;
-   font-size: 1.5rem;
-   margin: .25rem; 
-   background-color: #000;
-   border: 2px solid #fff;
-} */
+/* button:hover {
+   background-color: #ec9e37;
+   color: #000;
+ } */
