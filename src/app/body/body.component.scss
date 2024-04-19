@@ -11,6 +11,10 @@ ngb-carousel {
   grid-area: carousel;
 }
 
+.carousel-caption h3 {
+  padding: .3rem;
+}
+
 .filter-area {
   grid-area: formulario;
   text-align: right;
@@ -35,7 +39,6 @@ form {
 button {
   background-color: #053747;
   border-radius: 0;
-  /* margin-right: .5rem; */
   color: #fff;
 }
 
@@ -59,7 +62,6 @@ input {
 }
 
 .accordion-item h2 {
-  /* font-size: 2rem; */
   border-radius: 0;
   box-shadow: none;
 }

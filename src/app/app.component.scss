@@ -6,20 +6,6 @@
    text-align: center;
 }
 
-/* section {
-  z-index: 9999;
-   opacity: 0.95;
-   display: block;
-   margin: auto;
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   background: #033747;
-   transition: opacity 400ms ease-in;
-} */
-
 .pop-up-main-ol{
    z-index: 9999;
    position: sticky;
@@ -32,25 +18,9 @@
    box-shadow: 10px 5px 5px black;
 }
 
-/* section > div {
-   text-align: center;
-   margin: 0;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   opacity: 1.0;
-} */
-
 button:hover {
    color: #033747;
    border-color: #033747;
-}
-
-h2, h3 {
-   color: #033747;
-   background-color: #f29f3e;
-   padding: .2rem;
 }
 
 h2 {
@@ -87,7 +57,6 @@ ol ol {
    }
    h2, h3 {
       font-size: 1rem;
-      border-radius: 0;
       box-shadow: none;
    }
    h3 {
