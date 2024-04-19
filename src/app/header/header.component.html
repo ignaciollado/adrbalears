@@ -72,14 +72,15 @@
   </nav>
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
-    <i class="bi bi-menu-button"></i>
+    <i class="bi bi-menu-button" style="font-size: 2rem; color:#053747;"></i>
   </button>
 
 </header>
 
 <ng-template #content let-offcanvas>
 	<div class="offcanvas-header">
-		<h4 class="offcanvas-title">ADR Balears</h4>
+		<div class="offcanvas-title"><strong>ADR Balears</strong><br>
+    <small>Agència Desenvolupament Regional Balears</small></div>
 		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
 	</div>
 	<div class="offcanvas-body">
@@ -135,8 +136,8 @@
         </div>
       </li>
     </ul>
-		<div class="text-end">
+		<!-- <div class="text-end">
 			<button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
-		</div>
+		</div> -->
 	</div>
 </ng-template>

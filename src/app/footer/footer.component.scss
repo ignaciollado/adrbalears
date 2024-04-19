@@ -1,30 +1,45 @@
 footer{
   z-index: +9999;
   background-color: #fff;
-  opacity: .9;
-/*   position:relative;
-  left: 0;
-  bottom: 0; */
+  opacity: 1;
   width: 100%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  /* margin-top: 20rem; */
+  grid-template-areas: "logoBottom localizacionBottom socialMedia textosLegales";
+  text-align: left;
+  margin-bottom: .5rem;
 }
 
-.localizacion-idi {
-  display: grid;
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #ec9e37;
+}
+
+.logo-adr-balears {
+  grid-area: logoBottom;
+}
+
+.localizacion-adr-balears {
+  grid-area: localizacionBottom;
 }
 
 .social-media {
+  grid-area: socialMedia;
   display: grid;
 }
 
 .textos-legales {
+  grid-area: textosLegales;
   display: grid;
 }
 
 @media screen and (max-width: 795px) {
   footer{
     grid-template-columns: 100%;
+    grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";
+    text-align: center;
   }
 }

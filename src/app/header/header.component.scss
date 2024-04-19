@@ -3,27 +3,38 @@ header {
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   margin-bottom: 3rem;
-  /* border: 1px solid red; */
+}
+
+.offcanvas-header {
+  background-color: #053747;
+  color: #fff;
+}
+
+.offcanvas-body{
+  background-color: #ec9e37;
+  color: #fff;
+}
+
+.btn-close{
+  color: #fff;
 }
 
 .mobile-menu-button {
   grid-area: mobileMenu;
   display: none;
-  /* border: 1px solid darkmagenta; */
   margin: .2rem;
+  text-align: right;
 }
 
 .nav-bar-left-logo{
   grid-area: navLogo;
   padding: .25rem;
-  /* border: 1px solid darkgreen; */
 }
 .nav-bar-top{
   grid-area: navLangSede;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
-  /* border: 1px solid darkblue; */
   margin: .2rem;
 }
 
@@ -31,7 +42,6 @@ header {
   grid-area: navBottom;
   display: grid;
   justify-content: flex-end;
-  /* border: 1px solid black; */
 }
 
 .nav-bar-top-language{
@@ -65,10 +75,14 @@ button:hover {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
   }
+  .button-header-menu{
+    margin-right: 0;
+  }
   .nav-bar-bottom {
     display: none;
   }
   .mobile-menu-button {
     display: block;
+    margin: 0;
   }
 }

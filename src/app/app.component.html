@@ -1,19 +1,13 @@
-
 <app-header></app-header>
+<div class='area-cta'>
+	<button class="btn btn-warning" (click)="openHomePopUp(content)" [ngbTooltip]="tipContent">
+		Personaliza tu experiencia
+	</button>
+</div>
 
-<button class="btn btn-warning" (click)="openHomePopUp(content)" [ngbTooltip]="tipContent">
-	Personaliza tu experiencia
-</button>
-<ng-template #tipContent>Pop-up interactivo<br>que permite al usuario seleccionar sus
-	preferencias en <b>ADR Balears</b><br>a través de preguntas clave </ng-template>
-<!-- @if (show) {
-	<ngb-toast header="Click my close icon →" [autohide]="false" (hidden)="close()">
-		If you close me, I will automatically re-appear after a few seconds.
-	</ngb-toast>
-	
-} @else {
-	<p>Muchas gracias</p>
-} -->
+<ng-template #tipContent>Cunmplimentando este breve formulario<br>te permitirá seleccionar tus
+	preferencias durante la navegación en el sitio de <b>ADR Balears</b></ng-template>
+
 <app-body></app-body>
 <app-footer></app-footer>
 
@@ -21,13 +15,13 @@
 
 <ng-template #content let-modal>
 	<div class="modal-header">
-		<h2>Personalice su experiencia</h2>
+		<p>Personalice su experiencia</p>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
 		<section>
 			<div class = "pop-up-container">
-					<h3>Díganos un poco sobre usted y personalizaremos el contenido para adaptarlo a sus necesidades</h3>
+					<h3>Díganos un poco sobre usted y personalizaremos el contenido del sitio para adaptarlo a sus necesidades:</h3>
 					<ol class = "pop-up-main-ol">
 							<li><div class="note">¿Cuál describe mejor su situación actual?</div>
 									<ol> 
@@ -58,6 +52,6 @@
 	</section>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Aplicar perfíl</button>
 	</div>
 </ng-template>

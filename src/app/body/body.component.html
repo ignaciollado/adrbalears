@@ -46,14 +46,10 @@
   </div>
 </div>
 
-<hr />
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Ver el primero</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Ver el segundo</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Verlo todo</button>
-<button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Cerrarlo todo</button>
-
-<!-- <p>You need a width on the immediate child element for the animation to work correctly.</p> -->
-<hr />
+<div class='buttons-area'>
+  <button class="btn btn-sm me-2" (click)="accordion.expandAll()">Verlo todo</button>
+  <button class="btn btn-sm me-2" (click)="accordion.collapseAll()">Cerrarlo todo</button> 
+</div>
 
 <div ngbAccordion #accordion="ngbAccordion">
       <div ngbAccordionItem="first">

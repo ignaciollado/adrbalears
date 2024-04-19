@@ -2,6 +2,10 @@
   background-color: #053747;
 }
 
+.area-cta{
+   text-align: center;
+}
+
 /* section {
   z-index: 9999;
    opacity: 0.95;
@@ -46,7 +50,7 @@ button:hover {
 h2, h3 {
    color: #033747;
    background-color: #f29f3e;
-   padding: .5rem;
+   padding: .2rem;
 }
 
 h2 {
@@ -75,7 +79,28 @@ ol ol {
    margin-bottom: .2rem;
 }
 
-/* button:hover {
-   background-color: #ec9e37;
-   color: #000;
- } */
+
+@media screen and (max-width: 795px) {
+   .modal-header{
+      text-align: center;
+      font-weight: bold;
+   }
+   h2, h3 {
+      font-size: 1rem;
+      border-radius: 0;
+      box-shadow: none;
+   }
+   h3 {
+      color: #fff;
+      background-color: #033747;
+   }
+   .pop-up-main-ol{
+      box-shadow: 0;
+   }
+   ol {
+      border-radius: 0;
+   }
+   .modal-body {
+      padding: 0;
+    }
+ }
