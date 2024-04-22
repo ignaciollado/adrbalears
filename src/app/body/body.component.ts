@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
+import { ContentService } from '../services/content.service';
+import { genericDataDTO } from '../model/generic-data.model';
 
 @Component({
   selector: 'app-body',
@@ -16,12 +18,23 @@ export class BodyComponent {
 	pauseOnIndicator = false;
 	pauseOnHover = true;
 	pauseOnFocus = true;
+	genericDataContents: genericDataDTO[] = []
 
-  constructor(config: NgbTooltipConfig) {
+  constructor(config: NgbTooltipConfig, private contentService: ContentService) {
 		// customize default values of tooltips used by this component tree
 		config.placement = 'bottom';
 		config.triggers = 'hover';
 	}
+
+	ngOnInit() {
+
+		this.contentService.getAll()
+
+			.subscribe((response:genericDataDTO[]) => {
+				this.genericDataContents = response;
+			});
+
+}
 
 	@ViewChild('carousel', { static: true })
   carousel: NgbCarousel = new NgbCarousel;
