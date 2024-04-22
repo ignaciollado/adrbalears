@@ -22,7 +22,8 @@ header {
 .mobile-menu-button {
   grid-area: mobileMenu;
   display: none;
-  margin: .2rem;
+  padding-right: .2rem;
+  /* margin: .2rem; */
   text-align: right;
 }
 
@@ -35,7 +36,7 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
-  margin: .2rem;
+  margin: .4rem;
 }
 
 .nav-bar-bottom{
