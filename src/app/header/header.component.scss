@@ -10,12 +10,12 @@ header {
   color: #fff;
 }
 
-.offcanvas-body{
+.offcanvas-body {
   background-color: #ec9e37;
   color: #fff;
 }
 
-.btn-close{
+.btn-close {
   color: #fff;
 }
 
@@ -27,16 +27,16 @@ header {
   text-align: right;
 }
 
-.nav-bar-left-logo{
+.nav-bar-left-logo {
   grid-area: navLogo;
   padding: .25rem;
 }
-.nav-bar-top{
+.nav-bar-top {
   grid-area: navLangSede;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
-  margin: .4rem;
+  padding: .2rem;
 }
 
 .nav-bar-bottom{
@@ -45,7 +45,7 @@ header {
   justify-content: flex-end;
 }
 
-.nav-bar-top-language{
+.nav-bar-top-language {
   display: grid;
   grid-template-columns: auto auto;
   padding: .25rem;
@@ -53,11 +53,11 @@ header {
   text-align: center;
 }
 
-.nav-bar-top-sede-elect{
+/* .nav-bar-top-sede-elect {
   display: grid;
   grid-template-columns: auto;
   text-align: center;
-}
+} */
 
 .button-header-menu {
   background-color: #053747;
