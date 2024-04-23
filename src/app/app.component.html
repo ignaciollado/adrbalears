@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <div class='area-cta'>
 	<button class="btn btn-warning" (click)="openHomePopUp(content)" [ngbTooltip]="tipContent">
 		Personalice su experiencia
@@ -7,11 +8,10 @@
 
 <ng-template #tipContent>Cunmplimentando este breve formulario<br>podrá fijar sus
 	preferencias durante la navegación en nuestro sitio web de <b>ADR Balears</b></ng-template>
-
-<app-body></app-body>
-<app-footer></app-footer>
-
+	
 <router-outlet />
+<!-- <app-body></app-body> -->
+<app-footer></app-footer>
 
 <ng-template #content let-modal>
 	<div class="modal-header">

@@ -16,6 +16,7 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
 import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
 
 import { MatDialogModule} from '@angular/material/dialog';
+import { NewsAgendaListComponent } from './news/news-agenda-list/news-agenda-list.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BodyComponent,
     FooterComponent,
     CallToActionComponent,
-    PopUpDialogComponent
+    PopUpDialogComponent,
+    NewsAgendaListComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

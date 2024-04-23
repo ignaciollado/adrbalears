@@ -14,8 +14,8 @@ export class ContentService {
   private apiBaseUrl = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=200' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
   private apiBaseUrlEverything = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=1800' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
   private apiBaseUrlLastContent = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=20' /* Offset 0 y tamaño de página a 20 artículos */
-  /*  */
-  
+  /* ---------------------------------------- */
+
   constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<genericDataDTO[]> {

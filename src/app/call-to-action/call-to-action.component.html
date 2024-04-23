@@ -1,8 +1,14 @@
 <div class="cta-home">
-  <p>Sección variable (Pregunta3)</p>
-  <div>
-    <strong>Llamada a la acción</strong> 
+  <div class="cta-left">
+    <p innerHtml="{{ctaTextLeft}}"></p>
+  </div>
+  <div class="cta-center" innerHTML="{{ctaTextCenter}}">
+    <h2><strong>Llamada a la acción</strong></h2>
+     
     <p>Mensaje que motive al usuario a conectar a través del formulario más apropiado y botón que redirija al mismo</p>
   </div>  
-  <button class="btn btn-primary">Solicitar Asesoramiento (ejemplo)</button>
+  <div class="cta-right">
+    <button class="btn btn-primary" innerHtml="{{ctaTextRight}}"></button>
+  </div>
+  
 </div>

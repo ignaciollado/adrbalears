@@ -4,12 +4,44 @@
   grid-template-columns: auto auto auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 1rem;
+
+}
+
+.cta-left, .cta-center {
+  background-color: #faa723;
+  padding: 2rem;
+}
+
+.cta-center h2{
+  box-shadow: none;
+}
+
+.cta-right {
+  border-left: 4px solid #000;
+  background-color: #fdd695;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cta-right > button {
+  margin: 0;
+  position: relative;
+  top: 40%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: .8rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: #ec9e37;
+  border: 1px solid #053747;
+  color: #000;
 }
 
 @media screen and (max-width: 795px) {
   .cta-home {
-       grid-template-columns: 100%;
+    grid-template-columns: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: .5rem;

@@ -113,6 +113,6 @@ openCustomPanelClass(content: TemplateRef<any>) {
 sedeElectronica(): void {
     /* Navega a nuestra sede electrónica */
     window.open('https://pre-idi.sedipualba.es', '_blank');
-  }
+}
 
 }

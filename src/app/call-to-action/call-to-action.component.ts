@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-call-to-action',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './call-to-action.component.scss'
 })
 export class CallToActionComponent {
+  @Input({ required: true }) ctaTextRight!: string;
+  @Input({ required: true }) ctaTextCenter!: string;
+  @Input({ required: true }) ctaTextLeft!: string;
+
 
 }
