@@ -17,6 +17,13 @@ import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
 
 import { MatDialogModule} from '@angular/material/dialog';
 import { NewsAgendaListComponent } from './news/news-agenda-list/news-agenda-list.component';
+import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda-detail.component';
+
+import { FilterPipe } from './Pipes/filter.pipe';
+import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +39,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     CallToActionComponent,
     PopUpDialogComponent,
-    NewsAgendaListComponent
+    NewsAgendaListComponent,
+    InternalServerComponent,
+    NotFoundComponent,
+    NewsAgendaDetailComponent,
+    HighlightSearchTermPipe,
+    FilterPipe
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

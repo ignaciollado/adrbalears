@@ -1,8 +1,43 @@
-.container{
-  height: 15vh;
-  width: 100%;
-  background-color: antiquewhite;
-  border: 1px solid #000;
-  margin-top: 1rem;
+h2 {
+  box-shadow: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.col {
   margin-bottom: 1rem;
+}
+
+.card-body {
+  grid-area: title;
+  min-height: 16rem;
+  max-height: 16rem;
+  line-height: 1.4285em;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .row {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .row {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    grid-template-columns: auto;
+  }
+  .card-body {
+
+    min-height: 12rem;
+    max-height: 12rem;
+  }
 }

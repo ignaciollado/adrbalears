@@ -1,5 +1,37 @@
 <div class="container">
-  100% wide until small breakpoint
-  <p>news-agenda-list works!</p>
+  <h2>News and Agenda</h2>
+  <div *ngIf="noticias">
+    <div class="row">
+    <div *ngFor="let noticia of noticias">
+      <div class="col">
+      <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
+        <div class="card">
+          <img class="card-img-top" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+          <div class="card-body">
+            <h4 class="card-title">{{noticia.attributes.title}}</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div *ngIf="!noticias">
+    <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+      <img src="https://via.placeholder.com/260x145.png?text=...loading news one" class="card-img-top" alt="loading image">
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+        </p>
+      </div>
+    </div> 
+  </div>
+
 </div>
+
+
 
