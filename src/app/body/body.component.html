@@ -21,9 +21,9 @@
 
   <div class="filter-area">
     <form role="search" [formGroup]="searchTheWebForm" (ngSubmit)="onSubmit(searchTheWebForm)" novalidate class="form-inline">
-      <input [class.is-invalid] class="form-control" type="text" formControlName="searchTerm" placeholder="Buscador con filtros" aria-label="Search">
-      <button class="btn btn-search" [ngbTooltip]="tipContent" type="submit">Search <span class="badge text-bg-secondary ocultar" id="totalResults">{{totalFound}}</span></button>
-      <ng-template #tipContent>Search in <b>ADR Balears</b>!</ng-template>
+      <input class="form-control" type="text" formControlName="searchTerm" placeholder="Buscador con filtros" aria-label="Search">
+      <button class="btn btn-search" type="submit">Search <span class="badge text-bg-secondary ocultar" id="totalResults"><a [ngbTooltip]="tipContent" routerLink="/idi-result-list/{{searchTerm}}">{{totalFound}}</a></span></button>
+      <ng-template #tipContent>Ver los resultados de <b>ADR Balears</b>!</ng-template>
     </form>
     <span class="badge"><a href="#" class="btn"><small>filter 1</small></a></span>
     <span class="badge"><a href="#" class="btn"><small>filter 2</small></a></span>

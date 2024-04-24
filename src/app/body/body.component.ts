@@ -6,6 +6,7 @@ import { genericDataDTO } from '../model/generic-data.model';
 import { SearchTheWebService } from '../services/search-the-web.service';
 import { reqArticle } from '../model/article-data.model';
 import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -45,6 +46,10 @@ export class BodyComponent {
     this.searchTheWebForm = this.formBuilder.group( {
       searchTerm: [ '', [Validators.required ] ]
     } )
+  }
+
+	get searchTerm() {
+    return this.searchTheWebForm.get('searchTerm');
   }
 
 	ngOnInit() {
