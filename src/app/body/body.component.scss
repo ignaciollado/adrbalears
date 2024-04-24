@@ -81,6 +81,10 @@ input {
  box-shadow: none;
 }
 
+.ocultar {
+  display: none;
+}
+
 @media screen and (max-width: 795px) {
   .body-main {
     grid-template-columns: 100%;

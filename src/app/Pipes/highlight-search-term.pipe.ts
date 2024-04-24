@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle } from '@angular/platform-browser';
+import { SafeStyle } from '@angular/platform-browser';
 
 @Pipe({
   name: 'highlightSearchTerm'
@@ -15,7 +15,7 @@ export class HighlightSearchTermPipe implements PipeTransform {
    * @returns list of elements filtered by search text or []
    */
 
-  transform(items:string, searchText: string): SafeStyle {
+  transform(items:string, searchText: string): SafeStyle | undefined {
 
     if (!items) {
       return
