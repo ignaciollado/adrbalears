@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.css';
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -54,16 +54,15 @@ a {
     font-size:100%;
     vertical-align: baseline;
     background: transparent;
+    text-decoration: none!important;
 }
 
-/* change colours to suit your needs */
 ins {
     background-color:#ff9;
     color:#000;
     text-decoration:none;
 }
 
-/* change colours to suit your needs */
 mark {
     background-color:#ff9;
     color:#000; 
@@ -100,20 +99,11 @@ input, select {
 }
 
 body {
-    /* max-width: 1124px; */
     margin: auto!important;    
     line-height: 1.5rem;
     font-family: 'Montserrat';
     font-size: 14px;
     color: #fff;
-}
-
-a {
-    text-decoration: none!important;
-}
-
-a:hover{
-    color: orangered;
 }
 
 input:focus,

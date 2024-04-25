@@ -14,6 +14,7 @@ import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
 export class AppComponent {
   title:string = 'ADR alears'
   show:boolean = true
+  profileExists: boolean = false
   situacionActual: UntypedFormControl
   interesadoEn: UntypedFormControl
   objetivoPrincipal: UntypedFormControl
@@ -31,18 +32,24 @@ export class AppComponent {
     this.interesadoEn = new UntypedFormControl('', [ Validators.required ])
     this.objetivoPrincipal = new UntypedFormControl('', [ Validators.required ])
 
-    this.customizeTheWeb = this.formBuilder.group({
+    this.customizeTheWeb = this.formBuilder.group( {
       situacionActual: this.situacionActual,
       interesadoEn: this.interesadoEn,
       objetivoPrincipal: this.objetivoPrincipal
     });
     /* this.openDialog('3000', '1000', 'Personalice su experiencia', 'texto del tooltip', 'doc1.pdf', 'doc2.pdf') */
+  
+
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if (localStorage.getItem('situacionActual') && localStorage.getItem('interesadoEn') && localStorage.getItem('objetivoPrincipal')) {
+      this.profileExists = true
+    }
+   }
 
   openHomePopUp(content: TemplateRef<any>) {
-		this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
+		this.modalService.open(content, { backdropClass: 'color-backdrop' });
 	}
 
  /*  close() {
@@ -68,25 +75,13 @@ export class AppComponent {
   }
 
   onClick(customizeTheWeb: any) {
-    console.warn(`**** ${customizeTheWeb.value} ****`);
-		let resultCounter = document.getElementById("totalResults")
     if (customizeTheWeb.valid) {
-			resultCounter?.classList.remove("ocultar")
-			
-      const searchTerm: string = customizeTheWeb.value.searchTerm
-
-/*       this.searchService.getArticles()
-      .subscribe( (result: any) => {
-        this.contenidos = result.data
-        this.contenidos = result.data.filter( (item : reqArticle) => item.attributes.language === `${this.currentLang}`) 
-        this.contenidos = this.contenidos.filter( item => item.attributes.text.toUpperCase().includes(searchTerm.trim().toUpperCase()) )
-        this.totalFound = this.contenidos.length.toString()
-      }, (err) => {
-        console.log ( err.msg );
-      }); */
-
+      localStorage.setItem('situacionActual', customizeTheWeb.value.situacionActual)
+      localStorage.setItem('interesadoEn', customizeTheWeb.value.interesadoEn)
+      localStorage.setItem('objetivoPrincipal', customizeTheWeb.value.objetivoPrincipal)
+      this.profileExists = true
     } else {
-      console.error('Contact form is in an invalid state: ', customizeTheWeb)
+      console.error('profile form is in an invalid state: ', customizeTheWeb)
     } 
   }
 

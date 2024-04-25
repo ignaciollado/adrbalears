@@ -20,9 +20,10 @@
   </ngb-carousel>
 
   <div class="filter-area">
-    <form role="search" [formGroup]="searchTheWebForm" (ngSubmit)="onSubmit(searchTheWebForm)" novalidate class="form-inline">
+    <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
       <input class="form-control" type="text" formControlName="searchTerm" placeholder="Buscador con filtros" aria-label="Search">
-      <button class="btn btn-search" type="submit">Search <span class="badge text-bg-secondary ocultar" id="totalResults"><a [ngbTooltip]="tipContent" routerLink="/idi-result-list/{{searchTerm}}">{{totalFound}}</a></span></button>
+      <button class="btn btn-search" type="submit" (click)="onClick(searchTheWebForm)" 
+      [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults"><a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span></button>
       <ng-template #tipContent>Ver los resultados de <b>ADR Balears</b>!</ng-template>
     </form>
     <span class="badge"><a href="#" class="btn"><small>filter 1</small></a></span>

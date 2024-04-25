@@ -98,7 +98,7 @@ export class BodyComponent {
 		}
 	}
 
-	onSubmit(searchTheWebForm: any) {
+	onClick(searchTheWebForm: any) {
 		let resultCounter = document.getElementById("totalResults")
     if (searchTheWebForm.valid) {
 			resultCounter?.classList.remove("ocultar")

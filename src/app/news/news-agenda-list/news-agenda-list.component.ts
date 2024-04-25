@@ -34,11 +34,17 @@ export class NewsAgendaListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, '11', 24)
+    this.getNoticias(this.currentLang, '11', 24) /* 11 id de la categoría NOTICIA */
   }
 
   getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: number) {
- 
+    let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
+    /* Obtiene el perfíl del usuario */
+    interesadoEn = localStorage.getItem("interesadoEn")
+    objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
+    situacionActual = localStorage.getItem("situacionActual")
+    console.log(interesadoEn, objetivoPrincipal, situacionActual)
+
     this.articleContent.getAll()
         .subscribe( (resp:any) => {
           this.noticias = resp.data

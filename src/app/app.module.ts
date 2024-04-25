@@ -24,6 +24,7 @@ import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda
 
 import { FilterPipe } from './Pipes/filter.pipe';
 import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
+import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
 
 
 // AoT requires an exported function for factories
@@ -45,7 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NotFoundComponent,
     NewsAgendaDetailComponent,
     HighlightSearchTermPipe,
-    FilterPipe
+    FilterPipe,
+    SearchTheWebResultListComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

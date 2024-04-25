@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<div class='area-cta'>
+<div class='area-cta' *ngIf="!profileExists">
 	<button class="btn btn-warning" (click)="openHomePopUp(content)">
 		Personalice su experiencia
 	</button>
@@ -49,15 +49,14 @@
 									</ol>
 							</li>
 					</ol>
-					{{ customizeTheWeb.value | json}}
-					{{ customizeTheWeb.status | json}}
-
+					<!-- <small>{{ customizeTheWeb.value | json}}</small> -->
+				<!-- 	{{ customizeTheWeb.status | json}} -->
 					</form>
 			</div>
 	</section>
 	</div>
 	<div class="modal-footer">
 		<!-- <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Aplicar perfíl</button> -->
-		<button type="button" class="btn btn-outline-dark" [disabled]="!customizeTheWeb.valid" (click)="onClick(customizeTheWeb)">Aplicar perfíl</button>
+		<button type="button" class="btn btn-dark" [disabled]="!customizeTheWeb.valid" (click)="onClick(customizeTheWeb)">Aplicar perfíl</button>
 	</div>
 </ng-template>
