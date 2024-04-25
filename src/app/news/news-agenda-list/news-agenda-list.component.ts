@@ -52,7 +52,7 @@ export class NewsAgendaListComponent implements OnInit {
           this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
           this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
           if (this.id !=9999) {
-            this.noticias = this.noticias.slice(0,articlesNumber) /* Last articlesNumber news published */
+            this.noticias = this.noticias.slice(0,articlesNumber) /* The last 'articlesNumber' news published */
           }
         
         } ) 

@@ -46,4 +46,18 @@ button:hover {
     margin-bottom: 1rem;
     padding: .5rem;
   }
+  .cta-left, .cta-center {
+    padding: 1rem;
+  }
+  .cta-right {
+    border-left: none;
+    padding: 1rem;
+  }
+  .cta-right > button {
+    position: unset;
+    width: 100%;
+    padding: 1rem;
+    font-size: .8rem;
+    font-weight: bolder;
+  }
 }
