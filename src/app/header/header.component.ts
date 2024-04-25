@@ -131,7 +131,7 @@ goDown1() {
 
   goDown3() {
     console.log("estoy en goDown3")
-    this.router.navigate([], { fragment: "solicitar-asesoramiento" });
+    this.router.navigate([], { fragment: "logotipo" });
   }
 
 }
