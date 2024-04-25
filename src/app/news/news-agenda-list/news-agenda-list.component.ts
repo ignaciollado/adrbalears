@@ -9,8 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './news-agenda-list.component.html',
   styleUrl: './news-agenda-list.component.scss'
 })
-export class NewsAgendaListComponent implements OnInit {
 
+export class NewsAgendaListComponent implements OnInit {
   public noticias: reqArticle[] | undefined; 
   public noticiasAttributes: attrArticle | undefined
   public currentLang: string | undefined
@@ -43,7 +43,6 @@ export class NewsAgendaListComponent implements OnInit {
     interesadoEn = localStorage.getItem("interesadoEn")
     objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
     situacionActual = localStorage.getItem("situacionActual")
-    console.log(interesadoEn, objetivoPrincipal, situacionActual)
 
     this.articleContent.getAll()
         .subscribe( (resp:any) => {

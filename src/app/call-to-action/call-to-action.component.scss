@@ -4,7 +4,6 @@
   grid-template-columns: auto auto auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
-
 }
 
 .cta-left, .cta-center {
@@ -12,12 +11,15 @@
   padding: 2rem;
 }
 
+.cta-left {
+  border-left: 15px solid #053747;
+}
+
 .cta-center h2{
   box-shadow: none;
 }
 
 .cta-right {
-  border-left: 4px solid #000;
   background-color: #fdd695;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -26,7 +28,7 @@
 .cta-right > button {
   margin: 0;
   position: relative;
-  top: 40%;
+  top: 35%;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: .8rem;
@@ -46,11 +48,15 @@ button:hover {
     margin-bottom: 1rem;
     padding: .5rem;
   }
+
+  .cta-left {
+    border-left: none;
+  }
+
   .cta-left, .cta-center {
     padding: 1rem;
   }
   .cta-right {
-    border-left: none;
     padding: 1rem;
   }
   .cta-right > button {

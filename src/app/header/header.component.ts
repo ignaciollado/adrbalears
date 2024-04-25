@@ -11,8 +11,7 @@ import * as CookieConsent from 'vanilla-cookieconsent';
 })
 export class HeaderComponent {
 
-
-constructor(private scroller: ViewportScroller, private router: Router,) {}
+constructor( private router: Router ) {}
     
 private offcanvasService = inject(NgbOffcanvas);
   ngAfterViewInit(): void{
@@ -115,23 +114,9 @@ sedeElectronica(): void {
     window.open('https://pre-idi.sedipualba.es', '_blank');
 }
 
-goDown1() {
-    console.log("estoy en goDown1")
-    this.scroller.scrollToAnchor("#solicitar-asesoramiento");
-  }
+scroll(el: string) {
+    console.log (window.innerHeight, window.innerWidth)
 
-  goDown2() {
-    //this.scroller.scrollToAnchor("targetGreen");
-    document.getElementById("solicitar-asesoramiento")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
-  }
-
-  goDown3() {
-    console.log("estoy en goDown3")
-    this.router.navigate([], { fragment: "logotipo" });
-  }
+}
 
 }

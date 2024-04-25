@@ -128,7 +128,7 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
-            <button ngbDropdownItem (click)="goDown3();offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
+            <a href="#solicitarasesoramiento" ngbDropdownItem (click)="scroll('solicitarasesoramiento');offcanvas.dismiss('Cross click')">Solicitar asesoramiento</a>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Solicitar ayudas</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Solicitar formaciones</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>

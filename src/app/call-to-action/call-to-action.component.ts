@@ -9,6 +9,4 @@ export class CallToActionComponent {
   @Input({ required: true }) ctaTextRight!: string;
   @Input({ required: true }) ctaTextCenter!: string;
   @Input({ required: true }) ctaTextLeft!: string;
-
-
 }
