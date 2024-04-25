@@ -89,10 +89,10 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
           <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quienes somos</button>
-            <button ngbDropdownItem routerLink="news-agenda-list" (click)="offcanvas.dismiss('Cross click')">Noticias / Agenda</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Transparencia</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quienes somos</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="news-agenda-list">Noticias / Agenda</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Transparencia</button>
           </div>
         </div>
       </li>
@@ -100,12 +100,12 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Nuestros Proyectos</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Palma International Boat Show</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Emblemàtics Balears</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Iempren</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Industria local sostenible</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Loop disseny</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Pa d'aquí</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Palma International Boat Show</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Emblemàtics Balears</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Iempren</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Industria local sostenible</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Loop disseny</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Pa d'aquí</button>
           </div>
         </div>
       </li>
@@ -113,14 +113,14 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potencia tu proyecto</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button>
           </div>
         </div>
       </li>
@@ -128,10 +128,10 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Solicitar ayudas</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Solicitar formaciones</button>
-            <button ngbDropdownItem  (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>
+            <button ngbDropdownItem (click)="goDown3();offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Solicitar ayudas</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Solicitar formaciones</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>
           </div>
         </div>
       </li>

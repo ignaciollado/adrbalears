@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, inject, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +12,7 @@ import * as CookieConsent from 'vanilla-cookieconsent';
 export class HeaderComponent {
 
 
-constructor(private router: Router,) {}
+constructor(private scroller: ViewportScroller, private router: Router,) {}
     
 private offcanvasService = inject(NgbOffcanvas);
   ngAfterViewInit(): void{
@@ -111,8 +112,26 @@ openCustomPanelClass(content: TemplateRef<any>) {
 }
 
 sedeElectronica(): void {
-    /* Navega a nuestra sede electrónica */
     window.open('https://pre-idi.sedipualba.es', '_blank');
 }
+
+goDown1() {
+    console.log("estoy en goDown1")
+    this.scroller.scrollToAnchor("#solicitar-asesoramiento");
+  }
+
+  goDown2() {
+    //this.scroller.scrollToAnchor("targetGreen");
+    document.getElementById("solicitar-asesoramiento")!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
+  goDown3() {
+    console.log("estoy en goDown3")
+    this.router.navigate([], { fragment: "solicitar-asesoramiento" });
+  }
 
 }
