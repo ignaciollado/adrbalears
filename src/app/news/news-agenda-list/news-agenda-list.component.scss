@@ -11,12 +11,23 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.card-img-top {
+  min-height: 11rem;
+}
+
 .card-body {
   grid-area: title;
+  background-color: #053747;
+  color: #fff;
   min-height: 16rem;
   max-height: 16rem;
   line-height: 1.4285em;
   padding-left: 1rem;
+}
+
+.card:hover {
+  border: 1px solid #000;
+  border-radius: 0;
 }
 
 @media screen and (max-width: 1199px) {
