@@ -34,7 +34,7 @@ export class NewsAgendaListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, '11', 24) /* 11 id de la categoría NOTICIA */
+    this.getNoticias(this.currentLang, '11', 4) /* 11 id de la categoría NOTICIA */
   }
 
   getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: number) {

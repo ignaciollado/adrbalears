@@ -1,8 +1,18 @@
 <div>
-  <img class="img-fluid" 
+
+  <picture>
+    <!-- <source srcset="..." type="image/svg+xml"> -->
+    <img src="https://contents.idi.es/{{rootCategoryDetails!.data.attributes.params.image}}" 
+    class="img-fluid" 
+    alt="{{rootCategoryDetails!.data.attributes.title}}" 
+    title="{{rootCategoryDetails!.data.attributes.title}}">
+  </picture>
+  
+
+ <!--  <img class="img-fluid rounded" 
     src="https://contents.idi.es/{{rootCategoryDetails!.data.attributes.params.image}}" 
     alt="{{rootCategoryDetails!.data.attributes.title}}" 
-    title="{{rootCategoryDetails!.data.attributes.title}}" /> 
+    title="{{rootCategoryDetails!.data.attributes.title}}" />  -->
 </div>
  
 <div class="who-we-are-container" *ngFor="let childCategory of childCatMatrixHomeIDI">

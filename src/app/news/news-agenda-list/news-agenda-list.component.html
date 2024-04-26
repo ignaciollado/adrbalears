@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>News and Agenda</h2>
+  <h1>News</h1>
   <div *ngIf="noticias">
     <div class="row">
     <div *ngFor="let noticia of noticias">
@@ -7,7 +7,27 @@
       <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
         <div class="card">
           <div>
-            <img class="card-img-top" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+            <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{noticia.attributes.title}}</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <h1>Agenda</h1>
+  <div *ngIf="noticias">
+    <div class="row">
+    <div *ngFor="let noticia of noticias">
+      <div class="col">
+      <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
+        <div class="card">
+          <div>
+            <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
           </div>
           <div class="card-body">
             <h4 class="card-title">{{noticia.attributes.title}}</h4>
