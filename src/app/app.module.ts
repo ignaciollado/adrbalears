@@ -25,6 +25,7 @@ import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda
 import { FilterPipe } from './Pipes/filter.pipe';
 import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
+import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
 
 
 // AoT requires an exported function for factories
@@ -47,7 +48,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewsAgendaDetailComponent,
     HighlightSearchTermPipe,
     FilterPipe,
-    SearchTheWebResultListComponent
+    SearchTheWebResultListComponent,
+    AboutAdrBalearsComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

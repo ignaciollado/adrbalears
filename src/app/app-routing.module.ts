@@ -6,9 +6,11 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda-detail.component';
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
+import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
+  { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
   { path: 'news-agenda-list', component: NewsAgendaListComponent },
   { path: 'news-agenda-detail/:alias/:id', component: NewsAgendaDetailComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
