@@ -1,1 +1,11 @@
-<p>about-adr-balears works!</p>
+<div>
+  <img class="img-fluid" 
+    src="https://contents.idi.es/{{rootCategoryDetails!.data.attributes.params.image}}" 
+    alt="{{rootCategoryDetails!.data.attributes.title}}" 
+    title="{{rootCategoryDetails!.data.attributes.title}}" /> 
+</div>
+ 
+<div class="who-we-are-container" *ngFor="let childCategory of childCatMatrixHomeIDI">
+  <h2 id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</h2>
+  <app-about-adr-balears-child childCategory="{{childCategory  | categoryID}}" class="category-articles"></app-about-adr-balears-child>
+</div>

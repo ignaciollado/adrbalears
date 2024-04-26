@@ -23,9 +23,14 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda-detail.component';
 
 import { FilterPipe } from './Pipes/filter.pipe';
+import { CategoryIdPipe } from './Pipes/category-id.pipe';
+import { CategoryTitlePipe } from './Pipes/category-title.pipe';
 import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
+import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
+
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
 import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
+import { AboutAdrBalearsChildComponent } from './about-us/about-adr-balears-child/about-adr-balears-child.component';
 
 
 // AoT requires an exported function for factories
@@ -47,9 +52,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     NotFoundComponent,
     NewsAgendaDetailComponent,
     HighlightSearchTermPipe,
+    WellFormattedLinkPipe,
     FilterPipe,
+    CategoryIdPipe,
+    CategoryTitlePipe,
     SearchTheWebResultListComponent,
-    AboutAdrBalearsComponent
+    AboutAdrBalearsComponent,
+    AboutAdrBalearsChildComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

@@ -1,0 +1,11 @@
+.who-we-are-container {
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+
+  line-height: 2.7rem;
+  font-size: 2rem;
+  font-weight: 200;
+
+  border-bottom: 1px solid #e7e6e6;
+  margin-bottom: 2rem;
+}

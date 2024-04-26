@@ -1,0 +1,24 @@
+<div class='article-container' *ngIf="articulos">
+  <div *ngFor="let articulo of articulos">
+    
+      <div class="card">
+        <div class="card-body" [innerHTML]="articulo.attributes.text | wellFormattedLink">
+      
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="article-container" *ngIf="!articulos">
+  <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+    <div class="placeholder col-12"></div>
+    <div class="placeholder col-12"></div>
+    <div class="placeholder col-12"></div>
+    <div class="card-body">
+      <h4 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h4>
+    </div>
+  </div> 
+</div>

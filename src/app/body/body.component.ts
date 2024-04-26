@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
-import { ContentService } from '../services/content.service';
+import { ArticleContentService } from '../services/article-content.service';
 import { genericDataDTO } from '../model/generic-data.model';
 import { SearchTheWebService } from '../services/search-the-web.service';
 import { reqArticle } from '../model/article-data.model';
@@ -33,7 +33,7 @@ export class BodyComponent {
 	theRightLema: string = "Solicitar Asesoramiento<br>para mi StartUp"
 
   constructor(config: NgbTooltipConfig,
-		private contentService: ContentService,
+		private contentService: ArticleContentService,
 		private formBuilder: FormBuilder,
 		public translateService: TranslateService, 
 		private searchService: SearchTheWebService) {
@@ -68,7 +68,7 @@ export class BodyComponent {
         this.currentLang = 'ca-ES'
     }
 		this.contentService.getAll()
-			.subscribe((response:genericDataDTO[]) => {
+			.subscribe((response:any[]) => {
 				this.genericDataContents = response;
 			})
 	}
