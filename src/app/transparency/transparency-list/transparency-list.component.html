@@ -1,0 +1,21 @@
+<h1>Portal de transparencia</h1>
+<p>La Agencia de desarrollo regional de Baleares (ADR Balears) ha adoptado el compromiso de gestionar de manera participativa, satisfacer las necesidades y las expectativas de los ciudadanos, a través de la mejora continua, ofreciendo servicios de calidad. Consecuentemente, la ADR Balears se compromete con la ciudadanía a actuar con transparencia, mediante la publicidad activa y la garantía de acceso a la información.</p>
+
+
+
+<div class="transparency-container" *ngIf="childCatMatrixHomeIDI">
+  <div *ngFor="let childCategory of childCatMatrixHomeIDI">
+      <div class='transparency-item'>
+          <a [routerLink]="['/idi-transparency-detail', childCategory | getAlias, childCategory | categoryID]">
+  
+              <figure> 
+                  <img src="../../assets/images/cabeceras/transparencia-recuadro-off.webp" alt="{{childCategory | categoryTitle:currentLang}}" title="{{childCategory | categoryTitle:currentLang}}" /> 
+                  <figcaption id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</figcaption> 
+              </figure>
+  
+          </a>
+      </div>
+  </div>
+</div>
+
+<div *ngIf="!childCatMatrixHomeIDI">Getting contents from {{'Transparencia' | translate}} ...</div>

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
 
 * {
     margin: 0;
@@ -111,4 +112,10 @@ textarea:focus,
 select:focus,
 a:focus {
   outline: none;
+}
+
+h1, h2 {
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-style: normal;
 }

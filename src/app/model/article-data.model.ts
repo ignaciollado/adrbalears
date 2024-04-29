@@ -82,7 +82,7 @@ export interface Urls {
 
 export enum Language {
   CAES = "ca-ES",
-  EsES = "es-ES",
+  ESES = "es-ES",
 }
 
 export interface Metadata {

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ArticleDTO } from '../model/article-data.model';
 import { Observable } from 'rxjs';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,13 +22,15 @@ export class ArticleContentService {
   .set( 'Content-Type', 'application/vnd.api+json' ) 
   .set( 'X-Joomla-Token', this.jToken )
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private messagesService: MessageService) { }
 
   getAll(): Observable<ArticleDTO[]> {
+    this.messagesService.add('ArticleService: fetched ALL articles')
     return this.httpClient.get<ArticleDTO[]>(this.apiBaseUrl, { headers: this.headers });
   }
 
   get(id: string): Observable<ArticleDTO> {
+    this.messagesService.add('ArticleService: fetched ONE article')
     return this.httpClient.get<ArticleDTO>(`${this.apiBaseUrl}/${id}`, { headers: this.headers });
   }
 

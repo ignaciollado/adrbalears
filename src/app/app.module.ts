@@ -27,17 +27,18 @@ import { CategoryIdPipe } from './Pipes/category-id.pipe';
 import { CategoryTitlePipe } from './Pipes/category-title.pipe';
 import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
 import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
+import { GetAliasPipe } from './Pipes/get-alias.pipe';
 
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
 import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
 import { AboutAdrBalearsChildComponent } from './about-us/about-adr-balears-child/about-adr-balears-child.component';
+import { TransparencyListComponent } from './transparency/transparency-list/transparency-list.component';
 
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
-
 
 @NgModule({
   declarations: [
@@ -56,9 +57,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     FilterPipe,
     CategoryIdPipe,
     CategoryTitlePipe,
+    GetAliasPipe,
     SearchTheWebResultListComponent,
     AboutAdrBalearsComponent,
-    AboutAdrBalearsChildComponent
+    AboutAdrBalearsChildComponent,
+    TransparencyListComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,
