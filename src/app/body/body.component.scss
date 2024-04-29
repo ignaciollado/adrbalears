@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-areas: "carousel formulario" "carousel preDefinedFilter";
-  gap: .2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -19,7 +18,8 @@ ngb-carousel {
   grid-area: formulario;
   background-color: #d5d5d5;
   margin-bottom: .1rem;
-  padding: .2rem;
+  padding: .5rem;
+  margin-left: .2rem;
 }
 
 form {
@@ -32,9 +32,8 @@ form {
   grid-area: preDefinedFilter;
   background-color: #5274f6;
   color: #fff;
-  padding: .2rem;
   padding: .5rem;
-
+  margin-left: .2rem;
 }
 
 button {
@@ -86,7 +85,7 @@ input {
 }
 
 a {
-  color: #fff;
+  color: #053747;
 }
 
 @media screen and (max-width: 795px) {

@@ -20,7 +20,7 @@ export class BodyComponent {
 	public contenidos: reqArticle[] = []
 	currentLang: string = ""
 	isCollapsed:boolean = true
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/870/500`)
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/868/500`)
 
 	paused = false
 	unpauseOnArrow = false
@@ -28,7 +28,7 @@ export class BodyComponent {
 	pauseOnHover = true
 	pauseOnFocus = true
 	genericDataContents: genericDataDTO[] = []
-	theLeftLema: string = "Sección variable (Pregunta3)"
+	theLeftLema: string = "Sección variable (según la <strong>PREGUNTA 3</strong>)"
 	theCenterLema: string = "<h1>Llamadas a la acción</h1><p>Mensaje que motive al usuario a conectar a través del formulario más apropiado y botón que redirija al mismo</p>"
 	theRightLema: string = "Solicitar Asesoramiento<br>para mi StartUp"
 

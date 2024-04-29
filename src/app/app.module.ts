@@ -33,6 +33,8 @@ import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-r
 import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
 import { AboutAdrBalearsChildComponent } from './about-us/about-adr-balears-child/about-adr-balears-child.component';
 import { TransparencyListComponent } from './transparency/transparency-list/transparency-list.component';
+import { LandingPageComponent } from './landing-pages/landing-page/landing-page.component';
+import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 
 
 // AoT requires an exported function for factories
@@ -61,7 +63,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchTheWebResultListComponent,
     AboutAdrBalearsComponent,
     AboutAdrBalearsChildComponent,
-    TransparencyListComponent
+    TransparencyListComponent,
+    LandingPageComponent,
+    SearchTheWebComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,
