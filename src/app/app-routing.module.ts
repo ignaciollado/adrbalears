@@ -8,6 +8,7 @@ import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
 import { AboutAdrBalearsComponent } from './about-us/about-adr-balears/about-adr-balears.component';
 import { TransparencyListComponent } from './transparency/transparency-list/transparency-list.component';
+import { LandingPageComponent } from './landing-pages/landing-page/landing-page.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'news-agenda-detail/:alias/:id', component: NewsAgendaDetailComponent },
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
+  { path: 'landing-page/:projectName', component: LandingPageComponent },
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },

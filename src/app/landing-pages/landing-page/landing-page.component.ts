@@ -6,6 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
+
+  public showSearch: boolean = true
+
   @Input({ required: true }) landingMainTitle!: string;
   @Input({ required: true }) landingSlogan!: string;
   @Input({ required: true }) landingDescription!: string;

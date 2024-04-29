@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { reqArticle, attrArticle } from '../../model/article-data.model';
 import { ArticleContentService } from '../../services/article-content.service';
@@ -17,6 +17,8 @@ export class NewsAgendaListComponent implements OnInit {
   public currentLang: string | undefined
   public newsToDisplay: string | null
 
+  @Input () numberToDisplay = ''
+
   constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
     private router: Router ) {
       this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
@@ -27,13 +29,13 @@ export class NewsAgendaListComponent implements OnInit {
     switch (this.translateService.currentLang) {
       case 'cat':
         this.currentLang = 'ca-ES'
-      break
+        break
       case 'cas':
         this.currentLang = 'es-ES'      
-      break
+        break
       case 'en':
         this.currentLang = 'en-EN'
-      break
+        break
       default:
         this.currentLang = 'ca-ES'
     }

@@ -35,6 +35,7 @@ import { AboutAdrBalearsChildComponent } from './about-us/about-adr-balears-chil
 import { TransparencyListComponent } from './transparency/transparency-list/transparency-list.component';
 import { LandingPageComponent } from './landing-pages/landing-page/landing-page.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
+import { SliderComponent } from './slider/slider/slider.component';
 
 
 // AoT requires an exported function for factories
@@ -65,7 +66,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutAdrBalearsChildComponent,
     TransparencyListComponent,
     LandingPageComponent,
-    SearchTheWebComponent
+    SearchTheWebComponent,
+    SliderComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

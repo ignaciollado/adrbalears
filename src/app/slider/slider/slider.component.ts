@@ -1,23 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
-/* import { FormBuilder, FormGroup, Validators } from '@angular/forms'; */
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
-import { ArticleContentService } from '../services/article-content.service';
-import { genericDataDTO } from '../model/generic-data.model';
-import { reqArticle } from '../model/article-data.model';
+import { ArticleContentService } from '../../services/article-content.service';
+import { genericDataDTO } from '../../model/generic-data.model';
+import { reqArticle } from '../../model/article-data.model';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrl: './body.component.scss'
+  selector: 'app-slider',
+  templateUrl: './slider.component.html',
+  styleUrl: './slider.component.scss'
 })
-
-export class BodyComponent {
-
-	totalFound: string = ""
-	showSearch: boolean = true
-	public contenidos: reqArticle[] = []
-	currentLang: string = ""
+export class SliderComponent {
+  currentLang: string = ""
 	isCollapsed:boolean = true
   images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/868/500`)
 
@@ -27,21 +21,16 @@ export class BodyComponent {
 	pauseOnHover:boolean = true
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
-	theLeftLema: string = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
-	theCenterLema: string = "<h1>Llamadas a la acción</h1><p>Mensaje que motive al usuario a conectar a través del formulario más apropiado y botón que redirija al mismo</p>"
-	theRightLema: string = "Solicitar Asesoramiento<br>para mi StartUp"
 
   constructor(config: NgbTooltipConfig,
 		private contentService: ArticleContentService,
-		public translateService: TranslateService) {
+		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
 			config.placement = 'bottom';
 			config.triggers = 'hover';
 		}
 
-
-
-	ngOnInit() {
+  ngOnInit() {
     switch (this.translateService.currentLang) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -61,10 +50,11 @@ export class BodyComponent {
 			})
 	}
 
-	@ViewChild('carousel', { static: true })
+  @ViewChild('carousel', { static: true })
   carousel: NgbCarousel = new NgbCarousel;
 
-	togglePaused() {
+
+  togglePaused() {
 		if (this.paused) {
 			this.carousel.cycle();
 		} else {
@@ -73,7 +63,7 @@ export class BodyComponent {
 		this.paused = !this.paused;
 	}
 
-	onSlide(slideEvent: NgbSlideEvent) {
+  onSlide(slideEvent: NgbSlideEvent) {
 		if (
 			this.unpauseOnArrow &&
 			slideEvent.paused &&
