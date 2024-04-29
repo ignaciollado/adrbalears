@@ -11,13 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class NewsAgendaListComponent implements OnInit {
-  public noticias: reqArticle[] | undefined; 
+
+  public noticias: reqArticle[] | undefined
   public noticiasAttributes: attrArticle | undefined
   public currentLang: string | undefined
-  public id:number = +!this.route.snapshot.paramMap.get('id')
+  public newsToDisplay: string | null
 
   constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
-    private router: Router ) {}
+    private router: Router ) {
+      this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
+     }
 
   ngOnInit(): void {
 
@@ -34,15 +37,18 @@ export class NewsAgendaListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, '11', 4) /* 11 id de la categoría NOTICIA */
+
+    this.getNoticias(this.currentLang, '11', this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
-  getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: number) {
+  getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: any) {
     let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
     /* Obtiene el perfíl del usuario */
     interesadoEn = localStorage.getItem("interesadoEn")
     objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
     situacionActual = localStorage.getItem("situacionActual")
+
+    console.log ("**" +articlesNumber+ "**")
 
     this.articleContent.getAll()
         .subscribe( (resp:any) => {
@@ -50,8 +56,8 @@ export class NewsAgendaListComponent implements OnInit {
           this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
           this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
           this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
-          if (this.id !=9999) {
-            this.noticias = this.noticias.slice(0,articlesNumber) /* The last 'articlesNumber' news published */
+          if (this.newsToDisplay != '9999') {
+            this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
         
         } ) 

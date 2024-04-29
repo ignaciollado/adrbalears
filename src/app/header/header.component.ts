@@ -116,7 +116,6 @@ sedeElectronica(): void {
 
 scroll(el: string) {
     console.log (window.innerHeight, window.innerWidth)
-
 }
 
 }

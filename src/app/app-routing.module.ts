@@ -12,7 +12,7 @@ import { TransparencyListComponent } from './transparency/transparency-list/tran
 const routes: Routes = [
   { path: '', component: BodyComponent },
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
-  { path: 'news-agenda-list', component: NewsAgendaListComponent },
+  { path: 'news-agenda-list/:newsToDisplay', component: NewsAgendaListComponent },
   { path: 'news-agenda-detail/:alias/:id', component: NewsAgendaDetailComponent },
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
