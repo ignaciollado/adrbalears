@@ -1,0 +1,49 @@
+.filter-area {
+  grid-area: formulario;
+  background-color: #d5d5d5;
+  margin-bottom: .1rem;
+  padding: .5rem;
+  margin-left: .2rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .2rem;
+}
+
+button {
+  background-color: #053747;
+  border-radius: 0;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #ec9e37;
+  border: 1px solid #053747;
+  color: #000;
+}
+
+.buttons-area{
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+input {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #053747;
+  outline: none;
+  box-shadow: none;
+  color: #053747;
+}
+
+.ocultar {
+  display: none;
+}
+
+a {
+  color: #053747;
+}

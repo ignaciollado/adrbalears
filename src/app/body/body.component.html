@@ -13,30 +13,15 @@
       </div>
       <div class="carousel-caption">
         <h3>ADR Balears</h3>
-        <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 1</strong>)</p>
+        <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
       </div>
     </ng-template> 
   }
   </ngb-carousel>
-  <app-search-the-web></app-search-the-web>
-
-  <div class="filter-area">
-    <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
-      <input class="form-control" type="text" formControlName="searchTerm" placeholder="Buscar ..." aria-label="Search">
-      <button class="btn btn-search" type="submit" (click)="onClick(searchTheWebForm)"
-      [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults"><a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span></button>
-      <ng-template #tipContent>Ver los resultados de <b>ADR Balears</b>!</ng-template>
-    </form>
-    <a routerLink="filter-adr-balears/formacion" class="btn"><small>Formación</small></a>
-    <a routerLink="filter-adr-balears/ayudas" class="btn"><small>Ayudas</small></a>
-    <a routerLink="filter-adr-balears/eventos" class="btn"><small>Eventos</small></a>
-    <a routerLink="filter-adr-balears/servicios" class="btn"><small>Servicios</small></a>
-    <a routerLink="news-agenda-list" class="btn"><small>Noticias</small></a>
-    <a routerLink="filter-adr-balears/parcelas" class="btn"><small>Parcelas</small></a>
-  </div>
+  <app-search-the-web *ngIf="showSearch"></app-search-the-web>
 
   <div class='pre-defined-filter-area'>
-    <h4>Sección filtrable (según la <strong>PREGUNTA 2</strong>)</h4>
+    <h4>Sección filtrable (según la <strong>PREGUNTA 02</strong>)</h4>
     <h5>Accesos rápidos según el filtro seleccionado</h5>
     <ul>
       <li><small>Enlace 1 a sección con contenido relacionado</small></li>
@@ -47,66 +32,5 @@
     </ul>
   </div>
 </div>
-
-<!-- <div class='buttons-area'>
-  <button class="btn btn-sm me-2" (click)="accordion.expandAll()">Ver todo</button>
-  <button class="btn btn-sm me-2" (click)="accordion.collapseAll()">Cerrar todo</button>
-</div>
-
-<div ngbAccordion #accordion="ngbAccordion">
-      <div ngbAccordionItem="first" id="solicitarasesoramiento">
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>¿Cómo solicitar asesoramiento?</button>
-        </h2>
-        <div ngbAccordionCollapse>
-          <div ngbAccordionBody>
-            <ng-template>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-              haven't heard of them accusamus labore sustainable VHS.
-            </ng-template>
-          </div>
-        </div>
-      </div>
-      <div ngbAccordionItem="second">
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>Pedir cita, ¿cómo hacerlo?</button>
-        </h2>
-        <div ngbAccordionCollapse>
-          <div ngbAccordionBody>
-            <ng-template>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-              haven't heard of them accusamus labore sustainable VHS.
-            </ng-template>
-          </div>
-        </div>
-      </div>
-      <div ngbAccordionItem="third">
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>Formación</button>
-        </h2>
-        <div ngbAccordionCollapse>
-          <div ngbAccordionBody>
-            <ng-template>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-              haven't heard of them accusamus labore sustainable VHS.
-            </ng-template>
-          </div>
-        </div>
-      </div>
-</div>
-  
-<hr /> -->
 
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>
