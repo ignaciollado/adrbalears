@@ -1,5 +1,5 @@
 <div class="body-main">
-  <ngb-carousel
+<!--   <ngb-carousel
   #carousel
   [interval]="10000"
   [pauseOnHover]="pauseOnHover"
@@ -13,22 +13,24 @@
       </div>
       <div class="carousel-caption">
         <h3>ADR Balears</h3>
-        <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
+        <p>Contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
       </div>
     </ng-template> 
   }
-  </ngb-carousel>
+  </ngb-carousel> -->
+  <app-slider></app-slider>
+
   <app-search-the-web *ngIf="showSearch"></app-search-the-web>
 
   <div class='pre-defined-filter-area'>
     <h4>Sección filtrable (según la <strong>PREGUNTA 02</strong>)</h4>
     <h5>Accesos rápidos según el filtro seleccionado</h5>
     <ul>
-      <li><a routerLink='landing-page/:projectName'>Enlace 1 a sección con contenido relacionado</a></li>
-      <li><a routerLink='landing-page/:projectName'>Enlace 2 a sección con contenido relacionado</a></li>
-      <li><a routerLink='landing-page/:projectName'>Enlace 3 a sección con contenido relacionado</a></li>
-      <li><a routerLink='landing-page/:projectName'>Enlace 4 a sección con contenido relacionado</a></li>
-      <li><a routerLink='landing-page/:projectName'>Enlace 5 a sección con contenido relacionado</a></li>
+      <li><a routerLink='landing-page/:projectName1'>Enlace 1 a sección con contenido relacionado</a></li>
+      <li><a routerLink='landing-page/:projectName2'>Enlace 2 a sección con contenido relacionado</a></li>
+      <li><a routerLink='landing-page/:projectName3'>Enlace 3 a sección con contenido relacionado</a></li>
+      <li><a routerLink='landing-page/:projectName4'>Enlace 4 a sección con contenido relacionado</a></li>
+      <li><a routerLink='landing-page/:projectName5'>Enlace 5 a sección con contenido relacionado</a></li>
     </ul>
   </div>
 </div>

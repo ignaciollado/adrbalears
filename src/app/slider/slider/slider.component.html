@@ -1,4 +1,4 @@
-<div class="slider-container">
+<div [className]="twoColumns ? 'slider-container' : 'slider-container-single' ">
   <ngb-carousel *ngIf="showCustomProject"
   #carousel
   [interval]="10000"
@@ -19,7 +19,7 @@
   }
   </ngb-carousel>
 
-  <div class="slider-link-area">
+  <div class="slider-link-area" *ngIf="displayLinks">
     <h2>Enlaces de interés</h2>
     <ol>
       <li><button class='btn' routerLink="news-agenda-list/4">Líneas de ayuda</button></li>
@@ -30,7 +30,4 @@
     </ol>
     <button class="btn external-site">Abrir portal externo</button>
   </div>
-
-
-
 </div>

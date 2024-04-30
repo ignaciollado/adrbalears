@@ -4,6 +4,7 @@
 
 .area-profile{
    text-align: center;
+   margin-top: 2rem;
    margin-bottom: 2rem;
 }
 
@@ -63,8 +64,15 @@ ol ol {
    color: #fff;
 }
 
-
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 1199px) {
+ 
+ }
+ 
+@media screen and (max-width: 991px) {
+ 
+ }
+ 
+@media screen and (max-width: 767px) {
    .modal-header{
       text-align: center;
       font-weight: bold;
@@ -76,6 +84,8 @@ ol ol {
    h3 {
       color: #fff;
       background-color: #033747;
+      border-radius: 0;
+      padding: .5rem;
    }
    .pop-up-main-ol{
       box-shadow: 0;

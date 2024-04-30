@@ -10,10 +10,13 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
-	@Input({ required: false }) showCustomProject: boolean = true;
+	@Input({ required: false }) showCustomProject: boolean = true
+	@Input({ required: false }) displayLinks: boolean = false
+
   currentLang: string = ""
-	isCollapsed:boolean = true
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/920/500`)
+	isCollapsed: boolean = true
+	twoColumns: boolean = false
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/912/500`)
 
 	paused:boolean = false
 	unpauseOnArrow:boolean = false
@@ -50,8 +53,7 @@ export class SliderComponent {
 			})
 	}
 
-  @ViewChild('carousel', { static: true })
-  carousel: NgbCarousel = new NgbCarousel;
+  @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
 
 
   togglePaused() {

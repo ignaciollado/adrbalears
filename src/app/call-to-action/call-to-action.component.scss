@@ -1,4 +1,4 @@
-.cta-home {
+.cta {
   background-color: #62838e;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -42,7 +42,7 @@ button:hover {
 }
 
 @media screen and (max-width: 795px) {
-  .cta-home {
+  .cta {
     grid-template-columns: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;

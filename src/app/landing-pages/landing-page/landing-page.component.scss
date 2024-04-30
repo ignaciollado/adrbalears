@@ -44,7 +44,7 @@ app-news-list {
 @media screen and (max-width: 767px) {
   .top-landing-page {
     grid-template-columns: 100%;
-    grid-template-areas: "searchtheweb" "tituloslogan";
+    grid-template-areas: "tituloslogan" "searchtheweb";
     margin-bottom: 1rem;
   }
 
