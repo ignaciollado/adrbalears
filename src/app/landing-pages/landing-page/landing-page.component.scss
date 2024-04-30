@@ -1,7 +1,16 @@
 .top-landing-page {
   display: grid;
   grid-template-columns: 70% 30%;
+  grid-template-areas: "tituloslogan searchtheweb";
   margin-bottom: 1rem;
+}
+
+.titulo-slogan {
+  grid-area: tituloslogan;
+}
+
+app-search-the-web {
+  grid-area: searchtheweb;
 }
 
 .landing-page-bottom {
@@ -22,4 +31,25 @@ app-news-list {
   grid-area: contactus;
   background-color: #638691;
   padding: .5rem;
+}
+
+@media screen and (max-width: 1199px) {
+ 
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .top-landing-page {
+    grid-template-columns: 100%;
+    grid-template-areas: "searchtheweb" "tituloslogan";
+    margin-bottom: 1rem;
+  }
+
+  .landing-page-bottom {
+    grid-template-columns: 100%;
+    grid-template-areas: "description" "newslist" "contactus";
+  }
 }
