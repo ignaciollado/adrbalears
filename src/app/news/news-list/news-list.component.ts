@@ -17,7 +17,7 @@ export class NewsListComponent implements OnInit {
   public currentLang: string | undefined
   public newsToDisplay: string | null
 
-  @Input () numberToDisplay = ''
+  @Input () totalNewsToDisplay: string = "4"
 
   constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
     private router: Router ) {
@@ -25,7 +25,6 @@ export class NewsListComponent implements OnInit {
      }
 
   ngOnInit(): void {
-
     switch (this.translateService.currentLang) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -39,7 +38,6 @@ export class NewsListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-
     this.getNoticias(this.currentLang, '11', this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
@@ -50,7 +48,11 @@ export class NewsListComponent implements OnInit {
     objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
     situacionActual = localStorage.getItem("situacionActual")
 
-    console.log ("**" +articlesNumber+ "**")
+    console.log ("**" +articlesNumber+ "**" + this.totalNewsToDisplay + "**")
+
+    if ( !articlesNumber ) {
+      articlesNumber = this.totalNewsToDisplay
+    }
 
     this.articleContent.getAll()
         .subscribe( (resp:any) => {

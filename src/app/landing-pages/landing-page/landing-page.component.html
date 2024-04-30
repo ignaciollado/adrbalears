@@ -1,4 +1,4 @@
-<div class='main-landing-page'>
+<div class='top-landing-page'>
   <div class="titulo-slogan">
     <h2>{{landingMainTitle}}</h2>
     <h3>"Slogan o una prase que represente la esencia del proyecto"</h3>
@@ -8,8 +8,16 @@
 
 <app-slider></app-slider>
 
-<div innerHTML="{{landingDescription}}"></div>
-<app-news-list ></app-news-list>
+<div class="landing-page-bottom">
+  <div class="description" innerHTML="{{landingDescription}}"></div>
+  <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}"></app-news-list>
+  <div class='contact-us'>
+    <h2>Envíanos un mensaje</h2>
+    <form action=''>
+      <input type='text' />
+      <button type="button" class="btn"></button>
+    </form>
+  </div>
+</div>
+
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>
-
-

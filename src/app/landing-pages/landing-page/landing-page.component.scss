@@ -1,5 +1,25 @@
-.main-landing-page {
+.top-landing-page {
   display: grid;
   grid-template-columns: 70% 30%;
   margin-bottom: 1rem;
+}
+
+.landing-page-bottom {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "description contactus" "newslist contactus";
+}
+
+.description {
+  grid-area: description;
+}
+
+app-news-list {
+  grid-area: newslist;
+}
+
+.contact-us {
+  grid-area: contactus;
+  background-color: #638691;
+  padding: .5rem;
 }

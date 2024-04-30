@@ -7,10 +7,6 @@ h2 {
   grid-template-columns: auto auto auto auto;
 }
 
-.col {
-  margin-bottom: 1rem;
-}
-
 .card-img-top {
   min-height: 11rem;
 }
@@ -18,7 +14,7 @@ h2 {
 .card-body {
   grid-area: title;
   background-color: #053747;
-  color: #fff;
+  color: #ffffff;
   min-height: 16rem;
   max-height: 16rem;
   line-height: 1.4285em;
