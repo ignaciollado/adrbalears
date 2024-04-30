@@ -1,8 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ArticleContentService } from '../../services/article-content.service';
 import { genericDataDTO } from '../../model/generic-data.model';
-import { reqArticle } from '../../model/article-data.model';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,9 +10,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
+	@Input({ required: false }) showCustomProject: boolean = true;
   currentLang: string = ""
 	isCollapsed:boolean = true
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/868/500`)
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/920/500`)
 
 	paused:boolean = false
 	unpauseOnArrow:boolean = false

@@ -1,21 +1,36 @@
-<p>slider works!</p>
+<div class="slider-container">
+  <ngb-carousel *ngIf="showCustomProject"
+  #carousel
+  [interval]="10000"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  (slide)="onSlide($event)"
+  >
+  @for (img of images; track img; let i = $index) {
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>ADR Balears</h3>
+        <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
+      </div>
+    </ng-template> 
+  }
+  </ngb-carousel>
 
-<ngb-carousel
-#carousel
-[interval]="10000"
-[pauseOnHover]="pauseOnHover"
-[pauseOnFocus]="pauseOnFocus"
-(slide)="onSlide($event)"
->
-@for (img of images; track img; let i = $index) {
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img [src]="images[0]" alt="Random first slide" />
-    </div>
-    <div class="carousel-caption">
-      <h3>ADR Balears</h3>
-      <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
-    </div>
-  </ng-template> 
-}
-</ngb-carousel>
+  <div class="slider-link-area">
+    <h2>Enlaces de interés</h2>
+    <ol>
+      <li><button class='btn' routerLink="news-agenda-list/4">Líneas de ayuda</button></li>
+      <li><button class='btn' routerLink="news-agenda-list/3">Ayudas/subvenciones</button></li>
+      <li><button class='btn' routerLink="news-agenda-list/2">Bolsa de trabajo</button></li>
+      <li><button class='btn' routerLink="news-agenda-list/1">Formaciones</button></li>
+      <li><button class='btn' routerLink="news-agenda-list/5">Solicitar cita previa</button></li>
+    </ol>
+    <button class="btn external-site">Abrir portal externo</button>
+  </div>
+
+
+
+</div>

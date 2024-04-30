@@ -5,12 +5,12 @@ import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-news-agenda-list',
-  templateUrl: './news-agenda-list.component.html',
-  styleUrl: './news-agenda-list.component.scss'
+  selector: 'app-news-list',
+  templateUrl: './news-list.component.html',
+  styleUrl: './news-list.component.scss'
 })
 
-export class NewsAgendaListComponent implements OnInit {
+export class NewsListComponent implements OnInit {
 
   public noticias: reqArticle[] | undefined
   public noticiasAttributes: attrArticle | undefined

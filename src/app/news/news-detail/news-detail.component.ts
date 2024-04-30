@@ -3,11 +3,11 @@ import { reqArticle, attrArticle } from '../../model/article-data.model';
 import { ArticleContentService } from '../../services/article-content.service';
 import { Router, ActivatedRoute,  } from '@angular/router';
 @Component({
-  selector: 'app-news-agenda-detail',
-  templateUrl: './news-agenda-detail.component.html',
-  styleUrl: './news-agenda-detail.component.scss'
+  selector: 'app-news-detail',
+  templateUrl: './news-detail.component.html',
+  styleUrl: './news-detail.component.scss'
 })
-export class NewsAgendaDetailComponent {
+export class NewsDetailComponent {
 
   public unaNoticia: reqArticle | undefined
   public unaNoticiaAttribute: attrArticle | undefined

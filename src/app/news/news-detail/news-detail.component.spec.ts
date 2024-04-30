@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewsAgendaDetailComponent } from './news-agenda-detail.component';
+import { NewsAgendaDetailComponent } from './news-detail.component';
 
 describe('NewsAgendaDetailComponent', () => {
   let component: NewsAgendaDetailComponent;

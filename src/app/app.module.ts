@@ -17,10 +17,13 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
 import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
 
 import { MatDialogModule} from '@angular/material/dialog';
-import { NewsAgendaListComponent } from './news/news-agenda-list/news-agenda-list.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
+import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
-import { NewsAgendaDetailComponent } from './news/news-agenda-detail/news-agenda-detail.component';
+
 
 import { FilterPipe } from './Pipes/filter.pipe';
 import { CategoryIdPipe } from './Pipes/category-id.pipe';
@@ -38,6 +41,7 @@ import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-
 import { SliderComponent } from './slider/slider/slider.component';
 
 
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -51,10 +55,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     CallToActionComponent,
     PopUpDialogComponent,
-    NewsAgendaListComponent,
+    NewsListComponent,
+    NewsDetailComponent,
+    AgendaDetailComponent,
+    AgendaListComponent,
     InternalServerComponent,
     NotFoundComponent,
-    NewsAgendaDetailComponent,
     HighlightSearchTermPipe,
     WellFormattedLinkPipe,
     FilterPipe,
