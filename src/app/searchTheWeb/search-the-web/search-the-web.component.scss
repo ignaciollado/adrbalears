@@ -1,8 +1,9 @@
 .filter-area {
   grid-area: formulario;
   background-color: #d5d5d5;
-  margin-bottom: .1rem;
   padding: .5rem;
+  margin-left: .5rem;
+  min-height: 30%;
 }
 
 form {
@@ -11,9 +12,25 @@ form {
   gap: .2rem;
 }
 
+.pre-defined-filter-area {
+  grid-area: preDefinedFilter;
+  background-color: #5274f6;
+  min-height: 122.5%;
+  margin-top: .5rem;
+  margin-left: .5rem;
+}
+
+.filter-area, .pre-defined-filter-area {
+  color: #ffffff;
+  padding: .5rem;
+}
+
 button {
   background-color: #053747;
   border-radius: 0;
+}
+
+button, a {
   color: #fff;
 }
 
@@ -32,6 +49,10 @@ input {
   border-radius: 0;
 }
 
+h4, h5 {
+  margin-bottom: 2rem;
+}
+
 .form-control:focus {
   border-color: #053747;
   outline: none;
@@ -39,17 +60,7 @@ input {
   color: #053747;
 }
 
-.pre-defined-filter-area {
-  grid-area: preDefinedFilter;
-  background-color: #5274f6;
-  color: #fff;
-  padding: .5rem;
-}
-
 .ocultar {
   display: none;
 }
 
-a {
-  color: #053747;
-}
