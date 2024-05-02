@@ -22,9 +22,10 @@ h2 {
 }
 
 .card:hover {
-  border: 1px solid #000;
-  border-top-left-radius: var(--bs-card-inner-border-radius);
-  border-top-right-radius: var(--bs-card-inner-border-radius);
+  border: none;
+  /*border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius); */
+  box-shadow: 2px 2px 2px 1px #053747;
 }
 
 @media screen and (max-width: 1199px) {

@@ -7,13 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class LandingPageComponent {
 
-  public showSearch: boolean = true
-  public showLinks: boolean = false
   public totalNewsToDisplay: string = "3"
   public landingNewsTag: string = ""
   public theRightLema: string = "Llamar al 699 000 000 (ejemplo)"
   public theCenterLema: string = "<strong>Llamada a la acción</strong><p>Mensaje que motive al usuario a llamar y botón</p>"
-  public theLeftLema: string = "CTA"
+  public theLeftLema: string = "<h2>CTA</h2>"
 
   @Input({ required: true }) landingMainTitle: string = "Título del proyecto";
   @Input({ required: true }) landingSlogan: string = "\"Slogan o una prase que represente la esencia del proyecto\"";

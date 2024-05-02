@@ -14,10 +14,10 @@
 app-search-the-web {
   grid-area: searchtheweb;
   border: 1px solid olivedrab;
-  background-color: aqua;
+  background-color: red;
 }
 
-.landing-page-bottom {
+.bottom-landing-page {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-areas: "description contactus" "newslist contactus";
