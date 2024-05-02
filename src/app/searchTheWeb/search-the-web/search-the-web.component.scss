@@ -2,8 +2,6 @@
   grid-area: formulario;
   background-color: #d5d5d5;
   padding: .5rem;
-  margin-left: .5rem;
-  min-height: 30%;
 }
 
 form {
@@ -14,10 +12,6 @@ form {
 
 .pre-defined-filter-area {
   grid-area: preDefinedFilter;
-  background-color: #5274f6;
-  min-height: 122.5%;
-  margin-top: .5rem;
-  margin-left: .5rem;
 }
 
 .filter-area, .pre-defined-filter-area {
@@ -30,8 +24,17 @@ button {
   border-radius: 0;
 }
 
+.btn-link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
 button, a {
   color: #fff;
+}
+
+a {
+  margin-right: .5rem;
 }
 
 button:hover {

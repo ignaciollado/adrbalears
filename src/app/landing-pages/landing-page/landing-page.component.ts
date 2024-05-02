@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class LandingPageComponent {
 
   public showSearch: boolean = true
+  public showLinks: boolean = false
   public totalNewsToDisplay: string = "3"
   public landingNewsTag: string = ""
   public theRightLema: string = "Llamar al 699 000 000 (ejemplo)"

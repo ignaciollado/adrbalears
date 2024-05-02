@@ -3,14 +3,18 @@
   grid-template-columns: 70% 30%;
   grid-template-areas: "tituloslogan searchtheweb";
   margin-bottom: 1rem;
+  border: 1px solid green;
 }
 
 .titulo-slogan {
   grid-area: tituloslogan;
+  border: 1px solid blue;
 }
 
 app-search-the-web {
   grid-area: searchtheweb;
+  border: 1px solid olivedrab;
+  background-color: aqua;
 }
 
 .landing-page-bottom {
@@ -31,6 +35,7 @@ app-news-list {
   grid-area: contactus;
   background-color: #638691;
   padding: .5rem;
+  border: 1px solid red;
 }
 
 @media screen and (max-width: 1199px) {

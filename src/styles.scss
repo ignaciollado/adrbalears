@@ -106,13 +106,14 @@ input, select {
 html {
     margin: auto!important;    
     line-height: 1.5rem;
-    font-family: "Montserrat";
     font-size: 14px;
     color: #ffffff;
 }
 
-.container-xxl {
+.container {
     font-family: "Montserrat";
+    --bs-gutter-x: 0!important;
+    --bs-gutter-y: 0!important;
 }
 
 input:focus,

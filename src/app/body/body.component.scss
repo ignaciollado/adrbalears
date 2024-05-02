@@ -1,9 +1,7 @@
 .body-main {
   display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-areas: "carousel formulario" "carousel preDefinedFilter";
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 65% 35%;
+  grid-template-areas: "carousel searcharea";
 }
 
 app-slider {
@@ -11,10 +9,9 @@ app-slider {
 }
 
 app-search-the-web {
-  grid-area: formulario;
+  grid-area: searcharea;
+  background-color: #5274f6;
 }
-
-
 
 button {
   background-color: #053747;

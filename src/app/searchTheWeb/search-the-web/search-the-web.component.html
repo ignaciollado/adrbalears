@@ -2,24 +2,27 @@
   <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
     <input class="form-control" type="text" formControlName="searchTerm" placeholder="Buscar ..." aria-label="Search">
     <button class="btn btn-search" type="submit" (click)="onClick(searchTheWebForm)"
-    [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults"><a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span></button>
+    [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults">
+      <a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span>
+    </button>
     <ng-template #tipContent>Ver los resultados de <b>ADR Balears</b>!</ng-template>
   </form>
-  <a routerLink="filter-adr-balears/formacion" class="btn"><small>Formación</small></a>
-  <a routerLink="filter-adr-balears/ayudas" class="btn"><small>Ayudas</small></a>
-  <a routerLink="filter-adr-balears/eventos" class="btn"><small>Eventos</small></a>
-  <a routerLink="filter-adr-balears/servicios" class="btn"><small>Servicios</small></a>
-  <a routerLink="news-agenda-list" class="btn"><small>Noticias</small></a>
-  <a routerLink="filter-adr-balears/parcelas" class="btn"><small>Parcelas</small></a>
+  <a routerLink="filter-adr-balears/formacion"><small>Formación</small></a>
+  <a routerLink="filter-adr-balears/ayudas"><small>Ayudas</small></a>
+  <a routerLink="filter-adr-balears/eventos"><small>Eventos</small></a>
+  <a routerLink="filter-adr-balears/servicios"><small>Servicios</small></a>
+  <a routerLink="news-agenda-list"><small>Noticias</small></a>
+  <a routerLink="filter-adr-balears/parcelas"><small>Parcelas</small></a>
 </div>
-<div class='pre-defined-filter-area'>
+<div class='pre-defined-filter-area' *ngIf="showLinks">
   <h4>Sección filtrable (según la <strong>PREGUNTA 02</strong>)</h4>
   <h5>Accesos rápidos según el filtro seleccionado</h5>
   <ul>
-    <li><a routerLink='landing-page/:projectName1'>Enlace 1 a sección con contenido relacionado</a></li>
-    <li><a routerLink='landing-page/:projectName2'>Enlace 2 a sección con contenido relacionado</a></li>
-    <li><a routerLink='landing-page/:projectName3'>Enlace 3 a sección con contenido relacionado</a></li>
-    <li><a routerLink='landing-page/:projectName4'>Enlace 4 a sección con contenido relacionado</a></li>
-    <li><a routerLink='landing-page/:projectName5'>Enlace 5 a sección con contenido relacionado</a></li>
+    <li><button class="btn btn-link" (click)="goProject('projectName1')">Enlace 1 a sección con contenido relacionado</button></li>
+    <li><button class="btn btn-link" (click)="goProject('projectName2')">Enlace 2 a sección con contenido relacionado</button></li>
+    <li><button class="btn btn-link" (click)="goProject('projectName3')">Enlace 3 a sección con contenido relacionado</button></li>
+    <li><button class="btn btn-link" (click)="goProject('projectName4')">Enlace 4 a sección con contenido relacionado</button></li>
+    <li><button class="btn btn-link" (click)="goProject('projectName5')">Enlace 5 a sección con contenido relacionado</button></li>
   </ul>
 </div>
+

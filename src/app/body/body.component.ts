@@ -19,7 +19,7 @@ export class BodyComponent {
 	public contenidos: reqArticle[] = []
 	currentLang: string = ""
 	isCollapsed:boolean = true
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/868/500`)
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/200/550.webp`)
 
 	paused:boolean = false
 	unpauseOnArrow:boolean = false

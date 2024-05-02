@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SliderComponent {
 	@Input({ required: false }) showCustomProject: boolean = true
-	@Input({ required: false }) displayLinks: boolean = false
+	@Input({ required: false }) displayLinks: boolean = true
 
   currentLang: string = ""
 	isCollapsed: boolean = true
@@ -29,8 +29,8 @@ export class SliderComponent {
 		private contentService: ArticleContentService,
 		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
-			config.placement = 'bottom';
-			config.triggers = 'hover';
+			config.placement = 'bottom'
+			config.triggers = 'hover'
 		}
 
   ngOnInit() {

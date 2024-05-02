@@ -1,28 +1,6 @@
 <div class="body-main">
-<!--   <ngb-carousel
-  #carousel
-  [interval]="10000"
-  [pauseOnHover]="pauseOnHover"
-  [pauseOnFocus]="pauseOnFocus"
-  (slide)="onSlide($event)"
-  >
-  @for (img of images; track img; let i = $index) {
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="Random first slide" />
-      </div>
-      <div class="carousel-caption">
-        <h3>ADR Balears</h3>
-        <p>Contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
-      </div>
-    </ng-template> 
-  }
-  </ngb-carousel> -->
   <app-slider></app-slider>
-
-  <app-search-the-web *ngIf="showSearch"></app-search-the-web>
-
-  
+  <app-search-the-web></app-search-the-web>
 </div>
 
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>
