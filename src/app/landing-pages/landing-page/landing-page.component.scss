@@ -55,10 +55,12 @@ h2{
 
 .description {
   grid-area: description;
+  margin-right: 1rem;
 }
 
 app-news-list {
   grid-area: newslist;
+  margin-right: 1rem;
 }
 
 .contact-us {
