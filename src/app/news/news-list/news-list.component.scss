@@ -15,16 +15,14 @@ h2 {
   grid-area: title;
   background-color: #053747;
   color: #ffffff;
-  min-height: 17rem;
-  max-height: auto;
+  min-height: 18rem;
+  max-height: 18rem;
   line-height: 1.4285em;
   padding-left: 1rem;
 }
 
 .card:hover {
   border: none;
-  /*border-top-left-radius: var(--bs-card-inner-border-radius);
-  border-top-right-radius: var(--bs-card-inner-border-radius); */
   box-shadow: 2px 2px 2px 1px #053747;
 }
 
