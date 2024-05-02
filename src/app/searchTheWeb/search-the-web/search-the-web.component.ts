@@ -6,7 +6,7 @@ import { genericDataDTO } from '../../model/generic-data.model';
 import { SearchTheWebService } from '../../services/search-the-web.service';
 import { reqArticle } from '../../model/article-data.model';
 import { TranslateService } from '@ngx-translate/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-search-the-web',
   templateUrl: './search-the-web.component.html',
@@ -27,15 +27,18 @@ export class SearchTheWebComponent {
 	pauseOnHover: boolean = true
 	pauseOnFocus: boolean = true
 
-  constructor(private router: Router, config: NgbTooltipConfig,
+    constructor(private route: ActivatedRoute, private router: Router, config: NgbTooltipConfig,
 		private contentService: ArticleContentService,
 		private formBuilder: FormBuilder,
 		public translateService: TranslateService, 
 		private searchService: SearchTheWebService) {
 				// customize default values of tooltips used by this component tree
-				config.placement = 'bottom';
-				config.triggers = 'hover';
-				}
+				config.placement = 'bottom'
+				config.triggers = 'hover'
+      if (this.route.snapshot.paramMap.get('showLinks') === 'no') {
+        this.showLinks = false
+      }
+		}
 
   createForm() {
     this.searchTheWebForm = this.formBuilder.group( {
@@ -80,17 +83,17 @@ export class SearchTheWebComponent {
   }
       
   onSlide(slideEvent: NgbSlideEvent) {
-          if (
-            this.unpauseOnArrow &&
-            slideEvent.paused &&
-            (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
-          ) {
-            this.togglePaused();
-          }
-          if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
-            this.togglePaused();
-          }
+    if (
+        this.unpauseOnArrow &&
+        slideEvent.paused &&
+        (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+      ) {
+        this.togglePaused();
         }
+      if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+        this.togglePaused();
+      }
+  }
       
   onClick(searchTheWebForm: any) {
           let resultCounter = document.getElementById("totalResults")
@@ -115,7 +118,7 @@ export class SearchTheWebComponent {
         }
   
   goProject(projectName: string) {
-    this.router.navigate([`landing-page/:${projectName}`])
+    this.router.navigate([`landing-page/${projectName}/no`])
   }
        
 }

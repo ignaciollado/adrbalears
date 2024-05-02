@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
-  { path: 'landing-page/:projectName', component: LandingPageComponent },
+  { path: 'landing-page/:projectName/:showLinks', component: LandingPageComponent },
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },
