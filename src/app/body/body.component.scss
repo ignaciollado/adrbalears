@@ -6,33 +6,18 @@
   margin-bottom: 3rem;
 }
 
-ngb-carousel {
+app-slider {
   grid-area: carousel;
 }
 
-.carousel-caption h3 {
-  padding: .3rem;
-}
-
-.filter-area {
+app-search-the-web {
   grid-area: formulario;
   background-color: #d5d5d5;
   margin-bottom: .1rem;
   padding: .5rem;
 }
 
-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: .2rem;
-}
 
-.pre-defined-filter-area {
-  grid-area: preDefinedFilter;
-  background-color: #5274f6;
-  color: #fff;
-  padding: .5rem;
-}
 
 button {
   background-color: #053747;

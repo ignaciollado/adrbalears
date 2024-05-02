@@ -39,6 +39,13 @@ input {
   color: #053747;
 }
 
+.pre-defined-filter-area {
+  grid-area: preDefinedFilter;
+  background-color: #5274f6;
+  color: #fff;
+  padding: .5rem;
+}
+
 .ocultar {
   display: none;
 }
