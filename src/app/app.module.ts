@@ -39,6 +39,7 @@ import { TransparencyListComponent } from './transparency/transparency-list/tran
 import { LandingPageComponent } from './landing-pages/landing-page/landing-page.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 import { SliderComponent } from './slider/slider/slider.component';
+import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
 
 
 
@@ -73,7 +74,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TransparencyListComponent,
     LandingPageComponent,
     SearchTheWebComponent,
-    SliderComponent
+    SliderComponent,
+    ContainerNewsAgendaComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

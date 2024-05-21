@@ -19,6 +19,8 @@
   </div>
 
   <div *ngIf="!noticias">
+    <div class="row">
+    <div *ngFor="let item of [1,2,3,4]">
     <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
       <div>
         <img src="https://via.placeholder.com/260x145.png?text=...loading news list" class="card-img-top" alt="loading image">
@@ -33,6 +35,8 @@
         </p>
       </div>
     </div> 
+  </div>
+  </div> 
   </div>
 
 
