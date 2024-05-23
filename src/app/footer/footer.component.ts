@@ -11,6 +11,6 @@ export class FooterComponent {
   constructor() {}
  
   ngOnInit(): void {
-    this.currentLang = "cas"
+    this.currentLang = "cat"
   }
 }

@@ -40,6 +40,7 @@ import { LandingPageComponent } from './landing-pages/landing-page/landing-page.
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 import { SliderComponent } from './slider/slider/slider.component';
 import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
+import { CommonContentViewerComponent } from './common-content-viewer/common-content-viewer.component';
 
 
 
@@ -75,7 +76,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandingPageComponent,
     SearchTheWebComponent,
     SliderComponent,
-    ContainerNewsAgendaComponent
+    ContainerNewsAgendaComponent,
+    CommonContentViewerComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

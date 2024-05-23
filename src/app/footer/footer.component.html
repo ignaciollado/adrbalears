@@ -10,9 +10,6 @@
   </div>
 
   <div class="localizacion-adr-balears">
-<!--     <strong>{{'ADRLine_1' | translate}}</strong><br>
-    <strong>{{'ADRLine_2' | translate}}</strong><br>
-    <strong>{{'ADRLine_3' | translate}}</strong><br> -->
     Plaça de Son Castelló, 1<br>
     07009 - Palma de Mallorca<br>
     Illes Balears<br>
@@ -28,11 +25,19 @@
   </div>
 
   <div class="textos-legales">
-    <div><a routerLink="/accesibilidad/348" aria-label="accesibilidad">{{'Accesibilidad' | translate}}</a></div>
-    <div><a routerLink="/aviso-legal/350" aria-label="aviso legal">{{'AvisoLegal' | translate}}</a></div>
-    <div><a routerLink="/contacta" aria-label="contacta con nosotros">{{'Contacta' | translate}}</a></div>      
-    <div><a routerLink="/politica-de-cookies/349" aria-label="política de cookies">{{'PoliticaCookies' | translate}}</a></div>
-    <div><a routerLink="/politica-de-privacidad/351" aria-label="política de privacidad">{{'PoliticaPrivacidad' | translate}}</a></div>      
+    {{currentLang}}
+    <div *ngIf="currentLang==='cas'"><a routerLink="/accesibilidad/2771" aria-label="accesibilidad">{{'Accesibilidad' | translate}}</a></div>
+    <div *ngIf="currentLang==='cat'"><a routerLink="/accesibilidad/2770" aria-label="accesibilitat">{{'Accesibilitat' | translate}}</a></div>
+
+    <div *ngIf="currentLang==='cas'"><a routerLink="/aviso-legal/2772" aria-label="aviso legal">{{'AvisoLegal' | translate}}</a></div>
+    <div *ngIf="currentLang==='cat'"><a routerLink="/aviso-legal/2773" aria-label="avis legal">{{'AvisoLegal' | translate}}</a></div>
+
+    <div><a routerLink="/contacta" aria-label="contacta con nosotros">{{'Contacta' | translate}}</a></div>
+    <div *ngIf="currentLang==='cas'"><a routerLink="/politica-de-cookies/2775" aria-label="política de cookies">{{'PoliticaCookies' | translate}}</a></div>
+    <div *ngIf="currentLang==='cat'"><a routerLink="/politica-de-cookies/2774" aria-label="politica de cookies">{{'PoliticaCookies' | translate}}</a></div>
+
+    <div *ngIf="currentLang==='cas'"><a routerLink="/politica-de-privacidad/2777" aria-label="política de privacidad">{{'PoliticaPrivacidad' | translate}}</a></div>
+    <div *ngIf="currentLang==='cat'"><a routerLink="/politica-de-privacidad/2776" aria-label="politica de privacitat">{{'PoliticaPrivacidad' | translate}}</a></div>
   </div>
 
 
