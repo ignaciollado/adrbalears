@@ -2,18 +2,20 @@
   <div *ngIf="noticias">
     <div class="row">
     <div *ngFor="let noticia of noticias">
-      <div class="col">
-      <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
+      <!-- <div class="col"> -->
+      
         <div class="card">
           <div>
             <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
           </div>
           <div class="card-body">
-            <h4 class="card-title">{{noticia.attributes.title}}</h4>
+            <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
+              <h4 class="card-title">{{noticia.attributes.title}}</h4>
+            </a>
           </div>
         </div>
-      </a>
-      </div>
+      
+      <!-- </div> -->
     </div>
     </div>
   </div>

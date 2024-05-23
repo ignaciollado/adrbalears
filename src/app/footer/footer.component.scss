@@ -27,9 +27,20 @@ a:hover {
   grid-area: localizacionBottom;
 }
 
+.bi{
+  font-size: 2rem;
+  height: auto;
+  width: 2rem;
+}
+
+.bi::before{
+  prefix: '\F8DB';
+}
+
 .social-media {
   grid-area: socialMedia;
   display: grid;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .textos-legales {
