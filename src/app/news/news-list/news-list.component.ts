@@ -54,7 +54,7 @@ export class NewsListComponent implements OnInit {
       articlesNumber = this.totalNewsToDisplay
     }
 
-    this.articleContent.getAll()
+    this.articleContent.getLastContent()
         .subscribe( (resp:any) => {
           this.noticias = resp.data
           this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)

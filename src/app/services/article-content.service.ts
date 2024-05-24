@@ -14,7 +14,7 @@ export class ArticleContentService {
   private jToken = 'c2hhMjU2OjkwNzpjZjRkMmYwOTkxMGYyZTFiMWY2NGFjYThjZWVjM2VlNmI4ZGRlNGU1OTBjNzNiODA0NzM2NDdhYjUwN2M4NTdm'
   private apiBaseUrlOne = 'https://contents.idi.es/api/index.php/v1/content/articles'
   private apiBaseUrl = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=200' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
-  private apiBaseUrlEverything = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=2200' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
+  private apiBaseUrlEverything = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=1800' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
   private apiBaseUrlLastContent = 'https://contents.idi.es/api/index.php/v1/content/articles?page[offset]=0&page[limit]=20' /* Offset 0 y tamaño de página a 20 artículos */
   /* ---------------------------------------- */
 
@@ -27,6 +27,11 @@ export class ArticleContentService {
   getAll(): Observable<ArticleDTO[]> {
     this.messagesService.add('ArticleService: fetched ALL articles')
     return this.httpClient.get<ArticleDTO[]>(this.apiBaseUrlEverything, { headers: this.headers })
+  }
+
+  getLastContent(): Observable<ArticleDTO[]> {
+    this.messagesService.add('ArticleService: fetched ALL articles')
+    return this.httpClient.get<ArticleDTO[]>(this.apiBaseUrlLastContent, { headers: this.headers })
   }
 
   get(id: string|null): Observable<ArticleDTO> {
