@@ -1,0 +1,69 @@
+.cabecera {
+  width: 100%;
+  height: auto;
+  border: #a3d4db 1px solid;
+}
+.card {
+  display: grid;
+  grid-template-areas: "titulo titulo"
+                       "imagen texto";
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  gap: 1.4rem;
+  border: none;
+}
+.card-head {
+  grid-area: imagen;
+}
+.card-title {
+  grid-area: titulo;
+}
+.card__body {
+  grid-area: texto;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+}
+h2 {
+  border-bottom: #7e7e7c 1px solid;
+}
+.noticia-tag{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 3rem;
+}
+small {
+  font-weight: 800;
+}
+a {
+  font-weight: 300;
+  background-color: #7e7e7c;
+  color: #fff!important;
+  border-radius: 4px;
+  padding: .3rem .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+.card a:hover {
+  opacity: .8;
+  color:#a3d4db!important;
+  text-decoration: underline none #a3d4db 30%!important;
+}
+@media only screen and (max-width: 795px) {
+  .card {
+      grid-template-areas:    'imagen' 
+                              'titulo'
+                              'texto';
+      margin-top: .5rem;
+      margin-bottom: .5rem;                                
+  }
+  .menu-texto-idi{
+      grid-template-columns: repeat(2,1fr);
+  }
+  .menu-ayuda-idi{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}

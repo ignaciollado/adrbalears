@@ -1,5 +1,5 @@
 <div class="detail-news-container" *ngIf="unaNoticiaAttribute">
-  <img src="../../assets/images/cabeceras/cabecera-noticias-textura.webp" alt="Cabecera noticia IDI" title="Cabecera noticia IDI">
+  <img src="../../../assets/images/cabecera-noticia.webp" alt="Cabecera noticia ADR Balears" title="Cabecera noticia ADR Balears">
   
   <div class="card">
       
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
+<small class="barra_meta">{{'ArchivadoEn' | translate}}:</small>
    <div class="noticia-tag">
       <div *ngFor="let tag of unaNoticiaAttribute!.tags | keyvalue">
           <a class="noticia-tag-item" routerLink="/idi-result-list/{{tag.value}}">{{tag.value}}</a>

@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 * {
     margin: 0;
@@ -59,7 +61,7 @@ a {
 }
 
 a:hover {
-    color: #019ee5!important;
+    color: #019ee5;
 }
 
 ins {
@@ -111,7 +113,6 @@ html {
 }
 
 .container {
-    font-family: "Montserrat";
     --bs-gutter-x: 0!important;
     --bs-gutter-y: 0!important;
 }
@@ -123,8 +124,11 @@ a:focus {
   outline: none;
 }
 
-h1, h2 {
-    font-family: "Montaga", serif;
-    font-weight: 400;
-    font-style: normal;
+h1, h2, h3 {
+    font-family: "Instrument Sans", sans-serif;
+}
+
+p {
+
+    font-family: "Inter", sans-serif;
 }
