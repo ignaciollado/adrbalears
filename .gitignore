@@ -40,3 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+Documentacion/ADR Balears - Análisis y definición de la arquitectura de la información.pdf
+Documentacion/etiquetes web adrbalears.docx
