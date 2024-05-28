@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  color: #ec9e37;
+  color: #0098CB;
 }
 
 .logo-adr-balears {
@@ -41,11 +41,13 @@ a:hover {
   grid-area: socialMedia;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  padding-left: 3rem;
 }
 
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
+  padding-left: 5rem;
 }
 
 @media screen and (max-width: 795px) {

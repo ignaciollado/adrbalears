@@ -53,16 +53,28 @@ header {
 }
 
 .button-header-menu {
-  background-color: #019ee5;
+  background-color: #003747;
   border-radius: 0;
   margin-right: .5rem;
   color: #fff;
 }
 
 button:hover {
-  background-color: #ec9e37;
-  border: 1px solid #019ee5;
-  color: #000;
+  background-color: #0098CB;
+  border: 1px solid #003747;
+  color: #fff;
+}
+
+.f-emprender {
+  color: #6B9DA7;
+}
+
+.f-conectar {
+  color: #71B796;
+}
+
+.f-proyectar {
+  color: #ED7448;
 }
 
 @media screen and (max-width: 795px) {

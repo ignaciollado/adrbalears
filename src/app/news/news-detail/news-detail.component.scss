@@ -5,20 +5,18 @@
 }
 .card {
   display: grid;
-  grid-template-areas: "titulo titulo"
-                       "texto texto";
+  grid-template-areas: "titulo texto"
+                       "imagen texto";
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   gap: 1.4rem;
-  border: 1px solid blue;
+  border: none;
 }
 .card-head {
   grid-area: imagen;
-  border: 5px solid red;
 }
 .card-title {
   grid-area: titulo;
-  border: 1px solid green;
 }
 .card__body {
   grid-area: texto;
@@ -26,7 +24,6 @@
   margin-bottom: 4rem;
   line-height: 2.4rem;
   font-size: 1.4rem;
-  border: 1px solid yellow;
   padding-top: 0;
 }
 h2 {
