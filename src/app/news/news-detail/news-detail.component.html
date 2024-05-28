@@ -10,9 +10,7 @@
       <div class="card__body">
           <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
           <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
-      
-          <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>            
-          
+          <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>
       </div>
 
   </div>
