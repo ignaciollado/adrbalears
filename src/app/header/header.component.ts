@@ -1,7 +1,7 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, inject, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 import * as CookieConsent from 'vanilla-cookieconsent';
 
 @Component({
@@ -11,10 +11,11 @@ import * as CookieConsent from 'vanilla-cookieconsent';
 })
 export class HeaderComponent {
 
-constructor( private router: Router ) {}
+constructor( public translate: TranslateService, private router: Router ) {}
     
 private offcanvasService = inject(NgbOffcanvas);
-  ngAfterViewInit(): void{
+
+ngAfterViewInit(): void{
     CookieConsent.run({
       categories: {
           necessary: {
@@ -117,5 +118,11 @@ sedeElectronica(): void {
 scroll(el: string) {
     console.log (window.innerHeight, window.innerWidth)
 }
+
+switchLanguage( lang:string ) {
+    this.translate.use(lang)
+    localStorage.setItem('preferredLang', lang)
+    location.reload()
+  }
 
 }

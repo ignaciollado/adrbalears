@@ -25,7 +25,8 @@ export class NewsListComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    switch (this.translateService.currentLang) {
+   
+    switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
         break
@@ -42,13 +43,12 @@ export class NewsListComponent implements OnInit {
   }
 
   getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: any) {
+
     let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
-    /* Obtiene el perfíl del usuario */
+    /* Obtiene el perfíl del usuario según el cuestionario 'Personalice su experiencia' */
     interesadoEn = localStorage.getItem("interesadoEn")
     objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
     situacionActual = localStorage.getItem("situacionActual")
-
-    console.log ("**" +articlesNumber+ "**" + this.totalNewsToDisplay + "**")
 
     if ( !articlesNumber ) {
       articlesNumber = this.totalNewsToDisplay

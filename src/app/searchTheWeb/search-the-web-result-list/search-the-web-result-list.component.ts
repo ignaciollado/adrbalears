@@ -22,7 +22,8 @@ export class SearchTheWebResultListComponent {
   ngOnInit(): void {
    this.searchTerm = this.route.snapshot.paramMap.get('searchTerm')
 
-   switch (this.translateService.currentLang) {
+   console.log (`-${this.translateService.currentLang} - ${localStorage.getItem('preferredLang')}-`)
+   switch (localStorage.getItem('preferredLang')) {
     case 'cat':
       this.currentLang = 'ca-ES'
     break

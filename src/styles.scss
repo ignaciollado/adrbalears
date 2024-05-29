@@ -59,7 +59,7 @@ a {
 }
 
 a:hover {
-    color: #0098CB;
+    color: #0098CB!important;
 }
 
 ins {
@@ -142,9 +142,16 @@ a:focus {
     max-height: 10rem;
 }
   
-
 .card-title:hover {
     color: #0098CB;
-  }
-  
+}
 
+.emprender{
+    background-color:  #6b9da7;
+}
+.conectar{
+    background-color:  #71b796;
+}
+.proyectar{
+    background-color:  #ed7448;
+}

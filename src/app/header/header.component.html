@@ -7,8 +7,8 @@
   </nav>
 
   <nav class="navbar nav-bar-top">
-    <div class="nav-bar-top-language"><button class="btn button-header-menu">cat</button><button class="btn button-header-menu">cas</button></div>
-    <div class="nav-bar-top-sede-elect"><button class="btn button-header-menu" (click)="sedeElectronica()">Sede electrónica</button></div>
+    <div class="nav-bar-top-language"><button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button><button class="btn button-header-menu "#langSelect (click)="switchLanguage('cas')">cas</button></div>
+    <div class="nav-bar-top-sede-elect"><button class="btn button-header-menu" (click)="sedeElectronica()">{{'Sede_Elect' | translate}}</button></div>
   </nav>
 
   <nav class="navbar navbar-expand nav-bar-bottom">
@@ -21,10 +21,10 @@
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button ngbDropdownItem routerLink="about-adr-balears">Quienes somos</button>
+                <button ngbDropdownItem routerLink="about-adr-balears">{{'quienesSomos' | translate}}</button>
                 <button ngbDropdownItem routerLink="news-agenda-list/4">Noticias / Agenda</button>
                 <button ngbDropdownItem>Buscador de puntos de atención</button>
-                <button ngbDropdownItem routerLink="transparency-list">Portal de transparencia</button>
+                <button ngbDropdownItem routerLink="transparency-list">{{'Transparencia' | translate}}</button>
               </div>
             </div>
           </li>
@@ -81,7 +81,7 @@
 
 <ng-template #content let-offcanvas>
 	<div class="offcanvas-header">
-		<div class="offcanvas-title"><strong>ADR Balears</strong><br>
+		<div class="offcanvas-title"><strong>ADR Balears</strong><hr>
     <small>Agència Desenvolupament Regional Balears</small></div>
 		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
 	</div>
@@ -91,10 +91,10 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
           <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">Quienes somos</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'quienesSomos' | translate}}</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="news-agenda-list/4">Noticias / Agenda</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">Transparencia</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
           </div>
         </div>
       </li>
@@ -115,15 +115,15 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potencia tu proyecto</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
+            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button> -->
+            <button ngbDropdownItem class="f-emprender" (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
+            <button ngbDropdownItem class="f-conectar" (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
+            <button ngbDropdownItem class="f-proyectar" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
+<!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
             <li><hr class="dropdown-divider"></li>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button>
+            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button> -->
           </div>
         </div>
       </li>

@@ -29,7 +29,11 @@ button {
 
 .btn-link {
   background-color: transparent;
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+
+.btn-link:hover {
+  color: #0098CB;
 }
 
 button, a {

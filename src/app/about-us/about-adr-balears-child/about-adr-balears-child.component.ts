@@ -32,8 +32,9 @@ export class AboutAdrBalearsChildComponent {
   ) { }
 
     ngOnInit(): void {
-      console.log ("*"+this.childCategory+"*")
-      switch (this.translateService.currentLang) {
+      /* console.log ("*"+this.childCategory+"*") */
+      console.log (`-${this.translateService.currentLang} - ${localStorage.getItem('preferredLang')}-`)
+      switch (localStorage.getItem('preferredLang')) {
         case 'cat':
           this.currentLang = 'ca-ES'
         break
@@ -56,7 +57,7 @@ export class AboutAdrBalearsChildComponent {
           this.childChildCategory = item.data
           this.childChildCategory = this.childChildCategory.filter( ( item : reqCategory ) => item.attributes.published === 1 )
           this.childChildCategory.map ( item => {
-            console.log ( `Parent: ${item.attributes.parent_id.toString()}`, `Parent: ${parentCategory}` )
+           /*  console.log ( `Parent: ${item.attributes.parent_id.toString()}`, `Parent: ${parentCategory}` ) */
             if ( item.attributes.parent_id.toString() === `${parentCategory}`) {
               this.childChildCatMatrixHomeIDI.push(item.attributes.id.toString())
             }
@@ -65,7 +66,7 @@ export class AboutAdrBalearsChildComponent {
     }
 
     getArticulos( currentLanguage:string, childChildCategories: string /* ids de categorías child child */ ) {
-      console.log (".."+childChildCategories+"..")
+     /*  console.log (".."+childChildCategories+"..") */
       this.articleService.getAll() /* Para cada categoría nieta, buscar todos los artículos asociados */
           .subscribe( (resp:any) => {
             this.articulos = resp.data

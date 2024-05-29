@@ -1,3 +1,13 @@
 .card { 
   border: 0;
 }
+
+.card-body {
+  grid-area: title;
+  background-color: transparent;
+  color: #000!important;
+  min-height: 100%;
+  max-height: 100%;
+  line-height: 1.4285em;
+  padding-left: 1rem;
+}
