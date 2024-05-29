@@ -122,6 +122,11 @@ a:focus {
   outline: none;
 }
 
+.card:hover{
+    border: 1px solid #0098CB;
+    border-radius: 0;
+}
+
 .card-body {
     grid-area: title;
     background-color: #003747;
@@ -130,16 +135,16 @@ a:focus {
     max-height: 12rem;
     line-height: 1.4285em;
     padding-left: 1rem;
-  }
+}
 
 .card-img-top {
     min-height: 10rem;
     max-height: 10rem;
-  }
+}
   
 
 .card-title:hover {
-    color: #0098cb;
+    color: #0098CB;
   }
   
 
