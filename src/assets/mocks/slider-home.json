@@ -1,0 +1,68 @@
+[
+  {
+    "slideId": 1,
+    "tagES": "#ibempren",
+    "tagCA": "#ibempren",
+    "projectNameES": "Ibemprèn",
+    "projectNameCA": "Ibemprèn",
+    "projectImg": "https://picsum.photos/id/0/912/500",
+    "projectFase": "emprender",
+    "projectLema": "El lema del proyecto ",
+    "projectDestination": "url destino proyecto"
+  },
+  {
+    "slideId": 2,
+    "tagES": "#emblematicsbalears",
+    "tagCA": "#emblematicsbalears",
+    "projectNameES": "Emblemàtics Balears",
+    "projectNameCA": "Emblemàtics Balears",
+    "projectImg": "https://picsum.photos/id/1/912/500",
+    "projectFase": "conectar",
+    "projectLema": "El lema del proyecto",
+    "projectDestination": "url destino proyecto"
+  },
+  {
+    "slideId": 3,
+    "tagES": "#industrialocalsostenible",
+    "tagCA": "#industrialocalsostenible",
+    "projectNameES": "Industria Local Sostenible",
+    "projectNameCA": "Indústria Local Sostenible",
+    "projectImg": "https://picsum.photos/id/2/912/500",
+    "projectFase": "conectar",
+    "projectLema": "El lema del proyecto ",
+    "projectDestination": "url destino proyecto"
+  },
+  {
+    "slideId": 4,
+    "tagES": "#ibexporta",
+    "tagCA": "#ibexporta",
+    "projectNameES": "Ibexporta",
+    "projectNameCA": "Ibexporta",
+    "projectImg": "https://picsum.photos/id/4/912/500",
+    "projectFase": "proyectar",
+    "projectLema": "El lema del proyecto",
+    "projectDestination": "url destino proyecto "
+  },
+  {
+    "slideId": 5,
+    "tagES": "#loopdisseny",
+    "tagCA": "#loopdisseny",
+    "projectNameES": "LOOP Disseny i Circularitat",
+    "projectNameCA": "LOOP Disseny i Circularitat",
+    "projectImg": "https://picsum.photos/id/5/912/500",
+    "projectFase": "proyectar",
+    "projectLema": "El lema del proyecto",
+    "projectDestination": "url destino proyecto "
+  },
+  {
+    "slideId": 6,
+    "tagES": "#palmainternationalboatshow",
+    "tagCA": "#palmainternationalboatshow",
+    "projectNameES": "Palma International Boat Show",
+    "projectNameCA": "Palma International Boat Show",
+    "projectImg": "https://picsum.photos/id/6/912/500",
+    "projectFase": "proyectar",
+    "projectLema": "El lema del proyecto",
+    "projectDestination": "url destino proyecto "
+  }
+]

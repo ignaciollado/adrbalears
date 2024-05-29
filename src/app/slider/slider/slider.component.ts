@@ -1,7 +1,9 @@
 import { Component, ViewChild, Input } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ArticleContentService } from '../../services/article-content.service';
-import { genericDataDTO } from '../../model/generic-data.model';
+import { SliderHomeService } from '../../services/sliderHome.service';
+import { genericDataDTO } from '../../Models/generic-data.dto';
+import { SliderHomeDTO } from '../../Models/sliderhome.dto';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -16,8 +18,8 @@ export class SliderComponent {
   currentLang: string = ""
 	isCollapsed: boolean = true
 	twoColumns: boolean = false
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/912/500`)
-
+  images = [62, 83, 466, 965, 982, 1043].map((n) => `https://picsum.photos/id/${n}/912/500`)
+	public slides: SliderHomeDTO[] | undefined
 	paused:boolean = false
 	unpauseOnArrow:boolean = false
 	pauseOnIndicator:boolean = false
@@ -26,7 +28,7 @@ export class SliderComponent {
 	genericDataContents: genericDataDTO[] = []
 
   constructor(config: NgbTooltipConfig,
-		private contentService: ArticleContentService,
+		private contentService: ArticleContentService, private slideHomeService: SliderHomeService,
 		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
 			config.placement = 'bottom'
@@ -51,6 +53,8 @@ export class SliderComponent {
 			.subscribe((response:any[]) => {
 				this.genericDataContents = response;
 			})
+
+		this.getHomeSlides()
 	}
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
@@ -76,6 +80,14 @@ export class SliderComponent {
 		if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
 			this.togglePaused();
 		}
+	}
+
+	getHomeSlides() {
+		this.slideHomeService.getAll()
+			.subscribe( (slides: any) => {
+				this.slides = slides
+				this.slides?.forEach( (slide:SliderHomeDTO) => { console.log(slide.slideId, slide.tagCA)})
+			})
 	}
 
 }

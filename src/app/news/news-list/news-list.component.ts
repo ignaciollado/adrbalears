@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { reqArticle, attrArticle } from '../../model/article-data.model';
+import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
 

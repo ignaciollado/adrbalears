@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { reqArticle } from '../../model/article-data.model';
+import { reqArticle } from '../../Models/article-data.dto';
 import { SearchTheWebService } from '../../services/search-the-web.service';
 
 @Component({

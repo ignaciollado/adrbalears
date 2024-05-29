@@ -2,9 +2,9 @@ import { Component, ViewChild, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ArticleContentService } from '../../services/article-content.service';
-import { genericDataDTO } from '../../model/generic-data.model';
+import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SearchTheWebService } from '../../services/search-the-web.service';
-import { reqArticle } from '../../model/article-data.model';
+import { reqArticle } from '../../Models/article-data.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({

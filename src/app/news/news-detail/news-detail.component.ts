@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { reqArticle, attrArticle } from '../../model/article-data.model';
+import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { Router, ActivatedRoute,  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';

@@ -11,20 +11,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.card-img-top {
-  min-height: 11rem;
-}
-
-.card-body {
-  grid-area: title;
-  background-color: #019ee5;
-  color: #ffffff;
-  min-height: 19rem;
-  max-height: 18rem;
-  line-height: 1.4285em;
-  padding-left: 1rem;
-}
-
 @media screen and (max-width: 1199px) {
   .row {
     grid-template-columns: auto auto auto;
@@ -42,7 +28,6 @@ h2 {
     grid-template-columns: auto;
   }
   .card-body {
-
     min-height: 12rem;
     max-height: 12rem;
   }

@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
-import { ArticleDTO, reqArticle, attrArticle } from '../../model/article-data.model';
+import { ArticleDTO, reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { CategoryService } from '../../services/category.service';
-import { Category, reqCategory } from '../../model/category.model';
+import { Category, reqCategory } from '../../Models/category.dto';
 import { MessageService } from '../../services/message.service';
 
 @Component({

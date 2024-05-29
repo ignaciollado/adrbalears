@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
-import { Category, reqCategory } from '../../model/category.model'
-import { OneCategory } from '../../model/oneCategory.model'
+import { Category, reqCategory } from '../../Models/category.dto'
+import { OneCategory } from '../../Models/oneCategory.dto'
 import { ContentService } from '../../services/content.service'
 import { CategoryService } from '../../services/category.service'
 

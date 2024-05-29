@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ArticleContentService } from '../services/article-content.service';
-import { reqArticle } from '../model/article-data.model';
+import { reqArticle } from '../Models/article-data.dto';
 
 @Component({
   selector: 'app-common-content-viewer',

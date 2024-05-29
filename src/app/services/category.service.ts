@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MessageService } from './message.service';
-import { Category } from '../model/category.model';
-import { OneCategory } from '../model/oneCategory.model';
+import { Category } from '../Models/category.dto';
+import { OneCategory } from '../Models/oneCategory.dto';
 
 @Injectable({
   providedIn: 'root'

@@ -12,6 +12,9 @@ form {
 
 .pre-defined-filter-area {
   grid-area: preDefinedFilter;
+  margin-left: 4rem;
+  background-color: #003747;
+
 }
 
 .filter-area, .pre-defined-filter-area {
@@ -20,7 +23,7 @@ form {
 }
 
 button {
-  background-color: #053747;
+  background-color: #003747;
   border-radius: 0;
 }
 
@@ -37,12 +40,6 @@ a {
   margin-right: .5rem;
 }
 
-button:hover {
-  background-color: #ec9e37;
-  border: 1px solid #053747;
-  color: #000;
-}
-
 .buttons-area{
   text-align: center;
   margin-bottom: 0.75rem;
@@ -52,8 +49,8 @@ input {
   border-radius: 0;
 }
 
-h4, h5 {
-  margin-bottom: 2rem;
+ul{
+  list-style: none;
 }
 
 .form-control:focus {

@@ -6,7 +6,7 @@
   [pauseOnFocus]="pauseOnFocus"
   (slide)="onSlide($event)"
   >
-  @for (img of images; track img; let i = $index) {
+  <!-- @for (img of images; track img; let i = $index) {
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
         <img [src]="images[i]" alt="Random slide number {{i}}" title="Random slide number {{i}}"/>
@@ -17,6 +17,20 @@
         <p>contenido específico - {{i}} - (según la <strong>PREGUNTA 01</strong>)</p>
       </div>
     </ng-template> 
+  } -->
+
+  @for (slide of slides; track slide; let i = $index) {
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="slide.projectImg" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/>
+      </div>
+      <div class="carousel-caption">
+        <h3 class={{slide.projectFase}}><a href='{{slide.projectDestination}}'>{{slide.projectNameCA}}</a></h3>
+        <h2 class={{slide.projectFase}}>{{slide.projectLema}} {{slide.projectNameCA}}</h2>
+      </div>
+    </ng-template> 
   }
+
+
   </ngb-carousel>
 </div>

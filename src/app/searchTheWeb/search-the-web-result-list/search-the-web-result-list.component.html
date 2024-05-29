@@ -17,8 +17,13 @@
   </div>
 
   <div *ngIf="!contenidos">
+    <div class="row">
+    <div *ngFor="let item of [1,2,3,4]">
     <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
-      <img src="https://via.placeholder.com/260x145.png?text=... loading result list" class="card-img-top" alt="loading image">
+      <div>
+        <img src="https://via.placeholder.com/260x145.png?text=...loading results list" class="card-img-top" alt="loading image">
+      </div>
+     
       <div class="card-body">
         <h5 class="card-title placeholder-glow">
           <span class="placeholder col-6"></span>
@@ -28,4 +33,6 @@
         </p>
       </div>
     </div> 
+  </div>
+  </div> 
   </div>

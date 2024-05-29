@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ArticleDTO } from '../model/article-data.model';
+import { ArticleDTO } from '../Models/article-data.dto';
 /* import { MessageService } from './message.service'; */
 
 @Injectable({

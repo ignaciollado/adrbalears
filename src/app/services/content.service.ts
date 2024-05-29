@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { genericDataDTO } from '../model/generic-data.model';
-import { ArticleDTO } from '../model/article-data.model';
+import { genericDataDTO } from '../Models/generic-data.dto';
+import { ArticleDTO } from '../Models/article-data.dto';
 import { Observable } from 'rxjs';
 
 @Injectable({

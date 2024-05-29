@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { attrArticle, reqArticle } from '../../model/article-data.model';
+import { attrArticle, reqArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { CategoryService } from '../../services/category.service';
-import { Category, reqCategory } from '../../model/category.model';
+import { Category, reqCategory } from '../../Models/category.dto';
 
 @Component({
   selector: 'app-about-adr-balears-child',

@@ -7,31 +7,8 @@ h2 {
   grid-template-columns: 25% 25% 25% 25%;
 }
 
-.card-img-top {
-  min-height: 11rem;
-}
-
-.card-body {
-  grid-area: title;
-  background-color: #003747;
-  color: #ffffff;
-  min-height: 12rem;
-  max-height: 12rem;
-  line-height: 1.4285em;
-  padding-left: 1rem;
-}
-
 a {
   color: #ffffff;
-}
-
-h4:hover {
-  color: #0098cb;
-  /* box-shadow: 2px 2px 2px 1px #019ee5; */
-}
-
-card:hover {
-  border: 1px solid #0098cb;
 }
 
 @media screen and (max-width: 1199px) {
