@@ -1,10 +1,83 @@
-<h1>{{'agenda' | translate}}</h1>
-<div *ngIf="1">
+<h1>{{'Agenda' | translate}}:</h1>
+
+<h1 class="emprender">{{'#EMPRENDRE' | translate}}</h1>
+<div *ngIf="agendaEmprender">
   <div class="row">
-  <div *ngFor="let item of [1,2,3,4,5,6,7,8]">
+  <div *ngFor="let itemAgendaEmpr of agendaEmprender">
+      <div class="card">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-emprender.webp" alt={{itemAgendaEmpr.attributes.title}} title={{itemAgendaEmpr.attributes.title}} />
+        </div>
+        <div class="card-body">
+          <a [routerLink]="['/news-agenda-detail', itemAgendaEmpr.attributes.alias, itemAgendaEmpr.id]">
+            <h4 class="card-title">{{itemAgendaEmpr.attributes.title}}</h4>
+          </a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+<h1 class="conectar">{{'#CONNECTAR' | translate}}</h1>
+{{agendaConectar?.length}}
+<div *ngIf="agendaConectar?.length">
+  <div class="row">
+  <div *ngFor="let itemAgendaConectar of agendaConectar">
+      <div class="card">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-conectar.webp" alt={{itemAgendaConectar.attributes.title}} title={{itemAgendaConectar.attributes.title}} />
+        </div>
+        <div class="card-body">
+          <a [routerLink]="['/news-agenda-detail', itemAgendaConectar.attributes.alias, itemAgendaConectar.id]">
+            <h4 class="card-title">{{itemAgendaConectar.attributes.title}}</h4>
+          </a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+<h1 class="proyectar">{{'#PROJECTAR' | translate}}</h1>
+{{agendaProyectar?.length}}
+<div *ngIf="agendaProyectar?.length">
+  <div class="row">
+  <div *ngFor="let itemAgendaProyectar of agendaProyectar">
+      <div class="card">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
+        </div>
+        <div class="card-body">
+          <a [routerLink]="['/news-agenda-detail', itemAgendaProyectar.attributes.alias, itemAgendaProyectar.id]">
+            <h4 class="card-title">{{itemAgendaProyectar.attributes.title}}</h4>
+          </a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+<div *ngIf="!agendaConectar">
+  <div class="row">
+  <div *ngFor="let item of [1,2,3,4]">
   <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
     <div>
-      <img src="https://via.placeholder.com/260x145.png?text=...loading agenda events" class="card-img-top" alt="loading image">
+      <img src="../../../assets/images/logo-adrbalears-conectar.webp" class="card-img-top" alt="loading image">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+      </p>
+    </div>
+  </div> 
+</div>
+</div>
+</div>
+<div *ngIf="!agendaProyectar">
+  <div class="row">
+  <div *ngFor="let item of [1,2,3,4]">
+  <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+    <div>
+      <img src="../../../assets/images/logo-adrbalears-proyectar.webp" class="card-img-top" alt="loading image">
     </div>
     <div class="card-body">
       <h5 class="card-title placeholder-glow">

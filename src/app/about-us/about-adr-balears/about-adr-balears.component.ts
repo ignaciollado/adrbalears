@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { Category, reqCategory } from '../../Models/category.dto'
@@ -26,8 +26,8 @@ export class AboutAdrBalearsComponent {
     private router: Router ) { }
 
   ngOnInit(): void {
-
-    switch (this.translateService.currentLang) {
+    console.log (`#${this.translateService.currentLang} # ${localStorage.getItem('preferredLang')}#`)
+    switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
         break

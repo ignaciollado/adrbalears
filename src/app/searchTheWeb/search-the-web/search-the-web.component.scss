@@ -1,7 +1,19 @@
-.filter-area {
+.filter-form {
   grid-area: formulario;
   background-color: #d5d5d5;
   padding: .5rem;
+  height: 20%;
+}
+
+.filter-form-pre-defined {
+  margin-top: 1rem;
+}
+
+.pre-defined-filter-area {
+  grid-area: preDefinedFilter;
+  background-color: #d5d5d5;
+  color: #003747!important;
+  height: 80%;
 }
 
 form {
@@ -10,43 +22,30 @@ form {
   gap: .2rem;
 }
 
-.pre-defined-filter-area {
-  grid-area: preDefinedFilter;
-  margin-left: 4rem;
-  background-color: #003747;
-
+.btn-link {
+  background-color: transparent;
+  color: #fff!important;
+  text-decoration: none;
 }
 
-.filter-area, .pre-defined-filter-area {
+a {
+  margin-right: .5rem;
+  color: #003747!important;
+}
+
+.pre-defined-filter-area {
   color: #ffffff;
   padding: .5rem;
 }
 
 button {
   background-color: #003747;
+  color: #fff;
   border-radius: 0;
 }
 
-.btn-link {
-  background-color: transparent;
-  /* text-decoration: none; */
-}
-
-.btn-link:hover {
-  color: #0098CB;
-}
-
-button, a {
-  color: #fff;
-}
-
-a {
-  margin-right: .5rem;
-}
-
-.buttons-area{
-  text-align: center;
-  margin-bottom: 0.75rem;
+.btn-link:hover, a:hover {
+  color: #0098CB!important;
 }
 
 input {
@@ -55,6 +54,9 @@ input {
 
 ul{
   list-style: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-left: 0;
 }
 
 .form-control:focus {
@@ -66,5 +68,9 @@ ul{
 
 .ocultar {
   display: none;
+}
+
+.emprender, .conectar, .proyectar{
+  margin: 1px;
 }
 
