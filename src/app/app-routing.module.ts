@@ -11,6 +11,7 @@ import { TransparencyListComponent } from './transparency/transparency-list/tran
 import { LandingPageComponent } from './landing-pages/landing-page/landing-page.component';
 import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
 import { CommonContentViewerComponent } from './common-content-viewer/common-content-viewer.component';
+import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-balears.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
   { path: 'landing-page/:projectName/:showLinks', component: LandingPageComponent },
+
+  { path: 'contact-adr-balears', component: ContactAdrBalearsComponent},
 
   { path: 'accesibilidad/:id', component: CommonContentViewerComponent },
   { path: 'aviso-legal/:id', component: CommonContentViewerComponent },

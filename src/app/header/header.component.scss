@@ -61,20 +61,22 @@ header {
 
 button:hover {
   background-color: #0098CB;
-  border: 1px solid #003747;
+ /*  border: 1px solid #003747; */
   color: #fff;
 }
 
-.f-emprender {
-  color: #6B9DA7;
+.fase {
+  color: #fff;
+  padding: 2px;
 }
 
-.f-conectar {
-  color: #71B796;
+.emprender:hover, .conectar:hover, .proyectar:hover{
+  color: #0098C8;
+  background-color: #fff!important;
 }
 
-.f-proyectar {
-  color: #ED7448;
+h5 {
+  margin-bottom:0;
 }
 
 @media screen and (max-width: 795px) {

@@ -1,0 +1,15 @@
+.container-contact{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5rem;
+}
+
+.left-contact {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 795px) {
+  .container-contact {
+    grid-template-columns: 100%;
+  }
+}

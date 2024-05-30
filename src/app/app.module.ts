@@ -41,6 +41,7 @@ import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-
 import { SliderComponent } from './slider/slider/slider.component';
 import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
 import { CommonContentViewerComponent } from './common-content-viewer/common-content-viewer.component';
+import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-balears.component';
 
 
 
@@ -77,7 +78,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchTheWebComponent,
     SliderComponent,
     ContainerNewsAgendaComponent,
-    CommonContentViewerComponent
+    CommonContentViewerComponent,
+    ContactAdrBalearsComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

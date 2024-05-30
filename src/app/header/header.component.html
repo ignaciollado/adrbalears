@@ -23,7 +23,7 @@
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button ngbDropdownItem routerLink="about-adr-balears">{{'quienesSomos' | translate}}</button>
                 <button ngbDropdownItem routerLink="news-agenda-list/4">Noticias / Agenda</button>
-                <button ngbDropdownItem>Buscador de puntos de atención</button>
+                <!-- <button ngbDropdownItem>Buscador de puntos de atención</button> -->
                 <button ngbDropdownItem routerLink="transparency-list">{{'Transparencia' | translate}}</button>
               </div>
             </div>
@@ -32,13 +32,26 @@
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Nuestros Proyectos</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button ngbDropdownItem>Palma International Boat Show</button>
-                <button ngbDropdownItem>Emblemàtics Balers</button>
-                <button ngbDropdownItem>IBempren</button>
-                <button ngbDropdownItem>Industria local sostenible</button>
-                <button ngbDropdownItem>Loop disseny</button>
-                <button ngbDropdownItem>Pa d'aquí</button>
-                <button ngbDropdownItem>más proyectos ...</button>
+                <h5 class="emprender fase">#EMPRENDRE</h5>
+                <button class ="emprender" ngbDropdownItem>IBEMPRENJOVE</button>
+                <button class ="emprender" ngbDropdownItem>IBEMPREN</button>
+                <button class ="emprender" ngbDropdownItem>IBTALENT</button>
+                <button class ="emprender" ngbDropdownItem>IBGESTIÓxecs</button>
+                <button class ="emprender" ngbDropdownItem>IBDIGITALITZACIÓxecs</button>
+                <h5 class="conectar fase">#CONNECTAR</h5>
+                <button class ="conectar" ngbDropdownItem>EMBLEMÀTICS</button>
+                <button class ="conectar" ngbDropdownItem>IBCOMERÇ a escola</button>
+                <button class ="conectar" ngbDropdownItem>PÀ D'AQUÍ</button>
+                <button class ="conectar" ngbDropdownItem>ILS marca garantia</button>
+                <button class ="conectar" ngbDropdownItem>IBSOSTENIBILITATxecs</button>
+                <button class ="conectar" ngbDropdownItem>IBAVALS industria</button>
+                <button class ="conectar" ngbDropdownItem>IBEXPOSAproductelocal</button>
+                <button class ="conectar" ngbDropdownItem>IBRELLEU</button>
+                <h5 class="proyectar fase">#PROJECTAR</h5>
+                <button class ="proyectar" ngbDropdownItem>IBEXPORTAxecs</button>
+                <button class ="proyectar" ngbDropdownItem>LOOP</button>
+                <button class ="proyectar" ngbDropdownItem>INVESTINBALEARICS</button>
+                <button class ="proyectar" ngbDropdownItem>PIBS</button>
               </div>
             </div>
           </li>
@@ -47,9 +60,9 @@
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
               <!--   <button ngbDropdownItem>Quiero asesorarme</button> -->
-                <button class="f-emprender" ngbDropdownItem>Quiero emprender</button>
-                <button class="f-conectar" ngbDropdownItem>Quiero consolidarme</button>
-                <button class="f-proyectar" ngbDropdownItem>Quiero crecer</button>
+                <button class="emprender" ngbDropdownItem>Quiero emprender</button>
+                <button class="conectar" ngbDropdownItem>Quiero consolidarme</button>
+                <button class="proyectar" ngbDropdownItem>Quiero crecer</button>
               <!--   <button ngbDropdownItem>Quiero internacionalizarme</button>
                 <button ngbDropdownItem>Quiero financiarme</button> -->
                <!--  <li><hr class="dropdown-divider"></li>
@@ -62,10 +75,10 @@
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button ngbDropdownItem>Solicitar asesoramiento</button>
-                <button ngbDropdownItem>Solicitar ayudas</button>
-                <button ngbDropdownItem>Solicitar formaciones</button>
-                <button ngbDropdownItem>Pedir cita</button>
+                <button ngbDropdownItem routerLink="contact-adr-balears">Solicitar asesoramiento</button>
+                <button ngbDropdownItem routerLink="contact-adr-balears">Solicitar ayudas</button>
+                <button ngbDropdownItem routerLink="contact-adr-balears">Solicitar formaciones</button>
+                <button ngbDropdownItem routerLink="contact-adr-balears">Pedir cita</button>
               </div>
             </div>
           </li>
@@ -93,7 +106,7 @@
           <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'quienesSomos' | translate}}</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="news-agenda-list/4">Noticias / Agenda</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button>
+            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button> -->
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
           </div>
         </div>
@@ -102,12 +115,26 @@
         <div ngbDropdown class="d-inline-block">
           <button class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Nuestros Proyectos</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Palma International Boat Show</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Emblemàtics Balears</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">IBempren</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Industria local sostenible</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Loop disseny</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Pa d'aquí</button>
+            <h5 class="emprender fase">#EMPRENDRE</h5>
+            <button class ="emprender" ngbDropdownItem>IBEMPRENJOVE</button>
+            <button class ="emprender" ngbDropdownItem>IBEMPREN</button>
+            <button class ="emprender" ngbDropdownItem>IBTALENT</button>
+            <button class ="emprender" ngbDropdownItem>IBGESTIÓxecs</button>
+            <button class ="emprender" ngbDropdownItem>IBDIGITALITZACIÓxecs</button>
+            <h5 class="conectar fase">#CONNECTAR</h5>
+            <button class ="conectar" ngbDropdownItem>EMBLEMÀTICS</button>
+            <button class ="conectar" ngbDropdownItem>IBCOMERÇ a escola</button>
+            <button class ="conectar" ngbDropdownItem>PÀ D'AQUÍ</button>
+            <button class ="conectar" ngbDropdownItem>ILS marca garantia</button>
+            <button class ="conectar" ngbDropdownItem>IBSOSTENIBILITATxecs</button>
+            <button class ="conectar" ngbDropdownItem>IBAVALS industria</button>
+            <button class ="conectar" ngbDropdownItem>IBEXPOSAproductelocal</button>
+            <button class ="conectar" ngbDropdownItem>IBRELLEU</button>
+            <h5 class="proyectar fase">#PROJECTAR</h5>
+            <button class ="proyectar" ngbDropdownItem>IBEXPORTAxecs</button>
+            <button class ="proyectar" ngbDropdownItem>LOOP</button>
+            <button class ="proyectar" ngbDropdownItem>INVESTINBALEARICS</button>
+            <button class ="proyectar" ngbDropdownItem>PIBS</button>
           </div>
         </div>
       </li>
@@ -116,9 +143,9 @@
           <button class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potencia tu proyecto</button>
           <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
             <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button> -->
-            <button ngbDropdownItem class="f-emprender" (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
-            <button ngbDropdownItem class="f-conectar" (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
-            <button ngbDropdownItem class="f-proyectar" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
+            <button ngbDropdownItem class="emprender" (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
+            <button ngbDropdownItem class="conectar" (click)="offcanvas.dismiss('Cross click')">Quiero consolidarme</button>
+            <button ngbDropdownItem class="proyectar" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
 <!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
             <li><hr class="dropdown-divider"></li>
