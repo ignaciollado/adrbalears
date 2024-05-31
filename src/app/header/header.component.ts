@@ -123,6 +123,10 @@ switchLanguage( lang:string ) {
     this.translate.use(lang)
     localStorage.setItem('preferredLang', lang)
     location.reload()
+}
+
+redirectToExternalUrl(externalURL: string) {
+    window.location.href = externalURL;
   }
 
 }

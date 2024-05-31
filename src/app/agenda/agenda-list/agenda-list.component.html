@@ -37,11 +37,11 @@
 </div>
 <h1 class="proyectar">{{'#PROJECTAR' | translate}}</h1>
 {{agendaProyectar?.length}}
-<div *ngIf="agendaProyectar?.length">
+<div *ngIf="!agendaProyectar?.length">
   <div class="row">
   <div *ngFor="let itemAgendaProyectar of agendaProyectar">
       <div class="card">
-        <div>
+        <div> Nada que mostrar
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
         </div>
         <div class="card-body">
