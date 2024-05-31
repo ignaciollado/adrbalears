@@ -28,8 +28,9 @@ export class BodyComponent {
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
 	theLeftLema: string = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
-	theCenterLema: string = "<h1>Llamadas a la acción</h1><p>Mensaje que motive al usuario a conectar a través del formulario más apropiado y botón que redirija al mismo</p>"
-	theRightLema: string = "Solicitar Asesoramiento<br>para mi StartUp"
+	theCenterLema: string = "<h1>Solicita Asesoramiento para tu StartUp</h1>"
+	theRightLema: string = "<h3>Ponte en contacto con nosotros</h3>"
+	
 
   constructor(config: NgbTooltipConfig,
 		private contentService: ArticleContentService,

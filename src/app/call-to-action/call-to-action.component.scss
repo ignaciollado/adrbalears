@@ -1,44 +1,50 @@
 .cta {
-  background-color: #62838e;
+  background-color: #003747;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 100%;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding: .2rem;
 }
 
 .cta-left, .cta-center {
-  background-color: #faa723;
-  padding: 2rem;
+  background-color: #003747;
+  color: #fff;
+  /* padding: 2rem; */
+}
+
+.cta-center {
+  text-align: center;
 }
 
 .cta-left {
-  border-left: 15px solid #003747;
+  background-color: #003747;
+  color: #fff;
 }
 
-.cta-center h2{
+/* .cta-center h2{
   box-shadow: none;
 }
-
+ */
 .cta-right {
-  background-color: #0098CB;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background-color: #003747;
+  color: #fff;
+/*   padding-left: 1rem;
+  padding-right: 1rem; */
 }
 
-.cta-right > button {
+.cta-right > span {
   margin: 0;
   position: relative;
-  top: 35%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  top: 20%;
+ /*  padding-left: 1rem;
+  padding-right: 1rem; */
   font-size: .8rem;
   font-weight: bolder;
 }
 
-button:hover {
-  background-color: #ec9e37;
-  border: 1px solid #019ee5;
-  color: #000;
+div:hover, a:hover {
+  background-color: #019ee5;
 }
 
 @media screen and (max-width: 795px) {

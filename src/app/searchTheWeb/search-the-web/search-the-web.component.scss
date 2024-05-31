@@ -1,8 +1,10 @@
+
+
 .filter-form {
   grid-area: formulario;
-  background-color: #d5d5d5;
-  padding: .5rem;
-  height: 20%;
+  
+  margin-bottom: 1rem;
+  padding-left: .5rem;
 }
 
 .filter-form-pre-defined {
@@ -11,9 +13,10 @@
 
 .pre-defined-filter-area {
   grid-area: preDefinedFilter;
-  background-color: #d5d5d5;
+  background-color: transparent;
   color: #003747!important;
   height: 80%;
+  padding-left: .5rem;
 }
 
 form {
@@ -31,11 +34,6 @@ form {
 a {
   margin-right: .5rem;
   color: #003747!important;
-}
-
-.pre-defined-filter-area {
-  color: #ffffff;
-  padding: .5rem;
 }
 
 button {
@@ -70,7 +68,7 @@ ul{
   display: none;
 }
 
-.emprender, .conectar, .proyectar{
+.emprender-bck, .conectar-bck, .proyectar-bck{
   margin: 1px;
 }
 

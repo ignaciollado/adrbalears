@@ -42,6 +42,9 @@ import { SliderComponent } from './slider/slider/slider.component';
 import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
 import { CommonContentViewerComponent } from './common-content-viewer/common-content-viewer.component';
 import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-balears.component';
+import { EmprenderComponent } from './boost-your-project/emprender/emprender.component';
+import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.component';
+import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 
 
 
@@ -79,7 +82,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     SliderComponent,
     ContainerNewsAgendaComponent,
     CommonContentViewerComponent,
-    ContactAdrBalearsComponent
+    ContactAdrBalearsComponent,
+    EmprenderComponent,
+    ConsolidarComponent,
+    CrecerComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

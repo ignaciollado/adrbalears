@@ -18,13 +18,21 @@ ngb-carousel {
   grid-area: linkArea;
   text-align: center;
   padding: 1rem;
-  background-color: #053747;
+  background-color: #fff;
   color: #ffffff;
 }
 
-h2{
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+h3 {
+  position: relative;
+  top: -345px;
+}
+
+h2 {
+  position: relative;
+  top: -344px;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  font-size: 1rem;
 }
 
 a {
@@ -49,6 +57,19 @@ ol {
 
 .external-site {
   background-color: #004aad;
+}
+
+.emprender:hover {
+  color: #6b9da7!important;
+  background-color: #fff!important;
+}
+.conectar:hover {
+  color:  #71b796!important;
+  background-color: #fff!important;
+}
+.proyectar:hover {
+  color:  #ed7448!important;
+  background-color: #fff!important;
 }
 
 @media screen and (max-width: 1199px) {

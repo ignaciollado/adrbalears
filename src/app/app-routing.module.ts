@@ -12,6 +12,9 @@ import { LandingPageComponent } from './landing-pages/landing-page/landing-page.
 import { ContainerNewsAgendaComponent } from './container-news-agenda/container-news-agenda.component';
 import { CommonContentViewerComponent } from './common-content-viewer/common-content-viewer.component';
 import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-balears.component';
+import { EmprenderComponent } from './boost-your-project/emprender/emprender.component';
+import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.component';
+import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -21,6 +24,10 @@ const routes: Routes = [
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
   { path: 'landing-page/:projectName/:showLinks', component: LandingPageComponent },
+
+  { path: 'emprender', component: EmprenderComponent },
+  { path: 'consolidar', component: ConsolidarComponent },
+  { path: 'crecer', component: CrecerComponent },
 
   { path: 'contact-adr-balears', component: ContactAdrBalearsComponent},
 

@@ -147,11 +147,36 @@ a:focus {
 }
 
 .emprender{
-    background-color:  #6b9da7!important;
+    color:  #6b9da7!important;
+    background-color: #fff;
 }
 .conectar{
-    background-color:  #71b796!important;
+    color:  #71b796!important;
+    background-color: #fff;
 }
 .proyectar{
+    color:  #ed7448!important;
+    background-color: #fff;
+}
+
+.emprender:hover {
+    background-color: #6b9da7!important;
+    color: #fff!important;
+}
+.conectar:hover {
+    background-color:  #71b796!important;
+    color: #fff!important;
+}
+.proyectar:hover {
+    background-color:  #ed7448!important;
+    color: #fff!important;
+}
+.emprender-bck {
+    background-color:  #6b9da7!important;
+}
+.conectar-bck {
+    background-color:  #71b796!important;
+}
+.proyectar-bck {
     background-color:  #ed7448!important;
 }
