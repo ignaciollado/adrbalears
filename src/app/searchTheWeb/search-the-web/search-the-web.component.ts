@@ -52,7 +52,7 @@ export class SearchTheWebComponent {
       
   ngOnInit() {
     this.createForm()
-    switch (this.translateService.currentLang) {
+    switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
         break

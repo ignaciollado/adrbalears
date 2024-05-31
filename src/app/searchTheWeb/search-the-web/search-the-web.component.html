@@ -2,7 +2,9 @@
   <div class="filter-area"></div>
   <div class="filter-form">
     <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
-      <input class="form-control" type="text" formControlName="searchTerm" placeholder="Buscar ..." aria-label="Search">
+      <input *ngIf="currentLang === 'es-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="Buscar ..." aria-label="Search">
+      <input *ngIf="currentLang === 'ca-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="Cerca ..." aria-label="Search">
+
       <button class="btn btn-search" type="submit" (click)="onClick(searchTheWebForm)"
       [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults">
         <a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span>
@@ -19,7 +21,9 @@
     </div> -->
   </div>
   <div class='pre-defined-filter-area' *ngIf="showLinks">
-    <h5>Enlaces directos:</h5>
+    <h5 *ngIf="currentLang === 'es-ES'">Enlaces directos:</h5>
+    <h5 *ngIf="currentLang === 'ca-ES'">Enllaços directes:</h5>
+
     <ul>
       <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/iemprenjove/3046/356">Ibemprenjove</button></li>
       <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/ibtalent/2956/363">Ibtalent</button></li>
