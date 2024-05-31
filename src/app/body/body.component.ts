@@ -28,7 +28,7 @@ export class BodyComponent {
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
 	theLeftLema: string = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
-	theCenterLema: string = "<h1>Solicita Asesoramiento para tu StartUp</h1>"
+	theCenterLema: string = "<h1>Solicita asesoramiento</h1>"
 	theRightLema: string = "<h3>Ponte en contacto con nosotros</h3>"
 	
 

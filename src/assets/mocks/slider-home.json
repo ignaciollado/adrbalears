@@ -5,7 +5,7 @@
     "tagCA": "#ibempren",
     "projectNameES": "Ibemprèn",
     "projectNameCA": "Ibemprèn",
-    "projectImg": "../assets/images/adrbalears-centrebit.webp",
+    "projectImg": "../assets/images/adrbalears-iempren.webp",
     "projectFase": "emprender",
     "projectLema": "El lema del proyecto ",
     "projectDestination": "url destino proyecto"
@@ -27,7 +27,7 @@
     "tagCA": "#industrialocalsostenible",
     "projectNameES": "Industria Local Sostenible",
     "projectNameCA": "Indústria Local Sostenible",
-    "projectImg": "../assets/images/adrbalears-padaqui.webp",
+    "projectImg": "../assets/images/adrbalears-indus-local-sost.webp",
     "projectFase": "conectar",
     "projectLema": "El lema del proyecto ",
     "projectDestination": "url destino proyecto"
@@ -38,7 +38,7 @@
     "tagCA": "#ibexporta",
     "projectNameES": "Ibexporta",
     "projectNameCA": "Ibexporta",
-    "projectImg": "../assets/images/adrbalears-centrebit.webp",
+    "projectImg": "../assets/images/adrbalears-internacionalitzacio.webp",
     "projectFase": "proyectar",
     "projectLema": "El lema del proyecto",
     "projectDestination": "url destino proyecto "
@@ -60,7 +60,7 @@
     "tagCA": "#palmainternationalboatshow",
     "projectNameES": "Palma International Boat Show",
     "projectNameCA": "Palma International Boat Show",
-    "projectImg": "../assets/images/adrbalears-pibs.jpg",
+    "projectImg": "../assets/images/adrbalears-pibs.webp",
     "projectFase": "proyectar",
     "projectLema": "El lema del proyecto",
     "projectDestination": "url destino proyecto "

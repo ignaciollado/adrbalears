@@ -1,12 +1,11 @@
 <app-header></app-header>
 
 <div class='area-profile' *ngIf="!profileExists">
-	<button class="btn btn-warning" (click)="openHomePopUp(content)">
-		Personalice su experiencia
-	</button>
+	<button *ngIf="currentLang === 'es-ES'" class="btn btn-warning" (click)="openHomePopUp(content)">Personaliza tu experiencia</button>
+	<button *ngIf="currentLang === 'ca-ES'" class="btn btn-warning" (click)="openHomePopUp(content)">Personalitza la teva experiència</button>
 </div>
 
-<ng-template #tipContent>Cunmplimentando este breve formulario<br>podrá fijar sus
+<ng-template #tipContent>Cunmplimentando este breve formulario<br>podrás fijar tus
 	preferencias durante la navegación en nuestro sitio web de <b>ADR Balears</b></ng-template>
 	
 <router-outlet />
@@ -15,16 +14,18 @@
 
 <ng-template #content let-modal>
 	<div class="modal-header">
-		<p><strong>Personalice su experiencia</strong></p>
+		<p *ngIf="currentLang === 'es-ES'"><strong>Personaliza tu experiencia</strong></p>
+		<p *ngIf="currentLang === 'ca-ES'"><strong>Personalitza la teva experiència</strong></p>
+
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
 		<section>
 			<div class = "pop-up-container">
-					<h3>Díganos un poco sobre usted y personalizaremos el contenido del sitio para adaptarlo a sus necesidades:</h3>
+					<h3>Dínos un poco sobre ti y personalizaremos el contenido del sitio para adaptarlo a tus necesidades:</h3>
 					<form [formGroup]="customizeTheWeb" novalidate class="form-inline">
 					<ol class = "pop-up-main-ol">
-							<li><div class="note">¿Cuál describe mejor su situación actual?</div>
+							<li><div class="note">¿Cuál describe mejor tu situación actual?</div>
 									<ol> 
 											<li class="form-check form-switch"><label ><input formControlName="situacionActual" value="sit1" name="situacionActual" class="form-check-input" type="radio"> Pensando en empezar</label></li>
 											<li class="form-check form-switch"><label ><input formControlName="situacionActual" value="sit2" name="situacionActual" class="form-check-input" type="radio"> Emprendedor en fase inicial</label></li>
@@ -32,7 +33,7 @@
 											<li class="form-check form-switch"><label ><input formControlName="situacionActual" value="sit4" name="situacionActual" class="form-check-input" type="radio"> Gestor en una gran empresa</label></li>
 									</ol>
 							</li>
-							<li><div class="note">¿Qué es lo que más le interesa?</div>
+							<li><div class="note">¿Qué es lo que más te interesa?</div>
 									<ol>
 											<li class="form-check form-switch"><label ><input formControlName="interesadoEn" value="int1" name="interesadoEn" class="form-check-input" type="radio"> Obtener financiación</label></li>
 											<li class="form-check form-switch"><label ><input formControlName="interesadoEn" value="int2" name="interesadoEn" class="form-check-input" type="radio"> Expandir mi red</label></li>
@@ -40,7 +41,7 @@
 											<li class="form-check form-switch"><label ><input formControlName="interesadoEn" value="int4" name="interesadoEn" class="form-check-input" type="radio"> Explorar oportunidades de mercado</label></li>
 									</ol>
 							</li>
-							<li><div class="note">¿Cuál es su objetivo principal actual?</div>
+							<li><div class="note">¿Cuál es tu objetivo principal actual?</div>
 									<ol>
 											<li class="form-check form-switch"><label ><input formControlName="objetivoPrincipal" value="obj1" name="objetivoPrincipal" class="form-check-input" type="radio"> Iniciar un negocio</label></li>
 											<li class="form-check form-switch"><label ><input formControlName="objetivoPrincipal" value="obj2" name="objetivoPrincipal" class="form-check-input" type="radio"> Hacer crecer mi negocio</label></li>

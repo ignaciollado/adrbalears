@@ -19,7 +19,7 @@ export class CommonContentViewerComponent {
 
 
     ngOnInit(): void {
-      switch (this.translateService.currentLang) {
+      switch (localStorage.getItem('preferredLang')) {
         case 'cat':
           this.currentLang = 'ca-ES'
         break

@@ -19,6 +19,7 @@ export class AppComponent {
   interesadoEn: UntypedFormControl
   objetivoPrincipal: UntypedFormControl
   customizeTheWeb!: FormGroup
+  currentLang: string | undefined;
   private modalService = inject(NgbModal)
 
   @ViewChild('content') infoDialog = {} as TemplateRef<string>;
@@ -43,6 +44,19 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    switch (localStorage.getItem('preferredLang')) {
+      case 'cat':
+        this.currentLang = 'ca-ES'
+      break
+      case 'cas':
+        this.currentLang = 'es-ES'      
+      break
+      case 'en':
+        this.currentLang = 'en-EN'
+      break
+      default:
+        this.currentLang = 'ca-ES'
+    }
     if (localStorage.getItem('situacionActual') && localStorage.getItem('interesadoEn') && localStorage.getItem('objetivoPrincipal')) {
       this.profileExists = true
     }

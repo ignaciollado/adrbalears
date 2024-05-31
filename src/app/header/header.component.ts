@@ -10,8 +10,24 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+    currentLang: string | undefined;
+constructor( public translate: TranslateService, private router: Router ) { }
 
-constructor( public translate: TranslateService, private router: Router ) {}
+ngOnInit(): void {
+    switch (localStorage.getItem('preferredLang')) {
+      case 'cat':
+        this.currentLang = 'ca-ES'
+      break
+      case 'cas':
+        this.currentLang = 'es-ES'      
+      break
+      case 'en':
+        this.currentLang = 'en-EN'
+      break
+      default:
+        this.currentLang = 'ca-ES'
+    }
+}
     
 private offcanvasService = inject(NgbOffcanvas);
 
@@ -126,7 +142,6 @@ switchLanguage( lang:string ) {
 }
 
 redirectToExternalUrl(externalURL: string) {
-    console.log (externalURL)
     window.open (externalURL, '_blank');
   }
 

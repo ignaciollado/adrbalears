@@ -1,4 +1,4 @@
-footer{
+footer {
   z-index: +9999;
   background-color: #fff;
   opacity: 1;
@@ -55,5 +55,13 @@ a:hover {
     grid-template-columns: 100%;
     grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";
     text-align: center;
+  }
+  .social-media {
+    padding-top: 2rem;
+    padding-left: 0;
+  }
+  .textos-legales {
+    padding-top: 2rem;
+    padding-left: 0;
   }
 }
