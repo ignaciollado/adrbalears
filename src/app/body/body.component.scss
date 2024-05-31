@@ -72,9 +72,13 @@ li a {
 @media screen and (max-width: 795px) {
   .body-main {
     grid-template-columns: 100%;
-    grid-template-areas: "carousel" "formulario" "preDefinedFilter";
+    grid-template-areas: "carousel" "searcharea";
     margin-top: 1rem;
     margin-bottom: 1rem;
+    gap: 2rem;
+  }
+  app-search-the-web {
+    margin-left: 0;
   }
   .filter-area {
     text-align: center;

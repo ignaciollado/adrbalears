@@ -1,8 +1,5 @@
-
-
 .filter-form {
   grid-area: formulario;
-  
   margin-bottom: 1rem;
   padding-left: .5rem;
 }
@@ -42,8 +39,8 @@ button {
   border-radius: 0;
 }
 
-.btn-link:hover, a:hover {
-  color: #0098CB!important;
+li:hover, a:hover {
+  background-color: #0098CB!important;
 }
 
 input {
@@ -71,4 +68,14 @@ ul{
 .emprender-bck, .conectar-bck, .proyectar-bck{
   margin: 1px;
 }
+
+@media screen and (max-width: 795px) {
+  .filter-form {
+    padding-left: 0;
+  }
+  .pre-defined-filter-area {
+    padding-left: 0;
+  }
+ }
+
 

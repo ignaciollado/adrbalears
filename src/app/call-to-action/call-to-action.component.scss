@@ -10,7 +10,6 @@
 .cta-left, .cta-center {
   background-color: #003747;
   color: #fff;
-  /* padding: 2rem; */
 }
 
 .cta-center {
@@ -22,23 +21,15 @@
   color: #fff;
 }
 
-/* .cta-center h2{
-  box-shadow: none;
-}
- */
 .cta-right {
   background-color: #003747;
   color: #fff;
-/*   padding-left: 1rem;
-  padding-right: 1rem; */
 }
 
 .cta-right > span {
   margin: 0;
   position: relative;
   top: 20%;
- /*  padding-left: 1rem;
-  padding-right: 1rem; */
   font-size: .8rem;
   font-weight: bolder;
 }
@@ -47,14 +38,17 @@ div:hover, a:hover {
   background-color: #019ee5;
 }
 
+a {
+  background-color: #019ee5;
+}
+
 @media screen and (max-width: 795px) {
-  .cta {
+ /*  .cta {
     grid-template-columns: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: .5rem;
   }
-
   .cta-left {
     border-left: none;
   }
@@ -71,5 +65,5 @@ div:hover, a:hover {
     padding: 1rem;
     font-size: .8rem;
     font-weight: bolder;
-  }
+  } */
 }
