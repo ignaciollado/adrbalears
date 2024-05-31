@@ -29,6 +29,9 @@ const routes: Routes = [
   { path: 'consolidar', component: ConsolidarComponent },
   { path: 'crecer', component: CrecerComponent },
 
+  { path: 'detalle-proyecto-adr-balears/:alias/:id/:idMainCat', component: CommonContentViewerComponent },
+  { path: 'detall-projecte-adr-balears/:alias/:id/:idMainCat', component: CommonContentViewerComponent },
+
   { path: 'contact-adr-balears', component: ContactAdrBalearsComponent},
 
   { path: 'accesibilidad/:id', component: CommonContentViewerComponent },

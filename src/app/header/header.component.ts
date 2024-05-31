@@ -126,7 +126,8 @@ switchLanguage( lang:string ) {
 }
 
 redirectToExternalUrl(externalURL: string) {
-    window.location.href = externalURL;
+    console.log (externalURL)
+    window.open (externalURL, '_blank');
   }
 
 }

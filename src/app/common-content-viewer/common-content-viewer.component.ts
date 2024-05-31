@@ -19,7 +19,6 @@ export class CommonContentViewerComponent {
 
 
     ngOnInit(): void {
-
       switch (this.translateService.currentLang) {
         case 'cat':
           this.currentLang = 'ca-ES'
