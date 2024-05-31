@@ -1,0 +1,129 @@
+img {
+  min-width: 100%;
+  height: auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:  'image image'
+                        'title texto';
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: none;
+}
+
+.projects-banner {
+  margin-bottom: 0;
+
+ /*  border-bottom: 3px solid black; */
+}
+
+.idi__service{
+  grid-area: service;
+}
+
+.card__head {
+  grid-area: image;
+  margin-bottom: 4rem;
+}
+
+.card__title {
+  grid-area: title;
+  padding-right: 2rem;
+  font-size: 4rem;
+}
+
+.card__body {
+  grid-area: texto;
+  font-size: 2rem;
+}
+
+.noticia__tag{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 3rem;
+}
+
+small {
+  font-weight: 800;
+}
+
+.enlaces__relacionados {
+  list-style-type: none;
+  padding: 0;
+}
+
+.enlaces__relacionados a {
+  background-color: transparent;
+  color: black!important;
+
+}
+
+.enlaces__relacionados li {
+  margin: 1rem 0 1rem 0;
+}
+
+a {
+  font-weight: 800;
+  background-color: #7e7e7c;
+  color: #fff!important;
+  padding: .3rem .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  border-radius: 5px;
+}
+
+.barra_meta {
+  border-bottom: 5px solid #ededed;
+  display: block;
+  padding: 5px 0 0 0;
+  margin: 0 0 1rem 0;
+}
+
+.noticia-tag {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.noticia-tag-item {
+  flex: 1;
+  margin: 0 .5rem;
+}
+
+@media only screen and (max-width: 795px) {
+  .detail-news-container img {
+      width: 100%;
+      height: auto;
+  }
+  .card {
+    border: none;
+    grid-template-columns: 1fr;
+    grid-template-areas:    'service'
+                              'image' 
+                              'title'
+                              'texto';
+  }
+  .card__title {
+    padding-right: 0;
+    font-size: 2.2rem;
+  }
+  .card__body {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .card__head{
+    margin-bottom: 2rem;
+  }
+  .card__head > img {
+    width: 100%;
+    height: auto;
+  }
+  .card__footer {
+    padding-left: 0;
+  }
+}

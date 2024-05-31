@@ -1,7 +1,22 @@
 <div *ngIf="contenido">
  
-    <h1>{{contenido.attributes.title}}</h1>
+<!--     <h1>{{contenido.attributes.title}}</h1>
     <div class="menu-texto-idi" [innerHTML]='contenido.attributes.text.replaceAll("images/","https://contents.idi.es/images/")'> </div>
+ -->
+    <div class="card">
+    
+        <div class='card__head'>
+          <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
+        </div>
+          
+        <div>
+          <h2 class="card__title">{{contenido.attributes.title}}</h2>
+        </div>
+    
+        <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
+        </div>
+    
+      </div>
  
 </div>
 
