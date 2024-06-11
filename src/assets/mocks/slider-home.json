@@ -7,7 +7,7 @@
     "projectNameCA": "Ibemprèn",
     "projectImg": "../assets/images/adrbalears-iempren.webp",
     "projectFase": "emprender",
-    "projectLema": "El lema del proyecto ",
+    "projectLema": "Et donam les claus per començar el teu negoci",
     "projectDestination": "url destino proyecto"
   },
   {
@@ -18,7 +18,7 @@
     "projectNameCA": "Emblemàtics Balears",
     "projectImg": "../assets/images/adrbalears-emblematics.webp",
     "projectFase": "conectar",
-    "projectLema": "El lema del proyecto",
+    "projectLema": "La història d'un poble s'escriu a través dels comerços",
     "projectDestination": "url destino proyecto"
   },
   {
@@ -29,7 +29,7 @@
     "projectNameCA": "Indústria Local Sostenible",
     "projectImg": "../assets/images/adrbalears-indus-local-sost.webp",
     "projectFase": "conectar",
-    "projectLema": "El lema del proyecto ",
+    "projectLema": "Treballam per tenir més indústries sostenibles, competitives i arrelades",
     "projectDestination": "url destino proyecto"
   },
   {
@@ -40,7 +40,7 @@
     "projectNameCA": "Ibexporta",
     "projectImg": "../assets/images/adrbalears-internacionalitzacio.webp",
     "projectFase": "proyectar",
-    "projectLema": "El lema del proyecto",
+    "projectLema": "Comença a vendre els teus productes a l'exterior",
     "projectDestination": "url destino proyecto "
   },
   {
@@ -51,7 +51,7 @@
     "projectNameCA": "LOOP Disseny i Circularitat",
     "projectImg": "../assets/images/adrbalears-loop.webp",
     "projectFase": "proyectar",
-    "projectLema": "El lema del proyecto",
+    "projectLema": "Connexió, col·laboració, innovació i reflexió al voltant del disseny i materials<br>Més enllà del disseny i els materials",
     "projectDestination": "url destino proyecto "
   },
   {
@@ -62,7 +62,7 @@
     "projectNameCA": "Palma International Boat Show",
     "projectImg": "../assets/images/adrbalears-pibs.webp",
     "projectFase": "proyectar",
-    "projectLema": "El lema del proyecto",
+    "projectLema": "La principal cita nàutica per el sector a nivell internacional",
     "projectDestination": "url destino proyecto "
   }
 ]

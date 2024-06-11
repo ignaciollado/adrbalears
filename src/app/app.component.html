@@ -1,8 +1,8 @@
 <app-header></app-header>
 
-<div class='area-profile' *ngIf="!profileExists">
-	<button *ngIf="currentLang === 'es-ES'" class="btn btn-warning" (click)="openHomePopUp(content)">Personaliza tu experiencia</button>
-	<button *ngIf="currentLang === 'ca-ES'" class="btn btn-warning" (click)="openHomePopUp(content)">Personalitza la teva experiència</button>
+<div class='cta area-profile' *ngIf="!profileExists">
+	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1>Personaliza tu experiencia</h1></a>
+	<a *ngIf="currentLang === 'ca-ES'" (click)="openHomePopUp(content)"><h1>Personalitza la teva experiència</h1></a>
 </div>
 
 <ng-template #tipContent>Cunmplimentando este breve formulario<br>podrás fijar tus

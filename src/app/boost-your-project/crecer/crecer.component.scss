@@ -1,19 +1,40 @@
-.container-contact{
+.container-crecer{
   display: grid;
-  grid-template-columns: 50% 50%;
-  padding: 5rem;
+  grid-template-rows: 100% 100%;
 }
 
-.left-contact {
-  padding-left: 1rem;
+.top-crecer {
+  margin-bottom: 2rem;
+}
+
+.bottom-crecer {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+h2:first-child{
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+h3 > span {
+  font-weight: bold;
+  color: #ed7448;
 }
 
 h1 {
-  color: #fff;
+  background-color: #ed7448;
+  color: #fff!important;
+  padding: .5rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 795px) {
-  .container-contact {
+  .container-crecer {
     grid-template-columns: 100%;
   }
 }

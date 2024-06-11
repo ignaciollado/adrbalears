@@ -2,6 +2,7 @@ header {
   background-color: #d5d5d5;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
+  grid-template-columns: 9% 91%;
   margin-top: .5rem;
   margin-bottom: 3rem;
 }
@@ -30,7 +31,9 @@ header {
 .nav-bar-left-logo {
   grid-area: navLogo;
   padding: .25rem;
+  background-color: #fff;
 }
+
 .nav-bar-top {
   grid-area: navLangSede;
   display: grid;
@@ -61,7 +64,6 @@ header {
 
 button:hover {
   background-color: #0098CB;
- /*  border: 1px solid #003747; */
   color: #fff;
 }
 
@@ -69,11 +71,6 @@ button:hover {
   color: #fff;
   padding: 2px;
 }
-
-/* .emprender:hover, .conectar:hover, .proyectar:hover{
-  color: #0098C8;
-  background-color: #fff!important;
-} */
 
 h5 {
   margin-bottom:0;
