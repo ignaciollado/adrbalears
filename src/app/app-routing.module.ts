@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { BodyComponent } from './body/body.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
@@ -42,7 +41,8 @@ const routes: Routes = [
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },
-  { path: '**', redirectTo: '/404', pathMatch: 'full' }
+  { path: '*', component: BodyComponent },
+ /*  { path: '**', redirectTo: '/404', pathMatch: 'full' } */
 ];
 
 @NgModule({
