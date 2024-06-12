@@ -40,8 +40,9 @@ a:hover {
 .social-media {
   grid-area: socialMedia;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  padding-left: 3rem;
+  grid-template-columns: auto auto auto auto;
+  padding-left: 0;
+
 }
 
 .textos-legales {

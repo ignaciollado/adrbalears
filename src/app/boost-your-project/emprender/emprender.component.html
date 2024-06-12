@@ -21,28 +21,28 @@
   </div>
 </div>
 
-<div class="detail-news-container" *ngIf="unaNoticiaAttribute">
+<!-- <div class="detail-news-container" *ngIf="unaNoticiaAttribute">
 
   <div class="card">
       
       <div class="card__head" *ngIf="unaNoticiaAttribute.images.image_fulltext">
-          <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
+        <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
       </div>
 
       <div class="card__body">
-          <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
-          <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
-          <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>
+        <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
+        <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
+        <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>
       </div>
 
   </div>
-</div>
+</div> -->
 
-<small class="barra_meta">{{'ArchivadoEn' | translate}}:</small>
+<!-- <small class="barra_meta">{{'ArchivadoEn' | translate}}:</small>
    <div class="noticia-tag">
       <div *ngFor="let tag of unaNoticiaAttribute!.tags | keyvalue">
           <a class="noticia-tag-item" routerLink="/idi-result-list/{{tag.value}}">{{tag.value}}</a>
       </div>
   </div>
-  <hr>
+  <hr> -->
 <div *ngIf="!unaNoticiaAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
