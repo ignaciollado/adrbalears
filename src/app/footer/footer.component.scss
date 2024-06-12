@@ -61,12 +61,15 @@ a:hover {
     grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";
     text-align: center;
   }
+  .localizacion-adr-balears {
+    margin-top: 2rem;
+  }
   .social-media {
-    padding-top: 2rem;
-    padding-left: 0;
+    margin-top: 3rem;
   }
   .textos-legales {
-    padding-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     padding-left: 0;
   }
 }

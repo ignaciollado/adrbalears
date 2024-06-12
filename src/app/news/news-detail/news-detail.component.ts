@@ -25,7 +25,7 @@ export class NewsDetailComponent {
     let idCat = this.route.snapshot.paramMap.get('idCat')
 
     console.log ( id, idCat )
-    switch (this.translateService.currentLang) {
+    switch (localStorage.getItem('preferredLang')) {
       case 'ca':
         this.currentLang = 'ca-ES'
         this.subPath = this.currentLang+"/"

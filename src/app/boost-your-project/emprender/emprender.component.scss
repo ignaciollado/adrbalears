@@ -1,4 +1,4 @@
-.container-emprender{
+.container-emprender {
   display: grid;
   grid-template-rows: 100% 100%;
 }
@@ -12,7 +12,7 @@
   grid-template-columns: 15% 85%;
 }
 
-h2:first-child{
+h2:first-child {
   margin-bottom: 3rem;
 }
 
@@ -34,7 +34,20 @@ h1 {
 }
 
 @media screen and (max-width: 795px) {
+  h3 {
+    background-color: #fff;
+    color: #000;
+  }
   .container-emprender {
+    grid-template-rows: 100%;
+  }
+
+  .bottom-emprender{
+    display: grid;
     grid-template-columns: 100%;
+  }
+  .bottom-left-emprender {
+    margin-bottom: 1rem;
+    text-align: center;
   }
 }
