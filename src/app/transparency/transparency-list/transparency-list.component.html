@@ -10,7 +10,7 @@
 <div class="transparency-container" *ngIf="childCatMatrixHomeIDI">
   <div *ngFor="let childCategory of childCatMatrixHomeIDI">
       <div class='transparency-item'>
-          <a [routerLink]="['/idi-transparency-detail', childCategory | getAlias, childCategory | categoryID]">
+          <a [routerLink]="['/transparency-detail', childCategory | getAlias, childCategory | categoryID]">
   
               <figure> 
                   <img src="../../assets/images/transparencia-recuadro-off.webp" alt="{{childCategory | categoryTitle:currentLang}}" title="{{childCategory | categoryTitle:currentLang}}" /> 

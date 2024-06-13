@@ -1,0 +1,24 @@
+<div class="container" *ngIf="articles"> 
+  <div *ngFor="let article of articles">
+    <div class="card border-light">
+    <div>
+      <img class="card-head" src={{article.attributes.images.image_fulltext}} alt={{article.attributes.title}} title={{article.attributes.title}} />
+    </div>
+   
+      <div class="content-detail" [innerHTML]="article.attributes.text"></div>
+  
+  </div>
+  </div>
+</div>
+
+
+<div class="loading-data" *ngIf="loadingData">
+  
+  <button class="alert alert-info" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>&nbsp; 
+    <span *ngIf="currentLang === 'es-ES'" role="status">Cargando datos de transparencia ...</span>
+    <span *ngIf="currentLang === 'ca-ES'" role="status">Carregant dades de transparència ...</span>
+  </button>
+
+</div>
+

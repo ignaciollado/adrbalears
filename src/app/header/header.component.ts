@@ -10,7 +10,8 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    currentLang: string | undefined;
+    currentLang: string ="ca-ES";
+
 constructor( public translate: TranslateService, private router: Router ) { }
 
 ngOnInit(): void {
@@ -31,7 +32,7 @@ ngOnInit(): void {
     
 private offcanvasService = inject(NgbOffcanvas);
 
-ngAfterViewInit(): void{
+ngAfterViewInit(): void {
     CookieConsent.run({
       categories: {
           necessary: {
@@ -42,7 +43,7 @@ ngAfterViewInit(): void{
       },
   
       language: {
-          default: 'cas',
+          default: this.currentLang,
           translations: {
             en: {
                 consentModal: {
@@ -81,13 +82,13 @@ ngAfterViewInit(): void{
                     ]
                 }
             },
-            cas: {
+            'es-ES': {
                 consentModal: {
                     title: 'Usamos cookies',
                     description: 'Descripción de las cookies',
                     acceptAllBtn: 'Aceptar todo',
                     acceptNecessaryBtn: 'Rechazar todo',
-                    showPreferencesBtn: 'Manage Individual preferences'
+                    showPreferencesBtn: 'Gestionar preferencias individuales'
                 },
                 preferencesModal: {
                     title: 'Gestionar cookies',
@@ -98,16 +99,16 @@ ngAfterViewInit(): void{
                     sections: [
                         {
                             title: '¿Qué son las cookies?',
-                            description: 'son archivos de texto con pequeños datos, como un nombre de usuario y contraseña, que se utilizan para identificar tu ordenador cuando utilizas una red. Se utilizan cookies específicas para identificar a usuarios concretos y mejorar su experiencia de navegación por la web. Los datos almacenados en una cookie son creados por el servidor al conectarte. Estos datos se etiquetan con un ID exclusivo para ti y tu ordenador. Cuando la cookie se intercambia entre un ordenador y el servidor de la red, este último lee el ID y sabe qué información específica mostrarte.'
+                            description: 'es un pequeño fichero de texto que se almacena en el navegador cuando se visita cualquier página web. La utilidad que tiene es que la web sea capaz de recordar la visita cuando se vuelva a navegar por esta página. Las galletas suelen almacenar información de carácter técnico, preferencias personales, personalización de contenidos, estadísticas de uso, enlaces en redes sociales, acceso a cuentas de usuario, etc. El objetivo de la galleta es adaptar el contenido de la web al perfil y a las necesidades de cada uno, dado que sin galletas los servicios ofrecidos por cualquier página quedarían disminuidos notablemente.'
                         },
                         {
-                            title: 'Strictly Necessary cookies',
-                            description: 'These cookies are essential for the proper functioning of the website and cannot be disabled.',
+                            title: 'Galletas estrictamente necesarias',
+                            description: 'Estas galletas son necesarias para que el sitio web funcione y no se pueden desactivar en nuestros sistemas. En general, solo se establecen en respuesta a vuestras acciones para una petición de servicios, como configurar las preferencias de privacidad, iniciar la sesión o rellenar formularios. Puede configurar el navegador para bloquear estas galletas o para recibir alertas sobre su uso, pero algunas partes del sitio web no funcionarán. Estas galletas no almacenan ninguna información personal identificable.',
                             //this field will generate a toggle linked to the 'necessary' category
                             linkedCategory: 'necessary'
                         },
                         {
-                            title: 'Performance and Analytics',
+                            title: 'Galletas de rendimiento',
                             description: 'These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you.',
                             linkedCategory: 'analytics'
                         },
@@ -117,7 +118,44 @@ ngAfterViewInit(): void{
                         }
                     ]
                 }
-            }
+            },
+            'ca-ES': {
+                consentModal: {
+                    title: 'Empram galetes',
+                    description: 'Descripció de les galetes',
+                    acceptAllBtn: 'Aceptar-ho tot',
+                    acceptNecessaryBtn: 'Rebutjar tot',
+                    showPreferencesBtn: 'Gestionar preferències individuals'
+                },
+                preferencesModal: {
+                    title: 'Gestionar galetes',
+                    acceptAllBtn: 'Aceptar-ho tot',
+                    acceptNecessaryBtn: 'Rebutjar tot',
+                    savePreferencesBtn: 'Aceptar sel·lecció actual',
+                    closeIconLabel: 'Tanca modal',
+                    sections: [
+                        {
+                            title: 'Qué son les galetes?',
+                            description: 'és un petit fitxer de text que s’emmagatzema al navegador quan es visita qualsevol pàgina web. La utilitat que té és que el web sigui capaç de recordar la visita quan es torni a navegar per aquesta pàgina. Les galetes solen emmagatzemar informació de caràcter tècnic, preferències personals, personalització de continguts, estadístiques d’ús, enllaços a xarxes socials, accés a comptes d’usuari, etc. L’objectiu de la galeta és adaptar el contingut del web al perfil i a les necessitats de cadascú, atès que sense galetes els serveis que ofereix un web quedarien minvats notablement..'
+                        },
+                        {
+                            title: 'StrGaletes estrictament necessàriesictly Necessary cookies',
+                            description: 'Aquestes galetes són necessàries perquè el lloc web funcioni i no es poden desactivar en els nostres sistemes. En general, només s’estableixen en resposta a les vostres accions per a una petició de serveis, com ara configurar les preferències de privadesa, iniciar la sessió o omplir formularis. Podeu configurar el navegador per bloquejar aquestes galetes o per rebre alertes sobre el seu ús, però algunes parts del lloc no funcionaran. Aquestes galetes no emmagatzemen cap informació personal identificable..',
+                            //this field will generate a toggle linked to the 'necessary' category
+                            linkedCategory: 'necessary'
+                        },
+                        {
+                            title: 'Galetes de rendiment',
+                            description: 'These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you.',
+                            linkedCategory: 'analytics'
+                        },
+                        {
+                            title: 'Mes informació',
+                            description: 'For any queries in relation to my policy on cookies and your choices, please <a href="#contact-page">contact us</a>'
+                        }
+                    ]
+                }
+            }            
           }
       }
   });

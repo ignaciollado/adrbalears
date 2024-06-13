@@ -44,6 +44,7 @@ import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-ba
 import { EmprenderComponent } from './boost-your-project/emprender/emprender.component';
 import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.component';
 import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
+import { TransparencyDetailComponent } from './transparency-detail/transparency-detail.component';
 
 
 
@@ -84,7 +85,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactAdrBalearsComponent,
     EmprenderComponent,
     ConsolidarComponent,
-    CrecerComponent
+    CrecerComponent,
+    TransparencyDetailComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

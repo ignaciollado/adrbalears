@@ -20,4 +20,10 @@
  
 </div>
 
-<div *ngIf="!contenido">Getting contents ...</div>
+<div class="loading-data" *ngIf="!contenido">
+  <button class="alert alert-info" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>&nbsp; 
+    <span *ngIf="currentLang === 'es-ES'" role="status">Cargando datos de proyectos ...</span>
+    <span *ngIf="currentLang === 'ca-ES'" role="status">Carregant dades de projectes ...</span>
+  </button>
+</div>
