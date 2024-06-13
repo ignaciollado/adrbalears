@@ -44,7 +44,7 @@ export class BodyComponent {
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
-				this.theLeftLema  = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+				this.theLeftLema  = "Secció variable (segons la <strong>PREGUNTA 03</strong>)"
 				this.theCenterLema = "<h1>Sol·licita assessorament</h1>"
 				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
       break
