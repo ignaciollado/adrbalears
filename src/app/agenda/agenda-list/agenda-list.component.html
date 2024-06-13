@@ -17,7 +17,7 @@
   </div>
   </div>
 </div>
-<div class="no-hay-eventos" *ngIf="agendaEmprender?.length === 0">
+<div class="no-hay-eventos emprender-bck" *ngIf="agendaEmprender?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>
@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<div class="no-hay-eventos" *ngIf="agendaConectar?.length === 0">
+<div class="no-hay-eventos conectar-bck" *ngIf="agendaConectar?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>
@@ -62,7 +62,7 @@
   </div>
   </div>
 </div>
-<div class="no-hay-eventos" *ngIf="agendaProyectar?.length === 0">
+<div class="no-hay-eventos proyectar-bck" *ngIf="agendaProyectar?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>

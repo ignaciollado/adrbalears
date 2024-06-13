@@ -25,18 +25,52 @@
     <h5 *ngIf="currentLang === 'ca-ES'">Enllaços directes:</h5>
 
     <ul>
-      <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/iemprenjove/3046/356">Ibemprenjove</button></li>
-      <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/ibtalent/2956/363">Ibtalent</button></li>
-      <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/idigital-cheques-de-consultoria/3048/353">Ibgestió xecs</button></li>
-      <li class="emprender-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/idigital-cheques-de-consultoria/3048/353">Ibdigitalització xecs</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/Ibcomerç a escola/3035/363">Ibcomerç a l'escola</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/pa-daqui-forn-i-pastisseria/3018/353">Pà d'aquí</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/industria-local-sostenible/3042/353">ILS marca garantia</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/isostenibilitat-cheques-de-consultoria/3052/353">Ibsostenibilitat xecs</button></li>
+      <li class="emprender-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="iemprenjove-es/3046/356">Ibemprenjove</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="iemprenjove/2997/356">Ibemprenjove</button>
+      </li>
+     
+      <li class="emprender-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibtalent-es/3047/363">Ibtalent</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibtalent/3016/363">Ibtalent</button>        
+      </li>
+      <li class="emprender-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibgestio-xecs-es/3048/353">Ibgestió xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibgestio-xecs/3014/353">Ibgestió xecs</button>
+      </li>
+      <li class="emprender-bck">
+        <button *ngIf="currentLang === 'es-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs-es/3048/353">Ibdigitalització xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs/3014/353">Ibdigitalització xecs</button>        
+      </li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola-es/3035/363">Ibcomerç a l'escola</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola/2995/363">Ibcomerç a l'escola</button>
+      </li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="pa-daqui-forn-i-pastisseria-es/3018/353">Pà d'aquí</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="pa-daqui-forn-i-pastisseria/2982/353">Pà d'aquí</button>        
+      </li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="industria-local-sostenible-es/3042/353">ILS marca garantia</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="industria-local-sostenible/2986/353">ILS marca garantia</button>        
+      </li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibsostenibilitat-xecs-es/3052/353">Ibsostenibilitat xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibsostenibilitat-xecs/3050/353">Ibsostenibilitat xecs</button>        
+      </li>
       <li class="conectar-bck"><button class="btn btn-link" (click)="goProject('ibemprenjove')">Ibavals industria</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/exposabyidi/3024/353">Ibexposa producte local</button></li>
-      <li class="conectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/reempresa-cast/3043/379">Ibrelleu</button></li>
-      <li class="proyectar-bck"><button class="btn btn-link" routerLink="detalle-proyecto-adr-balears/idigital-cheques-de-consultoria/3048/353">Ibexporta xecs</button></li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="exposabyidi-es/3024/353">Ibexposa producte local</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="exposabyidi/3003/353">Ibexposa producte local</button>
+      </li>
+      <li class="conectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibrelleu-es/3043/379">Ibrelleu</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibrelleu/2990/379">Ibrelleu</button>
+      </li>
+      <li class="proyectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibexporta-xecs-es/3032/353">Ibexporta xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibexporta-xecs/3012/353">Ibexporta xecs</button>
+      </li>
       <li class="proyectar-bck"><button class="btn btn-link" (click)="goProject('ibtalent')">Invest in Balearics</button></li>
     </ul>
   </div>
