@@ -1,14 +1,14 @@
 <h1>{{'Agenda' | translate}}:</h1>
 
 <h1 class="emprender">{{'#EMPRENDRE' | translate}}</h1>
-<div *ngIf="agendaEmprender">
+<div class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaEmpr of agendaEmprender">
       <div class="card">
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-emprender.webp" alt={{itemAgendaEmpr.attributes.title}} title={{itemAgendaEmpr.attributes.title}} />
         </div>
-        <div class="card-body">
+        <div class="card-body" [innerHTML]="itemAgendaEmpr.attributes.text">
           <a [routerLink]="['/news-agenda-detail', itemAgendaEmpr.attributes.alias, itemAgendaEmpr.id]">
             <h4 class="card-title">{{itemAgendaEmpr.attributes.title}}</h4>
           </a>
@@ -17,9 +17,13 @@
   </div>
   </div>
 </div>
+<div class="no-hay-eventos" *ngIf="agendaEmprender?.length === 0">
+  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+</div>
+
 <h1 class="conectar">{{'#CONNECTAR' | translate}}</h1>
-{{agendaConectar?.length}}
-<div *ngIf="agendaConectar?.length">
+<div class="event-list-container" *ngIf="agendaConectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaConectar of agendaConectar">
       <div class="card">
@@ -35,13 +39,18 @@
   </div>
   </div>
 </div>
+
+<div class="no-hay-eventos" *ngIf="agendaConectar?.length === 0">
+  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+</div>
+
 <h1 class="proyectar">{{'#PROJECTAR' | translate}}</h1>
-{{agendaProyectar?.length}}
-<div *ngIf="!agendaProyectar?.length">
+<div class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaProyectar of agendaProyectar">
       <div class="card">
-        <div> Nada que mostrar
+        <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
         </div>
         <div class="card-body">
@@ -53,6 +62,11 @@
   </div>
   </div>
 </div>
+<div class="no-hay-eventos" *ngIf="agendaProyectar?.length === 0">
+  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+</div>
+
 <div *ngIf="!agendaConectar">
   <div class="row">
   <div *ngFor="let item of [1,2,3,4]">
@@ -72,6 +86,7 @@
 </div>
 </div>
 </div>
+
 <div *ngIf="!agendaProyectar">
   <div class="row">
   <div *ngFor="let item of [1,2,3,4]">

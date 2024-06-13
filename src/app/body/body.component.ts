@@ -49,7 +49,10 @@ export class BodyComponent {
 				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
       break
       case 'cas':
-        this.currentLang = 'es-ES'      
+        this.currentLang = 'es-ES'  
+				this.theLeftLema = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+				this.theCenterLema = "<h1>Solicita asesoramiento</h1>"
+				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"    
       break
       case 'en':
         this.currentLang = 'en-EN'
