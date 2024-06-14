@@ -19,6 +19,10 @@ export class LandingPageComponent {
   public contentID:string | null = ""
   public categoryID:string | null = ""
   public showLinks: string | null = ""
+  public fasePro: string | null = ""
+  public faseNewsToDisplay: string | null = ""
+  public agendaCategory: string | null = ""
+
   public hasExternalSite!: boolean  | null 
   public unaNoticia: reqArticle | undefined
   public theContentAttributes: attrArticle | undefined
@@ -37,6 +41,11 @@ export class LandingPageComponent {
     this.contentID = this.route.snapshot.paramMap.get('contentID')
     this.categoryID = this.route.snapshot.paramMap.get('categoryID')
     this.showLinks = this.route.snapshot.paramMap.get('showLinks')
+    this.fasePro = this.route.snapshot.paramMap.get('fasePro')
+    this.faseNewsToDisplay = this.route.snapshot.paramMap.get('faseNewsToDisplay')
+    this.agendaCategory = this.route.snapshot.paramMap.get('agendaCategory')
+
+
     this.getTheContent(this.contentID)
 
     switch (localStorage.getItem('preferredLang')) {
@@ -67,7 +76,6 @@ export class LandingPageComponent {
   }
 
   openExternalSite ( url: string) {
-    console.log (url)
     window.open(url, "_blank");
   }
 

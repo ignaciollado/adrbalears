@@ -24,7 +24,9 @@ app-slider, .project-link-area{
 }
 
 ol{
+  margin-top: 4rem;
   background-color: transparent;
+  list-style: none;
 }
 
 h2{
@@ -38,6 +40,14 @@ h2{
   background-color: #faa723;
   color: #ffffff;
   width: 90%;
+}
+
+.card__body {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  padding-top: 0;
 }
 
 .external-site {

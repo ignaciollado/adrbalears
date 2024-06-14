@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'transparency-detail/:alias/:id', component: TransparencyDetailComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
-  { path: 'landing-page/:projectName/:contentID/:categoryID/:showLinks', component: LandingPageComponent },
+  { path: 'landing-page/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
 
   { path: 'iemprenjove/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'iemprenjove-es/:id/:idMainCat', component: CommonContentViewerComponent },

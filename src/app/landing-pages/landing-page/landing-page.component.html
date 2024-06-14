@@ -2,18 +2,21 @@
   <div class="titulo-slogan">
     <h1>{{projectName}}</h1>
     <h2>{{theContentAttributes?.slogan}}</h2>
+    <h2 *ngIf="!theContentAttributes?.slogan">loading data ...</h2>
+
   </div>
   <app-search-the-web *ngIf="showLinks"></app-search-the-web>
   <app-slider></app-slider>
   <div class="project-link-area">
-    <h2>Enlaces de interés</h2>
+    <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
+    <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
     <ol>
-      <li><button class='btn' routerLink="news-agenda-list/3">Ayudas / subvenciones</button></li>
-      <li><button class='btn' routerLink="news-agenda-list/3">Financiación</button></li>
-      <li><button class='btn' routerLink="news-agenda-list/2">Bolsa de trabajo</button></li>
-      <li><button class='btn' routerLink="news-agenda-list/1">Formaciones</button></li>
-      <li><button class='btn' routerLink="news-agenda-list/4">Premios y concursos</button></li>
-      <li><button class='btn' routerLink="news-agenda-list/5">Solicitar cita previa</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/3">Ayudas / subvenciones</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/3">Financiación</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/2">Bolsa de trabajo</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/1">Formaciones</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/4">Premios y concursos</button></li>
+      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/5">Solicitar cita previa</button></li>
     </ol>
     <button *ngIf="hasExternalSite" class="btn external-site" (click)="openExternalSite(theContentAttributes!.urlportalexterno)">
       <span *ngIf="currentLang === 'es-ES'">Abrir el <strong>portal externo</strong></span>
@@ -23,8 +26,8 @@
 </div>
 
 <div class="bottom-landing-page">
-  <div class="description" innerHTML="{{theContentAttributes?.text}}"></div>
-  <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}"></app-news-list>
+  <div class="card__body description" innerHTML="{{theContentAttributes?.text}}"></div>
+  <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
     <h2>Envíanos un mensaje</h2>
     <form action=''>

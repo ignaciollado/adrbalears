@@ -18,6 +18,8 @@ export class NewsListComponent implements OnInit {
   public newsToDisplay: string | null
 
   @Input () totalNewsToDisplay: string = "4"
+  @Input () faseNewsToDisplay: string = "11"
+
 
   constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
     private router: Router ) {
@@ -39,7 +41,7 @@ export class NewsListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, '11', this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+    this.getNoticias(this.currentLang, this.faseNewsToDisplay, this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
   getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: any) {
@@ -53,6 +55,8 @@ export class NewsListComponent implements OnInit {
     if ( !articlesNumber ) {
       articlesNumber = this.totalNewsToDisplay
     }
+    
+    console.log (currentCategory, currentLanguage)
 
     this.articleContent.getLastContent()
         .subscribe( (resp:any) => {
