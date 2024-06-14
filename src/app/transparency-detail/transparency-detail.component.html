@@ -1,16 +1,15 @@
-<div class="container" *ngIf="articles"> 
+<div class="detail-transparency-container" *ngIf="articles"> 
   <div *ngFor="let article of articles">
     <div class="card border-light">
     <div>
       <img class="card-head" src={{article.attributes.images.image_fulltext}} alt={{article.attributes.title}} title={{article.attributes.title}} />
     </div>
    
-      <div class="content-detail" [innerHTML]="article.attributes.text"></div>
+      <div class="content-detail" [innerHTML]="article.attributes.text.replaceAll ('images/','https://contents.idi.es/images/')"></div>
   
   </div>
   </div>
 </div>
-
 
 <div class="loading-data" *ngIf="loadingData">
   

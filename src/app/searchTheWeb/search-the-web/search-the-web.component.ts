@@ -117,8 +117,8 @@ export class SearchTheWebComponent {
           } 
         }
   
-  goProject(projectName: string) {
-    this.router.navigate([`landing-page/${projectName}/no`])
+  projectLandingPage(projectName: string, contentID: string, categoryID: string, showLinks: string) {
+    this.router.navigate([`landing-page/${projectName}/${contentID}/${categoryID}/${showLinks}`])
   }
        
 }

@@ -23,6 +23,9 @@ export interface attrArticle {
   created_by_alias: string;
   modified:         Date;
   featured:         number;
+  slogan:           string;
+  hayportal:        boolean;
+  urlportalexterno: string;
   language:         Language;
   hits:             number;
   publish_up:       Date;

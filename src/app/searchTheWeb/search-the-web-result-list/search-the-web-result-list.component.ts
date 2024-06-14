@@ -40,8 +40,10 @@ export class SearchTheWebResultListComponent {
    this.searchService.getArticles()
       .subscribe( (result: any) => {
         this.contenidos = result.data
+        this.contenidos = this.contenidos!.filter( (item : reqArticle) => item.attributes.state === 1 )
         this.contenidos = result.data.filter( (item : reqArticle) => item.attributes.language === `${this.currentLang}`) 
         this.contenidos = this.contenidos!.filter( item => item.attributes.text.toUpperCase().includes(this.searchTerm!.trim().toUpperCase()) )
+
         console.log(this.contenidos, this.searchTerm)
       }, (err) => {
         console.log( err.msg );

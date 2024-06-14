@@ -1,9 +1,9 @@
 <div class='top-landing-page'>
   <div class="titulo-slogan">
-    <h1>{{landingMainTitle}}</h1>
-    <h2>{{landingSlogan}}</h2>
+    <h1>{{projectName}}</h1>
+    <h2>{{theContentAttributes?.slogan}}</h2>
   </div>
-  <app-search-the-web></app-search-the-web>
+  <app-search-the-web *ngIf="showLinks"></app-search-the-web>
   <app-slider></app-slider>
   <div class="project-link-area">
     <h2>Enlaces de interés</h2>
@@ -15,12 +15,15 @@
       <li><button class='btn' routerLink="news-agenda-list/4">Premios y concursos</button></li>
       <li><button class='btn' routerLink="news-agenda-list/5">Solicitar cita previa</button></li>
     </ol>
-    <button class="btn external-site">Abrir el <strong>portal externo</strong></button>
+    <button *ngIf="hasExternalSite" class="btn external-site" (click)="openExternalSite(theContentAttributes!.urlportalexterno)">
+      <span *ngIf="currentLang === 'es-ES'">Abrir el <strong>portal externo</strong></span>
+      <span *ngIf="currentLang === 'ca-ES'">Obrir el <strong>portal extern</strong></span>
+    </button>
   </div>
 </div>
 
 <div class="bottom-landing-page">
-  <div class="description" innerHTML="{{landingDescription}}"></div>
+  <div class="description" innerHTML="{{theContentAttributes?.text}}"></div>
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
     <h2>Envíanos un mensaje</h2>

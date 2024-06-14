@@ -47,7 +47,6 @@ import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { TransparencyDetailComponent } from './transparency-detail/transparency-detail.component';
 
 
-
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

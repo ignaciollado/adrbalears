@@ -66,9 +66,23 @@ button:hover {
   color: #fff;
 }
 
-.fase {
-  color: #fff;
-  padding: 2px;
+.emprender-header {
+  color: #fff!important;
+  background-color: #6b9da7;
+  padding: 4px 4px 4px 8px;
+}
+.conectar-header {
+  color: #fff!important;
+  background-color: #71b796;
+  padding: 4px 4px 4px 8px;
+}
+.proyectar-header {
+  color: #fff!important;
+  background-color: #ed7448;
+  padding: 4px 4px 4px 8px;
+}
+.emprender-header:hover, .conectar-header:hover, .projectar-header:hover {
+  cursor: default;
 }
 
 h5 {
