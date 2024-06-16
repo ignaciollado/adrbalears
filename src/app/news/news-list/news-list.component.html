@@ -1,8 +1,10 @@
   <h1>{{'Noticias' | translate}}:</h1>
   <div *ngIf="noticias">
-    <div class="row">-{{faseNewsToDisplay}}-
+    <span *ngIf="faseNewsToDisplay!=='11'">-{{faseNewsToDisplay}}-</span>
+   
+    <div class="row">
     <div *ngFor="let noticia of noticias">
-      <!-- <div class="col"> -->
+      <div class="col">
       
         <div class="card">
           <div class="card-header">
@@ -15,7 +17,7 @@
           </div>
         </div>
       
-      <!-- </div> -->
+      </div>
     </div>
     </div>
   </div>

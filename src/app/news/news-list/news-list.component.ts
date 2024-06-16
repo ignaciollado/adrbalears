@@ -64,10 +64,17 @@ export class NewsListComponent implements OnInit {
           this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
           this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
           this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
+          console.log (">>>>> ", this.noticias)
+/*           this.noticias.map((item:reqArticle) => {
+            if (item.attributes.state === 1) {
+              console.log ("es uno", this.noticias?.indexOf(item), item.relationships.category.data.id, currentCategory)
+              this.noticias?.splice(this.noticias?.indexOf(item), 1)
+            }
+          })  */
           if (this.newsToDisplay != '9999') {
             this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
-        
+          console.log ("---->", this.noticias)
         } ) 
 
       }

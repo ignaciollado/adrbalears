@@ -1,13 +1,15 @@
 .container-crecer{
   display: grid;
-  grid-template-rows: 100% 100%;
+  grid-template-areas: "topCrecer" "bottomCrecer";
 }
 
 .top-crecer {
+  grid-area: topCrecer;
   margin-bottom: 2rem;
 }
 
 .bottom-crecer {
+  grid-area: bottomCrecer;
   display: grid;
   grid-template-columns: 15% 85%;
 }

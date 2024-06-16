@@ -12,11 +12,11 @@ a {
 }
 
 .card-header {
-  min-height: 12.5rem;
+  min-height: 10.75rem;
   padding: 0;
 }
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1199px) {
   .row {
     grid-template-columns: auto auto auto;
   }
@@ -26,7 +26,7 @@ a {
   .row {
     grid-template-columns: auto auto;
   }
-}
+} */
 
 @media screen and (max-width: 767px) {
   .row {
