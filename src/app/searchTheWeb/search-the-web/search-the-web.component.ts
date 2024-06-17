@@ -126,8 +126,8 @@ export class SearchTheWebComponent {
           } 
         }
   
-  projectLandingPage(projectName: string, contentID: string, categoryID: string, showLinks: string, fasePro: string, newsCategory: string, agendaCategory: string) {
-    this.router.navigate([`landing-page/${projectName}/${contentID}/${categoryID}/${showLinks}/${fasePro}/${newsCategory}/${agendaCategory}`])
+  projectLandingPage(projectName: string, contentID: string, categoryID: string, showLinks: string, faseProCSSClass: string, newsCategory: string, agendaCategory: string) {
+    this.router.navigate([`landing-page/${projectName}/${contentID}/${categoryID}/${showLinks}/${faseProCSSClass}/${newsCategory}/${agendaCategory}`])
   }
        
 }

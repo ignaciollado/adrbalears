@@ -8,25 +8,17 @@ h1 {
 }
 
 a {
-  color: #ffffff;
+  color: #003849;
+}
+
+.card-body a {
+  color: #fff;
 }
 
 .card-header {
   min-height: 10.75rem;
   padding: 0;
 }
-
-/* @media screen and (max-width: 1199px) {
-  .row {
-    grid-template-columns: auto auto auto;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .row {
-    grid-template-columns: auto auto;
-  }
-} */
 
 @media screen and (max-width: 767px) {
   .row {

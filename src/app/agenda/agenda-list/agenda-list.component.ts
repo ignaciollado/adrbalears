@@ -59,7 +59,7 @@ export class AgendaListComponent {
           this.agendaProyectar = this.agenda.filter( (item : reqArticle) => item.relationships.category.data.id === `${categies[2]}`)
 
 
-          console.log (this.agenda)
+          console.log ("agenda: ", this.agenda)
 
         
         } ) 

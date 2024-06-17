@@ -15,11 +15,13 @@ import { ContactAdrBalearsComponent } from './contact-adr-balears/contact-adr-ba
 import { EmprenderComponent } from './boost-your-project/emprender/emprender.component';
 import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.component';
 import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
   { path: 'news-agenda-list/:newsToDisplay', component: ContainerNewsAgendaComponent },
+  { path: 'news-agenda-list-all/:newsToDisplay', component: NewsListComponent },
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'transparency-detail/:alias/:id', component: TransparencyDetailComponent },
@@ -62,6 +64,8 @@ const routes: Routes = [
   { path: 'invest-in-balearics-es/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'pibs/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'pibs-es/:id/:idMainCat', component: CommonContentViewerComponent },
+
+  { path: 'direct-link/:id/:idMainCat', component: CommonContentViewerComponent},
 
   { path: 'emprender', component: EmprenderComponent },
   { path: 'consolidar', component: ConsolidarComponent },

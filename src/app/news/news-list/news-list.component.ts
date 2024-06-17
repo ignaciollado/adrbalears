@@ -41,7 +41,7 @@ export class NewsListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, this.faseNewsToDisplay, this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+    this.getNoticias(this.currentLang, '11', this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
   getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: any) {
@@ -56,27 +56,27 @@ export class NewsListComponent implements OnInit {
       articlesNumber = this.totalNewsToDisplay
     }
     
-    this.articleContent.getLastContent()
+    this.articleContent.getAll()
         .subscribe( (resp:any) => {
           this.noticias = resp.data
-          this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
-          console.log (">>>>> ", this.noticias, currentLanguage, currentCategory)
-          this.noticias.map((item:reqArticle) => {
+          console.log("noticias 1: ", this.noticias)
+          this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
+          this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
+          this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
+          console.log("noticias 2: ", this.noticias)
+         /*  this.noticias.map((item:reqArticle) => {
             if (item.attributes.state === 1) {
-              console.log ("es uno", this.noticias?.indexOf(item), item.attributes.state)
               this.noticias?.splice(this.noticias?.indexOf(item), 1)
             }
-          })
-          this.noticias.map((item:reqArticle) => {
+          }) */
+          /* this.noticias.map((item:reqArticle) => {
             if (item.relationships.category.data.id !== currentCategory) {
-              console.log ("categoría ", this.noticias?.indexOf(item), item.relationships.category.data.id, currentCategory)
               this.noticias?.splice(this.noticias?.indexOf(item), 1)
             }
-          })           
+          })       */     
           if (this.newsToDisplay != '9999') {
             this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
-          console.log ("---->", this.noticias)
         } ) 
 
       }

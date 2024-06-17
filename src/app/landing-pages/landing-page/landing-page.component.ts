@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LandingPageComponent {
 
-  public totalNewsToDisplay: string = "3"
+  public totalNewsToDisplay: string = "4"
   public landingNewsTag: string = ""
   public theRightLema: string = ""
   public theCenterLema: string = "<strong>Llamada a la acción</strong><p>Mensaje que motive al usuario a llamar y botón</p>"
@@ -23,7 +23,15 @@ export class LandingPageComponent {
   public faseNewsToDisplay: string | null = ""
   public agendaCategory: string | null = ""
 
-  public hasExternalSite!: boolean  | null 
+  public hasExternalLink1!: boolean  | null
+  public hasExternalLink2!: boolean  | null
+  public hasExternalLink3!: boolean  | null
+  public hasExternalLink4!: boolean  | null
+  public hasExternalLink5!: boolean  | null
+  public hasExternalLink6!: boolean  | null
+  public hasExternalSite!: boolean  | null
+  public hasExternalBackoffice!: boolean  | null
+
   public unaNoticia: reqArticle | undefined
   public theContentAttributes: attrArticle | undefined
   currentLang: string = ""
@@ -73,10 +81,46 @@ export class LandingPageComponent {
     this.getNoticia.get(id)
       .subscribe( (resp: any) => {
         this.theContentAttributes = resp.data.attributes
-        if ( Object.keys(resp.data.attributes.hayportal)[0] === 'true') {
+        if ( resp.data.attributes.idcontenidoenlaceinteresuno.includes('https://')) {
+          this.hasExternalLink1 = true
+        } else {
+          this.hasExternalLink1 = false
+        }
+        if ( resp.data.attributes.idcontenidoenlaceinteresdos.includes('https://')) {
+          this.hasExternalLink2 = true
+        } else {
+          this.hasExternalLink2 = false
+        }
+        if ( resp.data.attributes.idcontenidoenlaceinterestres.includes('https://')) {
+          this.hasExternalLink3 = true
+        } else {
+          this.hasExternalLink3 = false
+        }
+        if ( resp.data.attributes.idcontenidoenlaceinterescuatro.includes('https://')) {
+          this.hasExternalLink4 = true
+        } else {
+          this.hasExternalLink4 = false
+        }
+        if ( resp.data.attributes.idcontenidoenlaceinterescinco.includes('https://')) {
+          this.hasExternalLink5 = true
+        } else {
+          this.hasExternalLink5 = false
+        }
+        if ( resp.data.attributes.idcontenidoenlaceinteresseis.includes('https://')) {
+          this.hasExternalLink6 = true
+        } else {
+          this.hasExternalLink6 = false
+        }
+
+        if ( Object.keys(resp.data.attributes.tieneportal)[0] === 'true') {
           this.hasExternalSite = true
         } else {
           this.hasExternalSite = false
+        }
+        if ( Object.keys(resp.data.attributes.tienebackoffice)[0] === 'true') {
+          this.hasExternalBackoffice = true
+        } else {
+          this.hasExternalBackoffice = false
         }
       }) 
   }

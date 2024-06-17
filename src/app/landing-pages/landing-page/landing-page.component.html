@@ -11,13 +11,34 @@
     <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
     <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
     <ol>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/3">iemprėnjove JES</button></li>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/3">iemprėnjove JEA</button></li>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/2">iemprėnjove JEP</button></li>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/1">Càtedra iemprènjove</button></li>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/4">Premis iemprėnjove</button></li>
-      <li><button class='btn {{fasePro}}' routerLink="news-agenda-list/5">Premis iemprėn-UIB</button></li>
-      <li><button class='btn {{fasePro}}' (click)="openExternalSite('https://app.iemprenjove.es/login')">Login</button></li>
+      <li>
+        <button *ngIf="hasExternalLink1" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresuno)">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
+        <button *ngIf="!hasExternalLink1" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresuno}}/{{theContentAttributes?.idcontenidoenlaceinteresuno}}">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
+      </li>
+      
+      <li>
+        <button *ngIf="hasExternalLink2" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresdos)">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
+        <button *ngIf="!hasExternalLink2" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresdos}}/{{theContentAttributes?.idcontenidoenlaceinteresdos}}">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
+      </li>
+      <li>
+        <button *ngIf="hasExternalLink3" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterestres)">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
+        <button *ngIf="!hasExternalLink3" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterestres}}/{{theContentAttributes?.idcontenidoenlaceinterestres}}">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
+      </li>
+      <li>
+        <button *ngIf="hasExternalLink4" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescuatro)">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
+        <button *ngIf="!hasExternalLink4" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescuatro}}/{{theContentAttributes?.idcontenidoenlaceinterescuatro}}">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
+
+      </li>
+      <li>
+        <button *ngIf="hasExternalLink5" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescinco)">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
+        <button *ngIf="!hasExternalLink5" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescinco}}/{{theContentAttributes?.idcontenidoenlaceinterescinco}}">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
+      </li>
+      <li>
+        <button *ngIf="hasExternalLink6" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresseis)">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
+        <button *ngIf="!hasExternalLink6" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresseis}}/{{theContentAttributes?.idcontenidoenlaceinteresseis}}">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
+      </li>
+
+      <li><button *ngIf="hasExternalBackoffice" class='btn external-site' (click)="openExternalSite(theContentAttributes!.urlbackoffice)">Login</button></li>
     </ol>
     <button *ngIf="hasExternalSite" class="btn external-site" (click)="openExternalSite(theContentAttributes!.urlportalexterno)">
       <span *ngIf="currentLang === 'es-ES'">Abrir el <strong>portal externo</strong></span>

@@ -1,6 +1,7 @@
-<h1>{{'Noticias' | translate}}:</h1>
+<a class ="btn btn-link" [routerLink]="['/news-agenda-list-all', 9999]"><h1 *ngIf="currentLang === 'es-ES'">Noticias:</h1>
+<h1 *ngIf="currentLang === 'ca-ES'">Noticies:</h1></a>
 <div *ngIf="noticias">
-  <span *ngIf="faseNewsToDisplay!=='11'">-{{faseNewsToDisplay}}-</span>
+  <!-- <span *ngIf="faseNewsToDisplay!=='11'">-{{faseNewsToDisplay}}-</span> -->
  
   <div class="row">
   <div *ngFor="let noticia of noticias">
@@ -12,7 +13,8 @@
         </div>
         <div class="card-body">
           <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
-            <h4 class="card-title">{{noticia.attributes.title}}</h4>
+            <h4 *ngIf="faseNewsToDisplay==='11'" class="card-title">{{noticia.attributes.title}}</h4>
+            <h6 *ngIf="faseNewsToDisplay!=='11'" class="card-title">{{noticia.attributes.title}}</h6>
           </a>
         </div>
       </div>
