@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-landing-page',
@@ -32,6 +33,8 @@ export class LandingPageComponent {
   public hasExternalSite!: boolean  | null
   public hasExternalBackoffice!: boolean  | null
 
+  contactForm!: FormGroup | undefined;
+
   public unaNoticia: reqArticle | undefined
   public theContentAttributes: attrArticle | undefined
   currentLang: string = ""
@@ -41,7 +44,11 @@ export class LandingPageComponent {
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute,
+  nombre: any;
+  email: any;
+  telefono: any;
+
+  constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute, private formBuilder: FormBuilder,
     private router: Router ) {}
   
   ngOnInit(): void {
@@ -74,7 +81,15 @@ export class LandingPageComponent {
         break
       default:
         this.currentLang = 'ca-ES'
-      }
+    }
+
+    this.contactForm = new FormGroup({
+      nombre: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      telefono: new FormControl(null, Validators.pattern('[0-9]{9}'))
+    });
+
+
   }
 
   getTheContent (id:string | null) {
@@ -127,6 +142,21 @@ export class LandingPageComponent {
 
   openExternalSite ( url: string) {
     window.open(url, "_blank");
+  }
+
+  sendContactForm() {
+    if (this.contactForm!.valid) {
+
+      const datosFormulario = this.contactForm.value
+  
+      // Continuar con el envío de los datos...
+      console.log (datosFormulario)
+  
+    } else {
+  
+      // Manejar caso de formulario inválido
+  
+    }
   }
 
 }

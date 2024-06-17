@@ -27,7 +27,7 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { CategoryIdPipe } from './Pipes/category-id.pipe';
 import { CategoryTitlePipe } from './Pipes/category-title.pipe';
-import { HighlightSearchTermPipe } from './Pipes/highlight-search-term.pipe';
+
 import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
 import { GetAliasPipe } from './Pipes/get-alias.pipe';
 
@@ -66,7 +66,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AgendaListComponent,
     InternalServerComponent,
     NotFoundComponent,
-    HighlightSearchTermPipe,
+
     WellFormattedLinkPipe,
     FilterPipe,
     CategoryIdPipe,
