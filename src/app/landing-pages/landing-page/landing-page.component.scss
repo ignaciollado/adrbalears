@@ -92,6 +92,62 @@ app-news-list {
 
 }
 
+
+.contact-us{
+  font-size: 16px;
+  border: 1px solid #ffffffbf;
+  border-radius: 5px;
+  max-width: 600px;
+  padding: 20px;
+  resize: horizontal;
+  overflow: auto;
+}
+form{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+input{
+  padding: 10px 14px;
+  outline: none;
+  color: #e2e2e2;
+  background: #dedede29;
+  border: 1px solid #ffffff8f;
+  border-radius: 4px;
+}
+
+.details{
+  flex: 1 0 130px;
+}
+.email{
+  flex: 1 0 130px;
+}
+button{
+  flex: 1 0 40px;
+  background: #0d6efd;
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #e2e2e2;
+  outline: none;
+  border: 1px solid transparent;
+}
+.details{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 3px;
+}
+.title {
+  font-size: 1.6rem;
+}
+.desc {
+  color: gray;
+}
+
+
 @media screen and (max-width: 767px) {
   .top-landing-page {
     grid-template-columns: 100%;

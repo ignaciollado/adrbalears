@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -33,7 +33,8 @@ export class LandingPageComponent {
   public hasExternalSite!: boolean  | null
   public hasExternalBackoffice!: boolean  | null
 
-  contactForm!: FormGroup | undefined;
+  contactForm!: FormGroup | undefined
+  infoLabel:string = ""
 
   public unaNoticia: reqArticle | undefined
   public theContentAttributes: attrArticle | undefined
@@ -44,9 +45,7 @@ export class LandingPageComponent {
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  nombre: any;
   email: any;
-  telefono: any;
 
   constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute, private formBuilder: FormBuilder,
     private router: Router ) {}
@@ -84,9 +83,7 @@ export class LandingPageComponent {
     }
 
     this.contactForm = new FormGroup({
-      nombre: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      telefono: new FormControl(null, Validators.pattern('[0-9]{9}'))
     });
 
 
@@ -148,9 +145,11 @@ export class LandingPageComponent {
     if (this.contactForm!.valid) {
 
       const datosFormulario = this.contactForm.value
-  
+     
       // Continuar con el envío de los datos...
       console.log (datosFormulario)
+      this.infoLabel ="subscrito correctamente, muchas gracias"
+      document.getElementById("email").setAttribute("disabled", "disabled")
   
     } else {
   

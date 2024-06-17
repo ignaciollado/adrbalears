@@ -51,29 +51,13 @@
   <div class="card__body description" innerHTML="{{theContentAttributes?.text}}"></div>
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
-    <h2>Envíanos un mensaje</h2>
+    <h2>NEWSLETTER:</h2>
+    <small>Keep up our latest news and events.Subscribe our newsletter</small>
     <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
-      <div>
+        <div>
+ 
 
-        <label for="nombre">Nombre:</label>
- 
-        <input type="text" id="nombre" formControlName="nombre">
- 
-        <!-- Mostramos el mensaje de error si el campo "nombre" es inválido y ha sido tocado -->
- 
-        <div *ngIf="contactForm!.get('nombre')!.invalid && contactForm!.get('nombre')!.touched">
- 
-          <div *ngIf="contactForm!.get('nombre')?.hasError('required')" class="error">El nombre es requerido.</div>
- 
-        </div>
- 
-      </div>
- 
-      <div>
- 
-        <label for="email">Email:</label>
- 
-        <input type="email" id="email" formControlName="email">
+        <input type="email" id="email" class="email" placeholder="enter your email" formControlName="email">
  
         <!-- Mostramos el mensaje de error si el campo "email" es inválido y ha sido tocado -->
  
@@ -86,26 +70,10 @@
         </div>
  
       </div>
- 
-      <div>
- 
-        <label for="telefono">Teléfono:</label>
- 
-        <input type="text" id="telefono" formControlName="telefono">
- 
-        <!-- Mostramos el mensaje de error si el campo "telefono" es inválido y ha sido tocado -->
- 
-        <div *ngIf="contactForm?.get('telefono')?.invalid && contactForm?.get('telefono')?.touched">
- 
-          <div *ngIf="contactForm?.get('telefono')?.hasError('pattern')" class="error">El teléfono debe contener 9 dígitos.</div>
- 
-        </div>
- 
-      </div>
 
-      <button type="submit" [disabled]="contactForm!.invalid" class="btn btn-info">Enviar</button>
+      <button type="submit" [disabled]="contactForm!.invalid">Subscribe</button>
     </form>
-    <span>Enviado</span>
+    <span class="subs-result" [innerHTML]="infoLabel"></span>
   </div>
 </div>
 
