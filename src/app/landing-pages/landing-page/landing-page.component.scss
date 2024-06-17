@@ -23,10 +23,16 @@ app-slider, .project-link-area{
   text-align: center;
 }
 
-ol{
-  margin-top: 4rem;
+.project-link-area ol{
   background-color: transparent;
+  margin-top: 4rem;
   list-style: none;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+li {
+  text-align: center;
 }
 
 h2{
@@ -37,7 +43,6 @@ h2{
 .btn {
   border-radius: 0;
   margin-bottom: 1rem;
-  background-color: #faa723;
   color: #ffffff;
   width: 90%;
 }

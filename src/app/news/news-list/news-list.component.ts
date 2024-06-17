@@ -56,21 +56,23 @@ export class NewsListComponent implements OnInit {
       articlesNumber = this.totalNewsToDisplay
     }
     
-    console.log (currentCategory, currentLanguage)
-
     this.articleContent.getLastContent()
         .subscribe( (resp:any) => {
           this.noticias = resp.data
-          this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
-          this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
-          this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
-          console.log (">>>>> ", this.noticias)
-/*           this.noticias.map((item:reqArticle) => {
+          this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
+          console.log (">>>>> ", this.noticias, currentLanguage, currentCategory)
+          this.noticias.map((item:reqArticle) => {
             if (item.attributes.state === 1) {
-              console.log ("es uno", this.noticias?.indexOf(item), item.relationships.category.data.id, currentCategory)
+              console.log ("es uno", this.noticias?.indexOf(item), item.attributes.state)
               this.noticias?.splice(this.noticias?.indexOf(item), 1)
             }
-          })  */
+          })
+          this.noticias.map((item:reqArticle) => {
+            if (item.relationships.category.data.id !== currentCategory) {
+              console.log ("categoría ", this.noticias?.indexOf(item), item.relationships.category.data.id, currentCategory)
+              this.noticias?.splice(this.noticias?.indexOf(item), 1)
+            }
+          })           
           if (this.newsToDisplay != '9999') {
             this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }

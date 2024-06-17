@@ -12,7 +12,7 @@ export class LandingPageComponent {
 
   public totalNewsToDisplay: string = "3"
   public landingNewsTag: string = ""
-  public theRightLema: string = "Llamar al 699 000 000 (ejemplo)"
+  public theRightLema: string = ""
   public theCenterLema: string = "<strong>Llamada a la acción</strong><p>Mensaje que motive al usuario a llamar y botón</p>"
   public theLeftLema: string = "<h2><strong>CTA</strong></h2>"
   public projectName:string | null = ""
@@ -51,9 +51,15 @@ export class LandingPageComponent {
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
+        this.theLeftLema  = "Secció variable (segons la <strong>PREGUNTA 03</strong>)"
+				this.theCenterLema = "<h1>Sol·licita assessorament</h1>"
+				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
         break
       case 'cas':
-        this.currentLang = 'es-ES'      
+        this.currentLang = 'es-ES'
+        this.theLeftLema = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+				this.theCenterLema = "<h1>Solicita asesoramiento</h1>"
+				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"    
         break
       case 'en':
         this.currentLang = 'en-EN'

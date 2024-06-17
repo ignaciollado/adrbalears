@@ -74,7 +74,10 @@
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibexporta-xecs-es/3032/353">Ibexporta xecs</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibexporta-xecs/3012/353">Ibexporta xecs</button>
       </li>
-      <li class="proyectar-bck"><button class="btn btn-link" (click)="projectLandingPage('Invest in Balearics','3206', '415', 'no', 'proyectar-bck', '419', '407')">Invest in Balearics</button></li>
+      <li class="proyectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class="btn btn-link" (click)="projectLandingPage('Invest in Balearics','3206', '415', 'no', 'proyectar-bck', '419', '407')">Invest in Balearics</button>
+        <button *ngIf="currentLang === 'ca-ES'" class="btn btn-link" (click)="projectLandingPage('Invest in Balearics','3205', '415', 'no', 'proyectar-bck', '419', '407')">Invest in Balearics</button>
+      </li>
     </ul>
   </div>
 </div>
