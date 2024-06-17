@@ -1,13 +1,15 @@
 .container-emprender {
   display: grid;
-  grid-template-rows: 100% 100%;
+  grid-template-areas: "topEmprender" "bottomEmprender";
 }
 
 .top-emprender {
+  grid-area: topEmprender;
   margin-bottom: 2rem;
 }
 
 .bottom-emprender {
+  grid-area: bottomEmprender;
   display: grid;
   grid-template-columns: 15% 85%;
 }

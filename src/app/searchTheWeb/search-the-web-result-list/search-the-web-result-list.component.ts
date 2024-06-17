@@ -21,8 +21,6 @@ export class SearchTheWebResultListComponent {
 
   ngOnInit(): void {
    this.searchTerm = this.route.snapshot.paramMap.get('searchTerm')
-
-   console.log (`-${this.translateService.currentLang} - ${localStorage.getItem('preferredLang')}-`)
    switch (localStorage.getItem('preferredLang')) {
     case 'cat':
       this.currentLang = 'ca-ES'
@@ -40,11 +38,16 @@ export class SearchTheWebResultListComponent {
    this.searchService.getArticles()
       .subscribe( (result: any) => {
         this.contenidos = result.data
-        this.contenidos = this.contenidos!.filter( (item : reqArticle) => item.attributes.state === 1 )
+/*         this.contenidos = this.contenidos!.filter( (item : reqArticle) => {
+          item.attributes.state === 1
+        } ) */
         this.contenidos = result.data.filter( (item : reqArticle) => item.attributes.language === `${this.currentLang}`) 
         this.contenidos = this.contenidos!.filter( item => item.attributes.text.toUpperCase().includes(this.searchTerm!.trim().toUpperCase()) )
-
-        console.log(this.contenidos, this.searchTerm)
+        this.contenidos.map((item:reqArticle) => {
+          if (item.attributes.state.toString().includes('0')) {
+            this.contenidos?.splice(this.contenidos?.indexOf(item), 1)
+          }
+        })
       }, (err) => {
         console.log( err.msg );
       })

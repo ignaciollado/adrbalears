@@ -1,45 +1,44 @@
-  <h1>{{'Noticias' | translate}}:</h1>
-  <div *ngIf="noticias">
-    <div class="row">-{{faseNewsToDisplay}}-
-    <div *ngFor="let noticia of noticias">
-      <!-- <div class="col"> -->
-      
-        <div class="card">
-          <div class="card-header">
-            <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
-          </div>
-          <div class="card-body">
-            <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
-              <h4 class="card-title">{{noticia.attributes.title}}</h4>
-            </a>
-          </div>
+<h1>{{'Noticias' | translate}}:</h1>
+<div *ngIf="noticias">
+  <span *ngIf="faseNewsToDisplay!=='11'">-{{faseNewsToDisplay}}-</span>
+ 
+  <div class="row">
+  <div *ngFor="let noticia of noticias">
+    <div class="col">
+    
+      <div class="card">
+        <div class="card-header">
+          <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
         </div>
-      
-      <!-- </div> -->
-    </div>
+        <div class="card-body">
+          <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
+            <h4 class="card-title">{{noticia.attributes.title}}</h4>
+          </a>
+        </div>
+      </div>
+    
     </div>
   </div>
+  </div>
+</div>
 
-  <div *ngIf="!noticias">
-    <div class="row">
-    <div *ngFor="let item of [1,2,3,4]">
-    <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
-      <div>
-        <img src="https://via.placeholder.com/260x145.png?text=...loading news list" class="card-img-top" alt="loading image">
-      </div>
-     
-      <div class="card-body">
-        <h5 class="card-title placeholder-glow">
-          <span class="placeholder col-6"></span>
-        </h5>
-        <p class="card-text placeholder-glow">
-          <span class="placeholder col-7"></span>
-        </p>
-      </div>
-    </div> 
-  </div>
+<div *ngIf="!noticias">
+  <div class="row">
+  <div *ngFor="let item of [1,2,3,4]">
+  <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+    <div>
+      <img src="https://via.placeholder.com/260x145.png?text=...loading news list" class="card-img-top" alt="loading image">
+    </div>
+   
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+      </p>
+    </div>
   </div> 
-  </div>
-
-
-
+</div>
+</div> 
+</div>
