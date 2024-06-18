@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from '../services/message.service';
+import { genericMailDTO } from '../Models/generic-data.dto';
 
 @Component({
   selector: 'app-call-to-action',
@@ -11,12 +13,13 @@ export class CallToActionComponent {
   infoLabel: string = ""
   showCtaForm: boolean = false
   currentLang: string = ""
+  formData: genericMailDTO
 
   @Input({ required: true }) ctaTextRight!: string;
   @Input({ required: true }) ctaTextCenter!: string;
   @Input({ required: true }) ctaTextLeft!: string;
 
-  constructor( private formBuilder: FormBuilder ) {}
+  constructor( private formBuilder: FormBuilder, private sendMail: MessageService ) {}
 
   ngOnInit(): void {
 
@@ -37,18 +40,15 @@ export class CallToActionComponent {
       email: new FormControl(null, [Validators.required, Validators.email]),
     });
 
-
   }
 
   ctaFormClick() {
    this.showCtaForm = !this.showCtaForm
-   console.log (this.showCtaForm)
   }
 
   sendContactForm() {
     if (this.ctaForm!.valid) {
-      const datosFormulario = this.ctaForm.value
-      console.log (datosFormulario)
+      this.formData = this.ctaForm.value
 
       if (localStorage.getItem('preferredLang') === 'es-ES') {
         this.infoLabel ="Hemos recibido tu solicitud de asesoramiento, pronto te contactaremos."
@@ -58,6 +58,8 @@ export class CallToActionComponent {
 
       document.getElementById("email").setAttribute("disabled", "disabled")
       document.getElementById("contactMe").setAttribute("disabled", "disabled")
+      this.sendMail.sendMail(this.formData)
+
     } else {
   
     }
