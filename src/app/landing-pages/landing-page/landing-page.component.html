@@ -37,6 +37,10 @@
         <button *ngIf="hasExternalLink6" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresseis)">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
         <button *ngIf="!hasExternalLink6" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresseis}}/{{theContentAttributes?.idcontenidoenlaceinteresseis}}">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
       </li>
+      <li>
+        <button *ngIf="hasExternalLink7" class='btn {{fasePro}}' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteressiete)">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
+        <button *ngIf="!hasExternalLink7" class='btn {{fasePro}}' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteressiete}}/{{theContentAttributes?.idcontenidoenlaceinteressiete}}">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
+      </li>
 
       <li><button *ngIf="hasExternalBackoffice" class='btn external-site' (click)="openExternalSite(theContentAttributes!.urlbackoffice)">Login</button></li>
     </ol>
@@ -53,28 +57,27 @@
   <div class='contact-us'>
     <h2>NEWSLETTER:</h2>
     <small>Keep up our latest news and events.Subscribe our newsletter</small>
-    <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
+    <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" class="form-inline">
         <div>
  
-
-        <input type="email" id="email" class="email" placeholder="enter your email" formControlName="email">
+        <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email">
  
         <!-- Mostramos el mensaje de error si el campo "email" es inválido y ha sido tocado -->
  
         <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched">
  
-          <div *ngIf="contactForm?.get('email')?.hasError('required')" class="error">El email es requerido.</div>
+          <!-- <span *ngIf="contactForm?.get('email')?.hasError('required')" class="error">El email es requerido.</span> -->
  
-          <div *ngIf="contactForm?.get('email')?.hasError('enail')" class="error">El email no es válido.</div>
+         <!--  <span *ngIf="contactForm?.get('email')?.hasError('enail')" class="error">El email no es válido.</span> -->
  
         </div>
  
       </div>
-
+      <span class="subs-result" [innerHTML]="infoLabel"></span>
       <button type="submit" [disabled]="contactForm!.invalid">Subscribe</button>
     </form>
-    <span class="subs-result" [innerHTML]="infoLabel"></span>
   </div>
+ 
 </div>
 
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>

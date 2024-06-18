@@ -36,7 +36,7 @@ export class SliderComponent {
 		}
 
   ngOnInit() {
-    switch (this.translateService.currentLang) {
+    switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
       break

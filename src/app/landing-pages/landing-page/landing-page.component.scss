@@ -82,26 +82,29 @@ app-news-list {
   grid-area: contactus;
   background-color: #638691;
   padding: .5rem;
-}
-
-.error {
-
-  color: red;
-
-  font-size: 14px;
-
-}
-
-
-.contact-us{
   font-size: 16px;
-  border: 1px solid #ffffffbf;
-  border-radius: 5px;
+  border-radius: 0;
   max-width: 600px;
   padding: 20px;
   resize: horizontal;
   overflow: auto;
 }
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  color: #0098CB;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+
 form{
   display: flex;
   align-items: center;
@@ -155,8 +158,20 @@ button{
     margin-bottom: 1rem;
   }
 
-  .landing-page-bottom {
+  .bottom-landing-page {
     grid-template-columns: 100%;
-    grid-template-areas: "description" "newslist" "contactus";
+    grid-template-areas: "description" "contactus" "newslist";
+  }
+
+  .description {
+    margin-right: 0;
+  }
+
+  .contact-us {
+    max-width: 100%;
+  }
+
+  app-news-list {
+    margin-right: 0;
   }
 }

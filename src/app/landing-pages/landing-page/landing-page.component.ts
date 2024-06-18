@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -30,6 +30,8 @@ export class LandingPageComponent {
   public hasExternalLink4!: boolean  | null
   public hasExternalLink5!: boolean  | null
   public hasExternalLink6!: boolean  | null
+  public hasExternalLink7!: boolean  | null
+
   public hasExternalSite!: boolean  | null
   public hasExternalBackoffice!: boolean  | null
 
@@ -58,7 +60,6 @@ export class LandingPageComponent {
     this.fasePro = this.route.snapshot.paramMap.get('fasePro')
     this.faseNewsToDisplay = this.route.snapshot.paramMap.get('faseNewsToDisplay')
     this.agendaCategory = this.route.snapshot.paramMap.get('agendaCategory')
-
 
     this.getTheContent(this.contentID)
 
@@ -123,6 +124,11 @@ export class LandingPageComponent {
         } else {
           this.hasExternalLink6 = false
         }
+        if ( resp.data.attributes.idcontenidoenlaceinteressiete.includes('https://')) {
+          this.hasExternalLink7 = true
+        } else {
+          this.hasExternalLink7 = false
+        }
 
         if ( Object.keys(resp.data.attributes.tieneportal)[0] === 'true') {
           this.hasExternalSite = true
@@ -143,17 +149,11 @@ export class LandingPageComponent {
 
   sendContactForm() {
     if (this.contactForm!.valid) {
-
       const datosFormulario = this.contactForm.value
-     
-      // Continuar con el envío de los datos...
       console.log (datosFormulario)
       this.infoLabel ="subscrito correctamente, muchas gracias"
       document.getElementById("email").setAttribute("disabled", "disabled")
-  
     } else {
-  
-      // Manejar caso de formulario inválido
   
     }
   }

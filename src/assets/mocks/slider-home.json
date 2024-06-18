@@ -8,7 +8,9 @@
     "projectImg": "../assets/images/adrbalears-iempren.webp",
     "projectFase": "emprender",
     "projectLema": "Et donam les claus per començar el teu negoci",
-    "projectDestination": "url destino proyecto"
+    "projectDestination": "/landing-page/Ibemprėn/3045/414/no/emprender-bck/417/405",
+    "projectDestination_ca": "/landing-page/Ibemprėn/2993/414/no/emprender-bck/417/405"
+
   },
   {
     "slideId": 2,
@@ -19,7 +21,8 @@
     "projectImg": "../assets/images/adrbalears-emblematics.webp",
     "projectFase": "conectar",
     "projectLema": "La història d'un poble s'escriu a través dels comerços",
-    "projectDestination": "url destino proyecto"
+    "projectDestination": "/landing-page/Emblemàtics Balears/3034/373/no/conectar-bck/417/405",
+    "projectDestination_ca": "/landing-page/Emblemàtics Balears/3053/373/no/conectar-bck/417/405"
   },
   {
     "slideId": 3,
@@ -30,7 +33,8 @@
     "projectImg": "../assets/images/adrbalears-indus-local-sost.webp",
     "projectFase": "conectar",
     "projectLema": "Treballam per tenir més indústries sostenibles, competitives i arrelades",
-    "projectDestination": "url destino proyecto"
+    "projectDestination": "/landing-page/Industria Local Sostenible/3042/353/no/conectar-bck/417/405",
+    "projectDestination_ca": "/landing-page/Indústria Local Sostenible/2986/353/no/conectar-bck/417/405"
   },
   {
     "slideId": 4,
@@ -41,7 +45,8 @@
     "projectImg": "../assets/images/adrbalears-internacionalitzacio.webp",
     "projectFase": "proyectar",
     "projectLema": "Comença a vendre els teus productes a l'exterior",
-    "projectDestination": "url destino proyecto "
+    "projectDestination": "/landing-page/Ibexporta/3032/353/no/proyectar-bck/417/405 ",
+    "projectDestination_ca": "/landing-page/Ibexporta/3012/353/no/proyectar-bck/417/405"
   },
   {
     "slideId": 5,
@@ -52,7 +57,8 @@
     "projectImg": "../assets/images/adrbalears-loop.webp",
     "projectFase": "conectar",
     "projectLema": "Connexió, col·laboració, innovació i reflexió al voltant del disseny i materials",
-    "projectDestination": "url destino proyecto "
+    "projectDestination": "/landing-page/LOOP Disseny i Circularitat/3025/353/no/conectar-bck/417/405 ",
+    "projectDestination_ca": "/landing-page/LOOP Disseny i Circularitat/2987/353/no/conectar-bck/417/405"
   },
   {
     "slideId": 6,
@@ -63,6 +69,7 @@
     "projectImg": "../assets/images/adrbalears-pibs.webp",
     "projectFase": "proyectar",
     "projectLema": "La principal cita nàutica per al sector en l'àmbit internacional",
-    "projectDestination": "url destino proyecto "
+    "projectDestination": "/landing-page/Palma International Boat Show/3019/414/no/proyectar-bck/417/405 ",
+    "projectDestination_ca": "/landing-page/Palma International Boat Show/3005/414/no/proyectar-bck/417/405"
   }
 ]

@@ -1,13 +1,15 @@
 
-<a class="cta" href=''>
- <!--  <div class="cta-left">
-    <p innerHtml="{{ctaTextLeft}}"></p>
-  </div> -->
+<button class="cta" (click)="ctaFormClick()">
   <div class="cta-center" innerHTML="{{ctaTextCenter}} {{ctaTextRight}}">
-    
-  </div>  
-<!--   <div class="cta-right">
-    <span class="btn btn-danger" innerHtml="{{ctaTextRight}}"></span>
-  </div> -->
-</a>
+  
+  </div>
+</button>
+<form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" class="row g-3 ocultar" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
+  <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email">
+  <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="contactMe" [ngClass]="{ocultar: !showCtaForm}">
+    <span *ngIf="currentLang === 'es-ES'">Contactarme</span>
+    <span *ngIf="currentLang === 'ca-ES'">Contacteu-me</span>
+  </button><br>
+  <span class="subs-result" [innerHTML]="infoLabel"></span>
+</form>
 

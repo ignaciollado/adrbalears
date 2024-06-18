@@ -40,6 +40,8 @@ export interface attrArticle {
   idcontenidoenlaceinterescinco:  string;
   etiquetaenlaceinteresseis:      string;
   idcontenidoenlaceinteresseis:   string;
+  etiquetaenlaceinteressiete:     string;
+  idcontenidoenlaceinteressiete:  string;
   language:         Language;
   hits:             number;
   publish_up:       Date;
