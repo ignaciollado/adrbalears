@@ -4,11 +4,11 @@
   
   </div>
 </button>
-<form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" class="row g-3 ocultar" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
-  <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email">
+<form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" class="ocultar" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
+  <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email"><br>
   <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="contactMe" [ngClass]="{ocultar: !showCtaForm}">
-    <span *ngIf="currentLang === 'es-ES'">Contactarme</span>
-    <span *ngIf="currentLang === 'ca-ES'">Contacteu-me</span>
+    <span *ngIf="currentLang === 'es-ES'">Contactarme, para recibir asesoramiento</span>
+    <span *ngIf="currentLang === 'ca-ES'">Contactar-me, per a rebre assessorament</span>
   </button><br>
   <span class="subs-result" [innerHTML]="infoLabel"></span>
 </form>
