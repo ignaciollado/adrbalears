@@ -51,9 +51,9 @@ export class CallToActionComponent {
       console.log (datosFormulario)
 
       if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido tu solicitud de contacto, pronto te contactaremos."
+        this.infoLabel ="Hemos recibido tu solicitud de asesoramiento, pronto te contactaremos."
       } else {
-        this.infoLabel ="Hem rebut la teva sol·licitud de contacte, aviat et contactarem."
+        this.infoLabel ="Hem rebut la teva sol·licitud de assessorament, aviat et contactarem."
       }
 
       document.getElementById("email").setAttribute("disabled", "disabled")
