@@ -48,7 +48,9 @@ export class CallToActionComponent {
 
   sendContactForm() {
     if (this.ctaForm!.valid) {
-      this.formData = this.ctaForm.value
+      this.formData.email = this.ctaForm.value
+      this.formData.subject = "Sol·licitud d'assessorament des-de "
+      this.formData.body = "M'agradaria que em contactessin per a rebre assessorament sobre ..."
 
       if (localStorage.getItem('preferredLang') === 'es-ES') {
         this.infoLabel ="Hemos recibido tu solicitud de asesoramiento, pronto te contactaremos."
