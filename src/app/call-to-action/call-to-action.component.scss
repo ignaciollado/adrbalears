@@ -63,12 +63,20 @@ input:valid {
   border-color: green;
 }
 
-/* div:hover, a:hover {
-  background-color: #019ee5;
-} */
-
 a {
   background-color: #019ee5;
+}
+
+button, input {
+  position: unset;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+input {
+  letter-spacing: .5rem;
 }
 
 @media screen and (max-width: 795px) {

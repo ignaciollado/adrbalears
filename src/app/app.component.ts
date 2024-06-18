@@ -12,7 +12,7 @@ import { PopUpDialogComponent } from './pop-up-dialog/pop-up-dialog.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title:string = 'ADR alears'
+  title:string = 'ADR Balears'
   show:boolean = true
   profileExists: boolean = false
   situacionActual: UntypedFormControl

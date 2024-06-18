@@ -17,7 +17,6 @@
   <div class="col-auto">
     <input type="email" id="email" class="form-control" placeholder="email@example.com" formControlName="email">
   </div>
-
   <div class="col-auto">
     <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="contactMe" [ngClass]="{ocultar: !showCtaForm}">
       <span *ngIf="currentLang === 'es-ES'">Contactarme, para recibir asesoramiento</span>
