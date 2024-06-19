@@ -4,25 +4,16 @@
   
   </div>
 </button>
-<!-- <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
-  <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email"><br>
-  <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="contactMe" [ngClass]="{ocultar: !showCtaForm}">
-    <span *ngIf="currentLang === 'es-ES'">Contactarme, para recibir asesoramiento</span>
-    <span *ngIf="currentLang === 'ca-ES'">Contactar-me, per a rebre assessorament</span>
-  </button><br>
-  <span class="subs-result" [innerHTML]="infoLabel"></span>
-</form> -->
 
 <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
   <div class="col-auto">
-    <input type="email" id="email" class="form-control" placeholder="email@example.com" formControlName="email">
+    <input type="email" id="emailCta" class="form-control" placeholder="email@example.com" formControlName="email">
   </div>
   <div class="col-auto">
-    <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="contactMe" [ngClass]="{ocultar: !showCtaForm}">
-      <span *ngIf="currentLang === 'es-ES'">Contactarme, para recibir asesoramiento</span>
-      <span *ngIf="currentLang === 'ca-ES'">Contactar-me, per a rebre assessorament</span>
+    <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="sendCta" [ngClass]="{ocultar: !showCtaForm}">
+      <span *ngIf="currentLang === 'es-ES'">Contactadme para recibir asesoramiento</span>
+      <span *ngIf="currentLang === 'ca-ES'">Contactar-me per a rebre assessorament</span>
     </button>
-    <span class="subs-result" [innerHTML]="infoLabel"></span>
   </div>
 </form>
-
+<small class="alert alert-success" [ngClass]="{ocultar: !showInfoLabel}" [innerHTML]="infoLabel"></small>

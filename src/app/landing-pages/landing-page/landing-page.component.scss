@@ -9,6 +9,24 @@
   grid-area: tituloslogan;
 }
 
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
+}
+
+.info-text {
+  font-size: .5rem;
+}
+
 app-search-the-web {
   grid-area: searchtheweb;
 }
@@ -90,6 +108,21 @@ app-news-list {
   overflow: auto;
 }
 
+.bottom-landing-page form {
+  display: grid;
+  grid-template-rows: 100% 100%;
+  margin-top: 1rem;
+}
+
+.bottom-landing-page input {
+  letter-spacing: .2rem;
+  margin-top: 1rem;
+}
+
+.bottom-landing-page button {
+  width: 100%;
+}
+
 .form-control:focus {
   outline: none;
   box-shadow: none;
@@ -149,7 +182,6 @@ button{
 .desc {
   color: gray;
 }
-
 
 @media screen and (max-width: 767px) {
   .top-landing-page {

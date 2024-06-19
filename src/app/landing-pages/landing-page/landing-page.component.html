@@ -55,29 +55,18 @@
   <div class="card__body description" innerHTML="{{theContentAttributes?.text}}"></div>
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
-    <h2>NEWSLETTER:</h2>
-    <small>Keep up our latest news and events.Subscribe our newsletter</small>
-    <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" class="form-inline">
+    <h2>NEWSLETTER</h2>
+    <small *ngIf="currentLang === 'es-ES'">Sigue nuestras últimas noticias y actividades. Subscríbete a nuestro boletín:</small>
+    <small *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments.Subscriu-te al nostre butlletí:</small>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm}">
         <div>
- 
-        <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email">
- 
-        <!-- Mostramos el mensaje de error si el campo "email" es inválido y ha sido tocado -->
- 
-        <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched">
- 
-          <!-- <span *ngIf="contactForm?.get('email')?.hasError('required')" class="error">El email es requerido.</span> -->
- 
-         <!--  <span *ngIf="contactForm?.get('email')?.hasError('enail')" class="error">El email no es válido.</span> -->
- 
+          <input type="email" id="email" class="form-control" placeholder="enter your email" formControlName="email">
+          <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched"></div>
         </div>
- 
-      </div>
-      <span class="subs-result" [innerHTML]="infoLabel"></span>
-      <button type="submit" [disabled]="contactForm!.invalid">Subscribe</button>
+      <button type="submit" [disabled]="contactForm!.invalid" id="sendMe">Subscribe</button>
     </form>
   </div>
- 
 </div>
 
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>

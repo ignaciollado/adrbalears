@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MessageService } from '../services/message.service';
 import { genericMailDTO } from '../Models/generic-data.dto';
 
@@ -9,9 +9,15 @@ import { genericMailDTO } from '../Models/generic-data.dto';
   styleUrl: './call-to-action.component.scss'
 })
 export class CallToActionComponent {
-  ctaForm!: FormGroup | undefined
+  ctaForm: UntypedFormGroup
+  subject: UntypedFormControl
+  body: UntypedFormControl
+  email: UntypedFormControl
+  requester: UntypedFormControl
+  contactPhone: UntypedFormControl
   infoLabel: string = ""
   showCtaForm: boolean = false
+  showInfoLabel: boolean = false
   currentLang: string = ""
   formData: genericMailDTO
 
@@ -19,10 +25,26 @@ export class CallToActionComponent {
   @Input({ required: true }) ctaTextCenter!: string;
   @Input({ required: true }) ctaTextLeft!: string;
 
-  constructor( private formBuilder: FormBuilder, private sendMail: MessageService ) {}
+  constructor( private formBuilder: FormBuilder, private sendMail: MessageService ) {
+    this.formData = new genericMailDTO('', '', '', '', '')
+
+    this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
+    this.requester = new UntypedFormControl("not indicated")
+    this.contactPhone = new UntypedFormControl("not indicated")
+    this.subject = new UntypedFormControl("Sol·licitud d'assessorament des-de el projecte:")
+    this.body = new UntypedFormControl("M'agradaria que em contactessin per a rebre assessorament")
+    
+    this.ctaForm = this.formBuilder.group({
+      email: this.email,
+      requester: this.requester,
+      contactPhone: this.contactPhone,
+      subject: this.subject,
+      body: this.body,
+    });
+
+  }
 
   ngOnInit(): void {
-
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -36,10 +58,6 @@ export class CallToActionComponent {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.ctaForm = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
-    });
-
   }
 
   ctaFormClick() {
@@ -47,23 +65,20 @@ export class CallToActionComponent {
   }
 
   sendContactForm() {
-    if (this.ctaForm!.valid) {
-      this.formData.email = this.ctaForm.value
-      this.formData.subject = "Sol·licitud d'assessorament des-de "
-      this.formData.body = "M'agradaria que em contactessin per a rebre assessorament sobre ..."
-
+      this.formData = this.ctaForm.value
       if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido tu solicitud de asesoramiento, pronto te contactaremos."
+        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos."
       } else {
-        this.infoLabel ="Hem rebut la teva sol·licitud de assessorament, aviat et contactarem."
+        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem."
       }
-
-      document.getElementById("email").setAttribute("disabled", "disabled")
-      document.getElementById("contactMe").setAttribute("disabled", "disabled")
+      document.getElementById("emailCta").setAttribute("disabled", "disabled")
+      document.getElementById("sendCta").innerHTML = `<i>${this.infoLabel}</i>`
+      document.getElementById("sendCta").setAttribute("disabled", "disabled")
       this.sendMail.sendMail(this.formData)
-
-    } else {
-  
-    }
+      .subscribe((sendMailResult:any) => {
+        console.log("sendMailResult: ", sendMailResult)
+        this.showCtaForm = !this.showCtaForm
+        this.showInfoLabel = !this.showInfoLabel
+      })
   }
 }

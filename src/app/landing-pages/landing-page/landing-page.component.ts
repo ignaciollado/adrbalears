@@ -2,7 +2,9 @@ import { Component, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { genericMailDTO } from '../../Models/generic-data.dto';
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -31,26 +33,48 @@ export class LandingPageComponent {
   public hasExternalLink5!: boolean  | null
   public hasExternalLink6!: boolean  | null
   public hasExternalLink7!: boolean  | null
-
   public hasExternalSite!: boolean  | null
   public hasExternalBackoffice!: boolean  | null
-
-  contactForm!: FormGroup | undefined
-  infoLabel:string = ""
+  public infoLabel:string = ""
 
   public unaNoticia: reqArticle | undefined
   public theContentAttributes: attrArticle | undefined
-  currentLang: string = ""
+
+  public currentLang: string = ""
+  formData: genericMailDTO
+  contactForm: UntypedFormGroup
+  subject: UntypedFormControl
+  body: UntypedFormControl
+  email: UntypedFormControl
+  requester: UntypedFormControl
+  contactPhone: UntypedFormControl
+  showCtaForm: boolean = false
+  showInfoLabel: boolean = false
 
   @Input({ required: true }) landingMainTitle: string = "Título del proyecto";
   @Input({ required: true }) landingSlogan: string = "\"ibemprėn, recursos para emprender un negocio en las Islas Baleares.\"";
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  email: any;
+  constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService,
+    private router: Router ) {
+      this.formData = new genericMailDTO('', '', '', '', '')
 
-  constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute, private formBuilder: FormBuilder,
-    private router: Router ) {}
+      this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
+      this.requester = new UntypedFormControl("not indicated")
+      this.contactPhone = new UntypedFormControl("not indicated")
+      this.subject = new UntypedFormControl("Sol·licitud d'alta al BUTLLETÍ")
+      this.body = new UntypedFormControl("M'agradaria que em donessin d'alta en el seu BUTLLETÍ")
+      
+      this.contactForm = this.formBuilder.group({
+        email: this.email,
+        requester: this.requester,
+        contactPhone: this.contactPhone,
+        subject: this.subject,
+        body: this.body,
+      });
+
+    }
   
   ngOnInit(): void {
     this.projectName = this.route.snapshot.paramMap.get('projectName')
@@ -82,12 +106,6 @@ export class LandingPageComponent {
       default:
         this.currentLang = 'ca-ES'
     }
-
-    this.contactForm = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
-    });
-
-
   }
 
   getTheContent (id:string | null) {
@@ -148,14 +166,21 @@ export class LandingPageComponent {
   }
 
   sendContactForm() {
-    if (this.contactForm!.valid) {
-      const datosFormulario = this.contactForm.value
-      console.log (datosFormulario)
-      this.infoLabel ="subscrito correctamente, muchas gracias"
+      this.formData = this.contactForm.value
+      if (localStorage.getItem('preferredLang') === 'es-ES') {
+        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos."
+      } else {
+        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem."
+      }
       document.getElementById("email").setAttribute("disabled", "disabled")
-    } else {
-  
-    }
+      document.getElementById("sendMe").innerHTML = `<i>${this.infoLabel}</i>`
+      document.getElementById("sendMe").setAttribute("disabled", "disabled")
+      this.sendMail.sendMail(this.formData)
+      .subscribe((sendMailResult:any) => {
+        console.log("sendMailResult: ", sendMailResult)
+        this.showCtaForm = !this.showCtaForm
+        this.showInfoLabel = !this.showInfoLabel
+      })
   }
 
 }
