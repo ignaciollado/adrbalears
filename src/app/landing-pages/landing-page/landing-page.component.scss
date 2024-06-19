@@ -27,6 +27,10 @@
   font-size: .5rem;
 }
 
+button {
+  padding: 0!important;
+}
+
 app-search-the-web {
   grid-area: searchtheweb;
 }
@@ -76,9 +80,9 @@ h2{
 .external-site {
   background-color: #019ee5;
   color: #ffffff;
-  margin-top: 6rem;
   width: 90%;
 }
+
 
 .bottom-landing-page {
   display: grid;

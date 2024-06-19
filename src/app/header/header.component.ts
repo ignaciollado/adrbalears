@@ -181,6 +181,10 @@ switchLanguage( lang:string ) {
 
 redirectToExternalUrl(externalURL: string) {
     window.open (externalURL, '_blank');
+}
+
+projectLandingPage(projectName: string, contentID: string, categoryID: string, showLinks: string, faseProCSSClass: string, newsCategory: string, agendaCategory: string) {
+    this.router.navigate([`landing-page/${projectName}/${contentID}/${categoryID}/${showLinks}/${faseProCSSClass}/${newsCategory}/${agendaCategory}`])
   }
 
 }

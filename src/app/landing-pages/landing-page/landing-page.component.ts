@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { genericMailDTO } from '../../Models/generic-data.dto';
 import { MessageService } from '../../services/message.service';
 
@@ -63,7 +63,7 @@ export class LandingPageComponent {
       this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
       this.requester = new UntypedFormControl("not indicated")
       this.contactPhone = new UntypedFormControl("not indicated")
-      this.subject = new UntypedFormControl("Sol·licitud d'alta al BUTLLETÍ")
+      this.subject = new UntypedFormControl("Alta al NEWSLETTER")
       this.body = new UntypedFormControl("M'agradaria que em donessin d'alta en el seu BUTLLETÍ")
       
       this.contactForm = this.formBuilder.group({
@@ -91,14 +91,14 @@ export class LandingPageComponent {
       case 'cat':
         this.currentLang = 'ca-ES'
         this.theLeftLema  = "Secció variable (segons la <strong>PREGUNTA 03</strong>)"
-				this.theCenterLema = "<h1>Sol·licita assessorament</h1>"
+				this.theCenterLema = "<h1>Sol·licita assessorament per aquest projecte</h1>"
 				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
         break
       case 'cas':
         this.currentLang = 'es-ES'
         this.theLeftLema = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
-				this.theCenterLema = "<h1>Solicita asesoramiento</h1>"
-				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"    
+				this.theCenterLema = "<h1>Solicita asesoramiento para este proyecto</h1>"
+				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"
         break
       case 'en':
         this.currentLang = 'en-EN'
@@ -168,9 +168,9 @@ export class LandingPageComponent {
   sendContactForm() {
       this.formData = this.contactForm.value
       if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos."
+        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos"
       } else {
-        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem."
+        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem"
       }
       document.getElementById("email").setAttribute("disabled", "disabled")
       document.getElementById("sendMe").innerHTML = `<i>${this.infoLabel}</i>`

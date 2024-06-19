@@ -28,8 +28,8 @@ const routes: Routes = [
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
   { path: 'landing-page/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
 
-  { path: 'iemprenjove/:id/:idMainCat', component: CommonContentViewerComponent },
-  { path: 'iemprenjove-es/:id/:idMainCat', component: CommonContentViewerComponent },
+  { path: 'iemprenjove/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
+  { path: 'iemprenjove-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'iempren/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'iempren-es/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'ibtalent/:id/:idMainCat', component: CommonContentViewerComponent },
@@ -49,8 +49,8 @@ const routes: Routes = [
   { path: 'industria-local-sostenible-es/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'ibsostenibilitat-xecs/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'ibsostenibilitat-xecs-es/:id/:idMainCat', component: CommonContentViewerComponent },
-  { path: 'ibavals-industria/:id/:idMainCat', component: CommonContentViewerComponent },
-  { path: 'ibavals-industria-es/:id/:idMainCat', component: CommonContentViewerComponent },
+  { path: 'ibavals-industria/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
+  { path: 'ibavals-industria-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'exposabyidi/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'exposabyidi-es/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'ibrelleu/:id/:idMainCat', component: CommonContentViewerComponent },
@@ -60,8 +60,8 @@ const routes: Routes = [
   { path: 'ibexporta-xecs/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'ibexporta-xecs-es/:id/:idMainCat', component: CommonContentViewerComponent },
 
-  { path: 'invest-in-balearics/:id/:idMainCat', component: CommonContentViewerComponent },
-  { path: 'invest-in-balearics-es/:id/:idMainCat', component: CommonContentViewerComponent },
+  { path: 'invest-in-balearics/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
+  { path: 'invest-in-balearics-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'pibs/:id/:idMainCat', component: CommonContentViewerComponent },
   { path: 'pibs-es/:id/:idMainCat', component: CommonContentViewerComponent },
 

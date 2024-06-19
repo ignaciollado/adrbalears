@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MessageService } from '../services/message.service';
 import { genericMailDTO } from '../Models/generic-data.dto';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-call-to-action',
@@ -25,14 +26,14 @@ export class CallToActionComponent {
   @Input({ required: true }) ctaTextCenter!: string;
   @Input({ required: true }) ctaTextLeft!: string;
 
-  constructor( private formBuilder: FormBuilder, private sendMail: MessageService ) {
+  constructor( private formBuilder: FormBuilder, private route: ActivatedRoute, private sendMail: MessageService ) {
     this.formData = new genericMailDTO('', '', '', '', '')
 
     this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
     this.requester = new UntypedFormControl("not indicated")
     this.contactPhone = new UntypedFormControl("not indicated")
-    this.subject = new UntypedFormControl("Sol·licitud d'assessorament des-de el projecte:")
-    this.body = new UntypedFormControl("M'agradaria que em contactessin per a rebre assessorament")
+    this.subject = new UntypedFormControl("Assessorament per un projecte")
+    this.body = new UntypedFormControl(`M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.route.snapshot.paramMap.get('projectName')}`)
     
     this.ctaForm = this.formBuilder.group({
       email: this.email,
@@ -67,9 +68,9 @@ export class CallToActionComponent {
   sendContactForm() {
       this.formData = this.ctaForm.value
       if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos."
+        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos"
       } else {
-        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem."
+        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem"
       }
       document.getElementById("emailCta").setAttribute("disabled", "disabled")
       document.getElementById("sendCta").innerHTML = `<i>${this.infoLabel}</i>`
