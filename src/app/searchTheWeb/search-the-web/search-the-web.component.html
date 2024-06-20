@@ -35,13 +35,14 @@
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" (click)="projectLandingPage('Ibtalent','3016','414', 'no', 'emprendre', '417', '405')">Ibtalent</button>        
       </li>
       <li class="emprendre-bck">
-        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibgestio-xecs-es/3048/353">Ibgestió xecs</button>
-        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibgestio-xecs/3014/353">Ibgestió xecs</button>
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" (click)="projectLandingPage('Ibgestió xecs','3048','353', 'no', 'emprendre', '417', '405')">Ibgestió xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" (click)="projectLandingPage('Ibgestió xecs','3014','353', 'no', 'emprendre', '417', '405')">Ibgestió xecs</button>
       </li>
       <li class="emprendre-bck">
-        <button *ngIf="currentLang === 'es-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs-es/3048/353">Ibdigitalització xecs</button>
-        <button *ngIf="currentLang === 'ca-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs/3014/353">Ibdigitalització xecs</button>        
+        <button *ngIf="currentLang === 'es-ES'"  class ="btn btn-link" (click)="projectLandingPage('Ibdigitalització xecs','3048','353', 'no', 'emprendre', '417', '405')">Ibdigitalització xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'"  class ="btn btn-link" (click)="projectLandingPage('Ibdigitalització xecs','3014','353', 'no', 'emprendre', '417', '405')">Ibdigitalització xecs</button>        
       </li>
+      
       <li class="connectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola-es/3035/363">Ibcomerç a l'escola</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola/2995/363">Ibcomerç a l'escola</button>
@@ -71,8 +72,8 @@
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibrelleu/2990/379">Ibrelleu</button>
       </li>
       <li class="projectar-bck">
-        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibexporta-xecs-es/3032/353">Ibexporta xecs</button>
-        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibexporta-xecs/3012/353">Ibexporta xecs</button>
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" (click)="projectLandingPage('Ibexporta xecs','3032','415', 'no', 'projectar', '415', '406')" routerLink="ibexporta-xecs-es/3032/353">Ibexporta xecs</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" (click)="projectLandingPage('Ibexporta xecs','3012','415', 'no', 'projectar', '415', '406')" routerLink="ibexporta-xecs/3012/353">Ibexporta xecs</button>
       </li>
       <li class="projectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class="btn btn-link" (click)="projectLandingPage('Invest in Balearics','3206', '415', 'no', 'projectar', '419', '407')">Invest in Balearics</button>

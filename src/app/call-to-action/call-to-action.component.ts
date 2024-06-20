@@ -32,7 +32,7 @@ export class CallToActionComponent {
     this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
     this.requester = new UntypedFormControl("not indicated")
     this.contactPhone = new UntypedFormControl("not indicated")
-    this.subject = new UntypedFormControl("Assessorament per un projecte")
+    this.subject = new UntypedFormControl("Assessoria per a un projecte")
     this.body = new UntypedFormControl(`M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.route.snapshot.paramMap.get('projectName')}`)
     
     this.ctaForm = this.formBuilder.group({
