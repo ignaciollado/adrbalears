@@ -5,6 +5,7 @@ import { SliderHomeService } from '../../services/sliderHome.service';
 import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SliderHomeDTO } from '../../Models/sliderhome.dto';
 import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
@@ -18,17 +19,19 @@ export class SliderComponent {
   currentLang: string = ""
 	isCollapsed: boolean = true
 	twoColumns: boolean = false
-  images = [62, 83, 466, 965, 982, 1043].map((n) => `https://picsum.photos/id/${n}/912/500`)
-	public slides: SliderHomeDTO[] | undefined
+  /* images = [62, 83, 466, 965, 982, 1043].map((n) => `https://picsum.photos/id/${n}/912/500`) */
+	public slides: SliderHomeDTO[] = []
+
 	paused:boolean = false
-	unpauseOnArrow:boolean = false
+	unpauseOnArrow:boolean = true
 	pauseOnIndicator:boolean = false
 	pauseOnHover:boolean = true
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
+	actualProjectName : string
 
   constructor(config: NgbTooltipConfig,
-		private contentService: ArticleContentService, private slideHomeService: SliderHomeService,
+		private contentService: ArticleContentService, private slideHomeService: SliderHomeService, private route: ActivatedRoute,
 		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
 			config.placement = 'bottom'
@@ -36,6 +39,7 @@ export class SliderComponent {
 		}
 
   ngOnInit() {
+		this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -86,7 +90,9 @@ export class SliderComponent {
 		this.slideHomeService.getAll()
 			.subscribe( (slides: any) => {
 				this.slides = slides
-				this.slides?.forEach( (slide:SliderHomeDTO) => { console.log(slide.slideId, slide.tagCA)})
+				if (this.actualProjectName) {
+					this.slides = this.slides.filter((slide:SliderHomeDTO) => slide.projectNameCA === this.actualProjectName)
+				}
 			})
 	}
 
