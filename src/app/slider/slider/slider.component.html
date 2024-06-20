@@ -1,5 +1,5 @@
 <div [className]="twoColumns ? 'slider-container' : 'slider-container-single' ">
-  <ngb-carousel *ngIf="showCustomProject"
+  <ngb-carousel *ngIf="!actualProjectName"
   #carousel
   [interval]="10000"
   [pauseOnHover]="pauseOnHover"
@@ -33,4 +33,12 @@
     </ng-template> 
   }
   </ngb-carousel>
+
+  <div *ngIf="actualProjectName">
+    <picture>
+      <source media="(min-width: 795px)" srcset="{{oneContentAttributes.images.image_fulltext}}">
+      <source media="(max-width: 795px)" srcset="{{oneContentAttributes.images.image_intro}}">
+      <img src="{{oneContentAttributes.images.image_intro}}" alt="{{oneContentAttributes.title}}" title="{{oneContentAttributes.slogan}}">
+    </picture> 
+  </div>
 </div>

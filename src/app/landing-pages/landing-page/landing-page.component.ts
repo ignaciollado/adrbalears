@@ -181,6 +181,7 @@ export class LandingPageComponent {
         this.showCtaForm = !this.showCtaForm
         this.showInfoLabel = !this.showInfoLabel
       })
+      window.scroll(0,0)
   }
 
 }

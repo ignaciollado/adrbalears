@@ -18,6 +18,11 @@
   padding: 1rem;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .alert {
   width: 100%;
   text-align: center;
@@ -205,6 +210,7 @@ button{
 
   .contact-us {
     max-width: 100%;
+    padding: 5px;
   }
 
   app-news-list {

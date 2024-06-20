@@ -6,6 +6,7 @@ import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SliderHomeDTO } from '../../Models/sliderhome.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
+import { attrArticle } from '../../Models/article-data.dto';
 
 @Component({
   selector: 'app-slider',
@@ -28,9 +29,11 @@ export class SliderComponent {
 	pauseOnHover:boolean = true
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
-	actualProjectName : string
+	oneContentAttributes: attrArticle
+	actualProjectName : string = ""
+	actualProjectID: string = ""
 
-  constructor(config: NgbTooltipConfig,
+  constructor(config: NgbTooltipConfig, private getNoticia: ArticleContentService,
 		private contentService: ArticleContentService, private slideHomeService: SliderHomeService, private route: ActivatedRoute,
 		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
@@ -40,6 +43,7 @@ export class SliderComponent {
 
   ngOnInit() {
 		this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
+		this.actualProjectID = this.route.snapshot.paramMap.get('contentID')
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -59,6 +63,9 @@ export class SliderComponent {
 			})
 
 		this.getHomeSlides()
+		if (this.actualProjectName) {
+			this.getOneContent(this.actualProjectID)
+		}
 	}
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
@@ -95,5 +102,12 @@ export class SliderComponent {
 				}
 			})
 	}
+
+	getOneContent (id:string | null) {
+    this.getNoticia.get(id)
+      .subscribe( (resp: any) => {
+        this.oneContentAttributes = resp.data.attributes
+      }) 
+  }
 
 }

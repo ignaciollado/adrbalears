@@ -37,10 +37,6 @@ export class CommonContentViewerComponent {
           .subscribe(
             (resp:any) => {
               this.contenido = resp.data
-           /*    this.contenidos = this.contenidos.filter( item => item.attributes.state === 1 )
-              this.contenidos = this.contenidos.filter( item => item.attributes.language === this.currentLang )
-              this.contenidos = this.contenidos.filter( item => item.relationships.category.data.id === this.id)  */
-             /*  console.log(this.id, this.contenido) */
           })
   
           window.scroll(0,0)

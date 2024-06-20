@@ -12,11 +12,11 @@ import { reqArticle } from '../../Models/article-data.dto';
 export class AgendaListComponent {
   public currentLang: string | undefined
   public newsToDisplay: string | null
-  public agenda: reqArticle[] | undefined
-  public agendaEmprender: reqArticle[] | undefined
-  public agendaConectar: reqArticle[] | undefined
-  public agendaProyectar: reqArticle[] | undefined
-
+  public agenda: reqArticle[] = []
+  public agendaEmprender: reqArticle[] = []
+  public agendaConectar: reqArticle[] = []
+  public agendaProyectar: reqArticle[] = []
+  listAgendaReady: boolean = false
 
   @Input () totalNewsToDisplay: string = "8"
 
@@ -49,21 +49,26 @@ export class AgendaListComponent {
       articlesNumber = this.totalNewsToDisplay
     }
 
-    this.articleContent.getLastContent()
+    this.articleContent.getEveryThing()
         .subscribe( (resp:any) => {
           this.agenda = resp.data
-          this.agenda = this.agenda!.filter( (item : reqArticle) => item.attributes.state === 1)
+          this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.state === 1)
           this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`)
-          this.agendaEmprender = this.agenda.filter( (item : reqArticle) => item.relationships.category.data.id === `${categies[0]}`)
-          this.agendaConectar = this.agenda.filter( (item : reqArticle) => item.relationships.category.data.id === `${categies[1]}`)
-          this.agendaProyectar = this.agenda.filter( (item : reqArticle) => item.relationships.category.data.id === `${categies[2]}`)
 
-
-          console.log ("agenda: ", this.agenda)
-
-        
+          this.agenda.map((item:reqArticle) => {
+            if (item.relationships.category.data.id === categies[0]) {
+              this.agendaEmprender.push(item)
+            }
+            if (item.relationships.category.data.id === categies[1]) {
+              this.agendaConectar.push(item)
+            }
+            if (item.relationships.category.data.id === categies[2]) {
+              this.agendaProyectar.push(item)
+            }
+          })
+          this.listAgendaReady = true
         } ) 
-
+        window.scroll(0,0)
       }
 
 }

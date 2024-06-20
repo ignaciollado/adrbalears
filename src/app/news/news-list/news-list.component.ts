@@ -12,14 +12,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class NewsListComponent implements OnInit {
 
-  public noticias: reqArticle[] | undefined
+  public noticias: reqArticle[] = []
+  public noticiasTemp: reqArticle[] = []
   public noticiasAttributes: attrArticle | undefined
   public currentLang: string | undefined
   public newsToDisplay: string | null
+	actualProjectName : string = ""
+	actualProjectFase: string = ""
+  listNewsReady: boolean = false
 
   @Input () totalNewsToDisplay: string = "4"
   @Input () faseNewsToDisplay: string = "11"
-
 
   constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
     private router: Router ) {
@@ -27,7 +30,8 @@ export class NewsListComponent implements OnInit {
      }
 
   ngOnInit(): void {
-   
+   	this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
+		this.actualProjectFase = this.route.snapshot.paramMap.get('fasePro')
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -59,26 +63,24 @@ export class NewsListComponent implements OnInit {
     this.articleContent.getAll()
         .subscribe( (resp:any) => {
           this.noticias = resp.data
-          console.log("noticias 1: ", this.noticias)
           this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
           this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
           this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
-          console.log("noticias 2: ", this.noticias)
-         /*  this.noticias.map((item:reqArticle) => {
-            if (item.attributes.state === 1) {
-              this.noticias?.splice(this.noticias?.indexOf(item), 1)
-            }
-          }) */
-          /* this.noticias.map((item:reqArticle) => {
-            if (item.relationships.category.data.id !== currentCategory) {
-              this.noticias?.splice(this.noticias?.indexOf(item), 1)
-            }
-          })       */     
+          this.listNewsReady = true
+          if (this.actualProjectFase) {
+            this.noticias.map((item:reqArticle) => {
+              if (Object.values(item.attributes.tags).includes(this.actualProjectFase)) {
+                this.noticiasTemp.push(item)
+              }
+            })
+            this.noticias = this.noticiasTemp
+          }
+
           if (this.newsToDisplay != '9999') {
             this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
         } ) 
-
+        window.scroll(0,0)
       }
 
 }

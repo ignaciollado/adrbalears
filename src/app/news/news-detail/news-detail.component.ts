@@ -47,21 +47,9 @@ export class NewsDetailComponent {
   }
 
   getUnaNotica (id:string | null) {
-
     this.getNoticia.get(id)
       .subscribe( (resp: any) => {
         this.unaNoticiaAttribute = resp.data.attributes
-        /* Comprobar si hay una cabecera 'custom' en el campo 'cabecera' */
-        /* if (this.unaNoticiaAttribute.cabecera && this.unaNoticiaAttribute.cabecera !== '{"imagefile":"","alt_text":""}') {
-          console.log (this.unaNoticiaAttribute.cabecera)
-          this.cabecera = this.unaNoticiaAttribute.cabecera
-          if (this.cabecera.includes("imagefile")) {
-            this.cabecera = Object.values(JSON.parse(this.cabecera))[0].toString() 
-          }
-          this.cabecera = `https://contents.idi.es/${ this.cabecera}`
-         } */
       }) 
-  
     }
-
 }

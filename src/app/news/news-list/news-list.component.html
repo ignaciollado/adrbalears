@@ -1,8 +1,8 @@
-<a class ="btn btn-link" [routerLink]="['/news-agenda-list-all', 9999]"><h1 *ngIf="currentLang === 'es-ES'">Noticias:</h1>
-<h1 *ngIf="currentLang === 'ca-ES'">Noticies:</h1></a>
+<a class ="btn btn-link" [routerLink]="['/news-agenda-list-all', 9999]">
+  <h1 *ngIf="currentLang === 'es-ES'">Noticias:</h1>
+  <h1 *ngIf="currentLang === 'ca-ES'">Noticies:</h1>
+</a>
 <div *ngIf="noticias">
-  <!-- <span *ngIf="faseNewsToDisplay!=='11'">-{{faseNewsToDisplay}}-</span> -->
- 
   <div class="row">
   <div *ngFor="let noticia of noticias">
     <div class="col">
@@ -24,7 +24,7 @@
   </div>
 </div>
 
-<div *ngIf="!noticias">
+<div *ngIf="!listNewsReady">
   <div class="row">
   <div *ngFor="let item of [1,2,3,4]">
   <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
