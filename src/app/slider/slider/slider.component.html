@@ -36,9 +36,9 @@
 
   <div *ngIf="actualProjectName">
     <picture>
-      <source media="(min-width: 795px)" srcset="{{oneContentAttributes.images.image_fulltext}}">
-      <source media="(max-width: 795px)" srcset="{{oneContentAttributes.images.image_intro}}">
-      <img src="{{oneContentAttributes.images.image_intro}}" alt="{{oneContentAttributes.title}}" title="{{oneContentAttributes.slogan}}">
+      <source *ngIf="oneContentAttributes" media="(min-width: 795px)" srcset="{{oneContentAttributes.images.image_fulltext}}">
+      <source *ngIf="oneContentAttributes" media="(max-width: 795px)" srcset="{{oneContentAttributes.images.image_intro}}">
+      <img *ngIf="oneContentAttributes" src="{{oneContentAttributes.images.image_intro}}" alt="{{oneContentAttributes.title}}" title="{{oneContentAttributes.slogan}}">
     </picture> 
   </div>
 </div>
