@@ -53,7 +53,8 @@
 </div>
 
 <div class="bottom-landing-page">
-  <div class="card__body description" innerHTML="{{theContentAttributes?.text}}"></div>
+  <div class="card__body description" [innerHTML]="theContentAttributes?.text.replaceAll ('images/','https://contents.idi.es/images/')"></div>
+
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
     <h2>

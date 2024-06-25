@@ -21,7 +21,7 @@
   @for (slide of slides; track slide; let i = $index) {
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img [src]="slide.projectImg" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/>
+        <img width="640" height="360" [src]="slide.projectImg" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/>
       </div>
       <div class="carousel-caption">
         <h3 class={{slide.projectFase}}>
