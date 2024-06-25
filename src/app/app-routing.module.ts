@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'ibcomerc-a-escola-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'pa-daqui-forn-i-pastisseria/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'pa-daqui-forn-i-pastisseria-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'industria-local-sostenible/:id/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
+  { path: 'industria-local-sostenible/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'industria-local-sostenible-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'ibsostenibilitat-xecs/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
   { path: 'ibsostenibilitat-xecs-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
