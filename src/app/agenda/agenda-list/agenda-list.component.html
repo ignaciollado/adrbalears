@@ -1,6 +1,6 @@
 <h1>{{'Agenda' | translate}}:</h1>
 
-<h1 class="emprender">{{'#EMPRENDRE' | translate}}</h1>
+<h1 class="emprendre">{{'#EMPRENDRE' | translate}}</h1>
 <div class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaEmpr of agendaEmprender">
@@ -17,12 +17,12 @@
   </div>
   </div>
 </div>
-<div class="no-hay-eventos emprender-bck" *ngIf="agendaEmprender?.length === 0">
+<div class="no-hay-eventos emprendre-bck" *ngIf="agendaEmprender?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>
 
-<h1 class="conectar">{{'#CONNECTAR' | translate}}</h1>
+<h1 class="connectar">{{'#CONNECTAR' | translate}}</h1>
 <div class="event-list-container" *ngIf="agendaConectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaConectar of agendaConectar">
@@ -40,12 +40,12 @@
   </div>
 </div>
 
-<div class="no-hay-eventos conectar-bck" *ngIf="agendaConectar?.length === 0">
+<div class="no-hay-eventos connectar-bck" *ngIf="agendaConectar?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>
 
-<h1 class="proyectar">{{'#PROJECTAR' | translate}}</h1>
+<h1 class="projectar">{{'#PROJECTAR' | translate}}</h1>
 <div class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaProyectar of agendaProyectar">
@@ -62,7 +62,7 @@
   </div>
   </div>
 </div>
-<div class="no-hay-eventos proyectar-bck" *ngIf="agendaProyectar?.length === 0">
+<div class="no-hay-eventos projectar-bck" *ngIf="agendaProyectar?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
 </div>
