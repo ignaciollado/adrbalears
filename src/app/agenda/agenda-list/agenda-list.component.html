@@ -30,7 +30,7 @@
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-conectar.webp" alt={{itemAgendaConectar.attributes.title}} title={{itemAgendaConectar.attributes.title}} />
         </div>
-        <div class="card-body">
+        <div class="card-body" [innerHTML]="itemAgendaConectar.attributes.text">
           <a [routerLink]="['/news-agenda-detail', itemAgendaConectar.attributes.alias, itemAgendaConectar.id]">
             <h4 class="card-title">{{itemAgendaConectar.attributes.title}}</h4>
           </a>
@@ -53,7 +53,7 @@
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
         </div>
-        <div class="card-body">
+        <div class="card-body" [innerHTML]="itemAgendaProyectar.attributes.text">
           <a [routerLink]="['/news-agenda-detail', itemAgendaProyectar.attributes.alias, itemAgendaProyectar.id]">
             <h4 class="card-title">{{itemAgendaProyectar.attributes.title}}</h4>
           </a>

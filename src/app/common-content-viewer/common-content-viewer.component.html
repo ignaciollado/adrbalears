@@ -1,8 +1,4 @@
 <div *ngIf="contenido">
- 
-<!--     <h1>{{contenido.attributes.title}}</h1>
-    <div class="menu-texto-idi" [innerHTML]='contenido.attributes.text.replaceAll("images/","https://contents.idi.es/images/")'> </div>
- -->
     <div class="card">
     
         <div class='card__head'>
@@ -19,6 +15,29 @@
       </div>
  
 </div>
+
+<div *ngIf="cooperativaList">
+  <div class="row">
+    <div *ngFor="let cooperativa of cooperativaList">
+      <div class="col">
+        <div class="adr-card">
+          <div class="card-header">
+            <img *ngIf="cooperativa['logo']" src="https://app.iemprenjove.es/storage/{{cooperativa['logo']}}" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
+            <img *ngIf="!cooperativa['logo']" src="https://picsum.photos/id/137/200/200?grayscale&blur=2" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
+          </div>
+          <div class="card-body">
+             <h1>{{cooperativa['name']}}</h1>
+             <h4>{{cooperativa['centre']['name']}}</h4>
+          
+          </div>
+          <div class='card-footer'>
+            <a href="{{cooperativa['video']}}">Video</a> | <a href="{{cooperativa['url']}}">Web</a> | <a href="{{cooperativa['socialnetworks']}}">Xarxes socials</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div> 
 
 <div class="loading-data" *ngIf="!contenido">
   <button class="alert alert-info" type="button" disabled>

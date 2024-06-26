@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { SliderHomeDTO } from '../Models/sliderhome.dto';
+import { SliderHomeDTO } from '../Models/slider-home.dto';
 
 const URL_API = '../../assets/phpAPI/'
 const URL_MOCKS = '../../assets/mocks/'

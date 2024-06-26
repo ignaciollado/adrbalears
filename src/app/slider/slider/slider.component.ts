@@ -3,7 +3,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } fro
 import { ArticleContentService } from '../../services/article-content.service';
 import { SliderHomeService } from '../../services/sliderHome.service';
 import { genericDataDTO } from '../../Models/generic-data.dto';
-import { SliderHomeDTO } from '../../Models/sliderhome.dto';
+import { SliderHomeDTO } from '../../Models/slider-home.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { attrArticle } from '../../Models/article-data.dto';
