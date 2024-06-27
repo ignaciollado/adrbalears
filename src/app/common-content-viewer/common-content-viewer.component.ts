@@ -42,11 +42,10 @@ export class CommonContentViewerComponent {
       }
   
       this.getContent(this.id)
-      if (this.program_id !== '0') {
+      if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
         this.getCooperativas ( +this.program_id, 3)
       }
       
-
       window.scroll(0,0)
     }
 

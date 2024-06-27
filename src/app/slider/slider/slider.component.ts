@@ -4,6 +4,8 @@ import { ArticleContentService } from '../../services/article-content.service';
 import { SliderHomeService } from '../../services/sliderHome.service';
 import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SliderHomeDTO } from '../../Models/slider-home.dto';
+import { UriConversionService } from '../../services/uriConversion.service';
+import { UriProjectConversionDTO } from '../../Models/uri-project-conversion.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { attrArticle } from '../../Models/article-data.dto';
@@ -30,10 +32,12 @@ export class SliderComponent {
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
 	oneContentAttributes: attrArticle
+	uriProjectData: UriProjectConversionDTO
 	actualProjectName : string = ""
 	actualProjectID: string = ""
-
-  constructor(config: NgbTooltipConfig, private getNoticia: ArticleContentService,
+	completeURI: string = ""
+  
+	constructor(config: NgbTooltipConfig, private getNoticia: ArticleContentService, private getTheUri: UriConversionService,
 		private contentService: ArticleContentService, private slideHomeService: SliderHomeService, private route: ActivatedRoute,
 		public translateService: TranslateService ) {
 			// customize default values of tooltips used by this component tree
@@ -42,8 +46,11 @@ export class SliderComponent {
 		}
 
   ngOnInit() {
-		this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
-		this.actualProjectID = this.route.snapshot.paramMap.get('contentID')
+		this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
+		this.getTheUriData()
+
+		/* this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
+		this.actualProjectID = this.route.snapshot.paramMap.get('contentID') */
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -63,13 +70,25 @@ export class SliderComponent {
 			})
 
 		this.getHomeSlides()
+
 		if (this.actualProjectName) {
 			this.getOneContent(this.actualProjectID)
 		}
 	}
 
-  @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
+	getTheUriData () {
+    this.getTheUri.getAll()
+      .subscribe( (resp: any) => {
+      this.uriProjectData = resp.filter((uriToFilter: UriProjectConversionDTO) => uriToFilter.uri === this.completeURI)
+      this.actualProjectName = this.uriProjectData[0]['data'][0]
+      this.actualProjectID = this.uriProjectData[0]['data'][1]
+			if (this.actualProjectName) {
+				this.getOneContent(this.actualProjectID)
+			}
+      }) 
+  }
 
+  @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
 
   togglePaused() {
 		if (this.paused) {

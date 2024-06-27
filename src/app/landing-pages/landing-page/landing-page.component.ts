@@ -1,9 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
 import { ArticleContentService } from '../../services/article-content.service';
+import { UriConversionService } from '../../services/uriConversion.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { genericMailDTO } from '../../Models/generic-data.dto';
+import { UriProjectConversionDTO } from '../../Models/uri-project-conversion.dto';
+
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -11,6 +14,7 @@ import { MessageService } from '../../services/message.service';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
 export class LandingPageComponent {
 
   public totalNewsToDisplay: string = "4"
@@ -26,15 +30,15 @@ export class LandingPageComponent {
   public faseNewsToDisplay: string | null = ""
   public agendaCategory: string | null = ""
 
-  public hasExternalLink1!: boolean  | null
-  public hasExternalLink2!: boolean  | null
-  public hasExternalLink3!: boolean  | null
-  public hasExternalLink4!: boolean  | null
-  public hasExternalLink5!: boolean  | null
-  public hasExternalLink6!: boolean  | null
-  public hasExternalLink7!: boolean  | null
-  public hasExternalSite!: boolean  | null
-  public hasExternalBackoffice!: boolean  | null
+  public hasExternalLink1!: boolean | null
+  public hasExternalLink2!: boolean | null
+  public hasExternalLink3!: boolean | null
+  public hasExternalLink4!: boolean | null
+  public hasExternalLink5!: boolean | null
+  public hasExternalLink6!: boolean | null
+  public hasExternalLink7!: boolean | null
+  public hasExternalSite!: boolean | null
+  public hasExternalBackoffice!: boolean | null
   public infoLabel:string = ""
 
   public unaNoticia: reqArticle | undefined
@@ -50,13 +54,20 @@ export class LandingPageComponent {
   contactPhone: UntypedFormControl
   showCtaForm: boolean = false
   showInfoLabel: boolean = false
+  uriProjectData: UriProjectConversionDTO
+  completeURI: string = ""
+
+  /**
+   * Ibemprėnjove
+   * 'Ibemprėnjove','3046','414', 'no', 'emprendre', '417', '405'  */
+
 
   @Input({ required: true }) landingMainTitle: string = "Título del proyecto";
   @Input({ required: true }) landingSlogan: string = "\"ibemprėn, recursos para emprender un negocio en las Islas Baleares.\"";
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  constructor( private getNoticia: ArticleContentService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService,
+  constructor( private getNoticia: ArticleContentService, private getTheUri: UriConversionService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService,
     private router: Router ) {
       this.formData = new genericMailDTO('', '', '', '', '')
 
@@ -77,15 +88,17 @@ export class LandingPageComponent {
     }
   
   ngOnInit(): void {
-    this.projectName = this.route.snapshot.paramMap.get('projectName')
+    this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
+/*     this.projectName = this.route.snapshot.paramMap.get('projectName')
     this.contentID = this.route.snapshot.paramMap.get('contentID')
     this.categoryID = this.route.snapshot.paramMap.get('categoryID')
     this.showLinks = this.route.snapshot.paramMap.get('showLinks')
     this.fasePro = this.route.snapshot.paramMap.get('fasePro')
     this.faseNewsToDisplay = this.route.snapshot.paramMap.get('faseNewsToDisplay')
-    this.agendaCategory = this.route.snapshot.paramMap.get('agendaCategory')
+    this.agendaCategory = this.route.snapshot.paramMap.get('agendaCategory')  */
 
-    this.getTheContent(this.contentID)
+    /* this.getTheContent(this.contentID) */
+    this.getTheUriData()
 
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
@@ -106,6 +119,22 @@ export class LandingPageComponent {
       default:
         this.currentLang = 'ca-ES'
     }
+  }
+
+  getTheUriData () {
+    this.getTheUri.getAll()
+      .subscribe( (resp: any) => {
+      this.uriProjectData = resp.filter((uriToFilter: UriProjectConversionDTO) => uriToFilter.uri === this.completeURI)
+      this.projectName = this.uriProjectData[0]['data'][0]
+      this.contentID = this.uriProjectData[0]['data'][1]
+      this.categoryID = this.uriProjectData[0]['data'][2]
+      this.showLinks = this.uriProjectData[0]['data'][3]
+      this.fasePro = this.uriProjectData[0]['data'][4]
+      this.faseNewsToDisplay = this.uriProjectData[0]['data'][5]
+      this.agendaCategory = this.uriProjectData[0]['data'][6]
+      console.log(this.projectName, this.contentID, this.categoryID, this.showLinks, this.fasePro, this.faseNewsToDisplay, this.agendaCategory)
+      this.getTheContent(this.contentID)
+      }) 
   }
 
   getTheContent (id:string | null) {

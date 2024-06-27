@@ -8,8 +8,8 @@
     "projectImg": "../assets/images/adrbalears-iempren.webp",
     "projectFase": "emprendre",
     "projectLema": "Et donam les claus per començar el teu negoci",
-    "projectDestination": "/landing-page/Ibemprėn/3045/414/no/emprendre/417/405",
-    "projectDestination_ca": "/landing-page/Ibemprėn/2993/414/no/emprendre/417/405"
+    "projectDestination": "ibempren/es/iempren-recursos-para-emprender/",
+    "projectDestination_ca": "ibempren"
 
   },
   {
@@ -21,8 +21,8 @@
     "projectImg": "../assets/images/adrbalears-emblematics.webp",
     "projectFase": "connectar",
     "projectLema": "La història d'un poble s'escriu a través dels comerços",
-    "projectDestination": "/landing-page/Emblemàtics Balears/3034/373/no/connectar/417/405",
-    "projectDestination_ca": "/landing-page/Emblemàtics Balears/3053/373/no/connectar/417/405"
+    "projectDestination": "emblematicsbalears/es/bienvenidos-a-emblematicsbalears/",
+    "projectDestination_ca": "emblematicsbalears"
   },
   {
     "slideId": 3,
@@ -33,8 +33,8 @@
     "projectImg": "../assets/images/adrbalears-indus-local-sost.webp",
     "projectFase": "connectar",
     "projectLema": "Treballam per tenir més indústries sostenibles, competitives i arrelades",
-    "projectDestination": "/landing-page/Industria Local Sostenible/3042/353/no/connectar/417/405",
-    "projectDestination_ca": "/landing-page/Indústria Local Sostenible/2986/353/no/connectar/417/405"
+    "projectDestination": "industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible/",
+    "projectDestination_ca": "industria-local-sostenible"
   },
   {
     "slideId": 4,
@@ -45,8 +45,8 @@
     "projectImg": "../assets/images/adrbalears-internacionalitzacio.webp",
     "projectFase": "projectar",
     "projectLema": "Comença a vendre els teus productes a l'exterior",
-    "projectDestination": "/landing-page/Ibexporta/3032/353/no/projectar/417/405 ",
-    "projectDestination_ca": "/landing-page/Ibexporta/3012/353/no/projectar/417/405"
+    "projectDestination": "ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs",
+    "projectDestination_ca": "ibexporta-xecs"
   },
   {
     "slideId": 5,
@@ -57,8 +57,8 @@
     "projectImg": "../assets/images/adrbalears-loop.webp",
     "projectFase": "connectar",
     "projectLema": "Connexió, col·laboració, innovació i reflexió al voltant del disseny i materials",
-    "projectDestination": "/landing-page/LOOP Disseny i Circularitat/3025/353/no/connectar/417/405 ",
-    "projectDestination_ca": "/landing-page/LOOP Disseny i Circularitat/2987/353/no/connectar/417/405"
+    "projectDestination": "loopdisseny/es/bienvenidos-a-loopdisseny/",
+    "projectDestination_ca": "loopdisseny"
   },
   {
     "slideId": 6,
@@ -69,7 +69,7 @@
     "projectImg": "../assets/images/adrbalears-pibs.webp",
     "projectFase": "projectar",
     "projectLema": "La principal cita nàutica per al sector en l'àmbit internacional",
-    "projectDestination": "/landing-page/Palma International Boat Show/3019/414/no/projectar/417/405 ",
-    "projectDestination_ca": "/landing-page/Palma International Boat Show/3005/414/no/projectar/417/405"
+    "projectDestination": "palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow/",
+    "projectDestination_ca": "palmainternationalboatshow"
   }
 ]

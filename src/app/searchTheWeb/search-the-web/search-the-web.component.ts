@@ -13,7 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './search-the-web.component.scss'
 })
 export class SearchTheWebComponent {
-  showLinks: boolean = true;
   searchTheWebForm!: FormGroup
 	totalFound: string = ""
 	public contenidos: reqArticle[] = []
@@ -26,6 +25,8 @@ export class SearchTheWebComponent {
 	pauseOnIndicator: boolean = false
 	pauseOnHover: boolean = true
 	pauseOnFocus: boolean = true
+  
+  @Input() showLinks: string;
 
     constructor(private route: ActivatedRoute, private router: Router, config: NgbTooltipConfig,
 		private contentService: ArticleContentService,
@@ -35,9 +36,6 @@ export class SearchTheWebComponent {
 				// customize default values of tooltips used by this component tree
 				config.placement = 'bottom'
 				config.triggers = 'hover'
-      if (this.route.snapshot.paramMap.get('showLinks') === 'no') {
-        this.showLinks = false
-      }
 		}
 
   createForm() {
