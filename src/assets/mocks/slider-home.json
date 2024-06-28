@@ -1,5 +1,18 @@
 [
   {
+    "slideId": 0,
+    "tagES": "#noticies",
+    "tagCA": "#noticies",
+    "projectNameES": "Noticias / agenda",
+    "projectNameCA": "Notícies / agenda",
+    "projectImg": "../assets/images/adrbalears-iempren.webp",
+    "projectFase": "emprendre",
+    "projectLema": "Et donam les claus per començar el teu negoci",
+    "projectDestination": "ibempren/es/iempren-recursos-para-emprender/",
+    "projectDestination_ca": "ibempren"
+
+  },
+  {
     "slideId": 1,
     "tagES": "#ibempren",
     "tagCA": "#ibempren",
