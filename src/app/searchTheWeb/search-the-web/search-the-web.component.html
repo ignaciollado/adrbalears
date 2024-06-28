@@ -27,10 +27,13 @@
 
     <ul>
       <li class="emprendre-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibempren/es/bienvenidos-a-iempren/">Ibemprėn</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibempren">Ibemprėn</button> 
+      </li>
+      <li class="emprendre-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibemprenjove/es/bienvenidos-a-iemprenjove/">Ibemprėnjove</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibemprenjove">Ibemprėnjove</button> 
       </li>
-     
       <li class="emprendre-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibtalent/es/bienvenidos-a-ibtalent/">Ibtalent</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibtalent">Ibtalent</button>        
@@ -43,7 +46,11 @@
         <button *ngIf="currentLang === 'es-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs/es/bienvenidos-a-ibdigitalitzacio-xecs/">Ibdigitalització xecs</button>
         <button *ngIf="currentLang === 'ca-ES'"  class ="btn btn-link" routerLink="ibdigitalitzacio-xecs">Ibdigitalització xecs</button>        
       </li>
-      
+
+      <li class="connectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="emblematicsbalears/es/bienvenidos-a-emblematicsbalears/">Emblemàtics</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="emblematicsbalears">Emblemàtics</button>
+      </li>
       <li class="connectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola/">Ibcomerç a l'escola</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibcomerc-a-escola">Ibcomerç a l'escola</button>
@@ -52,10 +59,10 @@
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="pa-daqui-forn-i-pastisseria/es/bienvenidos-a-pa-daqui-forn-i-pastisseria/">Pà d'aquí</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="pa-daqui-forn-i-pastisseria">Pà d'aquí</button>        
       </li>
-<!--       <li class="connectar-bck">
-        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="industria-local-sostenible-es/ILS marca garantía/3042/415/no/conectar/415/406">ILS marca garantía</button>
-        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="industria-local-sostenible/ILS marca garantia/2986/415/no/conectar/415/406">ILS marca garantia</button>        
-      </li> -->
+      <li class="connectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible/">ILS marca garantía</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="industria-local-sostenible">ILS marca garantia</button>        
+      </li>
       <li class="connectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibsostenibilitat-xecs/es/bienvenidos-a-ibsostenibilitat-xecs/">Ibsostenibilitat xecs</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibsostenibilitat-xecs">Ibsostenibilitat xecs</button>        
@@ -72,10 +79,15 @@
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibrelleu/es/bienvenidos-a-ibrelleu/">Ibrelleu</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibrelleu">Ibrelleu</button>
       </li>
-<!--       <li class="projectar-bck">
+      <li class="connectar-bck">
+        <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="loopdisseny/es/bienvenidos-a-loopdisseny/">LOOP</button>
+        <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="loopdisseny">LOOP</button>
+      </li>
+
+      <li class="projectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class ="btn btn-link" routerLink="ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs/">Ibexporta xecs</button>
         <button *ngIf="currentLang === 'ca-ES'" class ="btn btn-link" routerLink="ibexporta-xecs">Ibexporta xecs</button>
-      </li> -->
+      </li>
       <li class="projectar-bck">
         <button *ngIf="currentLang === 'es-ES'" class="btn btn-link" routerLink="invest-in-balearics/es/bienvenidos-a-invest-in-balearics/">Invest in Balearics</button>
         <button *ngIf="currentLang === 'ca-ES'" class="btn btn-link" routerLink="invest-in-balearics">Invest in Balearics</button>

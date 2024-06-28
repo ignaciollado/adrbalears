@@ -18,7 +18,6 @@ import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 
 const routes: Routes = [
-  { path: '', component: BodyComponent },
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
   { path: 'news-agenda-list/:newsToDisplay', component: ContainerNewsAgendaComponent },
   { path: 'news-agenda-list-all/:newsToDisplay', component: NewsListComponent },
@@ -30,6 +29,7 @@ const routes: Routes = [
 
   { path: 'ibemprenjove', component: LandingPageComponent },
   { path: 'ibemprenjove/es/:projectName', component: LandingPageComponent },
+
   { path: 'ibempren', component: LandingPageComponent },
   { path: 'ibempren/es/iempren-recursos-para-emprender', component: LandingPageComponent },
   { path: 'ibtalent', component: LandingPageComponent },
@@ -41,53 +41,29 @@ const routes: Routes = [
 
   { path: 'emblematicsbalears', component: LandingPageComponent },
   { path: 'emblematicsbalears/es/bienvenidos-a-emblematicsbalears', component: LandingPageComponent },
-/*   { path: 'emblematics-balears/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'emblematics-balears-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'ibcomerc-a-escola', component: LandingPageComponent },
   { path: 'ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola', component: LandingPageComponent },
- /*  { path: 'ibcomerc-a-escola/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'ibcomerc-a-escola-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'pa-daqui-forn-i-pastisseria', component: LandingPageComponent },
   { path: 'pa-daqui-forn-i-pastisseria/es/bienvenidos-a-pa-daqui-forn-i-pastisseria', component: LandingPageComponent },
-/*   { path: 'pa-daqui-forn-i-pastisseria/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'pa-daqui-forn-i-pastisseria-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'industria-local-sostenible', component: LandingPageComponent },
   { path: 'industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible', component: LandingPageComponent },
-/*   { path: 'industria-local-sostenible/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'industria-local-sostenible-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'ibsostenibilitat-xecs', component: LandingPageComponent },
   { path: 'ibsostenibilitat-xecs/es/bienvenidos-a-ibsostenibilitat-xecs', component: LandingPageComponent },   
-/*   { path: 'ibsostenibilitat-xecs/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'ibsostenibilitat-xecs-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'ibavals-industria', component: LandingPageComponent },
   { path: 'ibavals-industria/es/bienvenidos-a-ibavals-industria', component: LandingPageComponent },  
-  /* { path: 'ibavals-industria/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'ibavals-industria-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'exposabyidi', component: LandingPageComponent },
   { path: 'exposabyidi/es/bienvenidos-a-exposabyidi', component: LandingPageComponent },  
-  /* { path: 'exposabyidi/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'exposabyidi-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'ibrelleu', component: LandingPageComponent },
   { path: 'ibrelleu/es/bienvenidos-a-ibrelleu', component: LandingPageComponent },  
-/*   { path: 'ibrelleu/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'ibrelleu-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'loopdisseny', component: LandingPageComponent },
   { path: 'loopdisseny/es/bienvenidos-a-loopdisseny', component: LandingPageComponent },  
-  /* { path: 'loop-disseny-i-circularitat/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'loop-disseny-i-circularitat-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   
   { path: 'ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs', component: LandingPageComponent },
   { path: 'ibexporta-xecs', component: LandingPageComponent },  
-  /* { path: 'ibexporta-xecs/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'ibexporta-xecs-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'invest-in-balearics/es/bienvenidos-a-invest-in-balearics', component: LandingPageComponent },
   { path: 'invest-in-balearics', component: LandingPageComponent },  
-  /* { path: 'invest-in-balearics/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'invest-in-balearics-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
   { path: 'palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow', component: LandingPageComponent },
   { path: 'palmainternationalboatshow', component: LandingPageComponent },  
-  /* { path: 'pibs/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent },
-  { path: 'pibs-es/:projectName/:contentID/:categoryID/:showLinks/:fasePro/:faseNewsToDisplay/:agendaCategory', component: LandingPageComponent }, */
 
   { path: 'direct-link/:id/:idMainCat', component: CommonContentViewerComponent},
 
@@ -106,7 +82,8 @@ const routes: Routes = [
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },
   { path: '*', component: BodyComponent },
- /*  { path: '**', redirectTo: '/404', pathMatch: 'full' } */
+  { path: '', component: BodyComponent },
+  { path: '**', redirectTo: '/404', pathMatch: 'full' }
 ];
 
 @NgModule({

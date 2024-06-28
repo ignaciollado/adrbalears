@@ -23,6 +23,7 @@ export interface attrArticle {
   created_by_alias: string;
   modified:         Date;
   featured:         number;
+  logoproyecto:     string;
   slogan:           string;
   tieneportal:      boolean;
   urlportalexterno: string;
