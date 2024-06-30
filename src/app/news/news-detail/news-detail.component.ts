@@ -50,6 +50,7 @@ export class NewsDetailComponent {
     this.getNoticia.get(id)
       .subscribe( (resp: any) => {
         this.unaNoticiaAttribute = resp.data.attributes
+        window.scroll(0,0)
       }) 
     }
 }

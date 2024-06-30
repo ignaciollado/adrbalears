@@ -17,6 +17,14 @@
   margin-top: 4rem;
 }
 
+.accordion-body{
+  padding: 0;
+}
+
+.accordion-button{
+  margin: 0px !important;
+}
+
 form {
   display: grid;
   grid-template-columns: auto auto;
