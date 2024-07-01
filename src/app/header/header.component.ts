@@ -176,8 +176,8 @@ scroll(el: string) {
 switchLanguage( lang:string ) {
     this.translate.use(lang)
     localStorage.setItem('preferredLang', lang)
-    /* location.reload() */
-    this.router.navigate([''])
+    /* this.router.navigate(['']) */
+    location.reload() 
 }
 
 redirectToExternalUrl(externalURL: string) {
