@@ -1,18 +1,18 @@
 <app-header></app-header>
 
-<div class='cta area-profile' *ngIf="!profileExists">
+<!-- <div class='cta area-profile' *ngIf="!profileExists">
 	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1>Personaliza tu experiencia</h1></a>
 	<a *ngIf="currentLang === 'ca-ES'" (click)="openHomePopUp(content)"><h1>Personalitza la teva experiència</h1></a>
-</div>
+</div> -->
 
-<ng-template #tipContent>Cunmplimentando este breve formulario<br>podrás fijar tus
-	preferencias durante la navegación en nuestro sitio web de <b>ADR Balears</b></ng-template>
+<!-- <ng-template #tipContent>Cunmplimentando este breve formulario<br>podrás fijar tus
+	preferencias durante la navegación en nuestro sitio web de <b>ADR Balears</b></ng-template> -->
 	
 <router-outlet />
 
 <app-footer></app-footer>
 
-<ng-template #content let-modal>
+<!-- <ng-template #content let-modal>
 	<div class="modal-header">
 		<p *ngIf="currentLang === 'es-ES'"><strong>Personaliza tu experiencia</strong></p>
 		<p *ngIf="currentLang === 'ca-ES'"><strong>Personalitza la teva experiència</strong></p>
@@ -70,14 +70,16 @@
 									</ol>
 							</li>
 					</ol>
-					<!-- <small>{{ customizeTheWeb.value | json}}</small> -->
-				<!-- 	{{ customizeTheWeb.status | json}} -->
+				
+			
 					</form>
 			</div>
 	</section>
 	</div>
 	<div class="modal-footer">
-		<!-- <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Aplicar perfíl</button> -->
+		
 		<button type="button" class="btn btn-dark" [disabled]="!customizeTheWeb.valid" (click)="onClick(customizeTheWeb)">Aplicar perfíl</button>
 	</div>
-</ng-template>
+</ng-template> -->
+	<!-- <small>{{ customizeTheWeb.value | json}}</small> -->
+	<!-- 	{{ customizeTheWeb.status | json}} -->

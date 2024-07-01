@@ -25,9 +25,9 @@ export class AppComponent {
   @ViewChild('content') infoDialog = {} as TemplateRef<string>;
 
   constructor( translate: TranslateService, public dialog: MatDialog, private formBuilder: FormBuilder ){
-    translate.addLangs(['cas', 'cat'])
+/*     translate.addLangs(['cas', 'cat'])
     translate.setDefaultLang('cas')
-    translate.use('cas')
+    translate.use('cas') */
 
     this.situacionActual = new UntypedFormControl('', [ Validators.required ])
     this.interesadoEn = new UntypedFormControl('', [ Validators.required ])
@@ -62,9 +62,9 @@ export class AppComponent {
     }
    }
 
-  openHomePopUp(content: TemplateRef<any>) {
+/*   openHomePopUp(content: TemplateRef<any>) {
 		this.modalService.open(content, { backdropClass: 'color-backdrop' });
-	}
+	} */
 
  /*  close() {
 		this.show = false;
@@ -88,7 +88,7 @@ export class AppComponent {
     this.dialog.open(PopUpDialogComponent, dialogConfig);
   }
 
-  onClick(customizeTheWeb: any) {
+/*   onClick(customizeTheWeb: any) {
     if (customizeTheWeb.valid) {
       localStorage.setItem('situacionActual', customizeTheWeb.value.situacionActual)
       localStorage.setItem('interesadoEn', customizeTheWeb.value.interesadoEn)
@@ -97,6 +97,6 @@ export class AppComponent {
     } else {
       console.error('profile form is in an invalid state: ', customizeTheWeb)
     } 
-  }
+  } */
 
 }
