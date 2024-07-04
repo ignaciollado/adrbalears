@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { reqArticle } from '../../Models/article-data.dto';
+import { findIndex } from 'rxjs';
 
 @Component({
   selector: 'app-agenda-list',
@@ -51,10 +52,11 @@ export class AgendaListComponent {
 
     this.articleContent.getEveryThing()
         .subscribe( (resp:any) => {
+          const now = new Date
           this.agenda = resp.data
           this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.state === 1)
           this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`)
-
+          this.agenda = this.agenda.filter( (item : reqArticle) => now.getDate() - new Date(item.attributes.publish_down).getDate() <= 0) 
           this.agenda.map((item:reqArticle) => {
             if (item.relationships.category.data.id === categies[0]) {
               this.agendaEmprender.push(item)
