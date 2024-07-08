@@ -5,7 +5,7 @@
     "tagCA": "#noticies",
     "projectNameES": "Noticias / agenda",
     "projectNameCA": "Notícies / agenda",
-    "projectImg": "../assets/images/cabecera-noticia.png",
+    "projectImg": "../assets/images/cabecera-noticia.webp",
     "projectFase": "emprendre",
     "projectLema": "Notícies, agenda i formació d'ADR Balears",
     "projectDestination": "news-agenda-list/4",
