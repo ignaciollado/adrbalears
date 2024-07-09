@@ -5,6 +5,11 @@
   margin-bottom: 1rem;
 }
 
+.banner-pro {
+  color: #fff;
+  padding: 4px;
+}
+
 .titulo-slogan {
   grid-area: tituloslogan;
 }
@@ -21,11 +26,6 @@
   background-color: lightgray;
   padding: 1rem;
 }
-
-/* img {
-  width: 100%;
-  height: auto;
-} */
 
 .alert {
   width: 100%;
@@ -92,7 +92,6 @@ h2{
   width: 90%;
 }
 
-
 .bottom-landing-page {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -149,7 +148,6 @@ input:invalid {
 input:valid {
   border-color: green;
 }
-
 
 form{
   display: flex;

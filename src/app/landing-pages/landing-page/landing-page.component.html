@@ -1,6 +1,8 @@
 <div class='top-landing-page'>
   <div class="titulo-slogan">
-    <img width="auto" height="auto" src={{theContentAttributes.images.image_intro}} alt={{theContentAttributes.title}} title={{theContentAttributes.title}}>
+    <div class="top-emprender">
+      <h1 class='banner-pro {{fasePro}}-bck'>#{{fasePro}}</h1>
+    </div>
     <h2>{{theContentAttributes?.slogan}}</h2>
     <h2 *ngIf="!theContentAttributes?.slogan">loading data ...</h2>
   </div>
@@ -13,32 +15,31 @@
     <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
     <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
     <ol>
-      <li>
+      <li *ngIf="theContentAttributes?.etiquetaenlaceinteresuno">
         <button *ngIf="hasExternalLink1" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresuno)">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
         <button *ngIf="!hasExternalLink1" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresuno}}">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
       </li>
-      <li>
+      <li *ngIf="theContentAttributes.etiquetaenlaceinteresdos">
         <button *ngIf="hasExternalLink2" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresdos)">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
         <button *ngIf="!hasExternalLink2" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresdos}}">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
       </li>
-      <li>
+      <li *ngIf="theContentAttributes.etiquetaenlaceinterestres">
         <button *ngIf="hasExternalLink3" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterestres)">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
         <button *ngIf="!hasExternalLink3" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterestres}}">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
       </li>
-      <li>
+      <li *ngIf="theContentAttributes.etiquetaenlaceinterescuatro">
         <button *ngIf="hasExternalLink4" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescuatro)">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
         <button *ngIf="!hasExternalLink4" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescuatro}}">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
-
       </li>
-      <li>
+      <li *ngIf="theContentAttributes.etiquetaenlaceinterescinco">
         <button *ngIf="hasExternalLink5" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescinco)">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
         <button *ngIf="!hasExternalLink5" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescinco}}">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
       </li>
-      <li>
+      <li *ngIf="hasExternalLink6">
         <button *ngIf="hasExternalLink6" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresseis)">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
         <button *ngIf="!hasExternalLink6" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresseis}}">{{theContentAttributes?.etiquetaenlaceinteresseis}}</button>
       </li>
-      <li>
+      <li *ngIf="hasExternalLink7">
         <button *ngIf="hasExternalLink7" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteressiete)">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
         <button *ngIf="!hasExternalLink7" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteressiete}}">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
       </li> 
