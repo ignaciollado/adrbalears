@@ -89,15 +89,6 @@ export class LandingPageComponent {
   
   ngOnInit(): void {
     this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
-/*     this.projectName = this.route.snapshot.paramMap.get('projectName')
-    this.contentID = this.route.snapshot.paramMap.get('contentID')
-    this.categoryID = this.route.snapshot.paramMap.get('categoryID')
-    this.showLinks = this.route.snapshot.paramMap.get('showLinks')
-    this.fasePro = this.route.snapshot.paramMap.get('fasePro')
-    this.faseNewsToDisplay = this.route.snapshot.paramMap.get('faseNewsToDisplay')
-    this.agendaCategory = this.route.snapshot.paramMap.get('agendaCategory')  */
-
-    /* this.getTheContent(this.contentID) */
     this.getTheUriData()
 
     switch (localStorage.getItem('preferredLang')) {
