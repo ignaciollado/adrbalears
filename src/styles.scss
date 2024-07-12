@@ -20,9 +20,9 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
+    margin: 0;
     padding:0;
-    border:0;
+    border: 0;
     outline:0;
     font-size:100%;
     vertical-align: baseline;
@@ -56,11 +56,17 @@ a {
     vertical-align: baseline;
     background: transparent;
     text-decoration: none!important;
+    color: #0098CB!important;
+}
+
+a:visited {
+    color: #0098CB;
 }
 
 a:hover {
-    color: #0098CB!important;
+    color: #003747;
 }
+
 
 ins {
     background-color:#ff9;
@@ -89,7 +95,6 @@ table {
     border-spacing:0;
 }
 
-/* change border colour to suit your needs */
 hr {
     display:block;
     height:1px;
@@ -200,3 +205,9 @@ a:focus {
 img {
     max-width: 1320px;
 }
+
+@media (min-width: 1200px) {
+    .h1, h1 {
+      font-size: 2rem!important;
+    }
+  }

@@ -9,7 +9,7 @@ export class WellFormattedLinkPipe implements PipeTransform {
     
     let regex = /\dd/g
 
-    theLink=theLink.replaceAll('index.php?option=com_content&amp;view=article&amp;id=',"idi-level-two/")
+    theLink=theLink.replaceAll('index.php?option=com_content&amp;view=article&amp;id=',"direct-link/")
     theLink=theLink.replaceAll('&amp;catid=','/')
     theLink=theLink.replaceAll(regex, '*')
     theLink=theLink.replaceAll('&amp;lang=','')

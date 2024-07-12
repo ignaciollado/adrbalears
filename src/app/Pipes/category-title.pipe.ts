@@ -17,8 +17,6 @@ export class CategoryTitlePipe implements PipeTransform {
       return splitted[1];
     }
 
-    
-
   }
 
 }

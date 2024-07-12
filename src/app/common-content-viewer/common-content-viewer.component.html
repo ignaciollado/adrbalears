@@ -5,10 +5,8 @@
           <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
         </div>
           
-        <div>
-          <h2 class="card__title">{{contenido.attributes.title}}</h2>
-        </div>
-    
+        <h2 class="card__title">{{contenido.attributes.title}}</h2>
+            
         <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
         </div>
     
@@ -26,9 +24,8 @@
             <img *ngIf="!cooperativa['logo']" src="https://picsum.photos/id/137/200/200?grayscale&blur=2" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
           </div>
           <div class="card-body">
-             <h1>{{cooperativa['name']}}</h1>
-             <h4>{{cooperativa['centre']['name']}}</h4>
-          
+             <h4>{{cooperativa['name']}}</h4>
+             <h5>{{cooperativa['centre']['name']}}</h5>
           </div>
           <div class='card-footer'>
             <a href="{{cooperativa['video']}}">Video</a> | <a href="{{cooperativa['url']}}">Web</a> | <a href="{{cooperativa['socialnetworks']}}">Xarxes socials</a>

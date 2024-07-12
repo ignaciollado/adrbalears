@@ -11,12 +11,12 @@ footer {
   margin-top: 4rem;
 }
 
-a {
-  color: #000;
+a:visited {
+  color: #0098CB;
 }
 
 a:hover {
-  color: #0098CB;
+  color: #003747;
 }
 
 .logo-adr-balears {
@@ -43,6 +43,7 @@ a:hover {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding-left: 0;
+  color: red;
 
 }
 
@@ -55,6 +56,7 @@ a:hover {
 .logo-feder-izq, .logo-feder, .logo-feder-dcha {
   margin-top: 2rem;
 }
+
 .logoFeder {
   margin-bottom: 1rem;
   padding-left: 3rem;
@@ -78,4 +80,9 @@ a:hover {
     margin-bottom: 3rem;
     padding-left: 0;
   }
+  .logoFeder {
+    padding-left: 0;
+    width: 30%;
+  }
+  
 }
