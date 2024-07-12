@@ -1,0 +1,18 @@
+<div *ngIf="contenido">
+  <div class="card">
+      <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
+        <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
+      </div>
+      <h2 class="card__title">{{contenido.attributes.title}}</h2>   
+      <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
+      </div>
+    </div>
+</div>
+
+<div class="loading-data" *ngIf="!contenido">
+  <button class="alert alert-info" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>&nbsp; 
+    <span *ngIf="currentLang === 'es-ES'" role="status">Cargando los datos del proyecto ...</span>
+    <span *ngIf="currentLang === 'ca-ES'" role="status">Carregant les dades del projecte ...</span>
+  </button>
+</div>

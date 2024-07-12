@@ -16,6 +16,7 @@ import { EmprenderComponent } from './boost-your-project/emprender/emprender.com
 import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.component';
 import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
+import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
@@ -73,11 +74,11 @@ const routes: Routes = [
 
   { path: 'contact-adr-balears', component: ContactAdrBalearsComponent},
 
-  { path: 'accesibilidad/:id', component: CommonContentViewerComponent },
-  { path: 'aviso-legal/:id', component: CommonContentViewerComponent },
-  { path: 'contacta', component: CommonContentViewerComponent},
-  { path: 'politica-de-cookies/:id', component: CommonContentViewerComponent},
-  { path: 'politica-de-privacidad/:id', component: CommonContentViewerComponent},
+  { path: 'accesibilidad/:id', component: SimpleTextViewerComponent },
+  { path: 'aviso-legal/:id', component: SimpleTextViewerComponent },
+  { path: 'contacta', component: SimpleTextViewerComponent},
+  { path: 'politica-de-cookies/:id', component: SimpleTextViewerComponent},
+  { path: 'politica-de-privacidad/:id', component: SimpleTextViewerComponent},
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },

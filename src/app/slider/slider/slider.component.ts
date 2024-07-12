@@ -80,8 +80,10 @@ export class SliderComponent {
     this.getTheUri.getAll()
       .subscribe( (resp: any) => {
       this.uriProjectData = resp.filter((uriToFilter: UriProjectConversionDTO) => uriToFilter.uri === this.completeURI)
-      this.actualProjectName = this.uriProjectData[0]['data'][0]
-      this.actualProjectID = this.uriProjectData[0]['data'][1]
+			if (this.uriProjectData[0] ) {
+      	this.actualProjectName = this.uriProjectData[0]['data'][0]
+      	this.actualProjectID = this.uriProjectData[0]['data'][1]
+			}
 			if (this.actualProjectName) {
 				this.getOneContent(this.actualProjectID)
 			}

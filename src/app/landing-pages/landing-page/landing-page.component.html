@@ -19,19 +19,19 @@
         <button *ngIf="hasExternalLink1" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresuno)">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
         <button *ngIf="!hasExternalLink1" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresuno}}">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
       </li>
-      <li *ngIf="theContentAttributes.etiquetaenlaceinteresdos">
+      <li *ngIf="theContentAttributes?.etiquetaenlaceinteresdos">
         <button *ngIf="hasExternalLink2" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresdos)">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
         <button *ngIf="!hasExternalLink2" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresdos}}">{{theContentAttributes?.etiquetaenlaceinteresdos}}</button>
       </li>
-      <li *ngIf="theContentAttributes.etiquetaenlaceinterestres">
+      <li *ngIf="theContentAttributes?.etiquetaenlaceinterestres">
         <button *ngIf="hasExternalLink3" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterestres)">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
         <button *ngIf="!hasExternalLink3" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterestres}}">{{theContentAttributes?.etiquetaenlaceinterestres}}</button>
       </li>
-      <li *ngIf="theContentAttributes.etiquetaenlaceinterescuatro">
+      <li *ngIf="theContentAttributes?.etiquetaenlaceinterescuatro">
         <button *ngIf="hasExternalLink4" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescuatro)">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
         <button *ngIf="!hasExternalLink4" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescuatro}}">{{theContentAttributes?.etiquetaenlaceinterescuatro}}</button>
       </li>
-      <li *ngIf="theContentAttributes.etiquetaenlaceinterescinco">
+      <li *ngIf="theContentAttributes?.etiquetaenlaceinterescinco">
         <button *ngIf="hasExternalLink5" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinterescinco)">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
         <button *ngIf="!hasExternalLink5" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinterescinco}}">{{theContentAttributes?.etiquetaenlaceinterescinco}}</button>
       </li>
