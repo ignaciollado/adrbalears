@@ -11,16 +11,43 @@
       <h3>Coneix totes les oportunitats que et permetran tenir una empresa més forta i competitiva, i connectada amb l'ecosistema.
         Disposam de programes de promoció del comerç, d'impuls a la indústria sostenible, de modernització, de finançament, de relleu
         empresarial, i de formació per a empreses que vulguin retenir i atreure talent.</h3>
-      <h3><span>_Emblemàtics Balears:</span> protegim el teixit comercial de proximitat amb la visibilització dels comerços tradicionals.</h3>
-      <h3><span>_IBComerç a l'escola: </span> distingim els forns amb obrador que elaboren artesanalment pans propis de les Illes Balears.</h3>
-      <h3><span>_Pa d'aquí, forn i tradició:</span> assessorament per a empreses nacionals o internacionals que es volen establir a les Illes Balears.</h3>
-      <h3><span>_Indústria Local Sostenible:</span> marca de garantia per a les indústries de les Illes Balears que iniciïn el camí cap a la sostenibilitat
-        i es comprometin amb la reducció de la petjada de carboni.</h3>
-      <h3><span>_Ibsostenibilitat Xecs: </span> finançament del càlcul de la petjada de carboni corporativa i de producte.</h3>
-      <h3><span>_Ibavals Indústria:</span> ajuts per a empreses industrials per cobrir les despeses d'operacions de finançament per a inversions productives.</h3>
-      <h3><span>_Sòl industrial:</span> disseny d'espais expositius per als productes locals de les Illes Balears.</h3>
-      <h3><span>_Ibrelleu:</span> programa de relleu empresarial que posa en contacte persones emprenedores amb empresaris que volen cedir el seu negoci.</h3>
-      <h3><span>_LOOP Disseny i Circularitat:</span> connexió, col·laboració, innovació i reflexió al voltant del disseny i els materials.</h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/emblematicsbalears/es/bienvenidos-a-emblematicsbalears/">_Emblemàtics Balears</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/emblematicsbalears">_Emblemàtics Balears</a>: protegim el teixit comercial de proximitat amb la visibilització dels comerços tradicionals.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola/">_IBComerç a l'escola</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="ibcomerc-a-escola/">_IBComerç a l'escola</a>: distingim els forns amb obrador que elaboren artesanalment pans propis de les Illes Balears.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/pa-daqui-forn-i-tradicio/es/bienvenidos-a-pa-daqui-forn-i-tradicio/">_Pa d'aquí, forn i tradició</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/pa-daqui-forn-i-tradicio/">_Pa d'aquí, forn i tradició</a>: assessorament per a empreses nacionals o internacionals que es volen establir a les Illes Balears.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible/">_Indústria Local Sostenible</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/industria-local-sostenible/">_Indústria Local Sostenible</a>: marca de garantia per a les indústries de les Illes Balears que iniciïn el camí cap a la sostenibilitat
+        i es comprometin amb la reducció de la petjada de carboni.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/ibsostenibilitat-xecs/es/bienvenidos-a-ibsostenibilitat-xecs/">_Ibsostenibilitat Xecs</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/ibsostenibilitat-xecs/">_Ibsostenibilitat Xecs</a>: finançament del càlcul de la petjada de carboni corporativa i de producte.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/ibavals-industria/es/bienvenidos-a-ibavals-industria/">_Ibavals Indústria</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/ibavals-industria/">_Ibavals Indústria</a>: ajuts per a empreses industrials per cobrir les despeses d'operacions de finançament per a inversions productives.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/exposabyidi/es/bienvenidos-a-exposabyidi/">_Ibexposa producte local</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/exposabyidi/">_Ibexposa producte local</a>: disseny d'espais expositius per als productes locals de les Illes Balears.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/ibrelleu/es/bienvenidos-a-ibrelleu//">_Ibrelleu</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/ibrelleu/">_Ibrelleu</a>: programa de relleu empresarial que posa en contacte persones emprenedores amb empresaris que volen cedir el seu negoci.
+      </h3>
+      <h3>
+        <a class ="connectar" *ngIf="currentLang === 'es-ES'" routerLink="/loopdisseny/es/bienvenidos-a-loopdisseny/">_LOOP Disseny i Circularitat</a>
+        <a class ="connectar" *ngIf="currentLang === 'ca-ES'" routerLink="/loopdisseny/">_LOOP Disseny i Circularitat</a>: connexió, col·laboració, innovació i reflexió al voltant del disseny i els materials.
+      </h3>
     </div>
   </div>
 </div>

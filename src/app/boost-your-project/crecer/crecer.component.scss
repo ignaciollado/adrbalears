@@ -35,6 +35,15 @@ h1 {
   width: 100%;
 }
 
+.projectar{
+  font-weight: bold;
+}
+
+.projectar:hover {
+  background-color: transparent!important;
+  color: #003747!important;
+}
+
 @media screen and (max-width: 795px) {
   h3 {
     background-color: #fff;

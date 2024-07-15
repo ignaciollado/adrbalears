@@ -44,8 +44,8 @@ const routes: Routes = [
   { path: 'emblematicsbalears/es/bienvenidos-a-emblematicsbalears', component: LandingPageComponent },
   { path: 'ibcomerc-a-escola', component: LandingPageComponent },
   { path: 'ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola', component: LandingPageComponent },
-  { path: 'pa-daqui-forn-i-pastisseria', component: LandingPageComponent },
-  { path: 'pa-daqui-forn-i-pastisseria/es/bienvenidos-a-pa-daqui-forn-i-pastisseria', component: LandingPageComponent },
+  { path: 'pa-daqui-forn-i-tradicio', component: LandingPageComponent },
+  { path: 'pa-daqui-forn-i-tradicio/es/bienvenidos-a-pa-daqui-forn-i-tradicio', component: LandingPageComponent },
   { path: 'industria-local-sostenible', component: LandingPageComponent },
   { path: 'industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible', component: LandingPageComponent },
   { path: 'ibsostenibilitat-xecs', component: LandingPageComponent },
@@ -79,6 +79,7 @@ const routes: Routes = [
   { path: 'contacta', component: SimpleTextViewerComponent},
   { path: 'politica-de-cookies/:id', component: SimpleTextViewerComponent},
   { path: 'politica-de-privacidad/:id', component: SimpleTextViewerComponent},
+  { path: 'feder-detail/:id', component: SimpleTextViewerComponent },
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },

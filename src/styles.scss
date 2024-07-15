@@ -30,6 +30,13 @@ time, mark, audio, video {
     font-family: "Inter", sans-serif;
 }
 
+html {
+    margin: auto!important;    
+    line-height: 1.5rem;
+    font-size: 14px;
+    color: #ffffff;
+}
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
     display:block;
@@ -64,9 +71,8 @@ a:visited {
 }
 
 a:hover {
-    color: #003747;
+    color: #003747!important;
 }
-
 
 ins {
     background-color:#ff9;
@@ -108,12 +114,7 @@ input, select {
     vertical-align: middle;
 }
 
-html {
-    margin: auto!important;    
-    line-height: 1.5rem;
-    font-size: 14px;
-    color: #ffffff;
-}
+
 
 ::selection {
     color: #003747;

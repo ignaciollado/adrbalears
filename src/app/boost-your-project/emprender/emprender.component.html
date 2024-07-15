@@ -10,52 +10,25 @@
       <h2>Tens una idea de negoci i vols crear la teva empresa?</h2>
       <h3>T'acompanyam durant el procés amb els programes i les eines que t'ajudaran a aconseguir l'èxit empresarial</h3>
       <h3> <span>
-        <a *ngIf="currentLang === 'es-ES'" routerLink="/ibemprenjove/es/Ibemprėnjove/3046/414/no/emprendre/417/405">_Ibemprenjove</a>
-        <a *ngIf="currentLang === 'ca-ES'" routerLink="/ibemprenjove/ca/Ibemprėnjove/2997/414/no/emprendre/417/405">_Ibemprenjove</a>:</span> espai de foment i suport a l'emprenedoria per a l'alumnat de primària, secundària,
+        <a class ="emprendre" *ngIf="currentLang === 'es-ES'" routerLink="/ibemprenjove/es/bienvenidos-a-iemprenjove/">_Ibemprenjove</a>
+        <a class ="emprendre" *ngIf="currentLang === 'ca-ES'" routerLink="/ibemprenjove/">_Ibemprenjove</a>:</span> espai de foment i suport a l'emprenedoria per a l'alumnat de primària, secundària,
         formació professional bàsica i cicles formatius, de les Illes Balears.</h3>
       <h3><span>
-        <a *ngIf="currentLang === 'es-ES'" routerLink="/ibempren/es/Ibemprėn/3045/414/no/emprendre/417/405">_Ibempren</a>
-        <a *ngIf="currentLang === 'ca-ES'" routerLink="/ibempren/ca/Ibemprėn/2993/414/no/emprendre/417/405">_Ibempren</a>
-        :</span> recursos, serveis i formació per a persones emprenedores que volen iniciar un negoci.</h3>
+        <a class ="emprendre" *ngIf="currentLang === 'es-ES'" routerLink="/bempren/es/iempren-recursos-para-emprender/">_Ibempren</a>
+        <a class ="emprendre" *ngIf="currentLang === 'ca-ES'" routerLink="/ibempren/">_Ibempren</a>:</span> recursos, serveis i formació per a persones emprenedores que volen iniciar un negoci.</h3>
       <h3><span>
-        <a *ngIf="currentLang === 'es-ES'" routerLink="/ibtalent/es/IbTalent/3047/363/no/emprendre/417/405">_Ibtalent</a>
-        <a *ngIf="currentLang === 'ca-ES'" routerLink="/ibtalent/ca/IbTalent/3016/363/no/emprendre/417/405">_Ibtalent</a>:</span> millora del talent del personal per impulsar la gestió eficient i innovadora de les empreses.</h3>
+        <a class ="emprendre" *ngIf="currentLang === 'es-ES'" routerLink="/ibtalent/es/bienvenidos-a-ibtalent/">_Ibtalent</a>
+        <a class ="emprendre" *ngIf="currentLang === 'ca-ES'" routerLink="/ibtalent/">_Ibtalent</a>:</span> millora del talent del personal per impulsar la gestió eficient i innovadora de les empreses.</h3>
       <h3><span>
-        <a *ngIf="currentLang === 'es-ES'" routerLink="/ibgestio-xecs/es/Ibgestió xecs/3048/353/no/emprendre/417/405">_Ibgestió xecs</a>
-        <a *ngIf="currentLang === 'ca-ES'" routerLink="/ibgestio-xecs/ca/Ibgestió xecs/3014/353/no/emprendre/417/405">_Ibgestió xecs</a>
-        :</span> finançament de plans per optimitzar la gestió empresarial de la indústria.</h3>
+        <a class ="emprendre" *ngIf="currentLang === 'es-ES'" routerLink="/ibgestio-xecs/es/bienvenidos-a-ibgestio-xecs/">_Ibgestió xecs</a>
+        <a class ="emprendre" *ngIf="currentLang === 'ca-ES'" routerLink="/ibgestio-xecs/">_Ibgestió xecs</a>:</span> finançament de plans per optimitzar la gestió empresarial de la indústria.</h3>
       <h3><span>
-        <a *ngIf="currentLang === 'es-ES'" routerLink="/ibdigitalitzacio-xecs/es/Ibdigitalització xecs/3048/353/no/emprendre/417/405">_Ibdigital xecs</a>
-        <a *ngIf="currentLang === 'ca-ES'" routerLink="ibdigitalitzacio-xecs/ca/Ibdigitalització xecs/3014/353/no/emprendre/417/405">_Ibdigital xecs</a>
+        <a class ="emprendre" *ngIf="currentLang === 'es-ES'" routerLink="/ibdigitalitzacio-xecs/es/bienvenidos-a-ibdigitalitzacio-xecs/">_Ibdigital xecs</a>
+        <a class ="emprendre" *ngIf="currentLang === 'ca-ES'" routerLink="/ibdigitalitzacio-xecs/">_Ibdigital xecs</a>
         :</span> finançament de plans de transformació digital per a les empreses industrials.</h3>
       <h3><span>_Espais empresarials:</span> el Centre Bit Raiguer posa a disposició de persones emprenedores i dels sectors empresarials
         un espai públic de coworking i una incubadora d'empreses per a negocis innovadors de recent creació </h3>
     </div>
   </div>
 </div>
-
-<!-- <div class="detail-news-container" *ngIf="unaNoticiaAttribute">
-
-  <div class="card">
-      
-      <div class="card__head" *ngIf="unaNoticiaAttribute.images.image_fulltext">
-        <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
-      </div>
-
-      <div class="card__body">
-        <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
-        <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
-        <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>
-      </div>
-
-  </div>
-</div> -->
-
-<!-- <small class="barra_meta">{{'ArchivadoEn' | translate}}:</small>
-   <div class="noticia-tag">
-      <div *ngFor="let tag of unaNoticiaAttribute!.tags | keyvalue">
-          <a class="noticia-tag-item" routerLink="/idi-result-list/{{tag.value}}">{{tag.value}}</a>
-      </div>
-  </div>
-  <hr> -->
 <div *ngIf="!unaNoticiaAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

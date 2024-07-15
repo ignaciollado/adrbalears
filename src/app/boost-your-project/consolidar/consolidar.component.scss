@@ -23,10 +23,15 @@ h3 {
   margin-bottom: 2rem;
 }
 
-h3 > span {
+.connectar{
   font-weight: bold;
-  color: #71b796;
 }
+
+.connectar:hover {
+  background-color: transparent!important;
+  color: #003747!important;
+}
+
 
 h1 {
   background-color: #71b796;
