@@ -9,10 +9,10 @@ import { ArticleContentService } from '../../services/article-content.service';
 })
 export class EmprenderComponent {
   public unaNoticia: reqArticle | undefined
-  public unaNoticiaAttribute: attrArticle | undefined
+  public contenido: reqArticle | undefined
   public currentLang: string = ''
 
-  constructor( private getNoticia: ArticleContentService ) {  }
+  constructor( private articleService: ArticleContentService, ) {  }
 
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
@@ -28,16 +28,15 @@ export class EmprenderComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-      this.getUnaNotica('3199')
+      this.getContent('3199')
     }
 
-    getUnaNotica (id:string | null) {
-
-      this.getNoticia.get(id)
-        .subscribe( (resp: any) => {
-          this.unaNoticiaAttribute = resp.data.attributes
-        }) 
-    
-      }  
+    getContent (id: string) {
+      this.articleService.get(id)
+          .subscribe(
+            (resp:any) => {
+              this.contenido = resp.data
+          })
+    }
 
 }
