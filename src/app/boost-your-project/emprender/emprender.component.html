@@ -37,10 +37,10 @@
   <div class="card">
   
     <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
-      <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
+      <img width="129px" height="129px" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
     </div>
         
-    <h2 class="card__title">{{contenido.attributes.title}}</h2>
+    <!-- <h2 class="card__title">{{contenido.attributes.title}}</h2> -->
           
     <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></div>
   
