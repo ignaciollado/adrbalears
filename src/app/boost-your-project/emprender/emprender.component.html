@@ -33,19 +33,16 @@
 </div>
 
 
-<div *ngIf="contenido">
+<!-- <div *ngIf="contenido">
   <div class="card">
   
     <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
       <img width="129px" height="129px" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
     </div>
-        
-    <!-- <h2 class="card__title">{{contenido.attributes.title}}</h2> -->
-          
     <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></div>
   
   </div>
-</div>
+</div> -->
 
 <div class="loading-data" *ngIf="!contenido">
   <button class="alert alert-info" type="button" disabled>

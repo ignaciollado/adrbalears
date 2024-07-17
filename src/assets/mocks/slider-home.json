@@ -1,12 +1,12 @@
 [
   {
-    "slideId": 0,
+    "slideId": 1,
     "tagES": "#noticies",
     "tagCA": "#noticies",
     "projectNameES": "Noticias / agenda",
     "projectNameCA": "Notícies / agenda",
     "projectImg": "../assets/images/cabecera-noticia.webp",
-    "projectFase": "emprendre",
+    "projectFase": "adrbalears",
     "projectLema": "Notícias, agenda y formación de la ADR Balears",
     "projectLemaCA": "Notícies, agenda i formació d'ADR Balears",
     "projectDestination": "news-agenda-list/4",
@@ -14,7 +14,21 @@
 
   },
   {
-    "slideId": 1,
+    "slideId": 2,
+    "tagES": "#ayudas",
+    "tagCA": "#ajuts",
+    "projectNameES": "Ayudas / subvenciones",
+    "projectNameCA": "Ajuts / subvencions",
+    "projectImg": "../assets/images/cabecera-noticia.webp",
+    "projectFase": "adrbalears",
+    "projectLema": "Ayudas y subvenciones de ámbito local, nacional y europeo",
+    "projectLemaCA": "Ajuts i subvencions d'àmbit local, nacional i europeu",
+    "projectDestination": "ayudas-y-subvenciones",
+    "projectDestination_ca": "ajuts-i-subvencions"
+
+  },
+  {
+    "slideId": 3,
     "tagES": "#ibempren",
     "tagCA": "#ibempren",
     "projectNameES": "Ibemprėn",
@@ -28,7 +42,7 @@
 
   },
   {
-    "slideId": 2,
+    "slideId": 4,
     "tagES": "#emblematicsbalears",
     "tagCA": "#emblematicsbalears",
     "projectNameES": "Emblemàtics Balears",
@@ -41,7 +55,7 @@
     "projectDestination_ca": "emblematicsbalears"
   },
   {
-    "slideId": 3,
+    "slideId": 5,
     "tagES": "#industrialocalsostenible",
     "tagCA": "#industrialocalsostenible",
     "projectNameES": "Industria Local Sostenible",
@@ -54,7 +68,7 @@
     "projectDestination_ca": "industria-local-sostenible"
   },
   {
-    "slideId": 4,
+    "slideId": 6,
     "tagES": "#ibexporta",
     "tagCA": "#ibexporta",
     "projectNameES": "Ibexporta",
@@ -67,7 +81,7 @@
     "projectDestination_ca": "ibexporta-xecs"
   },
   {
-    "slideId": 5,
+    "slideId": 7,
     "tagES": "#loopdisseny",
     "tagCA": "#loopdisseny",
     "projectNameES": "LOOP Disseny i Circularitat",
@@ -80,7 +94,7 @@
     "projectDestination_ca": "loopdisseny"
   },
   {
-    "slideId": 6,
+    "slideId": 8,
     "tagES": "#palmainternationalboatshow",
     "tagCA": "#palmainternationalboatshow",
     "projectNameES": "Palma International Boat Show",
