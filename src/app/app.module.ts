@@ -46,6 +46,7 @@ import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.
 import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { TransparencyDetailComponent } from './transparency-detail/transparency-detail.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
+import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
 
 
 // AoT requires an exported function for factories
@@ -87,7 +88,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConsolidarComponent,
     CrecerComponent,
     TransparencyDetailComponent,
-    SimpleTextViewerComponent
+    SimpleTextViewerComponent,
+    GrantsSubsidiesComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

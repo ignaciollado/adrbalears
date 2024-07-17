@@ -17,12 +17,14 @@ import { ConsolidarComponent } from './boost-your-project/consolidar/consolidar.
 import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
+import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
   { path: 'news-agenda-list/:newsToDisplay', component: ContainerNewsAgendaComponent },
   { path: 'news-agenda-list-all/:newsToDisplay', component: NewsListComponent },
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
+  { path: 'grants-subsidies', component: GrantsSubsidiesComponent},
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'transparency-detail/:alias/:id', component: TransparencyDetailComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
