@@ -24,11 +24,10 @@
         <img width="640" height="360" [src]="slide.projectImg" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/>
       </div>
       <div class="carousel-caption">
-        <h3 class={{slide.projectFase}}>
-          <a *ngIf="currentLang === 'es-ES'" class={{slide.projectFase}} href='{{slide.projectDestination}}'>{{slide.projectNameES}}</a>
-          <a *ngIf="currentLang === 'ca-ES'" class={{slide.projectFase}} href='{{slide.projectDestination_ca}}'>{{slide.projectNameCA}}</a>
-        </h3>
-        <h2 class={{slide.projectFase}}>{{slide.projectLema}}</h2>
+          <a class={{slide.projectFase}} *ngIf="currentLang === 'es-ES'" class={{slide.projectFase}} href='{{slide.projectDestination}}'>{{slide.projectNameES}}</a>
+          <a class={{slide.projectFase}} *ngIf="currentLang === 'ca-ES'" class={{slide.projectFase}} href='{{slide.projectDestination_ca}}'>{{slide.projectNameCA}}</a>
+        <h2 *ngIf="currentLang === 'es-ES'" class={{slide.projectFase}}>{{slide.projectLema}}</h2>
+        <h2 *ngIf="currentLang === 'ca-ES'" class={{slide.projectFase}}>{{slide.projectLemaCA}}</h2>
       </div>
     </ng-template> 
   }

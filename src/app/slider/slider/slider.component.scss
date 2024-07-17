@@ -29,21 +29,21 @@ ngb-carousel {
   color: #ffffff;
 }
 
-h3 {
+a {
+  display: inline-block;
   position: relative;
-  top: -345px;
+  top: -245px;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 h2 {
   position: relative;
-  top: -344px;
+  top: -244px;
   padding-top: .3rem;
   padding-bottom: .3rem;
   font-size: 1rem;
-}
-
-a {
-  color: #ffffff;
 }
 
 ol {
@@ -79,18 +79,30 @@ ol {
   background-color: #fff!important;
 }
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1199px) {
  
 }
 
 @media screen and (max-width: 991px) {
 
-}
+} */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 795px) {
   .slider-container{
     grid-template-columns: 100%;
     grid-template-areas: "carousel" "linkArea";
     margin-bottom: 1rem;
+  }
+
+/*   img {
+    max-width: 97%;
+  } */
+
+  h3 {
+    top: -240px;
+  }
+  
+  h2 {
+    top: -230px;
   }
 }

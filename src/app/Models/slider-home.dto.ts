@@ -7,6 +7,7 @@ export class SliderHomeDTO {
   projectImg: string
   projectFase: string
   projectLema: string
+  projectLemaCA: string
   projectDestination: string
   projectDestination_ca: string
  constructor(
@@ -18,6 +19,7 @@ export class SliderHomeDTO {
   projectImg: string,
   projectFase: string,
   projectLema: string,
+  projectLemaCA: string,
   projectDestination: string,
   projectDestination_ca: string,
   ) {
@@ -29,6 +31,7 @@ export class SliderHomeDTO {
     this.projectImg = projectImg
     this.projectFase = projectFase
     this.projectLema = projectLema
+    this.projectLemaCA = projectLemaCA
     this.projectDestination = projectDestination
     this.projectDestination_ca = projectDestination_ca
     }
