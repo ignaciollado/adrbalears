@@ -43,19 +43,17 @@
         <button *ngIf="hasExternalLink7" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteressiete)">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
         <button *ngIf="!hasExternalLink7" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteressiete}}">{{theContentAttributes?.etiquetaenlaceinteressiete}}</button>
       </li> 
-    
+  
       <li><button *ngIf="hasExternalBackoffice" class='btn external-site' (click)="openExternalSite(theContentAttributes!.urlbackoffice)"><strong>Login</strong></button></li>
       <li><button *ngIf="hasExternalSite" class="btn external-site" (click)="openExternalSite(theContentAttributes!.urlportalexterno)">
       <span *ngIf="currentLang === 'es-ES'">Abrir el <strong>portal externo</strong></span>
       <span *ngIf="currentLang === 'ca-ES'">Obrir el <strong>portal extern</strong></span></button></li>
   </ol>
   </div>
- 
 </div>
 
 <div class="bottom-landing-page">
   <div class="card__body description" [innerHTML]="theContentAttributes?.text.replaceAll ('images/','https://contents.idi.es/images/')"></div>
-
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
     <h2>

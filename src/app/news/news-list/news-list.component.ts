@@ -14,6 +14,7 @@ export class NewsListComponent implements OnInit {
 
   public noticias: reqArticle[] = []
   public noticiasTemp: reqArticle[] = []
+
   public noticiasAttributes: attrArticle | undefined
   public currentLang: string | undefined
   public newsToDisplay: string | null
@@ -21,13 +22,12 @@ export class NewsListComponent implements OnInit {
 	actualProjectFase: string = ""
   listNewsReady: boolean = false
 
-  @Input () totalNewsToDisplay: string = "4"
-  @Input () faseNewsToDisplay: string = "11"
+  @Input () totalNewsToDisplay: string
+  @Input () faseNewsToDisplay: string
 
-  constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute,
-    private router: Router ) {
-      this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
-     }
+  constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private route: ActivatedRoute ) {
+    this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
+  }
 
   ngOnInit(): void {
    	this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
@@ -45,11 +45,11 @@ export class NewsListComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    this.getNoticias(this.currentLang, '11', this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+    console.log ("Fase to display: ", this.faseNewsToDisplay, this.totalNewsToDisplay)
+    this.getNoticias(this.currentLang, ['11', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
-  getNoticias(currentLanguage:string, currentCategory: string, articlesNumber: any) {
-
+  getNoticias(currentLanguage:string, currentCategory: string[], articlesNumber: any) {
     let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
     /* Obtiene el perfíl del usuario según el cuestionario 'Personalice su experiencia' */
     interesadoEn = localStorage.getItem("interesadoEn")
@@ -63,9 +63,9 @@ export class NewsListComponent implements OnInit {
     this.articleContent.getAll()
         .subscribe( (resp:any) => {
           this.noticias = resp.data
-          this.noticias = this.noticias!.filter( (item : reqArticle) => item.attributes.state === 1)
-          this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
-          this.noticias = this.noticias.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
+          this.noticias = this.noticias.filter( (item : reqArticle)  => item.attributes.state === 1)
+          this.noticias = this.noticias.filter( (item : reqArticle)   => item.attributes.language === `${currentLanguage}`) 
+          this.noticias = this.noticias.filter( (item : reqArticle)   => currentCategory.includes(item.relationships.category.data.id))
           this.listNewsReady = true
           if (this.actualProjectFase) {
             this.noticias.map((item:reqArticle) => {
@@ -75,12 +75,11 @@ export class NewsListComponent implements OnInit {
             })
             this.noticias = this.noticiasTemp
           }
-
           if (this.newsToDisplay != '9999') {
             this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
         } ) 
         window.scroll(0,0)
-      }
+  }
 
 }

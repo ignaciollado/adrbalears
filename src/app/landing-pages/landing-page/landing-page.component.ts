@@ -18,16 +18,16 @@ import { MessageService } from '../../services/message.service';
 export class LandingPageComponent {
 
   public totalNewsToDisplay: string = "4"
+  public faseNewsToDisplay: string = "['11', '420', '421', '422']"
   public landingNewsTag: string = ""
   public theRightLema: string = ""
   public theCenterLema: string = "<strong>Llamada a la acción</strong><p>Mensaje que motive al usuario a llamar y botón</p>"
   public theLeftLema: string = "<h2><strong>CTA</strong></h2>"
-  public projectName:string | null = ""
-  public contentID:string | null = ""
-  public categoryID:string | null = ""
+  public projectName: string | null = ""
+  public contentID: string | null = ""
+  public categoryID: string | null = ""
   public showLinks: string | null = ""
   public fasePro: string | null = ""
-  public faseNewsToDisplay: string | null = ""
   public agendaCategory: string | null = ""
 
   public hasExternalLink1!: boolean | null
@@ -37,7 +37,7 @@ export class LandingPageComponent {
   public hasExternalLink5!: boolean | null
   public hasExternalLink6!: boolean | null
   public hasExternalLink7!: boolean | null
-  public hasExternalSite!: boolean | null
+  public hasExternalSite!:  boolean | null
   public hasExternalBackoffice!: boolean | null
   public infoLabel:string = ""
 
@@ -57,18 +57,12 @@ export class LandingPageComponent {
   uriProjectData: UriProjectConversionDTO
   completeURI: string = ""
 
-  /**
-   * Ibemprėnjove
-   * 'Ibemprėnjove','3046','414', 'no', 'emprendre', '417', '405'  */
-
-
   @Input({ required: true }) landingMainTitle: string = "Título del proyecto";
   @Input({ required: true }) landingSlogan: string = "\"ibemprėn, recursos para emprender un negocio en las Islas Baleares.\"";
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  constructor( private getNoticia: ArticleContentService, private getTheUri: UriConversionService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService,
-    private router: Router ) {
+  constructor( private getNoticia: ArticleContentService, private getTheUri: UriConversionService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService ) {
       this.formData = new genericMailDTO('', '', '', '', '')
 
       this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
@@ -85,11 +79,13 @@ export class LandingPageComponent {
         body: this.body,
       });
 
+      this.getTheUriData()
+      this.totalNewsToDisplay = "6"
+      this.faseNewsToDisplay = "['11', '420', '421', '422']"
     }
   
   ngOnInit(): void {
     this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
-    this.getTheUriData()
 
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
@@ -114,7 +110,7 @@ export class LandingPageComponent {
 
   getTheUriData () {
     this.getTheUri.getAll()
-      .subscribe( (resp: any) => {
+     .subscribe((resp: any) => {
       this.uriProjectData = resp.filter((uriToFilter: UriProjectConversionDTO) => uriToFilter.uri === this.completeURI)
       this.projectName = this.uriProjectData[0]['data'][0]
       this.contentID = this.uriProjectData[0]['data'][1]
@@ -125,7 +121,7 @@ export class LandingPageComponent {
       this.agendaCategory = this.uriProjectData[0]['data'][6]
       console.log(this.projectName, this.contentID, this.categoryID, this.showLinks, this.fasePro, this.faseNewsToDisplay, this.agendaCategory)
       this.getTheContent(this.contentID)
-      }) 
+    })
   }
 
   getTheContent (id:string | null) {
