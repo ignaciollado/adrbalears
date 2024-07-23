@@ -1,0 +1,109 @@
+[
+  {
+    "slideId": 1,
+    "tagES": "#noticies",
+    "tagCA": "#noticies",
+    "projectNameES": "Noticias / agenda",
+    "projectNameCA": "Notícies / agenda",
+    "projectImg": "../assets/images/adrbalears-noticias-agenda.webp",
+    "projectFase": "adrbalears",
+    "projectLema": "Notícias, agenda y formación de la ADR Balears",
+    "projectLemaCA": "Notícies, agenda i formació d'ADR Balears",
+    "projectDestination": "news-agenda-list/4",
+    "projectDestination_ca": "news-agenda-list/4"
+
+  },
+  {
+    "slideId": 2,
+    "tagES": "#ayudas",
+    "tagCA": "#ajuts",
+    "projectNameES": "Ayudas / subvenciones",
+    "projectNameCA": "Ajuts / subvencions",
+    "projectImg": "../assets/images/adrbalears-ayudas-subvenciones.webp",
+    "projectFase": "adrbalears",
+    "projectLema": "Ayudas y subvenciones de ámbito local, nacional y europeo",
+    "projectLemaCA": "Ajuts i subvencions d'àmbit local, nacional i europeu",
+    "projectDestination": "ayudas-y-subvenciones",
+    "projectDestination_ca": "ajuts-i-subvencions"
+
+  },
+  {
+    "slideId": 3,
+    "tagES": "#ibempren",
+    "tagCA": "#ibempren",
+    "projectNameES": "Ibemprėn",
+    "projectNameCA": "Ibemprėn",
+    "projectImg": "../assets/images/adrbalears-iempren.webp",
+    "projectFase": "emprendre",
+    "projectLema": "Te damos las claves para empezar un negocio",
+    "projectLemaCA": "Et donam les claus per començar el teu negoci",
+    "projectDestination": "ibempren/es/iempren-recursos-para-emprender/",
+    "projectDestinationCA": "ibempren"
+
+  },
+  {
+    "slideId": 4,
+    "tagES": "#emblematicsbalears",
+    "tagCA": "#emblematicsbalears",
+    "projectNameES": "Emblemàtics Balears",
+    "projectNameCA": "Emblemàtics Balears",
+    "projectImg": "../assets/images/adrbalears-emblematics.webp",
+    "projectFase": "connectar",
+    "projectLema": "La historia de un pueblo se escribe a través de los comercios",
+    "projectLemaCA": "La història d'un poble s'escriu a través dels comerços",
+    "projectDestination": "emblematicsbalears/es/bienvenidos-a-emblematicsbalears/",
+    "projectDestination_ca": "emblematicsbalears"
+  },
+  {
+    "slideId": 5,
+    "tagES": "#industrialocalsostenible",
+    "tagCA": "#industrialocalsostenible",
+    "projectNameES": "Industria Local Sostenible",
+    "projectNameCA": "Indústria Local Sostenible",
+    "projectImg": "../assets/images/adrbalears-indus-local-sost.webp",
+    "projectFase": "connectar",
+    "projectLema": "Trabajamos para tener más industrias sostenibles, competitivas y arraigadas",
+    "projectLemaCA": "Treballam per tenir més indústries sostenibles, competitives i arrelades",
+    "projectDestination": "industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible/",
+    "projectDestination_ca": "industria-local-sostenible"
+  },
+  {
+    "slideId": 6,
+    "tagES": "#ibexporta",
+    "tagCA": "#ibexporta",
+    "projectNameES": "Ibexporta",
+    "projectNameCA": "Ibexporta",
+    "projectImg": "../assets/images/adrbalears-internacionalitzacio.webp",
+    "projectFase": "projectar",
+    "projectLema": "Empieza a vender tus productos en el exterior",
+    "projectLemaCA": "Comença a vendre els teus productes a l'exterior",
+    "projectDestination": "ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs",
+    "projectDestination_ca": "ibexporta-xecs"
+  },
+  {
+    "slideId": 7,
+    "tagES": "#loopdisseny",
+    "tagCA": "#loopdisseny",
+    "projectNameES": "LOOP Disseny i Circularitat",
+    "projectNameCA": "LOOP Disseny i Circularitat",
+    "projectImg": "../assets/images/adrbalears-loop.webp",
+    "projectFase": "connectar",
+    "projectLema": "Connexión, colaboración, innovación y reflexión alrededor del diseño y materiales",
+    "projectLemaCA": "Connexió, col·laboració, innovació i reflexió al voltant del disseny i materials",
+    "projectDestination": "loopdisseny/es/bienvenidos-a-loopdisseny/",
+    "projectDestination_ca": "loopdisseny"
+  },
+  {
+    "slideId": 8,
+    "tagES": "#palmainternationalboatshow",
+    "tagCA": "#palmainternationalboatshow",
+    "projectNameES": "Palma International Boat Show",
+    "projectNameCA": "Palma International Boat Show",
+    "projectImg": "../assets/images/adrbalears-pibs.webp",
+    "projectFase": "projectar",
+    "projectLema": "La principal cita náutica para el sector en el ámbito internacional",
+    "projectLemaCA": "La principal cita nàutica per al sector en l'àmbit internacional",
+    "projectDestination": "palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow/",
+    "projectDestination_ca": "palmainternationalboatshow"
+  }
+]
