@@ -2,8 +2,10 @@ import { Component, ViewChild, Input } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ArticleContentService } from '../../services/article-content.service';
 import { SliderHomeService } from '../../services/sliderHome.service';
+import { IbestatService } from '../../services/ibestat.service';
 import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SliderHomeDTO } from '../../Models/slider-home.dto';
+import { DatasetsIBESTATDTO } from '../../Models/ibestat.dto';
 import { UriConversionService } from '../../services/uriConversion.service';
 import { UriProjectConversionDTO } from '../../Models/uri-project-conversion.dto';
 import { TranslateService } from '@ngx-translate/core';
@@ -31,6 +33,7 @@ export class SliderComponent {
 	pauseOnHover:boolean = true
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
+	ibestatDataSets: DatasetsIBESTATDTO[] = []
 	oneContentAttributes: attrArticle
 	uriProjectData: UriProjectConversionDTO
 	actualProjectName : string = ""
@@ -39,7 +42,8 @@ export class SliderComponent {
   
 	constructor(config: NgbTooltipConfig, private getNoticia: ArticleContentService, private getTheUri: UriConversionService,
 		private contentService: ArticleContentService, private slideHomeService: SliderHomeService, private route: ActivatedRoute,
-		public translateService: TranslateService ) {
+		public translateService: TranslateService,
+		private ibestatService: IbestatService ) {
 			// customize default values of tooltips used by this component tree
 			config.placement = 'bottom'
 			config.triggers = 'hover'
@@ -48,7 +52,7 @@ export class SliderComponent {
   ngOnInit() {
 		this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
 		this.getTheUriData()
-
+		this.getIBESTATDatasets('IBESTAT', '' , '')
 		/* this.actualProjectName = this.route.snapshot.paramMap.get('projectName')
 		this.actualProjectID = this.route.snapshot.paramMap.get('contentID') */
     switch (localStorage.getItem('preferredLang')) {
@@ -89,6 +93,14 @@ export class SliderComponent {
 			}
       }) 
   }
+	
+	getIBESTATDatasets (agencyID: string, resourceID: string, version: string) {
+		this.ibestatService.getDatastets(agencyID, resourceID, version)
+		.subscribe ( (resp: any) => {
+			this.ibestatDataSets = resp
+			console.log (this.ibestatDataSets)
+		})
+	}
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel = new NgbCarousel;
 

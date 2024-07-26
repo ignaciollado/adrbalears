@@ -34,9 +34,9 @@
     "projectNameCA": "Guies",
     "projectImg": "../assets/images/adrbalears-ayudas-subvenciones.webp",
     "projectFase": "adrbalears",
-    "projectLema": "Guías de comercio, dititalización, sostenibilidad e ibempren",
+    "projectLema": "Guías de comercio, digitalización, sostenibilidad e ibempren",
     "projectLemaCA": "Guies de comerç, digitalització, sostenibilitat e ibempren",
-    "projectDestination": "guias",
-    "projectDestination_ca": "guies"
+    "projectDestination": "#",
+    "projectDestination_ca": "#"
   }
 ]
