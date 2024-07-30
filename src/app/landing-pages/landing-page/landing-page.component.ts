@@ -195,7 +195,6 @@ export class LandingPageComponent {
       document.getElementById("sendMe").setAttribute("disabled", "disabled")
       this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'comunicació')
       .subscribe((sendMailResult:any) => {
-        console.log("sendMailResult: ", sendMailResult)
         this.showCtaForm = !this.showCtaForm
         this.showInfoLabel = !this.showInfoLabel
       })
