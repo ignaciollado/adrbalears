@@ -21,7 +21,7 @@ export class LandingPageComponent {
   public faseNewsToDisplay: string = "['11', '420', '421', '422']"
   public landingNewsTag: string = ""
   public theRightLema: string = ""
-  public theCenterLema: string = "<strong>Necesita más información sobre este proyecto<br>pulse aquí y contacte con nosotros</p>"
+  public theCenterLema: string = "<strong>Sol·licita assessorament per aquest projecte<br>Posa't en contacte amb nosaltres</strong>"
   public theLeftLema: string = "<h2><strong>CTA</strong></h2>"
   public projectName: string | null = ""
   public contentID: string | null = ""
@@ -86,7 +86,7 @@ export class LandingPageComponent {
   
   ngOnInit(): void {
     this.route.snapshot.url.forEach((uriSegment:any) => {this.completeURI += uriSegment.path+"/"})
-
+    this.getTheUriData()
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -120,6 +120,8 @@ export class LandingPageComponent {
       this.faseNewsToDisplay = this.uriProjectData[0]['data'][5]
       this.agendaCategory = this.uriProjectData[0]['data'][6]
       console.log(this.projectName, this.contentID, this.categoryID, this.showLinks, this.fasePro, this.faseNewsToDisplay, this.agendaCategory)
+      localStorage.setItem("projectName", this.projectName)
+      this.theLeftLema = this.projectName
       this.getTheContent(this.contentID)
     })
   }
@@ -191,7 +193,7 @@ export class LandingPageComponent {
       document.getElementById("email").setAttribute("disabled", "disabled")
       document.getElementById("sendMe").innerHTML = `<i>${this.infoLabel}</i>`
       document.getElementById("sendMe").setAttribute("disabled", "disabled")
-      this.sendMail.sendMail(this.formData)
+      this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'comunicació')
       .subscribe((sendMailResult:any) => {
         console.log("sendMailResult: ", sendMailResult)
         this.showCtaForm = !this.showCtaForm

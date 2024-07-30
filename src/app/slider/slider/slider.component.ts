@@ -98,7 +98,7 @@ export class SliderComponent {
 		this.ibestatService.getDatastets(agencyID, resourceID, version)
 		.subscribe ( (resp: any) => {
 			this.ibestatDataSets = resp
-			console.log (this.ibestatDataSets)
+			console.log ("Desde slider Component: ", this.ibestatDataSets)
 		})
 	}
 

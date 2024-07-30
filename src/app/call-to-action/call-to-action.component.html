@@ -1,8 +1,5 @@
-
 <button class="cta" (click)="ctaFormClick()">
-  <div class="cta-center" innerHTML="{{ctaTextCenter}} {{ctaTextRight}}">
-  
-  </div>
+  <div class="cta-center" innerHTML="{{ctaTextLeft}}<br>{{ctaTextCenter}} {{ctaTextRight}}"></div>
 </button>
 
 <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">

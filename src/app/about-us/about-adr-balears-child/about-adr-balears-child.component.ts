@@ -32,7 +32,6 @@ export class AboutAdrBalearsChildComponent {
   ) { }
 
     ngOnInit(): void {
-      console.log (`-${this.translateService.currentLang} - ${localStorage.getItem('preferredLang')}-`)
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
           this.currentLang = 'ca-ES'

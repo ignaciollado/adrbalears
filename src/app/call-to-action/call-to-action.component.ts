@@ -12,7 +12,6 @@ import { ActivatedRoute } from '@angular/router';
 export class CallToActionComponent {
   ctaForm: UntypedFormGroup
   subject: UntypedFormControl
-  body: UntypedFormControl
   email: UntypedFormControl
   requester: UntypedFormControl
   contactPhone: UntypedFormControl
@@ -33,14 +32,12 @@ export class CallToActionComponent {
     this.requester = new UntypedFormControl("not indicated")
     this.contactPhone = new UntypedFormControl("not indicated")
     this.subject = new UntypedFormControl("Assessoria per a un projecte")
-    this.body = new UntypedFormControl(`M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.route.snapshot.paramMap.get('projectName')}`)
     
     this.ctaForm = this.formBuilder.group({
       email: this.email,
       requester: this.requester,
       contactPhone: this.contactPhone,
-      subject: this.subject,
-      body: this.body,
+      subject: this.subject
     });
 
   }
@@ -68,16 +65,15 @@ export class CallToActionComponent {
   sendContactForm() {
       this.formData = this.ctaForm.value
       if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos"
+        this.infoLabel ="Hemos recibido correctamente tu solicitud. En breve os contactaremos."
       } else {
-        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem"
+        this.infoLabel ="Hem rebut correctament la vostra consulta. En breu us contactarem."
       }
       document.getElementById("emailCta").setAttribute("disabled", "disabled")
       document.getElementById("sendCta").innerHTML = `<i>${this.infoLabel}</i>`
       document.getElementById("sendCta").setAttribute("disabled", "disabled")
-      this.sendMail.sendMail(this.formData)
+      this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.ctaTextLeft}`, this.ctaTextLeft)
       .subscribe((sendMailResult:any) => {
-        console.log("sendMailResult: ", sendMailResult)
         this.showCtaForm = !this.showCtaForm
         this.showInfoLabel = !this.showInfoLabel
       })

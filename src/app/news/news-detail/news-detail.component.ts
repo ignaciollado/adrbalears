@@ -23,8 +23,6 @@ export class NewsDetailComponent {
   ngOnInit(): void {
     let id:string | null = this.route.snapshot.paramMap.get('id')
     let idCat = this.route.snapshot.paramMap.get('idCat')
-
-    console.log ( id, idCat )
     switch (localStorage.getItem('preferredLang')) {
       case 'ca':
         this.currentLang = 'ca-ES'
