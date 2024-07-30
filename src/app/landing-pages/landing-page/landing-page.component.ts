@@ -21,7 +21,7 @@ export class LandingPageComponent {
   public faseNewsToDisplay: string = "['11', '420', '421', '422']"
   public landingNewsTag: string = ""
   public theRightLema: string = ""
-  public theCenterLema: string = "<strong>Llamada a la acción</strong><p>Mensaje que motive al usuario a llamar y botón</p>"
+  public theCenterLema: string = "<strong>Necesita más información sobre este proyecto<br>pulse aquí y contacte con nosotros</p>"
   public theLeftLema: string = "<h2><strong>CTA</strong></h2>"
   public projectName: string | null = ""
   public contentID: string | null = ""
