@@ -15,7 +15,9 @@ import { MessageService } from './message.service';
 })
 export class IbestatService {
   private ibestat_Key = ''
-  private baseUrl = 'https://ibestat.es/edatos/apis/statistical-resources'
+  private baseUrlStatisticalResources = 'https://ibestat.es/edatos/apis/statistical-resources'
+  private baseUrlStructuralResources = 'https://ibestat.es/edatos/apis/statistical-resources'
+
  
   headers = new HttpHeaders()
   .set( 'Content-Type', 'application/vnd.api+json' ) 
@@ -34,6 +36,6 @@ export class IbestatService {
      if (version) {
       theParams += "/"+version+"/"
      }
-     return this.httpClient.get<DatasetsIBESTATDTO[]>(`${this.baseUrl}/v1.0/datasets${theParams}`)
+     return this.httpClient.get<DatasetsIBESTATDTO[]>(`${this.baseUrlStatisticalResources}/v1.0/datasets${theParams}`)
    }
 }

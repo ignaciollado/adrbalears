@@ -29,7 +29,7 @@ export class BodyComponent {
 	pauseOnHover:boolean = true
 	pauseOnFocus:boolean = true
 	genericDataContents: genericDataDTO[] = []
-	theLeftLema: string = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+	theLeftLema: string = "Nos gustaría ayudarte"
 	theCenterLema: string = "<h1>Solicita asesoramiento</h1>"
 	theRightLema: string = "<h3>Ponte en contacto con nosotros</h3>"
   situacionActual: UntypedFormControl
@@ -67,13 +67,13 @@ export class BodyComponent {
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
-				this.theLeftLema  = "Secció variable (segons la <strong>PREGUNTA 03</strong>)"
+				this.theLeftLema  = "Ens agradaria ajudar-te"
 				this.theCenterLema = "<h1>Sol·licita assessorament</h1>"
 				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
       break
       case 'cas':
         this.currentLang = 'es-ES'  
-				this.theLeftLema = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+				this.theLeftLema = "Nos gustaría ayudarte"
 				this.theCenterLema = "<h1>Solicita asesoramiento</h1>"
 				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"    
       break

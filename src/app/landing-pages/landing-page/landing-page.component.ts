@@ -90,13 +90,13 @@ export class LandingPageComponent {
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
-        this.theLeftLema  = "Secció variable (segons la <strong>PREGUNTA 03</strong>)"
+        this.theLeftLema  = "Ens agradaria ajudar-te"
 				this.theCenterLema = "<h1>Sol·licita assessorament per aquest projecte</h1>"
 				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
         break
       case 'cas':
         this.currentLang = 'es-ES'
-        this.theLeftLema = "Sección variable (según la <strong>PREGUNTA 03</strong>)"
+        this.theLeftLema = "Nos gustaría ayudarte"
 				this.theCenterLema = "<h1>Solicita asesoramiento para este proyecto</h1>"
 				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"
         break
