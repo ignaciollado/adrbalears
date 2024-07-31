@@ -38,4 +38,6 @@ export class IbestatService {
      }
      return this.httpClient.get<DatasetsIBESTATDTO[]>(`${this.baseUrlStatisticalResources}/v1.0/datasets${theParams}`)
    }
+
+   get
 }
