@@ -166,7 +166,8 @@ openCustomPanelClass(content: TemplateRef<any>) {
 }
 
 sedeElectronica(): void {
-    window.open('https://pre-idi.sedipualba.es', '_blank');
+    //window.open('https://adrbalears.sedipualba.es', '_blank');
+    window.open('https://seuelectronica.caib.es/', '_blank');
 }
 
 scroll(el: string) {
