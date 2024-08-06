@@ -18,6 +18,7 @@ import { CrecerComponent } from './boost-your-project/crecer/crecer.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
 import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
+import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
   { path: 'ayudas-y-subvenciones', component: GrantsSubsidiesComponent},
   { path: 'ajuts-i-subvencions', component: GrantsSubsidiesComponent},
+  { path: 'guides-and-publications', component: GuidesAndPublicationsComponent},
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'transparency-detail/:alias/:id', component: TransparencyDetailComponent },
   { path: 'search-the-web-result-list/:searchTerm', component: SearchTheWebResultListComponent },
