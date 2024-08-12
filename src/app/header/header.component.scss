@@ -2,7 +2,7 @@ header {
   background-color: #d5d5d5;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 8% 92%;
   margin-top: .2rem;
   margin-bottom: 3rem;
 }
@@ -93,9 +93,9 @@ h5 {
  header {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
-    grid-template-columns: 10% 88%;
+    grid-template-columns: 12% 88%;
     margin-top: 0;
-    max-height: 103px;
+    max-height: 120px;
   } 
   button:hover {
     background-color: transparent;
