@@ -66,7 +66,7 @@ export class LandingPageComponent {
       this.formData = new genericMailDTO('', '', '', '', '')
 
       this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
-      this.requester = new UntypedFormControl("not indicated")
+      this.requester = new UntypedFormControl(this.formData.email)
       this.contactPhone = new UntypedFormControl("not indicated")
       this.subject = new UntypedFormControl("Alta al NEWSLETTER")
       this.body = new UntypedFormControl("M'agradaria que em donessin d'alta en el seu BUTLLETÍ")
@@ -193,7 +193,7 @@ export class LandingPageComponent {
       document.getElementById("email").setAttribute("disabled", "disabled")
       document.getElementById("sendMe").innerHTML = `<i>${this.infoLabel}</i>`
       document.getElementById("sendMe").setAttribute("disabled", "disabled")
-      this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'comunicació')
+      this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'Comunicació')
       .subscribe((sendMailResult:any) => {
         this.showCtaForm = !this.showCtaForm
         this.showInfoLabel = !this.showInfoLabel
