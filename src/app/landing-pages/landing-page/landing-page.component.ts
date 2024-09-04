@@ -8,6 +8,9 @@ import { genericMailDTO } from '../../Models/generic-data.dto';
 import { UriProjectConversionDTO } from '../../Models/uri-project-conversion.dto';
 
 import { MessageService } from '../../services/message.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { SharedService } from '../../services/shared.service';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-landing-page',
@@ -56,13 +59,17 @@ export class LandingPageComponent {
   showInfoLabel: boolean = false
   uriProjectData: UriProjectConversionDTO
   completeURI: string = ""
+  submitted: boolean = false
 
   @Input({ required: true }) landingMainTitle: string = "Título del proyecto";
   @Input({ required: true }) landingSlogan: string = "\"ibemprėn, recursos para emprender un negocio en las Islas Baleares.\"";
   @Input({ required: true }) landingDescription: string = "";
   @Input({ required: true }) landingContactData!: string;
 
-  constructor( private getNoticia: ArticleContentService, private getTheUri: UriConversionService, private route: ActivatedRoute, private formBuilder: FormBuilder, private sendMail: MessageService ) {
+  constructor( private getNoticia: ArticleContentService, private getTheUri: UriConversionService, private route: ActivatedRoute, 
+    private formBuilder: FormBuilder, 
+    private sendMail: MessageService, 
+    private sharedService: SharedService ) {
       this.formData = new genericMailDTO('', '', '', '', '')
 
       this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
@@ -184,21 +191,29 @@ export class LandingPageComponent {
   }
 
   sendContactForm() {
-      this.formData = this.contactForm.value
-      if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido correctamente tu solicitud, pronto de contactaremos"
-      } else {
-        this.infoLabel ="Hem rebut correctament la teva sol·licitud, aviat et contactarem"
-      }
-      document.getElementById("email").setAttribute("disabled", "disabled")
-      document.getElementById("sendMe").innerHTML = `<i>${this.infoLabel}</i>`
-      document.getElementById("sendMe").setAttribute("disabled", "disabled")
-      this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'Comunicació')
-      .subscribe((sendMailResult:any) => {
-        this.showCtaForm = !this.showCtaForm
-        this.showInfoLabel = !this.showInfoLabel
+    let responseOK: boolean = false
+    let errorResponse: any
+    this.submitted = true
+    this.formData = this.contactForm.value
+    this.sendMail.sendMail(this.formData, "M'agradaria que em donessin d'alta en el seu BUTLLETÍ", 'Comunicació')
+    .pipe (
+      finalize(async () => {
+        await this.sharedService.managementToast( 'postFeedback', responseOK, errorResponse )
       })
-      window.scroll(0,0)
+      )
+      .subscribe(() => {    
+      },
+      (error: HttpErrorResponse) => {
+        if ( error.status === 200 ) {
+          responseOK = true
+        }
+        this.sharedService.errorLog(error)
+        this.submitted = false
+        this.contactForm.reset()
+        finalize(async () => {
+          await this.sharedService.managementToast( 'postFeedback', responseOK, error )
+        })
+      })
   }
 
 }

@@ -64,11 +64,18 @@
     <small *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments.Subscriu-te al nostre butlletí:</small>
   
     <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm}">
-        <div>
-          <input type="email" id="email" class="form-control" placeholder="email@example.com" formControlName="email">
-          <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched"></div>
-        </div>
-      <button type="submit" [disabled]="contactForm!.invalid" id="sendMe">Subscribe</button>
+      <div class="col-auto">
+        <input type="email" id="email" class="form-control" placeholder="email@example.com" formControlName="email">
+        <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched"></div>
+      </div>
+      <div class="col-auto">
+        <button type="submit" [disabled]="contactForm!.invalid" id="sendMe">Subscribe
+          <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
+            <span class="visually-hidden">Sending message...</span>
+          </div>
+          <span id="postFeedback"></span>
+        </button>
+      </div>
     </form>
   </div>
 </div>

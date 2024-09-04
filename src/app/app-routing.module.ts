@@ -19,6 +19,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
 import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
 import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
@@ -77,7 +78,8 @@ const routes: Routes = [
   { path: 'consolidar', component: ConsolidarComponent },
   { path: 'crecer', component: CrecerComponent },
 
-  { path: 'contact-adr-balears', component: ContactAdrBalearsComponent},
+  /* { path: 'contact-adr-balears', component: ContactAdrBalearsComponent}, */
+  { path: 'contact-adr-balears', component: ContactFormComponent},
 
   { path: 'accesibilidad/:id', component: SimpleTextViewerComponent },
   { path: 'aviso-legal/:id', component: SimpleTextViewerComponent },

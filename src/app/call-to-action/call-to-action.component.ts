@@ -3,6 +3,9 @@ import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@
 import { MessageService } from '../services/message.service';
 import { genericMailDTO } from '../Models/generic-data.dto';
 import { ActivatedRoute } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { SharedService } from '../services/shared.service';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-call-to-action',
@@ -20,12 +23,13 @@ export class CallToActionComponent {
   showInfoLabel: boolean = false
   currentLang: string = ""
   formData: genericMailDTO
+  submitted: boolean = false
 
   @Input({ required: true }) ctaTextRight!: string;
   @Input({ required: true }) ctaTextCenter!: string;
   @Input({ required: true }) ctaTextLeft!: string;
 
-  constructor( private formBuilder: FormBuilder, private route: ActivatedRoute, private sendMail: MessageService ) {
+  constructor( private formBuilder: FormBuilder, private route: ActivatedRoute, private sendMail: MessageService, private sharedService: SharedService ) {
     this.formData = new genericMailDTO('', '', '', '', '')
 
     this.email = new UntypedFormControl(this.formData.email, [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),])
@@ -63,19 +67,28 @@ export class CallToActionComponent {
   }
 
   sendContactForm() {
-      this.formData = this.ctaForm.value
-      if (localStorage.getItem('preferredLang') === 'es-ES') {
-        this.infoLabel ="Hemos recibido correctamente tu solicitud. En breve os contactaremos."
-      } else {
-        this.infoLabel ="Hem rebut correctament la vostra consulta. En breu us contactarem."
-      }
-      document.getElementById("emailCta").setAttribute("disabled", "disabled")
-      document.getElementById("sendCta").innerHTML = `<i>${this.infoLabel}</i>`
-      document.getElementById("sendCta").setAttribute("disabled", "disabled")
-      this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.ctaTextLeft}`, this.ctaTextLeft)
+    let responseOK: boolean = false
+    let errorResponse: any
+    this.submitted = true
+    this.formData = this.ctaForm.value
+    this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per al projecte ${this.ctaTextLeft}`, this.ctaTextLeft)
+    .pipe (
+      finalize(async () => {
+        await this.sharedService.managementToast( 'postFeedback', responseOK, errorResponse )
+      })
+      )
       .subscribe((sendMailResult:any) => {
-        this.showCtaForm = !this.showCtaForm
-        this.showInfoLabel = !this.showInfoLabel
+      },
+      (error: HttpErrorResponse) => {
+        if ( error.status === 200 ) {
+          responseOK = true
+        }
+        this.sharedService.errorLog(error)
+        this.submitted = false
+        this.ctaForm.reset()
+        finalize(async () => {
+          await this.sharedService.managementToast( 'postFeedback', responseOK, error )
+        })
       })
   }
 }

@@ -1,7 +1,12 @@
-.container-contact{
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.text-contact{
   display: grid;
   grid-template-columns: 50% 50%;
-  padding: 5rem;
+  padding: 0;
 }
 
 .left-contact {
@@ -9,7 +14,7 @@
 }
 
 @media screen and (max-width: 795px) {
-  .container-contact {
+  .text-contact {
     grid-template-columns: 100%;
   }
 }

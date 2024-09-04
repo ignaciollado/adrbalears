@@ -20,16 +20,15 @@ export class MessageService {
 
   constructor(private http: HttpClient) { }
 
-  sendMail(formData: genericMailDTO, bodyText: string, project: string): Observable<genericMailDTO[]> {
-    const email: string = formData.email
-    const requester: string = formData.requester
+  sendMail(formData: any, bodyText: string, project: string): Observable<genericMailDTO[]> {
+    const email: string = formData.contactEmail
+    const requester: string = formData.contactName
     const contactPhone: string = formData.contactPhone
-    const subject: string = formData.subject
-    const body: string = bodyText
+    const subject: string = "ADR Balears - contact"
+    const body: string = formData.body
     const projectContact: string = project
-
     return this.http
-      .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${requester}/${subject}/${body}/${projectContact}`, httpOptions)
+      .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${contactPhone}/${subject}/${body}/${projectContact}`, httpOptions)
   }
 
   add(message: string) {
