@@ -16,12 +16,29 @@ export class ContactFormComponent {
   contactForm: FormGroup
   formData: genericMailDTO
   submitted: boolean = false
-  
+  currentLang: string = ""
+
   constructor(private formBuilder: FormBuilder, private sendMail: MessageService, private sharedService: SharedService,) { 
     this.formData = new genericMailDTO('', '', '', '', '')
   }
 
   ngOnInit() {
+
+    switch ( localStorage.getItem('preferredLang') ) {
+      case 'cat':
+        this.currentLang = 'ca-ES'
+      break
+      case 'cas':
+        this.currentLang = 'es-ES'      
+      break
+      case 'en':
+        this.currentLang = 'en-EN'
+      break
+      default:
+        this.currentLang = 'ca-ES'
+    }
+
+
     this.contactForm = this.formBuilder.group({
       contactName:  ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],
