@@ -86,7 +86,15 @@ ol {
 @media screen and (max-width: 991px) {
 
 } */
-
+@media screen and (max-width: 1400px) {
+  img {
+    width: 99%!important;
+  }
+  
+  button {
+    padding: 0!important;
+  }
+}
 @media screen and (max-width: 795px) {
   .slider-container{
     grid-template-columns: 100%;

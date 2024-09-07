@@ -221,6 +221,12 @@ button{
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+@media screen and (max-width: 1400px) {
+  button {
+    padding: 0!important;
+  }
+}
+
 
 @media screen and (max-width: 795px) {
   .top-landing-page {
