@@ -1,7 +1,7 @@
 .cta {
   background-color: #003747;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
   padding: .2rem;
   border: none;
   width: 100%;
@@ -106,7 +106,7 @@ input {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 912px) {
 
   form {
     display: grid;

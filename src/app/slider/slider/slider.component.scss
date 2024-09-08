@@ -79,14 +79,7 @@ ol {
   background-color: #fff!important;
 }
 
-/* @media screen and (max-width: 1199px) {
- 
-}
-
-@media screen and (max-width: 991px) {
-
-} */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1320px) {
   img {
     width: 99%!important;
   }
@@ -95,7 +88,8 @@ ol {
     padding: 0!important;
   }
 }
-@media screen and (max-width: 795px) {
+
+@media screen and (max-width: 912px) {
   .slider-container{
     grid-template-columns: 100%;
     grid-template-areas: "carousel" "linkArea";
@@ -108,5 +102,9 @@ ol {
   
   h2 {
     top: -40px;
+  }
+
+  img {
+    width: 100%!important;
   }
 }

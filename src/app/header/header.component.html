@@ -229,7 +229,7 @@
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Vull creixer</button>
 
-<!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
+            <!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
             <li><hr class="dropdown-divider"></li>
             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
@@ -239,8 +239,9 @@
       </li>
       <li class="nav-item">
         <div ngbDropdown class="d-inline-block">
-          <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button>
-          <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
+         <!--  <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button> -->
+          <button class="btn" routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Contacta</button>
+              <!--           <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar assesdorament</button>
 
@@ -252,8 +253,7 @@
 
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Demanar cita</button>
-
-          </div>
+          </div> -->
         </div>
       </li>
     </ul>

@@ -221,14 +221,17 @@ button{
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1320px) {
   button {
     padding: 0!important;
   }
+  .project-link-area {
+    max-height: 430px;
+  }
+
 }
 
-
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 912px) {
   .top-landing-page {
     grid-template-columns: 100%;
     grid-template-areas: "tituloslogan" "searchtheweb";

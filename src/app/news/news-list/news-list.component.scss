@@ -14,7 +14,7 @@ h1 {
 .card-header {
   padding: 0;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1320px) {
   h6 {
     font-size: .8rem;
   }
@@ -23,7 +23,7 @@ h1 {
     max-height: 10rem;
   }
 }
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 912px) {
   .row {
     grid-template-columns: auto;
   }
