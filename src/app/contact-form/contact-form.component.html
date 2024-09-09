@@ -6,7 +6,7 @@
           <span *ngIf="currentLang === 'es-ES'">Tu nombre</span>
           <span *ngIf="currentLang === 'ca-ES'">El teu nom</span>
         </label>
-        <input type="text"class="form-control" id="contactName" aria-describedby="nameHelp" formControlName="contactName"
+        <input type="text"class="form-control form-control-lg" id="contactName" aria-describedby="nameHelp" formControlName="contactName"
         [ngClass]="f['contactName'].errors ? 'is-invalid':'is-valid'">
       </div>
       <div class="form-group">
@@ -14,7 +14,7 @@
           <span *ngIf="currentLang === 'es-ES'">Dirección de correo electrónico</span>
           <span *ngIf="currentLang === 'ca-ES'">Adreça de correu electrònic</span>
         </label>
-        <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" formControlName="contactEmail" 
+        <input type="email" class="form-control form-control-lg" id="contactEmail" aria-describedby="emailHelp" formControlName="contactEmail" 
         [ngClass]="f['contactEmail'].errors ? 'is-invalid':'is-valid'">
       </div>
       <div class="form-group">
@@ -22,7 +22,7 @@
           <span *ngIf="currentLang === 'es-ES'">Teléfono</span>
           <span *ngIf="currentLang === 'ca-ES'">Telèfon</span>
         </label>
-        <input type="tel" class="form-control" id="contactPhone" aria-describedby="phoneHelp" maxlength="9" minlength="9" formControlName="contactPhone" 
+        <input type="tel" class="form-control form-control-lg" id="contactPhone" aria-describedby="phoneHelp" maxlength="9" minlength="9" formControlName="contactPhone" 
         [ngClass]="!f['contactPhone'].errors ? 'is-valid' : 'is-invalid'">
       </div>
       <div class="form-group">
@@ -30,7 +30,7 @@
           <span *ngIf="currentLang === 'es-ES'">Tu consulta</span>
           <span *ngIf="currentLang === 'ca-ES'">La teva consulta</span>
         </label>
-        <textarea class="form-control" rows="3" id="body" formControlName="body" 
+        <textarea class="form-control form-control-lg" rows="3" id="body" formControlName="body" 
         [ngClass]="f['body'].errors ? 'is-invalid':'is-valid'"></textarea>
       </div>
       <div class="form-group form-check">
