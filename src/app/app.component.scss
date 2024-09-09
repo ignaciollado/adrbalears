@@ -1,20 +1,14 @@
 .cta {
-   background-color: #003747;
    color: #0098cb;
    display: grid;
    grid-template-columns: 100%;
    margin-top: 3rem;
    margin-bottom: 3rem;
-   padding: .2rem;
  }
 
 .cta:hover{
   cursor: pointer;
   opacity: .9;
-}
-
-.color-backdrop {
-  background-color: #053747;
 }
 
 .note {
@@ -37,6 +31,10 @@
    padding-right: 0;
    padding-top: 1rem;
    padding-bottom: 1rem;
+}
+
+button {
+   border: none;
 }
 
 .area-profile button:hover {
@@ -72,7 +70,7 @@ ol ol {
    color: #fff;
 }
  
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 760px) {
    .container, .container-sm {
       max-width: 99%;
     }
@@ -88,7 +86,7 @@ ol ol {
       color: #fff;
       background-color: #019ee5;
       border-radius: 0;
-      padding: .5rem;
+      /* padding: .5rem; */
    }
    .pop-up-main-ol{
       box-shadow: 0;

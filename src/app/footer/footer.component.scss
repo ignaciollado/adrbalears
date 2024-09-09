@@ -63,7 +63,7 @@ a:hover {
   width: 50%;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 760px) {
   footer{
     grid-template-columns: 100%;
     grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";

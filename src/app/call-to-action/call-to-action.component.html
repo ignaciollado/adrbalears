@@ -1,20 +1,22 @@
-<button class="cta" (click)="ctaFormClick()">
-  <div class="cta-center" innerHTML="{{ctaTextLeft}}<br>{{ctaTextCenter}} {{ctaTextRight}}"></div>
-</button>
 
-<form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
-  <div class="col-auto">
-    <input type="email" id="emailCta" class="form-control" placeholder="email@example.com" formControlName="email">
-  </div>
-  <div class="col-auto">
-    <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-primary" id="sendCta" [ngClass]="{ocultar: !showCtaForm}">
-      <span *ngIf="currentLang === 'es-ES'">Contactadme para recibir asesoramiento</span>
-      <span *ngIf="currentLang === 'ca-ES'">Contactar-me per a rebre assessorament</span>
-      <div class="spinner-border" role="status" *ngIf ="ctaForm.valid && submitted">
-        <span class="visually-hidden">Sending message...</span>
-      </div>
-      <span id="postFeedback"></span>
-    </button>
-  </div>
-</form>
+<div class="cta">
+  <button  (click)="ctaFormClick()">
+    <div class="cta-center" innerHTML="<h1>{{ctaTextLeft}}</h1><h2>{{ctaTextCenter}}</h2><h3>{{ctaTextRight}}</h3>"></div>
+  </button>
+  <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
+    <div class="col-auto">
+      <input type="email" id="emailCta" class="form-control  form-control-lg" placeholder="email@example.com" formControlName="email">
+    </div>
+    <div class="col-auto">
+      <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-dark btn-lg" id="sendCta" [ngClass]="{ocultar: !showCtaForm}">
+        <span *ngIf="currentLang === 'es-ES'">Contactadme para recibir asesoramiento</span>
+        <span *ngIf="currentLang === 'ca-ES'">Contactar-me per a rebre assessorament</span>
+        <div class="spinner-border" role="status" *ngIf ="ctaForm.valid && submitted">
+          <span class="visually-hidden">Sending message...</span>
+        </div>
+        <span id="postFeedback"></span>
+      </button>
+    </div>
+  </form>
+</div>
 <small class="alert alert-success" [ngClass]="{ocultar: !showInfoLabel}" [innerHTML]="infoLabel"></small>

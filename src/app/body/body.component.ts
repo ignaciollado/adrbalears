@@ -31,7 +31,7 @@ export class BodyComponent {
 	genericDataContents: genericDataDTO[] = []
 	theLeftLema: string = "Nos gustaría ayudarte"
 	theCenterLema: string = "<h1>Solicita asesoramiento</h1>"
-	theRightLema: string = "<h3>Ponte en contacto con nosotros</h3>"
+	theRightLema: string = "Ponte en contacto con nosotros"
   situacionActual: UntypedFormControl
   interesadoEn: UntypedFormControl
   objetivoPrincipal: UntypedFormControl
@@ -67,15 +67,15 @@ export class BodyComponent {
     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
-				this.theLeftLema  = "Ens agradaria ajudar-te"
-				this.theCenterLema = "<h1>Sol·licita assessorament</h1>"
-				this.theRightLema = "<h3>Posa't en contacte amb nosaltres</h3>"
+ 				this.theLeftLema  = "Ens agradaria ajudar-te"
+				this.theCenterLema = "Sol·licita assessorament"
+				this.theRightLema = "Posa't en contacte amb nosaltres"
       break
       case 'cas':
         this.currentLang = 'es-ES'  
 				this.theLeftLema = "Nos gustaría ayudarte"
-				this.theCenterLema = "<h1>Solicita asesoramiento</h1>"
-				this.theRightLema = "<h3>Ponte en contacto con nosotros</h3>"    
+				this.theCenterLema = "Solicita asesoramiento"
+				this.theRightLema = "Ponte en contacto con nosotros" 
       break
       case 'en':
         this.currentLang = 'en-EN'
@@ -83,8 +83,6 @@ export class BodyComponent {
       default:
         this.currentLang = 'ca-ES'
     }
-
-
 
 		this.contentService.getAll()
 			.subscribe((response:any[]) => {

@@ -1,6 +1,9 @@
 h1 {
   margin-bottom: 2rem;
 }
+h2 {
+  margin-bottom: 0;
+}
 .row {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -31,12 +34,23 @@ a {
   padding: 1rem;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
+  .row {
+    grid-template-columns: 50% 50%;
+  }
+  .card-body {
+    min-height: 20rem;
+    max-height: 20rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .row {
     grid-template-columns: auto;
   }
+
   .card-body {
-    min-height: 22rem;
-    max-height: 22rem;
+    min-height: 18rem;
+    max-height: 18rem;
   }
 }

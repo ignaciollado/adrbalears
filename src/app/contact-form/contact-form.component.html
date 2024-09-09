@@ -1,3 +1,6 @@
+<h1 *ngIf="currentLang === 'es-ES'">Contactar con la ADR Balears</h1>
+<h1 *ngIf="currentLang === 'ca-ES'">Contactar amb l'ADR Balears</h1>
+
 <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col mb-3">
@@ -44,7 +47,7 @@
     </div>
   </div>
   <div class="d-grid gap-2">
-    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!contactForm.valid">
+    <button type="submit" class="btn btn-dark btn-lg" [disabled]="!contactForm.valid">
       <div class="text-center" *ngIf ="!submitted">Enviar</div>
       <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
         <span class="visually-hidden">

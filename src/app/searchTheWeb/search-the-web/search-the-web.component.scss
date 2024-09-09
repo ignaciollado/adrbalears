@@ -89,11 +89,17 @@ ul{
   margin: 1px;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
+  .pre-defined-filter-area {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .filter-form {
     padding-left: 0;
   }
   .pre-defined-filter-area {
     padding-left: 0;
   }
- }
+}

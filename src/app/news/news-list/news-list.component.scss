@@ -5,6 +5,7 @@ h1 {
 .row {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 1rem 0;
 }
 
 .btn {
@@ -23,12 +24,26 @@ h1 {
     max-height: 10rem;
   }
 }
-@media screen and (max-width: 912px) {
+
+@media screen and (max-width: 992px) {
+  .row {
+    grid-template-columns: 50% 50%;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .row {
     grid-template-columns: auto;
   }
   .card {
     margin-bottom: 1rem;
+  }
+  h6 {
+    font-size: 1.5rem;
   }
   .card-body {
     min-height: 12rem;

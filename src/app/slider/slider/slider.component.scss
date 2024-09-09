@@ -89,7 +89,17 @@ ol {
   }
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
+  a {
+    top: -200px;
+  }
+
+  h2 {
+    top: -180px;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .slider-container{
     grid-template-columns: 100%;
     grid-template-areas: "carousel" "linkArea";

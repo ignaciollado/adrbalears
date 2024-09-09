@@ -57,11 +57,11 @@
   <app-news-list totalNewsToDisplay="{{totalNewsToDisplay}}" faseNewsToDisplay="{{faseNewsToDisplay}}"></app-news-list>
   <div class='contact-us'>
     <h2>
-      <small *ngIf="currentLang === 'es-ES'">BOLETÍN INFORMATIVO</small>
-      <small *ngIf="currentLang === 'ca-ES'">NEWSLETTER</small>
+      <span *ngIf="currentLang === 'es-ES'">BOLETÍN INFORMATIVO</span>
+      <span *ngIf="currentLang === 'ca-ES'">BUTLLETÍ INFORMATIU</span>
     </h2>
-    <small *ngIf="currentLang === 'es-ES'">Sigue nuestras últimas noticias y actividades. Subscríbete a nuestro boletín:</small>
-    <small *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments.Subscriu-te al nostre butlletí:</small>
+    <h4 *ngIf="currentLang === 'es-ES'">Sigue nuestras últimas noticias y actividades. Subscríbete a nuestro boletín:</h4>
+    <h4 *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments.Subscriu-te al nostre butlletí:</h4>
   
     <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm}">
       <div class="col-auto">
@@ -69,7 +69,7 @@
         <div *ngIf="contactForm?.get('email')?.invalid && contactForm?.get('email')?.touched"></div>
       </div>
       <div class="col-auto">
-        <button type="submit" [disabled]="contactForm!.invalid" id="sendMe">Subscribe
+        <button type="submit" [disabled]="contactForm!.invalid" id="sendMe" class="btn btn-dark btn-lg">Subscribe
           <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
             <span class="visually-hidden">Sending message...</span>
           </div>

@@ -1,11 +1,10 @@
 .cta {
-  background-color: #003747;
   margin-top: 5rem;
   margin-bottom: 6rem;
-  padding: .2rem;
-  border: none;
+  border: 0 none;
   width: 100%;
 } 
+
 
 form {
   display: grid;
@@ -26,6 +25,7 @@ form {
 .cta-left, .cta-center {
   background-color: #003747;
   color: #fff;
+  padding: .5rem;
 }
 
 .cta-center {
@@ -67,10 +67,10 @@ a {
   background-color: #019ee5;
 }
 
-button, input {
+input {
   position: unset;
   width: 100%;
-  padding: 1rem;
+ /*  padding: 1rem; */
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -106,7 +106,7 @@ input {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 760px) {
 
   form {
     display: grid;
@@ -114,27 +114,5 @@ input {
     
     justify-content: center;
   }
- /*  .cta {
-    grid-template-columns: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: .5rem;
-  }
-  .cta-left {
-    border-left: none;
-  }
 
-  .cta-left, .cta-center {
-    padding: 1rem;
-  }
-  .cta-right {
-    padding: 1rem;
-  }
-  .cta-right > button {
-    position: unset;
-    width: 100%;
-    padding: 1rem;
-    font-size: .8rem;
-    font-weight: bolder;
-  } */
 }

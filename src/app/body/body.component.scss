@@ -4,6 +4,10 @@
   grid-template-areas: "carousel searcharea";
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
 app-slider {
   grid-area: carousel;
 }
@@ -32,6 +36,8 @@ button:hover {
 
 .area-profile {
   margin-bottom: 4rem;
+  background-color: #003747;
+  padding: .5rem;
 }
 
 .area-profile h1:hover {
@@ -77,7 +83,7 @@ li a {
   color: #fff;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 760px) {
   .body-main {
     grid-template-columns: 100%;
     grid-template-areas: "carousel" "searcharea";
