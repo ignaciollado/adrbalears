@@ -11,19 +11,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1320px) {
   .row {
     grid-template-columns: auto auto auto;
   }
 }
 
-@media screen and (max-width: 991px) {
-  .row {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 912px) {
   .row {
     grid-template-columns: auto;
   }
