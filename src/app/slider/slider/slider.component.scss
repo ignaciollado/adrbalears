@@ -105,7 +105,9 @@ ol {
     grid-template-areas: "carousel" "linkArea";
     margin-bottom: 1rem;
   }
-
+  .slider-container-single {
+    grid-template-columns: 100%;
+  }
   a {
     top: -60px;
   }
