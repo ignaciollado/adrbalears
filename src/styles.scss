@@ -42,6 +42,11 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0!important;
+}
+
 nav ul {
     list-style: none;
 }
@@ -113,8 +118,6 @@ hr {
 input, select {
     vertical-align: middle;
 }
-
-
 
 ::selection {
     color: #003747;
