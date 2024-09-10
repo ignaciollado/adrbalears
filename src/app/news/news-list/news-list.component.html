@@ -3,7 +3,7 @@
   <h1 *ngIf="currentLang === 'ca-ES'">Notícies</h1>
 </a>
 <div *ngIf="noticias">
-  <div class="row">
+  <div [ngClass]="{'row': faseNewsToDisplay === undefined, 'row-proyectar': faseNewsToDisplay === '420', 'row-conectar': faseNewsToDisplay === '421', 'row-emprender': faseNewsToDisplay === '422'}">
   <div *ngFor="let noticia of noticias">
     <div class="col">
     
@@ -13,8 +13,8 @@
         </div>
         <div class="card-body">
           <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
-            <h4 *ngIf="faseNewsToDisplay==='11'" class="card-title">{{noticia.attributes.title}}</h4>
-            <h6 *ngIf="faseNewsToDisplay!=='11'" class="card-title">{{noticia.attributes.title}}</h6>
+            <h4 *ngIf="faseNewsToDisplay==='11'">{{noticia.attributes.title}}</h4>
+            <h6 *ngIf="faseNewsToDisplay!=='11'">{{noticia.attributes.title}}</h6>
           </a>
         </div>
       </div>

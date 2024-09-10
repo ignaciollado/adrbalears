@@ -34,6 +34,19 @@ a {
   padding: 1rem;
 }
 
+.emprendre:hover {
+  color:  #6b9da7!important;
+  background-color: #fff!important;
+}
+.connectar:hover {
+  color:  #71b796!important;
+  background-color: #fff!important;
+}
+.projectar:hover {
+  color:  #ed7448!important;
+  background-color: #fff!important;
+}
+
 @media screen and (max-width: 992px) {
   .row {
     grid-template-columns: 50% 50%;
