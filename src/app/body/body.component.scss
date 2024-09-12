@@ -1,9 +1,24 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 mat-card {
   border-radius: 1rem;
   color: #fff;
   --spacing: 1.2rem;
   padding: var(--spacing);
   margin-bottom: var(--spacing);
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+mat-card:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;
 }
 
 mat-card-title {
@@ -16,6 +31,10 @@ mat-card-title {
 
 mat-card-content {
   text-align: right;
+}
+
+mat-grid-list{
+
 }
 
 mat-grid-tile {
