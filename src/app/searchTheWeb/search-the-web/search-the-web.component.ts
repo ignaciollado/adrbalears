@@ -25,6 +25,7 @@ export class SearchTheWebComponent {
 	pauseOnIndicator: boolean = false
 	pauseOnHover: boolean = true
 	pauseOnFocus: boolean = true
+  value = 'Clear me';
   
   @Input() showLinks: string;
 

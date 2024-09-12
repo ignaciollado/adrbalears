@@ -1,8 +1,8 @@
 header {
-  background-color: rgba(0, 55, 71,.3);
+  /* background-color: rgba(0, 55, 71,.3); */
   display: grid;
-  grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
-  grid-template-columns: 8% 92%;
+  grid-template-areas: "navLogo navLangSede" "menu menu";
+  grid-template-columns: auto auto;
   margin-top: .2rem;
   margin-bottom: 4rem;
 }
@@ -33,17 +33,26 @@ header {
   background-color: #fff;
 }
 
+.adr-texto {
+  grid-area: adrtexto;
+}
+
 .nav-bar-top {
   grid-area: navLangSede;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: flex-end;
+  justify-content: flex-end; 
+}
+
+.nav-bar-top-sede-elect{
+  grid-area: menu;
+  text-align: center;
 }
 
 .nav-bar-bottom{
   grid-area: navBottom;
   display: grid;
   justify-content: flex-end;
+  border: 1px solid blue;
 }
 
 .nav-bar-top-language {
@@ -55,15 +64,9 @@ header {
 }
 
 .button-header-menu {
-  background-color: #003747;
   border-radius: 0;
   margin-right: .5rem;
-  color: #fff;
-}
-
-button:hover {
-  background-color: #0098CB;
-  color: #fff;
+  color: #003747;
 }
 
 .emprender-header {

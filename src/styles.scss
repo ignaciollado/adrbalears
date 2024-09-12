@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'bootstrap/dist/css/bootstrap.css';
+/* @import 'bootstrap/dist/css/bootstrap.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
@@ -134,7 +134,9 @@ input, select {
 }
 
 .btn:hover {
-    color: #ffffff!important;
+    text-decoration: underline;
+    text-underline-offset: 20%;
+    color: #0098cb!important;
   }
 
 input:focus,
@@ -173,7 +175,7 @@ a:focus {
     color: #0098CB;
 }
 
-.adrbalears {
+/* .adrbalears {
     color:  #003747!important;
     background-color: #fff;
 }
@@ -188,8 +190,8 @@ a:focus {
 .projectar{
     color:  #ed7448!important;
     background-color: #fff;
-}
-.adrbalears:hover {
+} */
+/* .adrbalears:hover {
     background-color:  #003747!important;
     color: #fff!important;
 }
@@ -213,9 +215,32 @@ a:focus {
 }
 .projectar-bck {
     background-color:  #ed7448!important;
+} */
+
+.example {
+    text-align: center;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 15px hsla(0deg, 0%, 0%, 0.5);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    text-shadow: 0 2px 3px hsla(0deg, 0%, 0%, 0.25);
+  }
+
+.linear {
+    background-image: linear-gradient(#0098cb, #003747);
+  }
+  
+.radial {
+   background-image: radial-gradient(#000, #003747);
 }
-img {
-    max-width: 1320px;
+  
+.conic {
+  background-image: conic-gradient(#003747, #fff);
 }
 
 @media (min-width: 1200px) {

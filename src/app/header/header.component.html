@@ -1,44 +1,75 @@
 <header>
   <nav class='nav-bar-left-logo' id="logotipo">
     <a class="navbar-brand" href="#">
-      <img src="../assets/images/logo-adr-balears.png" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="120px">
+      <img src="../assets/images/ADRBalears-conselleria-color.webp" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="120px">
     </a>
+    <h1 class="adr-texto" *ngIf="currentLang === 'es-ES'">Agencia de Desarrollo Regional de les Illes Balears</h1>
+    <h1 class="adr-texto" *ngIf="currentLang === 'ca-ES'">Agència de Desenvolupament Regional de les Illes Balears</h1>
+
   </nav>
 
   <nav class="navbar nav-bar-top">
-    <div class="nav-bar-top-language"><button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button><button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button></div>
-    <div class="nav-bar-top-sede-elect">
-      <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
-      <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+    <div>
+      <button class="btn" #langSelect (click)="switchLanguage('cat')">cat</button>/<button class="btn" #langSelect (click)="switchLanguage('cas')">cas</button>  
     </div>
+    <app-search-the-web></app-search-the-web>
+    <!-- <div class="nav-bar-top-sede-elect">
+      <button class="btn" routerLink="contact-adr-balears">Contacta</button>
+
+      <button *ngIf="currentLang === 'es-ES'" class="btn" routerLink="news-agenda-list/4">Noticias / Agenda</button>
+      <button *ngIf="currentLang === 'ca-ES'" class="btn" routerLink="news-agenda-list/4">Notícies / Agenda</button>
+
+      <button *ngIf="currentLang === 'es-ES'" class="btn" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
+      <button *ngIf="currentLang === 'ca-ES'" class="btn" routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
+
+      <button *ngIf="currentLang === 'es-ES'" class="btn" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
+      <button *ngIf="currentLang === 'ca-ES'" class="btn" routerLink="transparency-list">{{'Transparència' | translate}}</button>
+
+      <button *ngIf="currentLang === 'es-ES'" class="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
+      <button *ngIf="currentLang === 'ca-ES'" class="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+    </div> -->
   </nav>
 
-  <nav class="navbar navbar-expand nav-bar-bottom">
+  <div class="nav-bar-top-sede-elect">
+    <button *ngIf="currentLang === 'es-ES'" class="btn" routerLink="news-agenda-list/4">Noticias / Agenda</button>
+    <button *ngIf="currentLang === 'ca-ES'" class="btn" routerLink="news-agenda-list/4">Notícies / Agenda</button>
+
+    <button *ngIf="currentLang === 'es-ES'" class="btn" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
+    <button *ngIf="currentLang === 'ca-ES'" class="btn" routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
+
+    <button class="btn" routerLink="contact-adr-balears">Contacta</button>
+
+    <button *ngIf="currentLang === 'es-ES'" class="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
+    <button *ngIf="currentLang === 'ca-ES'" class="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+    
+  </div>
+
+ <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+<!--   <nav class="navbar navbar-expand nav-bar-bottom">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
+      </button> -->
+     <!--  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0"> -->
+<!--           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Quienes somos' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Qui som' | translate}}</button>
-
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="news-agenda-list/4">Noticias / Agenda</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="news-agenda-list/4">Notícies / Agenda</button>
-
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
-                <!-- <button ngbDropdownItem>Buscador de puntos de atención</button> -->
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparencia' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparència' | translate}}</button>
 
               </div>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> -->
+<!--           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Nuestros proyectos</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Els nostres projectes</button>
@@ -55,7 +86,6 @@
                 <button *ngIf="currentLang === 'ca-ES'" class ="emprendre" ngbDropdownItem routerLink="ibgestio-xecs">Ibgestió xecs</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="emprendre" ngbDropdownItem routerLink="ibdigitalitzacio-xecs/es/bienvenidos-a-ibdigitalitzacio-xecs">Ibdigital xecs</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="emprendre" ngbDropdownItem routerLink="ibdigitalitzacio-xecs">Ibdigital xecs</button>
-
                 <h6 class="connectar conectar-header"><strong>#CONNECTAR</strong></h6>
                 <button *ngIf="currentLang === 'es-ES'" class ="connectar" ngbDropdownItem routerLink="emblematicsbalears/es/bienvenidos-a-emblematicsbalears/">Emblemàtics</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="connectar" ngbDropdownItem routerLink="emblematicsbalears">Emblemàtics</button>
@@ -75,7 +105,6 @@
                 <button *ngIf="currentLang === 'ca-ES'" class ="connectar" ngbDropdownItem routerLink="ibrelleu">Ibrelleu</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="connectar" ngbDropdownItem routerLink="loopdisseny/es/bienvenidos-a-loopdisseny/">LOOP</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="connectar" ngbDropdownItem routerLink="loopdisseny">LOOP</button>
-
                 <h6 class="projectar proyectar-header"><strong>#PROJECTAR</strong></h6>
                 <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs/">Ibexporta xecs</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs">Ibexporta xecs</button>
@@ -85,54 +114,30 @@
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow">PIBS</button>
               </div>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> -->
+<!--           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia el teu projecte</button>
 
               <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-              <!--   <button ngbDropdownItem>Quiero asesorarme</button> -->
                 <button *ngIf="currentLang === 'es-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Quiero emprender</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Vull emprendre</button>
-
                 <button *ngIf="currentLang === 'es-ES'" class="connectar" ngbDropdownItem routerLink="consolidar">Quiero consolidarme</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="connectar" ngbDropdownItem routerLink="consolidar">Vull consolidar-me</button>
-
                 <button *ngIf="currentLang === 'es-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Quiero crecer</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Vull creixer</button>
-
-              <!--   <button ngbDropdownItem>Quiero internacionalizarme</button>
-                <button ngbDropdownItem>Quiero financiarme</button> -->
-               <!--  <li><hr class="dropdown-divider"></li>
-                <button ngbDropdownItem>Buscador de Coworkings</button>
-                <button ngbDropdownItem>Buscador de parcelas y naves</button> -->
               </div>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> -->
+       <!--    <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" routerLink="contact-adr-balears">Contacta</button>
-             <!--  <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar asesoramiento</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar assessorament</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar ayudas</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar ajudes</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar formaciones</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar formacions</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Pedir cita</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Demanar cita</button>
-
-              </div> -->
             </div>
-          </li>
-        </ul>
-      </div>
-  </nav>
+          </li> -->
+<!--         </ul>
+      </div> -->
+  <!-- </nav> -->
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
     <i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i>
@@ -153,14 +158,10 @@
           <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'Quienes somos' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'Qui som' | translate}}</button>
-
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="news-agenda-list/4">Noticias / Agenda</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="news-agenda-list/4">Noticies / Agenda</button>
-
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
-
-            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button> -->
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparència' | translate}}</button>
 
@@ -171,7 +172,6 @@
         <div ngbDropdown class="d-inline-block">
           <button *ngIf="currentLang === 'es-ES'" class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Nuestros proyectos</button>
           <button *ngIf="currentLang === 'ca-ES'" class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Els nostres projectes</button>
-
           <div ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
             <h6 class="emprendre emprender-header"><strong>#EMPRENDRE</strong></h6>
             <button *ngIf="currentLang === 'es-ES'" class ="emprendre" ngbDropdownItem routerLink="ibemprenjove/es/bienvenidos-a-iemprenjove/" (click)="offcanvas.dismiss('Cross click')">Ibemprėnjove</button>
@@ -219,7 +219,6 @@
           <button *ngIf="currentLang === 'ca-ES'" class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potència el teu projecte</button>
 
           <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
-            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button> -->
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem class="emprendre" routerLink="emprender" (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem class="emprendre" routerLink="emprender" (click)="offcanvas.dismiss('Cross click')">Vull emprendre</button>
 
@@ -228,37 +227,14 @@
 
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Vull creixer</button>
-
-            <!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
-            <li><hr class="dropdown-divider"></li>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button> -->
           </div>
         </div>
       </li>
       <li class="nav-item">
         <div ngbDropdown class="d-inline-block">
-         <!--  <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button> -->
           <button class="btn" routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Contacta</button>
-              <!--           <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar assesdorament</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar ayudas</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar ajudes</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar formaciones</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar formacions</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Demanar cita</button>
-          </div> -->
         </div>
       </li>
     </ul>
-		<!-- <div class="text-end">
-			<button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
-		</div> -->
 	</div>
 </ng-template>

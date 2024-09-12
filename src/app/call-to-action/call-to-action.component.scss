@@ -1,10 +1,19 @@
-.cta {
+/* .cta {
   margin-top: 5rem;
   margin-bottom: 6rem;
   border: 0 none;
   width: 100%;
 } 
+ */
 
+.example {
+  margin-top: 4rem;
+  height: 150px;
+}
+
+.example:hover {
+  cursor: pointer;
+}
 
 form {
   display: grid;
@@ -22,7 +31,10 @@ form {
   padding: 1rem;
 }
 
-.cta-left, .cta-center {
+.cta-center {
+  margin-right: 1rem;
+}
+/* .cta-left, .cta-center {
   background-color: #003747;
   color: #fff;
   padding: .5rem;
@@ -41,14 +53,14 @@ form {
   background-color: #003747;
   color: #fff;
 }
-
-.cta-right > span {
+ */
+/* .cta-right > span {
   margin: 0;
   position: relative;
   top: 20%;
   font-size: .8rem;
   font-weight: bolder;
-}
+} */
 .form-control:focus {
   outline: none;
   box-shadow: none;

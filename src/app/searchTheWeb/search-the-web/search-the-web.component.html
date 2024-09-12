@@ -2,11 +2,16 @@
   <div class="filter-area"></div>
   <div class="filter-form">
     <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
-      <input *ngIf="currentLang === 'es-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="Buscar ..." aria-label="Search">
-      <input *ngIf="currentLang === 'ca-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="Cerca ..." aria-label="Search">
+      <input *ngIf="currentLang === 'es-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="¿qué necesitas? ..." aria-label="Search">
+      <input *ngIf="currentLang === 'ca-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="què necessites? ..." aria-label="Search"> 
+     
+      
+      <button mat-flat-button type="submit" (click)="onClick(searchTheWebForm)"
+      [disabled]="!searchTheWebForm.valid">
+      <span *ngIf="currentLang === 'es-ES'">Buscar</span>
+      <span *ngIf="currentLang === 'ca-ES'">Cerca</span>
 
-      <button class="btn btn-search" type="submit" (click)="onClick(searchTheWebForm)"
-      [disabled]="!searchTheWebForm.valid">Search <span class="badge text-bg-secondary ocultar" id="totalResults">
+      <span class="badge text-bg-secondary ocultar" id="totalResults">
         <a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span>
       </button>
       <ng-template #tipContent>Ver los resultados de <b>ADR Balears</b>!</ng-template>
@@ -19,10 +24,10 @@
       <a routerLink="news-agenda-list"><small>Noticias</small></a>
       <a routerLink="filter-adr-balears/parcelas"><small>Parcelas</small></a> 
     </div> -->
-  </div>
+  <!-- </div> -->
   <!-- <div class='pre-defined-filter-area' *ngIf="showLinks"> -->
   <div class='pre-defined-filter-area'>
-    <h5 *ngIf="currentLang === 'es-ES'">Enlaces directos:</h5>
+    <!-- <h5 *ngIf="currentLang === 'es-ES'">Enlaces directos:</h5>
     <h5 *ngIf="currentLang === 'ca-ES'">Enllaços directes:</h5>
     <div class="accordion" id="accordionHome">
       <div class="accordion-item">
@@ -132,7 +137,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 <!--     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
@@ -244,6 +249,6 @@
         <button *ngIf="currentLang === 'ca-ES'" class="btn btn-link" routerLink="palmainternationalboatshow">PIBS</button>
       </li> -->
     <!-- </ul> -->
-  </div>
+  <!-- </div> -->
   
 </div>

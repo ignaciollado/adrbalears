@@ -8,6 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatInputModule} from '@angular/material/input'; 
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -101,7 +109,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatGridListModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

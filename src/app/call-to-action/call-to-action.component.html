@@ -1,8 +1,8 @@
 
-<div class="cta">
-  <button  (click)="ctaFormClick()">
-    <div class="cta-center" innerHTML="<h1>{{ctaTextLeft}}</h1><h2>{{ctaTextCenter}}</h2><h3>{{ctaTextRight}}</h3>"></div>
-  </button>
+<div class="example radial">
+  <!-- <button  > -->
+    <div (click)="ctaFormClick()" class="cta-center" innerHTML="<h1>{{ctaTextLeft}}</h1><h2>{{ctaTextCenter}}</h2><h3>{{ctaTextRight}}</h3>"></div>
+  <!-- </button> -->
   <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
     <div class="col-auto">
       <input type="email" id="emailCta" class="form-control  form-control-lg" placeholder="email@example.com" formControlName="email">
