@@ -9,12 +9,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatCardModule} from '@angular/material/card'; 
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatInputModule} from '@angular/material/input'; 
-import {MatButtonModule} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card'; 
+import { MatGridListModule } from '@angular/material/grid-list'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,7 +57,6 @@ import { TransparencyDetailComponent } from './transparency-detail/transparency-
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
 import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
 import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
-
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
