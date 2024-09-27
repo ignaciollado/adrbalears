@@ -8,24 +8,6 @@ h1 {
   grid-gap: 1rem 0;
 }
 
-.row-emprender {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: .5rem .5rem;
-}
-
-.row-conectar {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: .5rem .5rem;
-}
-
-.row-proyectar {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: .5rem .5rem;
-}
-
 .btn {
   padding: 0;
 }
@@ -33,14 +15,10 @@ h1 {
 .card-header {
   padding: 0;
 }
-
-h6 {
-  color: #fff;
-}
-h6:hover {
-  color: #0098CB;
-}
 @media screen and (max-width: 1320px) {
+  h6 {
+    font-size: .8rem;
+  }
   .card-body {
     min-height: 10rem;
     max-height: 10rem;
@@ -49,27 +27,7 @@ h6:hover {
 
 @media screen and (max-width: 992px) {
   .row {
-    display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 1rem 0;
-  }
-  
-  .row-emprender {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: .5rem .5rem;
-  }
-  
-  .row-conectar {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: .5rem .5rem;
-  }
-  
-  .row-proyectar {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: .5rem .5rem;
   }
   
   h6 {
@@ -79,27 +37,7 @@ h6:hover {
 
 @media screen and (max-width: 760px) {
   .row {
-    display: grid;
     grid-template-columns: auto;
-    grid-gap: 1rem 0;
-  }
-  
-  .row-emprender {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: .5rem .5rem;
-  }
-  
-  .row-conectar {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: .5rem .5rem;
-  }
-  
-  .row-proyectar {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: .5rem .5rem;
   }
   .card {
     margin-bottom: 1rem;
