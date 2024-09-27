@@ -8,15 +8,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-	logo: string;
-	fase: string;
-}
-
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -24,25 +15,6 @@ export interface Tile {
 })
 
 export class BodyComponent {
-	tiles: Tile[] = [
-    {text: 'Tengo un proyecto,<br>quiero convertirlo en una realidad', cols: 2, rows: 3, color: '#6b9da7', logo: 'logo-adrbalears-emprender.webp', fase: '#emprendre'},
-    {text: 'Quiero aprender a emprender', cols: 3, rows: 3, color: '#6b9da7', logo: 'logo-adrbalears-emprender.webp', fase: '#emprendre'},
-		{text: '¿Qué puedo hacer para mejorar las capacidades de mis<br>trabajadores y de los gestores?', cols: 2, rows: 4, color: '#6b9da7', logo: 'logo-adrbalears-emprender.webp', fase: '#connectar'},
-
-		{text: 'Me interesa la sostenibilidad<br>de mi actividad', cols: 2, rows: 3, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-		{text: '¿Comó puedo reutilizar mis productos obsoletos?', cols: 2, rows: 3, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-    {text: '¿Cómo podría digitalizar<br>mi empresa, negocio, actividad?', cols: 2, rows: 3, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#emprendre'},
-    {text: 'Me gustaría ceder mi empresa, negocio, actividad', cols: 2, rows: 4, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-
-		{text: 'Estoy buscando<br>un empresa, negocio, actividad', cols: 3, rows: 3, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-    {text: 'Quiero mejorar el interior de mi negocio', cols: 2, rows: 4, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-    {text: 'Tengo una actividad industrial, necesito una ayuda, una subvención', cols: 2, rows: 3, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-    {text: 'Tengo un comercio local', cols: 2, rows: 4, color: '#71b796', logo: 'logo-adrbalears-conectar.webp', fase: '#connectar'},
-
-		{text: 'Invierte en Baleares,<br>establécete en una de las<br>regiones con más posibilidades', cols: 3, rows: 3, color: '#ed7448', logo: 'logo-adrbalears-proyectar.webp', fase: '#projectar'},
-    {text: 'Tengo un producto, un servicio para exportar ¿cómo lo puedo hacer?', cols: 2, rows: 4, color: '#ed7448', logo: 'logo-adrbalears-proyectar.webp', fase: '#projectar'},
-		{text: 'Mi empresa es industrial,<br>quiero internacionalizarme', cols: 2, rows: 3, color: '#ed7448', logo: 'logo-adrbalears-proyectar.webp', fase: '#projectar'},
-  ];
 
 	totalFound: string = ""
 	showSearch: boolean = true

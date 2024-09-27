@@ -1,66 +1,12 @@
-<!-- <div class='cta area-profile' >
+<div class='cta area-profile' >
 	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1>Personaliza tu experiencia</h1></a>
 	<a *ngIf="currentLang === 'ca-ES'"(click)="openHomePopUp(content)" ><h1>Personalitza la teva experiència</h1></a>
-</div> -->
-
-<!-- <div class="body-main">
-	<h2 class="al-ciudadano">Servicios para emprendedores</h2>
-	<h2 class="al-ciudadano">Quiero aprender a emprender</h2>
-	<h2 class="al-ciudadano">Quiero exportar</h2>
-	<h2 class="al-ciudadano">Me interesa la sostenibilidad</h2>
-	<h2 class="al-ciudadano">¿Comó puedo reutilizar mis productos obsoletos?</h2>
-	<h2 class="al-ciudadano">¿Cómo podría digitalizar mi empresa/negocio/actividad</h2>
-	<h2 class="al-ciudadano">Me gustaría ceder mi empresa/negocio/actividad</h2>
-	<h2 class="al-ciudadano">Estoy buscando un empresa/negocio/actividad</h2>
-	<h2 class="al-ciudadano">Quiero mejorar el diseño interior de mi negocio</h2>
-	<h2 class="al-ciudadano">Tengo una actividad industrial, necesito una ayuda/subvención</h2>
-	<h2 class="al-ciudadano">Comercios emblemáticos de les Illes Balears</h2>
-	<h2 class="al-ciudadano">Invierte en Baleares, establécete en una de las regiones con más posibilidades</h2>
-	<h2 class="al-ciudadano">Tengo un producto/servicio para exportar ¿cómo lo puedo hacer?</h2>
-	<h2 class="al-ciudadano">¿Qué puedo hacer para mejorar las capacidades de mis trabajadores y gestores?</h2>
-</div> -->
-
-<mat-grid-list cols="4" rowHeight="100px">
-  @for (tile of tiles; track tile) {
-    <mat-grid-tile
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows"
-    >
-			<mat-card class="example-card" 
-      [style.background]="tile.color"
-			[style.border] ="tile.color">
-				<mat-card-header>
-					<mat-card-title-group>
-						<mat-card-title>
-							<div><img *ngIf="tile.logo" src="../../assets/images/{{tile.logo}}" alt="{{tile.logo}}" title="{{tile.logo}}" /></div>
-							<div [innerHTML]="tile.text"></div>
-						</mat-card-title>
-					</mat-card-title-group>
-				</mat-card-header>
-				<mat-card-content>
-					<button mat-raised-button>+info</button>
-				</mat-card-content>
-			</mat-card>
-		</mat-grid-tile>
-  }
-</mat-grid-list>
-
-
-<div class="gradient-examples">
-  <div class="example linear">
-    Associació de Forners i Pastissers de les Illes Balears
-  </div>
-
-  <div class="example linear">
-    Escuela de Organización Industrial (EOI)
-  </div>
-
-  <div class="example linear">
-    Palma International Boatshow
-  </div>
 </div>
 
-
+<div class="body-main">
+  <app-slider></app-slider>
+  <app-search-the-web></app-search-the-web>
+</div>
 
 <app-call-to-action ctaTextRight="{{theRightLema}}" ctaTextLeft="{{theLeftLema}}" ctaTextCenter="{{theCenterLema}}"></app-call-to-action>
 
