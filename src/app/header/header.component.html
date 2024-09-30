@@ -4,6 +4,8 @@
       <img src="../assets/images/logo-adr-balears.png" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="120px">
     </a>
   </nav>
+  <h1 *ngIf="currentLang === 'es-ES'" class='title-header'>Agencia de desarrollo regional de les Illes Balears</h1>
+  <h1 *ngIf="currentLang === 'ca-ES'" class='title-header'>Agència de desenvolupament regional de les Illes Balears</h1>
 
   <nav class="navbar nav-bar-top">
     <div class="nav-bar-top-language"><button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button><button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button></div>
@@ -77,10 +79,10 @@
                 <button *ngIf="currentLang === 'ca-ES'" class ="connectar" ngbDropdownItem routerLink="loopdisseny">LOOP</button>
 
                 <h6 class="projectar proyectar-header"><strong>#PROJECTAR</strong></h6>
-                <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs/">Ibexporta xecs</button>
-                <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs">Ibexporta xecs</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-orienta/es/bienvenidos-a-ibexporta-orienta/">Ibexporta Orienta</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-orienta">Ibexporta Orienta</button>
+                <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs/">Ibexporta xecs</button>
+                <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="ibexporta-xecs">Ibexporta xecs</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem routerLink="invest-in-balearics/es/bienvenidos-a-invest-in-balearics/">Invest in Balearics</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="invest-in-balearics">Invest in Balearics</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow/">PIBS</button>

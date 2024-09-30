@@ -1,10 +1,9 @@
 header {
-  /* background-color: rgba(0, 55, 71,.3); */
   display: grid;
-  grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
+  grid-template-areas: "navLogo navLangSede" "navLogo navBottom" "titleHeader titleHeader";
   grid-template-columns: 8% 92%;
   margin-top: .2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .offcanvas-header {
@@ -26,6 +25,10 @@ header {
   display: none;
   padding-right: .2rem;
   text-align: right;
+}
+
+.title-header {
+  grid-area: titleHeader;
 }
 
 .nav-bar-left-logo {
@@ -55,7 +58,6 @@ header {
 }
 
 .button-header-menu {
-  /* background-color: #003747; */
   border-radius: 0;
   margin-right: .5rem;
   color: #003747;
