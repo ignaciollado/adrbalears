@@ -66,11 +66,13 @@ const routes: Routes = [
   { path: 'loopdisseny/es/bienvenidos-a-loopdisseny', component: LandingPageComponent },  
   
   { path: 'ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs', component: LandingPageComponent },
-  { path: 'ibexporta-xecs', component: LandingPageComponent },  
+  { path: 'ibexporta-xecs', component: LandingPageComponent },
+  { path: 'ibexporta-orienta/es/bienvenidos-a-ibexporta-orienta', component: LandingPageComponent },
+  { path: 'ibexporta-orienta', component: LandingPageComponent }, 
   { path: 'invest-in-balearics/es/bienvenidos-a-invest-in-balearics', component: LandingPageComponent },
-  { path: 'invest-in-balearics', component: LandingPageComponent },  
+  { path: 'invest-in-balearics', component: LandingPageComponent },
   { path: 'palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow', component: LandingPageComponent },
-  { path: 'palmainternationalboatshow', component: LandingPageComponent },  
+  { path: 'palmainternationalboatshow', component: LandingPageComponent },
 
   { path: 'direct-link/:id/:idMainCat', component: CommonContentViewerComponent},
 

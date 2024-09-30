@@ -1,5 +1,5 @@
 header {
-  background-color: rgba(0, 55, 71,.3);
+  /* background-color: rgba(0, 55, 71,.3); */
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   grid-template-columns: 8% 92%;
@@ -55,15 +55,15 @@ header {
 }
 
 .button-header-menu {
-  background-color: #003747;
+  /* background-color: #003747; */
   border-radius: 0;
   margin-right: .5rem;
-  color: #fff;
+  color: #003747;
 }
 
 button:hover {
   background-color: #0098CB;
-  color: #fff;
+  color: #fff!important;
 }
 
 .emprender-header {
