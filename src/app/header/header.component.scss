@@ -6,6 +6,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.nav-bar-left-logo {
+  grid-area: navLogo;
+}
+
 .offcanvas-header {
   background-color: #019ee5;
   color: #fff;
@@ -25,15 +29,6 @@ header {
   display: none;
   padding-right: .2rem;
   text-align: right;
-}
-
-.title-header {
-  grid-area: titleHeader;
-}
-
-.nav-bar-left-logo {
-  grid-area: navLogo;
-  background-color: #fff;
 }
 
 .nav-bar-top {
@@ -59,7 +54,6 @@ header {
 
 .button-header-menu {
   border-radius: 0;
- /*  margin-right: .5rem; */
   color: #003747;
 }
 
@@ -91,19 +85,22 @@ h5 {
   margin-bottom:0;
 }
 
+@media screen and (max-width: 1200px) {
+  header {
+     grid-template-areas: "navLogo navLangSede" "navBottom navBottom";
+     margin-bottom: 1rem;
+     grid-template-columns: 12% 88%;
+   }
+}
+
 @media screen and (max-width: 760px) {
  header {
-    grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
-    margin-bottom: 1rem;
-    grid-template-columns: 12% 88%;
-    margin-top: 0.1rem;
-    max-height: 120px;
+    grid-template-areas: "navLogo mobileMenu" "navLangSede navLangSede";
   }
   .nav-bar-top {
     padding: 0 .5rem;
   }
-
-  button:hover {
+  .mobile-menu-button:hover {
     background-color: transparent;
   }
   .button-header-menu{
@@ -117,19 +114,29 @@ h5 {
     margin: 0;
   }
   div button:hover {
-    color: #fff;
+    color: #000;
     border-color: #033747;
- }
+  }
 
- a img {
-  width: 110px;
+a img {
+  width: 450px;
  }
  
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
+  header {
+    grid-template-areas: "navLogo" "mobileMenu" "navLangSede";
+    grid-template-columns: 100%;
+  }
   .button-header-menu {
     font-size: .7rem;
     margin-right: .2rem;
+  }
+  a img {
+    width: 390px;
+  }
+  .nav-bar-left-logo {
+    text-align: center;
   }
 }
