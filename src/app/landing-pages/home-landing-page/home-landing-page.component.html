@@ -38,7 +38,7 @@
       <img src="../../../assets/images/img-orient.webp" class="card-img-top" alt="...">
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-orient.svg' width="100px" alt=''>
-        <h3 class="card-title"><a routerLink="ibempren" *ngIf="currentLang === 'es-ES'">Te orientamos<br>Para crear<br>Tu empresa</a></h3>
+        <h3 class="card-title"><a routerLink="ibempren/es/iempren-recursos-para-emprender" *ngIf="currentLang === 'es-ES'">Te orientamos<br>Para crear<br>Tu empresa</a></h3>
         <h3 class="card-title"><a routerLink="ibempren" *ngIf="currentLang === 'ca-ES'">T'orientem<br>Per crear<br>la Teva empresa</a></h3>
       </div>
     </div>
@@ -46,8 +46,8 @@
       <img src="../../../assets/images/img-form.webp" class="card-img-top" alt="...">
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-form.svg' width="100px" alt=''>
-        <h3 class="card-title"><a routerLink="" *ngIf="currentLang === 'es-ES'">Te formamos<br>(Emprendedores,<br>Directivos,<br>profesionales,<br>relevo,<br>formaciones EOI...)</a></h3>
-        <h3 class="card-title"><a routerLink="" *ngIf="currentLang === 'ca-ES'">Et formem<br>(Emprenedors,<br>Directius,<br>profesionals,<br>relleu,<br>formacions EOI...)</a></h3>
+        <h3 class="card-title"><a routerLink='news-agenda-list-all/9999' *ngIf="currentLang === 'es-ES'">Te formamos<br>(Emprendedores,<br>Directivos,<br>profesionales,<br>relevo,<br>formaciones EOI...)</a></h3>
+        <h3 class="card-title"><a routerLink='' *ngIf="currentLang === 'ca-ES'">Et formem<br>(Emprenedors,<br>Directius,<br>profesionals,<br>relleu,<br>formacions EOI...)</a></h3>
       </div>
     </div>
     <div class="card card-ayuda card-border-emprendedor card-border-empresa" >
@@ -62,7 +62,7 @@
       <img src="../../../assets/images/img-export.webp" class="card-img-top" alt="...">
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-export.svg' width="100px" alt=''>
-        <h3 class="card-title" *ngIf="currentLang === 'es-ES'"><a routerLink="ibexporta-orienta">Te ayudamos<br>a vender fuera</a></h3>
+        <h3 class="card-title" *ngIf="currentLang === 'es-ES'"><a routerLink="ibexporta-orienta/es/bienvenidos-a-ibexporta-orienta">Te ayudamos<br>a vender fuera</a></h3>
         <h3 class="card-title" *ngIf="currentLang === 'ca-ES'"><a routerLink="ibexporta-orienta">T'ajudem<br>a vendre fora</a></h3>
       </div>
     </div>
@@ -87,15 +87,15 @@
         </div>
         <ul>
           <li>
-            <span *ngIf="currentLang === 'es-ES'">Eres comercio histórico o con patrimonio: <br><a routerLink="emblematicsbalears" *ngIf="currentLang === 'es-ES'"><strong>Te damos un sello de calidad</strong></a></span>
+            <span *ngIf="currentLang === 'es-ES'">Eres comercio histórico o con patrimonio: <br><a routerLink="emblematicsbalears/es/bienvenidos-a-emblematicsbalears" *ngIf="currentLang === 'es-ES'"><strong>Te damos un sello de calidad</strong></a></span>
             <span *ngIf="currentLang === 'ca-ES'">Ets comerç històric o amb patrimoni: <br><a routerLink="emblematicsbalears"><strong>Et donem un segell de qualitat</strong></a></span>
           </li>
           <li>
-            <a routerLink="ibrelleu" *ngIf="currentLang === 'es-ES'"><strong>¿Necesitas relevo para tu negocio?</strong></a>
+            <a routerLink="ibrelleu/es/bienvenidos-a-ibrelleu" *ngIf="currentLang === 'es-ES'"><strong>¿Necesitas relevo para tu negocio?</strong></a>
             <a routerLink="ibrelleu" *ngIf="currentLang === 'ca-ES'"><strong>Necessites relleu per al teu negoci?</strong></a>
           </li>
           <li>
-            <a routerLink="ibcomerc-a-escola" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que tu colegio te visite?</strong></a>
+            <a routerLink="ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que tu colegio te visite?</strong></a>
             <a routerLink="ibcomerc-a-escola" *ngIf="currentLang === 'ca-ES'"><strong>Vols que el teu col·legi et visiti?</strong></a>
           </li>
         </ul>
@@ -104,19 +104,18 @@
         <div class='industria-title'>
           <h2 class="title-blanco" *ngIf="currentLang === 'es-ES'">INDUSTRIA</h2>
           <h2 class="title-blanco" *ngIf="currentLang === 'ca-ES'">INDÚSTRIA</h2>
-
         </div>
         <ul>
           <li>
-            <span *ngIf="currentLang === 'es-ES'">Eres sensible con el medio ambiente:<br><a routerLink="industria-local-sostenible" *ngIf="currentLang === 'es-ES'"><strong>Te ofrecemos la marca ILS</strong></a></span>
+            <span *ngIf="currentLang === 'es-ES'">Eres sensible con el medio ambiente:<br><a routerLink="industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible" *ngIf="currentLang === 'es-ES'"><strong>Te ofrecemos la marca ILS</strong></a></span>
             <span *ngIf="currentLang === 'ca-ES'">Ets sensible amb el medi ambient:<br><a routerLink="industria-local-sostenible" *ngIf="currentLang === 'ca-ES'"><strong>T'oferim la marca ILS</strong></a></span>
           </li>
           <li>
-            <a routerLink="exposabyidi" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que te ayudemos a diseñar tu espacio?</strong></a>
+            <a routerLink="exposabyidi/es/bienvenidos-a-exposabyidi" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que te ayudemos a diseñar tu espacio?</strong></a>
             <a routerLink="exposabyidi" *ngIf="currentLang === 'ca-ES'"><strong>Vols que t'ajudem a dissenyar el teu espai?</strong></a>
           </li>
           <li>
-            <a routerLink="loopdisseny" *ngIf="currentLang === 'es-ES'"><strong>¿Te interesa la circularidad y quieres contactar con otros sectores?</strong></a>
+            <a routerLink="loopdisseny/es/bienvenidos-a-loopdisseny" *ngIf="currentLang === 'es-ES'"><strong>¿Te interesa la circularidad y quieres contactar con otros sectores?</strong></a>
             <a routerLink="loopdisseny" *ngIf="currentLang === 'ca-ES'"><strong>T'interessa la circularitat i vols contactar amb altres sectors?</strong></a>
           </li>
         </ul>
@@ -124,7 +123,7 @@
       <div class="bottom-sector">
         <ul>
           <li>
-            <span *ngIf="currentLang === 'es-ES'">¿Eres una panadería o un horno? <a routerLink="pa-daqui-forn-i-tradicio"><strong>Pa d'aquí</strong></a> es tu marca</span>
+            <span *ngIf="currentLang === 'es-ES'">¿Eres una panadería o un horno? <a routerLink="pa-daqui-forn-i-tradicio/es/bienvenidos-a-pa-daqui-forn-i-tradicio"><strong>Pa d'aquí</strong></a> es tu marca</span>
             <span *ngIf="currentLang === 'ca-ES'">Ets un forn? <a routerLink="pa-daqui-forn-i-tradicio"><strong>Pa d'aquí</strong></a> és la teva marca</span>
           </li>
         </ul>
@@ -141,34 +140,39 @@
   <div class="slider">
     <div class="slide-track">
       <div class="slide">
-        <a href='#'>
-          <h5 *ngIf="currentLang === 'es-ES'">SOMOS<br>Coordinadores<br>de la Mesa de<br>Internacionalización</h5>
-          <h5 *ngIf="currentLang === 'ca-ES'">SOM<br>Coordinadors<br>de la Mesa<br>d'Internacionalització</h5>
-        <img src="../../../assets/images/iexporta.jpg" height="auto" width="245" alt="" /></a>
+        <a *ngIf="currentLang === 'es-ES'" routerLink=''>
+          <h5>SOMOS<br>Coordinadores<br>de la Mesa de<br>Internacionalización</h5></a>
+        <a *ngIf="currentLang === 'ca-ES'" routerLink=''>
+          <h5>SOM<br>Coordinadors<br>de la Mesa<br>d'Internacionalització</h5></a>
+        <img src="../../../assets/images/iexporta.jpg" height="auto" width="245" alt="" />
       </div>
       <div class="slide">
-        <a href='https://palmainternationalboatshow.com/'>
-          <h5 *ngIf="currentLang === 'es-ES'">SOMOS<br>Los organizadores<br>del salón Náutico<br>de Palma (PIBS)</h5>
-          <h5 *ngIf="currentLang === 'ca-ES'">SOM<br>Els Organitzadors<br>del saló Nàutic<br>de Palma (PIBS)</h5>
-        <img src="../../../assets/images/logo-pibs.png" height="auto" width="245" title="Palma International Boat Show" alt="Palma International Boat Show" /></a>
+        <a *ngIf="currentLang === 'es-ES'" routerLink='palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow'>
+          <h5 >SOMOS<br>Los organizadores<br>del salón Náutico<br>de Palma (PIBS)</h5></a>
+        <a *ngIf="currentLang === 'ca-ES'" routerLink='palmainternationalboatshow'>  
+          <h5>SOM<br>Els Organitzadors<br>del saló Nàutic<br>de Palma (PIBS)</h5></a>
+        <img src="../../../assets/images/logo-pibs.png" height="auto" width="245" title="Palma International Boat Show" alt="Palma International Boat Show" />
       </div>
       <div class="slide">
-        <a href='#'>
-          <h5 *ngIf="currentLang === 'es-ES'">SOMOS<br>Los organizadores<br>del ecosistema<br>emprendedor</h5>
-          <h5 *ngIf="currentLang === 'ca-ES'">SOM<br>Els Organitzadors<br>de l'ecosistema<br>emprenedor</h5>
-        <img src="../../../assets/images/logo_xspe.webp" height="auto" width="245" title="Red de Servicios Públicos Empresariales de las Islas Baleares" alt="Red de Servicios Públicos Empresariales de las Islas Baleares" /></a>
+        <a *ngIf="currentLang === 'es-ES'" routerLink='ibempren/es/iempren-recursos-para-emprender'>
+          <h5>SOMOS<br>Los organizadores<br>del ecosistema<br>emprendedor</h5></a>
+        <a *ngIf="currentLang === 'ca-ES'" routerLink='ibempren'>
+          <h5>SOM<br>Els Organitzadors<br>de l'ecosistema<br>emprenedor</h5></a>
+        <img src="../../../assets/images/logo_xspe.webp" height="auto" width="245" title="Red de Servicios Públicos Empresariales de las Islas Baleares" alt="Red de Servicios Públicos Empresariales de las Islas Baleares" />
       </div>
       <div class="slide">
-        <a href='https://investinbalearics.adrbalears.es'>
-          <h5 *ngIf="currentLang === 'es-ES'">SOMOS<br>la puerta de<br>entrada a las<br>inversiones<br>en Illes Balears</h5>
-          <h5 *ngIf="currentLang === 'ca-ES'">SOM<br>la porta<br>d'entrada a les<br>inversions<br>a Illes Balears</h5>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="auto" width="245" alt="" /></a>
+        <a *ngIf="currentLang === 'es-ES'" href='https://investinbalearics.adrbalears.es'>
+          <h5>SOMOS<br>la puerta de<br>entrada a las<br>inversiones<br>en Illes Balears</h5></a>
+        <a *ngIf="currentLang === 'ca-ES'" href='https://investinbalearics.adrbalears.es'>
+          <h5>SOM<br>la porta<br>d'entrada a les<br>inversions<br>a Illes Balears</h5></a>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="auto" width="245" alt="" />
       </div>
       <div class="slide">
-        <a href='#'>
-          <h5 *ngIf="currentLang === 'es-ES'">SOMOS<br>impulsores de<br>emprendeduría<br>desde la escuela<br>a la UIB</h5>
-          <h5 *ngIf="currentLang === 'ca-ES'">SOM<br>impulsors<br>d'empreneduria<br>des de l'escola<br>a la UIB</h5>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="auto" width="245" alt="" /></a>
+        <a *ngIf="currentLang === 'es-ES'" routerLink='ibemprenjove/es/bienvenidos-a-iemprenjove'>
+          <h5>SOMOS<br>impulsores de<br>emprendeduría<br>desde la escuela<br>a la UIB</h5></a>
+        <a *ngIf="currentLang === 'ca-ES'" routerLink='ibemprenjove'>
+          <h5>SOM<br>impulsors<br>d'empreneduria<br>des de l'escola<br>a la UIB</h5></a>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="auto" width="245" alt="" />
       </div>
     </div>
   </div>

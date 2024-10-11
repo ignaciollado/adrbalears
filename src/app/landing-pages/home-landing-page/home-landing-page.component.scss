@@ -49,6 +49,9 @@ h4 {
 .card-title {
   font-size: 2.25rem;
   padding-bottom: .5rem;
+  :hover{
+    color: adr-colors.$secondary-adr!important;
+  }
 }
 .card-text {
   font-size: 2rem;
@@ -74,7 +77,6 @@ h4 {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
-
 .card {
   border-radius: 0!important;
 }
