@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import 'bootstrap/dist/css/bootstrap.css'; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@use 'adr-colors';
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -31,10 +32,21 @@ time, mark, audio, video {
 }
 
 html {
-    margin: auto!important;    
-    line-height: 1.5rem;
-    font-size: 14px;
-    color: #ffffff;
+    margin: auto;
+    font-size: 16px;
+}
+
+.img-top-home {
+   margin-bottom: 3rem;
+}
+
+img, svg {
+    vertical-align: inherit!important;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0!important;
 }
 
 article,aside,details,figcaption,figure,
@@ -68,15 +80,13 @@ a {
     vertical-align: baseline;
     background: transparent;
     text-decoration: none!important;
-    color: #0098CB!important;
-}
-
-a:visited {
-    color: #0098CB;
-}
-
-a:hover {
-    color: #003747!important;
+    color: adr-colors.$primary-adr-txt!important;
+    :visited {
+        color: adr-colors.$primary-adr-txt!important;
+    }
+    :hover {
+        color: adr-colors.$secondary-adr!important;
+    }
 }
 
 ins {
@@ -101,11 +111,6 @@ abbr[title], dfn[title] {
     cursor:help;
 }
 
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
 hr {
     display:block;
     height:1px;
@@ -120,8 +125,8 @@ input, select {
 }
 
 ::selection {
-    color: #003747;
-    background: #0098cb;
+    color: adr-colors.$primary-adr;
+    background: adr-colors.$secondary-adr;
 }
 
 .container {
@@ -136,8 +141,8 @@ input, select {
 .btn:hover {
     text-decoration: underline;
     text-underline-offset: 20%;
-    color: #0098cb!important;
-  }
+    color: adr-colors.$secondary-adr!important;
+}
 
 input:focus,
 textarea:focus,
@@ -147,16 +152,15 @@ a:focus {
 }
 
 .card:hover{
-    border: 1px solid #0098CB;
+    border: 1px solid adr-colors.$secondary-adr;
     border-radius: 0;
 }
 
 .card-body {
     grid-area: title;
-    background-color: #003747;
+    background-color: adr-colors.$primary-adr;
     color: #ffffff!important;
     min-height: 12rem;
-    max-height: 12rem;
     line-height: 1.4285em;
     padding-left: 1rem;
 }
@@ -171,42 +175,39 @@ a:focus {
     color: #fff;
 }
 
-.card-title:hover {
-    color: #0098CB;
-}
-
 .adrbalears {
-    color:  #003747!important;
+    color:  adr-colors.$primary-adr;
     background-color: #fff;
+    :hover {
+        background-color: adr-colors.$primary-adr!important;
+        color: #fff!important;
+    }
 }
 .emprendre{
-    color:  #6b9da7!important;
+    color:  adr-colors.$emprender;
     background-color: #fff;
+    :hover {
+        background-color: adr-colors.$emprender!important;
+        color: #fff!important;
+    }
 }
 .connectar{
-    color:  #71b796!important;
+    color:  adr-colors.$conectar!important;
     background-color: #fff;
+    :hover {
+        background-color: adr-colors.$conectar!important;
+        color: #fff!important;
+    }
 }
 .projectar{
-    color:  #ed7448!important;
+    color:  adr-colors.$proyectar!important;
     background-color: #fff;
+    :hover {
+        background-color: adr-colors.$proyectar!important;
+        color: #fff!important;
+    }
 }
-.adrbalears:hover {
-    background-color:  #003747!important;
-    color: #fff!important;
-}
-.emprendre:hover {
-    background-color: #0098CB!important;
-    color: #fff!important;
-}
-.connectar:hover {
-    background-color:  #71b796!important;
-    color: #fff!important;
-}
-.projectar:hover {
-    background-color:  #ed7448!important;
-    color: #fff!important;
-}
+
 .emprendre-bck {
     background-color:  #6b9da7!important;
 }
@@ -217,23 +218,9 @@ a:focus {
     background-color:  #ed7448!important;
 }
 
-.example {
-    text-align: center;
-    align-items: center;
-    border-radius: 16px;
-    box-shadow: 0 0 15px hsla(0deg, 0%, 0%, 0.5);
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 900;
-    display: flex;
-    height: 250px;
-    justify-content: center;
-    text-shadow: 0 2px 3px hsla(0deg, 0%, 0%, 0.25);
-  }
-
 .linear {
     background-image: linear-gradient(#0098cb, #003747);
-  }
+}
   
 .radial {
    background-image: radial-gradient(#000, #003747);
@@ -243,8 +230,14 @@ a:focus {
   background-image: conic-gradient(#003747, #fff);
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 992px) {
+    header {
+        margin-bottom: 0;
+    }
     .h1, h1 {
       font-size: 2rem!important;
     }
+    .img-top-home {
+        margin-bottom: 1rem;
+     }
   }

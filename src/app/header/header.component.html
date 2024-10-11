@@ -1,25 +1,15 @@
 <header>
-  <nav class='nav-bar-left-logo' id="logotipo">
+  <nav class='nav-bar-logo'>
     <a class="navbar-brand" href="#">
-      <img src="../assets/images/ADRBalearscompleto-conselleria.jpg" alt="GOIB+ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="520px" height="auto">
+      <img src="../../assets/images/logo gov+adr.svg" alt="GOIB+ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="420px" height="auto">
     </a>
   </nav>
 
-  <nav class="navbar nav-bar-top">
-    <div class="nav-bar-top-language">
-      <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
-      <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button></div>
-    <div class="nav-bar-top-sede-elect">
-      <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
-      <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand nav-bar-bottom">
+  <nav class="navbar navbar-expand nav-bar-menu">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
@@ -134,9 +124,14 @@
               </div> -->
             </div>
           </li>
+          <app-search-the-web></app-search-the-web>
         </ul>
-      </div>
   </nav>
+
+  <div class="language-select">
+    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
+    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
+  </div>
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
     <i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i>
@@ -164,10 +159,8 @@
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
 
-            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de puntos de atención</button> -->
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparència' | translate}}</button>
-
           </div>
         </div>
       </li>

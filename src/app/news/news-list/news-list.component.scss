@@ -2,6 +2,11 @@ h1 {
   margin-bottom: 2rem;
 }
 
+h6 {
+  font-size: .75rem;
+  color: #fff;
+}
+
 .row {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -12,41 +17,32 @@ h1 {
   padding: 0;
 }
 
+.card-body {
+  grid-area: title;
+  background-color: #003747;
+  color: #ffffff!important;
+  min-height: 12rem;
+  max-height: 12rem;
+  line-height: 1.4285em;
+  padding-left: 1rem;
+}
+
 .card-header {
   padding: 0;
-}
-@media screen and (max-width: 1320px) {
-  h6 {
-    font-size: .8rem;
-  }
-  .card-body {
-    min-height: 10rem;
-    max-height: 10rem;
-  }
 }
 
 @media screen and (max-width: 992px) {
   .row {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
   }
-  
+
   h6 {
     font-size: 1rem;
   }
+
+  .card-body {
+    max-height: auto;
+  }
 }
 
-@media screen and (max-width: 760px) {
-  .row {
-    grid-template-columns: auto;
-  }
-  .card {
-    margin-bottom: 1rem;
-  }
-  h6 {
-    font-size: 1.5rem;
-  }
-  .card-body {
-    min-height: 12rem;
-    max-height: 12rem;
-  }
-}
+

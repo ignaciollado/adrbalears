@@ -1,16 +1,19 @@
 .cta {
   margin-top: 5rem;
-  margin-bottom: 6rem;
+  margin-bottom: 0;
   border: 0 none;
   width: 100%;
 } 
-
 
 form {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
   justify-content: center;
+}
+
+.col-auto {
+  text-align: center;
 }
 
 .ocultar {
@@ -30,6 +33,7 @@ form {
 
 .cta-center {
   text-align: center;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .cta-left {

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { BodyComponent } from './body/body.component';
+import { HomeLandingPageComponent } from './landing-pages/home-landing-page/home-landing-page.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { SearchTheWebResultListComponent } from './searchTheWeb/search-the-web-result-list/search-the-web-result-list.component';
@@ -92,8 +93,8 @@ const routes: Routes = [
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },
-  { path: '*', component: BodyComponent },
-  { path: '', component: BodyComponent },
+  { path: '*', component: HomeLandingPageComponent },
+  { path: '', component: HomeLandingPageComponent },
   { path: '**', redirectTo: '/404', pathMatch: 'full' }
 ];
 

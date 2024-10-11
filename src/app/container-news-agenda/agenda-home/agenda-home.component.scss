@@ -1,0 +1,53 @@
+@use '../../../adr-colors';
+
+h2 {
+  text-align: center;
+  font-size: 3rem !important;
+  margin-bottom: 3rem!important;
+  color: #003747;
+}
+h3 {
+  color: inherit;
+}
+.eventos{
+  font-weight: bolder;
+  background-color: #ececed;
+  padding: 1rem;
+}
+.agenda-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.agenda-item{
+  border-bottom: 1px solid lightgray;
+  border-radius: 0;
+  height: auto;
+  font-weight: 300!important;
+  dl {
+    margin-top: .25rem!important;
+  }
+}
+
+.card-body {
+  background-color: transparent; // #eceded!important;
+  color: #003747!important;
+  min-height: 12rem;
+  max-height: auto!important;
+}
+
+@media screen and (max-width: 992px) {
+  .agenda-items-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .eventos{
+    padding: 0;
+  }
+  .agenda-item {
+    margin-left: .1rem;
+  }
+  .ics-calendar-label {
+    font-weight: bolder!important;
+  }
+}

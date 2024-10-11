@@ -15,12 +15,14 @@
 }
 
 h2:first-child{
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  margin-bottom: 3rem!important;
 }
 
 h3 {
+  color: inherit;
   font-weight: 200;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem!important;
 }
 
 h3 > span {
@@ -44,7 +46,7 @@ h1 {
   color: #003747!important;
 }
 
-@media screen and (max-width: 760px) {
+/* @media screen and (max-width: 760px) {
   h3 {
     background-color: #fff;
     color: #000;
@@ -57,4 +59,4 @@ h1 {
   .bottom-left-crecer {
     margin-bottom: 1rem;
   }
-}
+} */

@@ -1,0 +1,22 @@
+<div class='eventos'>
+  <h2 *ngIf="currentLang === 'es-ES'">Eventos</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">Esdeveniments</h2>
+  <div class="event-list-container" *ngIf="agenda">
+    <div class="agenda-items-container">
+      <div *ngFor="let itemAgenda of agendaAll">
+        <div class="agenda-item">
+          <div class="card-body" [innerHTML]="itemAgenda.attributes.text">
+            <a [routerLink]="['/news-agenda-detail', itemAgenda.attributes.alias, itemAgenda.id]">
+              <h4 class="card-title">{{itemAgenda.attributes.title}}</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="no-hay-eventos emprendre-bck" *ngIf="!agenda">
+    <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
+    <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+  </div>
+</div>
+

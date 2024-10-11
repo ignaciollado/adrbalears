@@ -7,10 +7,10 @@
     <h2 *ngIf="!theContentAttributes?.slogan">loading data ...</h2>
   </div>
   <div *ngIf="true">
-
   </div>
-  <!-- <app-search-the-web *ngIf="showLinks"></app-search-the-web> -->
+
   <app-slider></app-slider>
+
   <div class="project-link-area">
     <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
     <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
@@ -61,7 +61,7 @@
       <span *ngIf="currentLang === 'ca-ES'">BUTLLETÍ INFORMATIU</span>
     </h2>
     <h4 *ngIf="currentLang === 'es-ES'">Sigue nuestras últimas noticias y actividades. Subscríbete a nuestro boletín:</h4>
-    <h4 *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments.Subscriu-te al nostre butlletí:</h4>
+    <h4 *ngIf="currentLang === 'ca-ES'">Segueix les nostres últimes notícies i esdeveniments. Subscriu-te al nostre butlletí:</h4>
   
     <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm}">
       <div class="col-auto">

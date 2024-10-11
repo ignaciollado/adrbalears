@@ -15,12 +15,14 @@
 }
 
 h2:first-child {
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  margin-bottom: 3rem!important;
 }
 
 h3 {
+  color: inherit;
   font-weight: 200;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem!important;
 }
 
 .connectar{
@@ -40,7 +42,7 @@ h1 {
   width: 100%;
 }
 
-@media screen and (max-width: 760px) {
+/* @media screen and (max-width: 760px) {
   h3 {
     background-color: #fff;
     color: #000;
@@ -53,4 +55,4 @@ h1 {
   .bottom-left-conectar {
     margin-bottom: 1rem;
   }
-}
+} */

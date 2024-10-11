@@ -57,6 +57,9 @@ import { TransparencyDetailComponent } from './transparency-detail/transparency-
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
 import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.component';
 import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
+import { HomeLandingPageComponent } from './landing-pages/home-landing-page/home-landing-page.component';
+import { AgendaHomeComponent } from './container-news-agenda/agenda-home/agenda-home.component';
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -100,7 +103,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     TransparencyDetailComponent,
     SimpleTextViewerComponent,
     GrantsSubsidiesComponent,
-    GuidesAndPublicationsComponent
+    GuidesAndPublicationsComponent,
+    HomeLandingPageComponent,
+    AgendaHomeComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

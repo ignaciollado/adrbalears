@@ -1,0 +1,363 @@
+@use '../../../adr-colors';
+@use '../../../utilities.scss';
+
+h1, h2, h3, h4{
+  text-align: center;
+  font-weight: bolder;
+  color: adr-colors.$primary-adr;
+}
+h1 {
+  font-size: 3rem!important;
+  margin-bottom: 3rem!important;
+}
+h2{
+  font-size: 2.5rem!important;
+}
+h3 {
+  background-color: transparent;
+}
+h4 {
+  font-weight: normal;
+}
+.color-adr-sec {
+  color: adr-colors.$secondary-adr;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 4rem 0 4rem 0;
+  justify-items: center;
+  column-gap: 1rem;
+}
+.card{
+  border: none;
+  text-align: center;
+  border-radius: 1.5rem 1.5rem 0 0!important;
+}
+.card-img-top {
+  border-radius: 1.5rem 1.5rem 0 0!important;
+  max-height: inherit;
+}
+.card-body-home {
+  text-align: center;
+  border-radius: 0 0 1.5rem 1.5rem!important;
+  background-color: adr-colors.$secondary-adr-bck;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: 17rem;
+}
+.card-title {
+  font-size: 2.25rem;
+  padding-bottom: .5rem;
+}
+.card-text {
+  font-size: 2rem;
+}
+/* -------------------------------------------------------------- */
+.te-ayudamos-container{
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+}
+.sub-title-emprendedor{
+  color: adr-colors.$primary-adr;
+  font-weight: bold;
+}
+.title-container-top-ayudanos{
+  margin-top: 2rem;
+  text-align: left;
+}
+.te-ayudamos {
+  font-weight: normal;
+}
+.card-container-ayudamos {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.card {
+  border-radius: 0!important;
+}
+.card-ayuda {
+  border-left: 1px solid lightgray;
+}
+.card-ayuda:first-child{
+  border-left: 3px solid adr-colors.$primary-adr;
+}
+.card-ayuda:last-child{
+  border-right: 3px solid adr-colors.$secondary-adr;
+}
+.card-ayuda img {
+  padding: .3rem;
+}
+.card-body-home-ayuda .card-title{
+  font-size: 1.5rem;
+}
+.card-border-emprendedor{
+  border-top: 5px solid adr-colors.$primary-adr;
+}
+.card-border-emprendedor-blanco{
+  border-top: 5px solid #fff;
+}
+.card-border-empresa{
+  border-bottom: 5px solid adr-colors.$secondary-adr;
+}
+.title-container-bottom-ayudanos{
+  text-align: right;
+  position: relative;
+  right: 0;
+}
+.sub-title-empresa {
+  color: adr-colors.$secondary-adr;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------- */
+.container-sector {
+  padding: 3rem;
+}
+.de-que-sector {
+  background-color: adr-colors.$secondary-adr-bck;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.de-que-sector-tipo {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-areas: "sectorComercio sectorIndustria" "sectorBottom sectorBottom";
+  grid-template-columns: 1fr 1fr;
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  li {
+    padding: 1rem;
+  }
+}
+
+.comercio {
+  grid-area: sectorComercio;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  li {
+    border-bottom: 1px solid adr-colors.$comercio-adr-bck;
+  }
+}
+
+.comercio-title {
+  background-color: adr-colors.$comercio-adr-bck;
+  font-weight: bolder;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+.title-blanco {
+  color: #fff;
+  margin-bottom: 0;
+}
+.industria {
+  grid-area: sectorIndustria;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  li {
+    border-bottom: 1px solid adr-colors.$industria-adr-bck;
+  }
+}
+
+.industria-title {
+  background-color: adr-colors.$industria-adr-bck;
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+.bottom-sector{
+  grid-area: sectorBottom;
+}
+/* ----------------------------------------------------------------- */
+.somos-adr {
+  margin-bottom: 3rem;
+}
+
+.slider {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+  text-align: center;
+	
+	.slide {
+    background-image: url("../../../assets/images/simbol-adr.svg");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position-x: 95%;
+    border-left: 1px solid adr-colors.$secondary-adr;
+	  h5 {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+}
+.slide-track {
+  display: grid;
+  grid-template-columns: 264px 264px 264px 264px 264px;
+  :nth-child(5) {
+    border-right: 1px solid adr-colors.$secondary-adr;
+  }
+}
+/* -------------------------------------------------------------------- */
+.somos-miembros-de {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.somos-miembros-de-slider{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.slide-miembros-de {
+  background-image: url("../../../assets/images/simbol-adr.svg");
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position-x: 95%;
+  height: 200px;
+  border-left: 1px solid adr-colors.$secondary-adr;
+  h5 {
+    margin-top: 2rem;
+  }
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+.slide-miembros-de:nth-child(3){
+  border-right: 1px solid adr-colors.$secondary-adr;
+}
+/* --------------------------------------------------------------------- */
+.contador{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-image: url("../../../assets/images/simbol-adr.svg");
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: center;
+  height: 500px;
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+.contador-background{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3rem;
+  column-gap: 10rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.asistentes{
+  background-color: adr-colors.$asistentes;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+.asesoramiento{
+  background-color: adr-colors.$asesoramiento;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+}
+.alumnos{
+  background-color: adr-colors.$alumnos;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+}
+.number{
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+/* -------------------------------------------- */
+.colaboradores-container{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 2.5rem!important;
+    font-weight: bold!important;
+    margin-bottom: 3rem!important;
+  }
+  h2 {
+    font-size: 2rem!important;
+    font-weight: bold!important;
+    margin-bottom: 0!important;
+  }
+  ul,ol {
+    padding-left: 0;
+  }
+  .te-ayudamos-container {
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  } 
+  .card-ayuda, img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card-container {
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .container-sector {
+    padding: 0;
+  }
+  .contador {
+    height: auto;
+  }
+  .card-border-emprendedor {
+    border-top: none;
+    border-left: 3px solid adr-colors.$primary-adr;
+  }
+  .card-ayuda:first-child {
+    border-top: 5px solid adr-colors.$primary-adr;
+  }
+  .card-border-empresa {
+    border-bottom: none;
+    border-right: 3px solid adr-colors.$secondary-adr;
+  }
+  .card-ayuda:last-child {
+    border-bottom: 5px solid adr-colors.$secondary-adr;
+  }
+  .card-ayuda:last-child{
+    border-right: 3px solid adr-colors.$secondary-adr;
+    border-left: none;
+  }
+  .card-container ,
+  .card-container-ayudamos ,
+  .contador-background, 
+  .colaboradores-container { 
+    grid-template-columns: 1fr;
+  }
+  .slide-track, .somos-miembros-de-slider {
+    grid-template-columns: 264px;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+  .slide, .slide-miembros-de {
+    border-right: 1px solid adr-colors.$secondary-adr;
+  }
+  .de-que-sector-tipo {
+    column-gap: 1rem;
+    grid-template-areas: "sectorComercio" "sectorIndustria" "sectorBottom";
+    grid-template-columns: 1fr;
+  }
+}

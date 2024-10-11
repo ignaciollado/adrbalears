@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { ArticleContentService } from '../../services/article-content.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { reqArticle } from '../../Models/article-data.dto';
-import { findIndex } from 'rxjs';
+
 
 @Component({
   selector: 'app-agenda-list',
