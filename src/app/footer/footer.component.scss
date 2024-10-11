@@ -1,3 +1,6 @@
+@use '../../adr-colors';
+@use '../../utilities.scss';
+
 footer {
   z-index: +9999;
   background-color: #fff;
@@ -12,11 +15,11 @@ footer {
 }
 
 a:visited {
-  color: #0098CB;
+  color: adr-colors.$secondary-adr;
 }
 
 a:hover {
-  color: #003747;
+  color: adr-colors.$secondary-adr!important;
 }
 
 .logo-adr-balears {
@@ -43,24 +46,12 @@ a:hover {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding-left: 0;
-  color: red;
-
 }
 
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
   padding-left: 5rem;
-}
-
-.logo-feder-izq, .logo-feder, .logo-feder-dcha {
-  margin-top: 2rem;
-}
-
-.logoFeder {
-  margin-bottom: 1rem;
-  padding-left: 3rem;
-  width: 50%;
 }
 
 @media screen and (max-width: 992px) {
@@ -81,9 +72,4 @@ a:hover {
     margin-bottom: 3rem;
     padding-left: 0;
   }
-  .logoFeder {
-    padding-left: 0;
-    width: 30%;
-  }
-  
 }

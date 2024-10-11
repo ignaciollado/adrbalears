@@ -1,3 +1,6 @@
+@use '../../adr-colors';
+@use '../../utilities.scss';
+
 .cta {
   margin-top: 5rem;
   margin-bottom: 0;
@@ -26,7 +29,7 @@ form {
 }
 
 .cta-left, .cta-center {
-  background-color: #003747;
+  background-color: adr-colors.$primary-adr;
   color: #fff;
   padding: .5rem;
 }
@@ -37,12 +40,12 @@ form {
 }
 
 .cta-left {
-  background-color: #003747;
+  background-color: adr-colors.$primary-adr;
   color: #fff;
 }
 
 .cta-right {
-  background-color: #003747;
+  background-color: adr-colors.$primary-adr;
   color: #fff;
 }
 
@@ -56,7 +59,7 @@ form {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  color: #0098CB;
+  color: adr-colors.$secondary-adr;
 }
 
 input:invalid {
@@ -68,13 +71,12 @@ input:valid {
 }
 
 a {
-  background-color: #019ee5;
+  background-color: adr-colors.$secondary-adr;
 }
 
 input {
   position: unset;
   width: 100%;
- /*  padding: 1rem; */
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -115,7 +117,6 @@ input {
   form {
     display: grid;
     grid-template-columns: 100%;
-    
     justify-content: center;
   }
 

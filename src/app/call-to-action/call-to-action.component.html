@@ -5,7 +5,7 @@
   </button>
   <form [formGroup]="ctaForm" (ngSubmit)="sendContactForm()" [ngClass]="{ocultar: !showCtaForm, mostrar: showCtaForm}">
     <div class="col-auto">
-      <input type="email" id="emailCta" class="form-control  form-control-lg" placeholder="email@example.com" formControlName="email">
+      <input type="email" id="emailCta" class="form-control form-control-sm" placeholder="email@example.com" formControlName="email">
     </div>
     <div class="col-auto">
       <button type="submit" [disabled]="ctaForm!.invalid" class="btn btn-dark btn-lg" id="sendCta" [ngClass]="{ocultar: !showCtaForm}">
