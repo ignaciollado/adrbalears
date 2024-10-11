@@ -1,3 +1,5 @@
+@use "../../adr-colors";
+
 header {
   display: grid;
   grid-template-areas:  "navLogo" "navBarMenu";
@@ -44,6 +46,16 @@ header {
 
 .emprendre:hover, .connectar:hover, .projectar:hover {
   color: #fff!important;
+}
+
+.emprendre:hover {
+  background-color: adr-colors.$emprender;
+}
+.connectar:hover {
+  background-color: adr-colors.$conectar;
+}
+.projectar:hover {
+  background-color: adr-colors.$proyectar;
 }
 
 .mobile-menu-button {

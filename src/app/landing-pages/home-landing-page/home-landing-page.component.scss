@@ -184,7 +184,6 @@ h4 {
 	position: relative;
 	width: 100%;
   text-align: center;
-	
 	.slide {
     background-image: url("../../../assets/images/simbol-adr.svg");
     background-repeat: no-repeat;
@@ -193,6 +192,7 @@ h4 {
     border-left: 1px solid adr-colors.$secondary-adr;
 	  h5 {
       margin-top: 1rem;
+      margin-bottom: 2rem!important;
       text-align: center;
       font-size: 1rem;
     }
@@ -223,6 +223,7 @@ h4 {
   border-left: 1px solid adr-colors.$secondary-adr;
   h5 {
     margin-top: 2rem;
+    margin-bottom: 2rem!important;
   }
   h1 {
     margin-bottom: 3rem;
@@ -258,8 +259,6 @@ h4 {
   color: #fff;
   text-align: center;
 }
-
-
 
 .asesoramiento{
   background-color: adr-colors.$asesoramiento;
