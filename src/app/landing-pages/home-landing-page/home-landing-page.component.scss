@@ -118,6 +118,9 @@ h4 {
 .container-sector {
   padding: 3rem;
 }
+ol, ul {
+  padding-left: 0;
+}
 .de-que-sector {
   background-color: adr-colors.$secondary-adr-bck;
   margin-top: 3rem;
