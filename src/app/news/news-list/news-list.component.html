@@ -9,7 +9,8 @@
     
       <div class="card">
         <div class="card-header">
-          <img class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+          <img *ngIf="noticia.attributes.images.image_intro" class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+          <img *ngIf="!noticia.attributes.images.image_intro" class="img-fluid" src="https://picsum.photos/310?grayscale&blur=4" alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
         </div>
         <div class="card-body">
           <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">

@@ -8,7 +8,8 @@
     <div class="col">
     <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
       <div class="card">
-        <img class="card-img-top" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+        <img *ngIf="noticia.attributes.images.image_intro" class="card-img-top" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+        <img *ngIf="!noticia.attributes.images.image_intro" class="card-img-top" src="https://picsum.photos/200?grayscale&blur=4" alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
         <div class="card-body">
           <h4 class="card-title">{{noticia.attributes.title}}</h4>
         </div>
