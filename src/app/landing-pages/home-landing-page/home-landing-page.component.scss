@@ -6,30 +6,30 @@ h1, h2, h3, h4{
   font-weight: bolder;
   color: adr-colors.$primary-adr;
 }
+.title-header {
+  padding: 0 4rem 0 4rem;
+}
 h1 {
   font-size: 3rem!important;
-  margin-bottom: 0;
 }
 h2{
   font-size: 2.5rem!important;
-  font-weight: normal;
+  font-weight: 20;
 }
 h3 {
   background-color: transparent;
 }
 h4 {
-  font-weight: normal;
+  font-weight: 20;
 }
 .color-adr-sec {
   color: adr-colors.$secondary-adr;
 }
-.img-top-home{
-  
-}
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 4rem 0 5rem 0;
+  margin: 5rem 0 5rem 0;
+  padding: 0 5rem 0 5rem;
   justify-items: center;
   column-gap: 1rem;
 }
@@ -46,9 +46,7 @@ h4 {
   text-align: center;
   border-radius: 0 0 1.5rem 1.5rem!important;
   background-color: adr-colors.$secondary-adr-bck;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  min-height: 17rem;
+  padding: 3rem 0 3rem 0;
 }
 .card-title {
   font-size: 2.25rem;
@@ -62,9 +60,8 @@ h4 {
 }
 /* -------------------------------------------------------------- */
 .te-ayudamos-container{
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-bottom: 3rem;
+  padding: 0 4rem 0 4rem;
+  margin: 5rem 0 5rem 0;
 }
 .sub-title-emprendedor{
   color: adr-colors.$primary-adr;
@@ -190,7 +187,9 @@ ol, ul {
 .somos-adr {
   margin-bottom: 3rem;
 }
-
+.somos-adr-title {
+  padding: 2rem 0 6rem 0;
+}
 .slider {
 	margin: auto;
 	overflow:hidden;
@@ -220,7 +219,7 @@ ol, ul {
 }
 /* -------------------------------------------------------------------- */
 .somos-miembros-de {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   text-align: center;
 }
 .somos-miembros-de-slider{
@@ -247,8 +246,7 @@ ol, ul {
 }
 /* --------------------------------------------------------------------- */
 .contador{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 5rem 0 5rem 0;
   background-image: url("../../../assets/images/simbol-adr.svg");
   background-repeat: no-repeat;
   background-size: 550px;
@@ -258,7 +256,10 @@ ol, ul {
     margin-bottom: 3rem;
   }
 }
-.contador-background{
+.contador-title {
+  margin-bottom: 2rem;
+}
+.contador-background {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 3rem;
@@ -272,7 +273,6 @@ ol, ul {
   color: #fff;
   text-align: center;
 }
-
 .asesoramiento{
   background-color: adr-colors.$asesoramiento;
   padding: 2rem;
@@ -291,12 +291,15 @@ ol, ul {
 }
 
 /* -------------------------------------------- */
-.colaboradores-container{
+.colaboradores-title {
+margin-bottom: 2rem;
+}
+.colaboradores-container {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 992px) {

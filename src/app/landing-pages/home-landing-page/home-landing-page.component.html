@@ -1,15 +1,16 @@
 <img class="img-top-home" src='../../../assets/images/capcalera-provisional.webp' alt='Agencia de desarrollo regional Baleares'>
-<h1 *ngIf="currentLang === 'es-ES'">Agencia de desarrollo regional <span class="color-adr-sec">Baleares</span></h1>
-<h1 *ngIf="currentLang === 'ca-ES'">Agència de desenvolupament regional <span class="color-adr-sec">Balears</span></h1>
-<h2 *ngIf="currentLang === 'es-ES'">Ponemos <span class="color-adr-sec">el desarrollo</span> en el centro</h2>
-<h2 *ngIf="currentLang === 'ca-ES'">Posem <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>
-
+<div class='title-header'>
+  <h1 *ngIf="currentLang === 'es-ES'">Agencia de desarrollo regional <span class="color-adr-sec">Baleares</span></h1>
+  <h1 *ngIf="currentLang === 'ca-ES'">Agència de desenvolupament regional <span class="color-adr-sec">Balears</span></h1>
+  <h2 *ngIf="currentLang === 'es-ES'">Ponemos <span class="color-adr-sec">el desarrollo</span> en el centro</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">Posem <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>  
+</div>
 <div class='card-container'>
   <div class="card" >
     <img src="../../../assets/images/img-centrebit.webp" class="card-img-top" alt="Centre Bit Raiger">
     <div class="card-body-home">
-      <h3 class="card-title" *ngIf="currentLang === 'es-ES'">Delegación ADR Balears Inca</h3>
-      <h3 class="card-title" *ngIf="currentLang === 'ca-ES'">Delegació ADR Balears Inca</h3>
+      <h3 class="card-title" *ngIf="currentLang === 'es-ES'">Delegación ADR<br>Balears Inca</h3>
+      <h3 class="card-title" *ngIf="currentLang === 'ca-ES'">Delegació ADR<br>Balears Inca</h3>
       <h4 class="card-text">Centre Bit Raiger</h4>
       <h4 class="card-text">Espais Empresarials</h4>
     </div>
@@ -17,8 +18,8 @@
   <div class="card" >
     <img src="../../../assets/images/img-espai-menorca.webp" class="card-img-top" alt="Centre Empresarial Menorca">
     <div class="card-body-home">
-      <h3 class="card-title" *ngIf="currentLang === 'es-ES'">Delegación ADR Balears Menorca</h3>
-      <h3 class="card-title" *ngIf="currentLang === 'ca-ES'">Delegació ADR Balears Menorca</h3>
+      <h3 class="card-title" *ngIf="currentLang === 'es-ES'">Delegación ADR<br>Balears Menorca</h3>
+      <h3 class="card-title" *ngIf="currentLang === 'ca-ES'">Delegació ADR<br>Balears Menorca</h3>
 
       <h4 class="card-text">Centre Empresarial</h4>
       <h4 class="card-text">ADR Balears</h4>
@@ -207,8 +208,11 @@
 
 <app-agenda-home></app-agenda-home>
 <div class='contador'>
-  <h1 *ngIf="currentLang === 'es-ES'">Contador 2024</h1>
-  <h1 *ngIf="currentLang === 'ca-ES'">Comptador 2024</h1>
+  <div class='contador-title'>
+    <h1 *ngIf="currentLang === 'es-ES'">Contador 2024</h1>
+    <h1 *ngIf="currentLang === 'ca-ES'">Comptador 2024</h1>
+  </div>
+
   <div class='contador-background'>
     <div class='asistentes'>
       <h4 *ngIf="currentLang === 'es-ES'">Asistentes<br>a formaciones</h4>
@@ -228,8 +232,10 @@
   </div>
 </div>
 <div class='nuestros-colaboradores'>
-  <h1 *ngIf="currentLang === 'es-ES'">Nuestros colaboradores</h1>
-  <h1 *ngIf="currentLang === 'ca-ES'">Els nostres col·laboradors</h1>
+  <div class='colaboradores-title'>
+    <h1 *ngIf="currentLang === 'es-ES'">Nuestros colaboradores</h1>
+    <h1 *ngIf="currentLang === 'ca-ES'">Els nostres col·laboradors</h1>
+  </div>
   <div class='colaboradores-container'>
     <a href='https://www.cambramallorca.com/'><img src='../../../assets/images/cambra-mallorca.webp' width="200" alt='Cambra de Comerç Mallorca'></a>
     <a href='https://www.camaramenorca.com/'><img src='../../../assets/images/cambra-menorca.webp' width="200" alt='Cámara de Comercio de Menorca'></a>
