@@ -5,49 +5,42 @@ header {
   grid-template-areas:  "navLogo" "navBarMenu";
   background-image: url("../../assets/images/simbol-adr.svg");
   background-repeat: no-repeat;
-  background-position: 98% 1rem;
-  background-color: #F7F8F9;
-  background-size: 200px;
+  background-position: 100% 1rem;
+  background-color: rbg(248, 249, 250);
+  background-size: 190px;
+  max-width: 1150px;
 }
-
 .nav-bar-logo {
   grid-area: navLogo;
   margin-left: 5rem;
   margin-top: 2rem;
 }
-
 .nav-bar-menu {
   grid-area: navBarMenu;
   margin-top: 2rem;
   margin-left: 5rem;
   display: grid;
 }
-
 .language-select {
   grid-area: languageSelect;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
 }
-
 .offcanvas-header {
   background-color: #019ee5;
   color: #fff;
 }
-
 .offcanvas-body {
   background-color: #ec9e37;
   color: #fff;
 }
-
 .btn-close {
   color: #fff;
 }
-
 .emprendre:hover, .connectar:hover, .projectar:hover {
   color: #fff!important;
 }
-
 .emprendre:hover {
   background-color: adr-colors.$emprender;
 }
@@ -57,7 +50,6 @@ header {
 .projectar:hover {
   background-color: adr-colors.$proyectar;
 }
-
 .mobile-menu-button {
   grid-area: mobileMenu;
   display: none;
@@ -69,7 +61,7 @@ header {
   border-radius: 0;
 }
 
-button, .btn, h3, h4, p {
+ h3, h4, p {
   color: #333333!important;
   font-weight: bold;
 }

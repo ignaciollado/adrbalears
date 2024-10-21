@@ -125,13 +125,17 @@
             </div>
           </li>
           <app-search-the-web></app-search-the-web>
-        </ul>
+        <li>
+          <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
+          <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
+        </li>
+      </ul>
   </nav>
 
-  <div class="language-select">
+<!--   <div class="language-select">
     <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
     <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
-  </div>
+  </div> -->
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
     <i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i>

@@ -8,10 +8,11 @@ h1, h2, h3, h4{
 }
 h1 {
   font-size: 3rem!important;
-  margin-bottom: 3rem!important;
+  margin-bottom: 0;
 }
 h2{
   font-size: 2.5rem!important;
+  font-weight: normal;
 }
 h3 {
   background-color: transparent;
@@ -22,10 +23,13 @@ h4 {
 .color-adr-sec {
   color: adr-colors.$secondary-adr;
 }
+.img-top-home{
+  
+}
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 4rem 0 4rem 0;
+  margin: 4rem 0 5rem 0;
   justify-items: center;
   column-gap: 1rem;
 }
@@ -84,10 +88,11 @@ h4 {
   border-left: 1px solid lightgray;
 }
 .card-ayuda:first-child{
-  border-left: 3px solid adr-colors.$primary-adr;
+ /*  border-left: 3px solid adr-colors.$primary-adr; */
 }
 .card-ayuda:last-child{
-  border-right: 3px solid adr-colors.$secondary-adr;
+  /* border-right: 3px solid adr-colors.$secondary-adr; */
+  border-right: 1px solid lightgray;
 }
 .card-ayuda img {
   padding: .3rem;
@@ -97,12 +102,15 @@ h4 {
 }
 .card-border-emprendedor{
   border-top: 5px solid adr-colors.$primary-adr;
+  padding-top: 3rem;
 }
 .card-border-emprendedor-blanco{
   border-top: 5px solid #fff;
+  padding-top: 3rem;
 }
 .card-border-empresa{
   border-bottom: 5px solid adr-colors.$secondary-adr;
+  padding-bottom: 3rem;
 }
 .title-container-bottom-ayudanos{
   text-align: right;
@@ -151,7 +159,7 @@ ol, ul {
 
 .comercio-title {
   background-color: adr-colors.$comercio-adr-bck;
-  font-weight: bolder;
+  font-weight: normal!important;
   border-radius: 1.5rem;
   padding: 1rem;
 }
@@ -171,7 +179,7 @@ ol, ul {
 .industria-title {
   background-color: adr-colors.$industria-adr-bck;
   color: #fff;
-  font-weight: bolder;
+  font-weight: normal!important;
   border-radius: 1.5rem;
   padding: 1rem;
 }

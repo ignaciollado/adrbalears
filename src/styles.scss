@@ -30,10 +30,12 @@ time, mark, audio, video {
     background: transparent;
     font-family: "Inter", sans-serif;
 }
-
 html {
     margin: auto;
     font-size: 16px;
+}
+body {
+    background-color: rgb(248, 249, 250)!important;
 }
 
 .img-top-home {
@@ -88,29 +90,24 @@ a {
         color: adr-colors.$secondary-adr!important;
     }
 }
-
 ins {
     background-color:#ff9;
     color:#000;
     text-decoration:none;
 }
-
 mark {
     background-color:#ff9;
     color:#000; 
     font-style:italic;
     font-weight:bold;
 }
-
 del {
     text-decoration: line-through;
 }
-
 abbr[title], dfn[title] {
     border-bottom:1px dotted;
     cursor:help;
 }
-
 hr {
     display:block;
     height:1px;
@@ -119,25 +116,20 @@ hr {
     margin:1em 0;
     padding:0;
 }
-
 input, select {
     vertical-align: middle;
 }
-
 ::selection {
     color: adr-colors.$primary-adr;
     background: adr-colors.$secondary-adr;
 }
-
 .container {
     --bs-gutter-x: 0!important;
     --bs-gutter-y: 0!important;
 }
-
 .btn {
     transition: background-color 2s ease-out;
 }
-
 .btn:hover {
     text-decoration: underline;
     text-underline-offset: 20%;
