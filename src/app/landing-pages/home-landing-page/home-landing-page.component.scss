@@ -14,13 +14,12 @@ h1 {
 }
 h2{
   font-size: 2.5rem!important;
-  font-weight: 20;
 }
 h3 {
   background-color: transparent;
 }
-h4 {
-  font-weight: 20;
+h2, h4 {
+  font-weight: 300;
 }
 .color-adr-sec {
   color: adr-colors.$secondary-adr;
@@ -189,7 +188,11 @@ ol, ul {
 }
 .somos-adr-title {
   padding: 2rem 0 6rem 0;
+  h1 {
+    font-weight: normal;
+  }
 }
+
 .slider {
 	margin: auto;
 	overflow:hidden;
@@ -258,6 +261,9 @@ ol, ul {
 }
 .contador-title {
   margin-bottom: 2rem;
+  h1 {
+    font-weight: normal;
+  }
 }
 .contador-background {
   display: grid;
@@ -292,7 +298,10 @@ ol, ul {
 
 /* -------------------------------------------- */
 .colaboradores-title {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  h1 {
+    font-weight: normal;
+  }
 }
 .colaboradores-container {
   display: grid;
