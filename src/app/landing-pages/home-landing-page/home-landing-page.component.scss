@@ -298,7 +298,6 @@ ol, ul {
   font-weight: bolder;
   font-size: 4rem;
 }
-
 /* -------------------------------------------- */
 .colaboradores-title {
   margin-bottom: 2rem;
@@ -322,13 +321,11 @@ ol, ul {
     max-width: 100%;
   }
   h1 {
-    font-size: 2.5rem!important;
-    font-weight: bold!important;
+    font-size: 2rem!important;
     margin-bottom: 3rem!important;
   }
   h2 {
     font-size: 2rem!important;
-    font-weight: bold!important;
     margin-bottom: 0!important;
   }
   ul,ol {
@@ -338,6 +335,7 @@ ol, ul {
     margin-top: 2rem;
     margin-left: 0;
     margin-right: 0;
+    padding: 0;
   } 
   .card-ayuda, img {
     padding-left: 0;
@@ -345,7 +343,8 @@ ol, ul {
   }
   .card-container {
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 0;
+    padding: 0;
   }
   .container-sector {
     padding: 0;
