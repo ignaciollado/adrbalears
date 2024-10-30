@@ -244,6 +244,9 @@ ol, ul {
     margin-bottom: 3rem;
   }
 }
+.slide-miembros-de img:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .slide-miembros-de:nth-child(3){
   border-right: 1px solid adr-colors.$secondary-adr;
 }
@@ -309,6 +312,9 @@ ol, ul {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   margin-bottom: 5rem;
+}
+.colaboradores-container img:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 @media screen and (max-width: 992px) {
