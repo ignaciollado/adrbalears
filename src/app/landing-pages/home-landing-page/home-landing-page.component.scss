@@ -415,6 +415,9 @@ $noAnimationSpeed: 0s;
   .colaboradores-container { 
     grid-template-columns: 1fr;
   }
+  .slider {
+    width: 100%;
+  }
   .slide-track, .somos-miembros-de-slider {
     grid-template-columns: 264px;
     justify-content: center;
