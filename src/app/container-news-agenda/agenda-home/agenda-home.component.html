@@ -14,9 +14,9 @@
       </div>
     </div>
   </div>
-  <div class="no-hay-eventos emprendre-bck" *ngIf="!agenda">
-    <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
-    <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+  <div class="no-hay-eventos" *ngIf="agenda?.length === 0">
+    <h2 *ngIf="currentLang === 'es-ES'">Estamos preparando nuevos eventos para ti</h2>
+    <h2 *ngIf="currentLang === 'ca-ES'">Estem preparant nous esdeveniments per a tu</h2>
   </div>
 </div>
 

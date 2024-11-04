@@ -31,10 +31,14 @@ h3 {
 }
 
 .card-body {
-  background-color: transparent; // #eceded!important;
+  background-color: transparent;
   color: #003747!important;
   min-height: 12rem;
   max-height: auto!important;
+}
+
+.no-hay-eventos {
+  color: #fff;
 }
 
 @media screen and (max-width: 992px) {

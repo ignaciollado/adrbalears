@@ -60,6 +60,7 @@ export class AgendaHomeComponent {
           this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`)
           this.agenda = this.agenda.filter( (item : reqArticle) => now.getDate() - new Date(item.attributes.publish_down).getDate() <= 0) 
           this.agenda.map((item:reqArticle) => {
+            console.log (this.agenda)
             if (item.relationships.category.data.id === categies[0]) {
               this.agendaEmprender.push(item)
               this.agendaAll.push(item)
