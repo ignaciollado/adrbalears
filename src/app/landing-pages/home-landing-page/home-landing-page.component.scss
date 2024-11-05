@@ -144,7 +144,6 @@ ol, ul {
     padding: 1rem;
   }
 }
-
 .comercio {
   grid-area: sectorComercio;
   margin-top: 2rem;
@@ -153,7 +152,6 @@ ol, ul {
     border-bottom: 1px solid adr-colors.$comercio-adr-bck;
   }
 }
-
 .comercio-title {
   background-color: adr-colors.$comercio-adr-bck;
   font-weight: normal!important;
@@ -172,7 +170,6 @@ ol, ul {
     border-bottom: 1px solid adr-colors.$industria-adr-bck;
   }
 }
-
 .industria-title {
   background-color: adr-colors.$industria-adr-bck;
   color: #fff;
@@ -214,7 +211,7 @@ ol, ul {
     }
   }
 }
-.slide-track {
+.slider-somos .slide-track {
   display: grid;
   grid-template-columns: 264px 264px 264px 264px 264px;
   :nth-child(5) {
@@ -318,8 +315,7 @@ ol, ul {
 }
 
 /* ------------------------------------------------------------------------------------- */
-$animationSpeed: 35s;
-$noAnimationSpeed: 0s;
+$animationSpeed: 40s;
 
 // Animation
 @keyframes scroll {
@@ -329,8 +325,7 @@ $noAnimationSpeed: 0s;
 
 // Styling
 .slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	background: transparent;
 	height: 150px;
 	margin: auto;
 	overflow:hidden;
@@ -351,6 +346,9 @@ $noAnimationSpeed: 0s;
 		height: 150px;
 		width: 250px;
 	}
+  .slide:hover {
+    border: 1px solid adr-colors.$secondary-adr;
+  }
 }
 
 /* ------------------------------------------------------------------------------------ */
