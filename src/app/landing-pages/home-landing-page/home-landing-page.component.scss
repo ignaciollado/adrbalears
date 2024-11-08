@@ -73,6 +73,10 @@ h2, h4 {
 .te-ayudamos {
   margin-top: 4rem;
   font-weight: normal;
+  color: adr-colors.$primary-adr;
+}
+.card-title {
+  color: adr-colors.$primary-adr;
 }
 .card-container-ayudamos {
   display: grid;
@@ -349,7 +353,7 @@ $animationSpeed: 60s;
     position: relative;
 	}
   .slide:hover {
-    border: 1px solid adr-colors.$secondary-adr;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
 /* ------------------------------------------------------------------------------------ */
@@ -376,6 +380,23 @@ $animationSpeed: 60s;
 button[type='submit']{
   margin-top: 1rem;
 }
+#postFeedback.requestOk {
+  background-color: green;
+  padding: .5rem;
+}
+
+#postFeedback.requestKo {
+  background-color: red;
+  padding: .5rem;
+}
+
+#postFeedback.show {
+  display: block;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
 @media screen and (max-width: 992px) {
   .container {
     max-width: 100%;

@@ -442,11 +442,7 @@
 	</section>
 	</div>
 	<div class="modal-footer">
-    <div class="spinner-border" role="status" *ngIf ="formSendMail.valid && submitted">
-      <span *ngIf ="successfullySend" id="postFeedback">
-        <span *ngIf="currentLang === 'es-ES'">Su correo electrónico ha sido enviado correctamente.</span>
-        <span *ngIf="currentLang === 'ca-ES'">El seu correu electrònic ha estat enviat correctament.</span>
-      </span>
-    </div>
+    <div class="spinner-border" role="status" *ngIf ="formSendMail.valid && submitted"></div>
 	</div>
+  <div role="alert" id="postFeedback"></div>
 </ng-template>

@@ -68,7 +68,7 @@ export class HomeLandingPageComponent implements OnInit {
   onSubmit(): void {
     let responseOK: boolean = false
     this.submitted = true
-    this.sendMail.sendMail(this.formSendMail.value,"Sol·licitud d'assessorament:", "Tester")
+    this.sendMail.sendMail(this.formSendMail.value,"Sol·licitud d'assessorament:", "Comunicació")
     .pipe(
       finalize(async () => {
         await this.sharedService.managementToast( 'postFeedback', responseOK )
@@ -85,7 +85,6 @@ export class HomeLandingPageComponent implements OnInit {
         console.log ("enviado yyyy")
       }
       this.sharedService.errorLog(error)
-      this.submitted = false
       this.formSendMail.reset()
       finalize(async () => {
         await this.sharedService.managementToast( 'postFeedback', responseOK, error )

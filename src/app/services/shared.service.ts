@@ -32,6 +32,7 @@ export class SharedService {
         }
         await this.wait(4500);
         toastMsg.className = toastMsg.className.replace('show', '');
+
       } else {
         toastMsg.className = 'show requestKo';
         if (error?.status) {
