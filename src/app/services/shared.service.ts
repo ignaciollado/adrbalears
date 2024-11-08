@@ -21,7 +21,7 @@ export class SharedService {
   async managementToast( element: string, validRequest: boolean, error?: HttpErrorResponse ): Promise<void> {
     const toastMsg = document.getElementById(element);
     const preferredLang = localStorage.getItem("preferredLang")
-    console.log ( toastMsg, preferredLang, error)
+    console.log ( "En shared service:", toastMsg, preferredLang, error)
     if (toastMsg) {
       if (validRequest) {
         toastMsg.className = 'show requestOk';

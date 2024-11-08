@@ -18,7 +18,7 @@ export class ContactFormComponent {
   submitted: boolean = false
   currentLang: string = ""
 
-  constructor(private formBuilder: FormBuilder, private sendMail: MessageService, private sharedService: SharedService,) { 
+  constructor(private formBuilder: FormBuilder, private sendMail: MessageService, private sharedService: SharedService) { 
     this.formData = new genericMailDTO('', '', '', '', '')
   }
 

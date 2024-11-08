@@ -60,7 +60,7 @@ export class BodyComponent {
       situacionActual: this.situacionActual,
       interesadoEn: this.interesadoEn,
       objetivoPrincipal: this.objetivoPrincipal
-    });
+    })
 		}
 
 	ngOnInit() {
