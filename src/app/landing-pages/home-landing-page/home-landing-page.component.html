@@ -373,9 +373,9 @@
   </div>
 </div>
 
-<div class='cta area-profile' >
-	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1>Nos gustaría ayudarte</h1><h2>Solicita asesoramiento</h2><h3>Ponte en contacto con nosotros</h3></a>
-	<a *ngIf="currentLang === 'ca-ES'"(click)="openHomePopUp(content)" ><h1>Ens agradaria ajudar-te</h1><h2>Sol·licita assessorament</h2><h3>Posa't en contacte amb nosaltres</h3></a>
+<div class='cta' >
+	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1 class="cta-home-area-profile">Nos gustaría ayudarte</h1><h2 class="cta-home-area-profile">Solicita asesoramiento</h2><h3 class="cta-home-area-profile">Ponte en contacto con nosotros</h3></a>
+	<a *ngIf="currentLang === 'ca-ES'"(click)="openHomePopUp(content)" ><h1 class="cta-home-area-profile">Ens agradaria ajudar-te</h1><h2 class="cta-home-area-profile">Sol·licita assessorament</h2><h3 class="cta-home-area-profile">Posa't en contacte amb nosaltres</h3></a>
 </div>
 <app-slider></app-slider>
 
@@ -413,19 +413,25 @@
 </div>
 
 <ng-template #content let-modal>
+  <section class="modal-contact-form">
 	<div class="modal-header">
 		<p *ngIf="currentLang === 'es-ES'"><strong>Nos gustaría ayudarte</strong></p>
 		<p *ngIf="currentLang === 'ca-ES'"><strong>Ens agradaria ajudar-te</strong></p>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
-		<section>
 			<div class = "pop-up-container">
-					<h3 *ngIf="currentLang === 'es-ES'">Necesitaremos tu dirección de correo electrónico para ponernos en contacto contigo</h3>
-					<h3 *ngIf="currentLang === 'ca-ES'">Necessitarem la teva adreça de correu electrònic per a posar-nos en contacte amb tu</h3>
-
+					<h4 *ngIf="currentLang === 'es-ES'">Necesitaremos tus datos para ponernos en contacto contigo</h4>
+					<h4 *ngIf="currentLang === 'ca-ES'">Necessitarem les teves dades per a posar-nos en contacte amb tu</h4>
 					<form [formGroup]="formSendMail" (ngSubmit)="onSubmit()" class="form-inline">
-
+            <div class="form-group">
+              <label for="contactEmail">
+                <span *ngIf="currentLang === 'es-ES'">Tu nombre</span>
+                <span *ngIf="currentLang === 'ca-ES'">El teu nom</span>
+              </label>
+              <input type="text" class="form-control form-control-lg" id="contactName" aria-describedby="contactNameHelp" formControlName="contactName" 
+              [ngClass]="f['contactName'].errors ? 'is-invalid':'is-valid'">
+            </div>
             <div class="form-group">
               <label for="contactEmail">
                 <span *ngIf="currentLang === 'es-ES'">Dirección de correo electrónico</span>
@@ -434,15 +440,15 @@
               <input type="email" class="form-control form-control-lg" id="contactEmail" aria-describedby="emailHelp" formControlName="contactEmail" 
               [ngClass]="f['contactEmail'].errors ? 'is-invalid':'is-valid'">
             </div>
-            <div class='form-group'>
+            <div class='form-group submit-btn'>
               <button type="submit" class="btn btn-dark btn-lg float-end" [disabled]="!formSendMail.valid && !submitted">Enviar</button>
             </div>
 					</form>
 			</div>
-	</section>
 	</div>
 	<div class="modal-footer">
     <div class="spinner-border" role="status" *ngIf ="formSendMail.valid && submitted"></div>
+    <div role="alert" id="postFeedback"></div>
 	</div>
-  <div role="alert" id="postFeedback"></div>
+</section>  
 </ng-template>

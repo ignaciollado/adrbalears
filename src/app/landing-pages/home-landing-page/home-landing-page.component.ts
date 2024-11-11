@@ -28,7 +28,7 @@ export class HomeLandingPageComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private sendMail: MessageService, private sharedService: SharedService) {
     this.formSendMail = this.formBuilder.group( {
-      contactName:  ['Usuari web ADR Balears'],
+      contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]],
       contactEmail: ['', [Validators.required, Validators.email]],
       contactPhone: ["no s'indica"],
       body: ["Sol·licitud d'assessorament des-de la web ADR Balears"]

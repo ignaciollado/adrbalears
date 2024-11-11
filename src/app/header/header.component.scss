@@ -28,14 +28,15 @@ header {
   justify-content: flex-end;
 }
 .offcanvas-header {
-  background-color: #019ee5;
-  color: #fff;
+  background-color: adr-colors.$secondary-adr;
+  color: #fff!important;
 }
 .offcanvas-body {
-  background-color: #ec9e37;
+  background-color: adr-colors.$primary-adr;
   color: #fff;
 }
-.btn-close {
+
+.btn, .btn-close {
   color: #fff;
 }
 .emprendre:hover, .connectar:hover, .projectar:hover {
@@ -56,20 +57,16 @@ header {
   padding-right: .2rem;
   text-align: right;
 }
-
 .button-header-menu {
   border-radius: 0;
 }
-
  h3, h4, p {
   color: #333333!important;
   font-weight: bold;
 }
-
 button:hover {
   color: #0098CB!important;
 }
-
 .emprender-header {
   color: #fff!important;
   background-color: #6b9da7;

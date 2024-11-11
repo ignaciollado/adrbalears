@@ -90,7 +90,6 @@ h2, h4 {
 }
 
 .card-ayuda:last-child{
-  /* border-right: 3px solid adr-colors.$secondary-adr; */
   border-right: 1px solid lightgray;
 }
 .card-ayuda img {
@@ -137,7 +136,6 @@ ol, ul {
     margin-top: 0;
   }
 }
-
 .de-que-sector-tipo {
   display: grid;
   column-gap: 1rem;
@@ -197,7 +195,6 @@ ol, ul {
     font-weight: normal;
   }
 }
-
 .slider-somos {
 	margin: auto;
 	overflow:hidden;
@@ -340,11 +337,9 @@ $animationSpeed: 60s;
 		display: flex;
 		width: calc(250px * 50);
 	}
-
   .slide-track:hover {
     animation-play-state: paused;
   }
-
 	.slide {
     background: #fff;
     padding: 10px 10px;
@@ -366,36 +361,54 @@ $animationSpeed: 60s;
   background-color: #00405e;
   padding: 0.5rem;
 }
-.cta h1, h2, h3 {
+.cta-home-area-profile {
   color: #fff;
 }
-.modal-content {
-  border: var(--bs-modal-border-width) solid #00405e;
-  border-radius: 0!important;
-}
-.modal-body h3 {
-  color: black;
+
+.modal-body h4 {
   text-align: left;
+  margin-bottom: 1rem!important;
 }
 button[type='submit']{
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.modal-footer {
+  border-top: none;
 }
 #postFeedback.requestOk {
   background-color: green;
-  padding: .5rem;
+  padding: 1rem;
+  color: #fff;
 }
-
 #postFeedback.requestKo {
   background-color: red;
   padding: .5rem;
 }
-
 #postFeedback.show {
   display: block;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-
+.modal-contact-form {
+  color: adr-colors.$primary-adr;
+  border: 2px solid adr-colors.$primary-adr;
+  background-color: adr-colors.$secondary-adr-bck;
+  padding: .5rem;
+  box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
+}
+.form-group {
+  margin-top: 1rem;
+}
+.form-control {
+  border-radius: 0;
+}
+.form-control.is-invalid {
+  border-color: transparent;
+}
+.submit-btn {
+  margin-top: .5rem;
+}
 
 @media screen and (max-width: 992px) {
   .container {
