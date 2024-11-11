@@ -1,70 +1,57 @@
-<h1>{{'Agenda' | translate}}:</h1>
-
-<h1 class="emprendre">{{'#EMPRENDRE' | translate}}</h1>
-<div class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
+<h1>{{'Agenda' | translate}}</h1>
+<!-- <h1 class="emprendre">{{'#EMPRENDRE' | translate}}</h1> -->
+<section class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaEmpr of agendaEmprender">
       <div class="card">
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-emprender.webp" alt={{itemAgendaEmpr.attributes.title}} title={{itemAgendaEmpr.attributes.title}} />
         </div>
-        <div class="card-body" [innerHTML]="itemAgendaEmpr.attributes.text">
-          <a [routerLink]="['/news-agenda-detail', itemAgendaEmpr.attributes.alias, itemAgendaEmpr.id]">
-            <h4 class="card-title">{{itemAgendaEmpr.attributes.title}}</h4>
-          </a>
-        </div>
+        <div class="card-body" [innerHTML]="itemAgendaEmpr.attributes.text"></div>
       </div>
   </div>
   </div>
-</div>
+</section>
 <div class="no-hay-eventos emprendre-bck" *ngIf="agendaEmprender?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+  <h2 *ngIf="currentLang === 'es-ES'">#EMPRENDRE, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#EMPRENDRE, actualment no tenim esdeveniments programats</h2>
 </div>
 
-<h1 class="connectar">{{'#CONNECTAR' | translate}}</h1>
-<div class="event-list-container" *ngIf="agendaConectar?.length !== 0">
+<!-- <h1 class="connectar">{{'#CONNECTAR' | translate}}</h1> -->
+<section class="event-list-container" *ngIf="agendaConectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaConectar of agendaConectar">
-      <div class="card">
+      <section class="card">
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-conectar.webp" alt={{itemAgendaConectar.attributes.title}} title={{itemAgendaConectar.attributes.title}} />
         </div>
-        <div class="card-body" [innerHTML]="itemAgendaConectar.attributes.text">
-          <a [routerLink]="['/news-agenda-detail', itemAgendaConectar.attributes.alias, itemAgendaConectar.id]">
-            <h4 class="card-title">{{itemAgendaConectar.attributes.title}}</h4>
-          </a>
-        </div>
-      </div>
+        <div class="card-body" [innerHTML]="itemAgendaConectar.attributes.text"></div>
+      </section>
   </div>
   </div>
-</div>
+</section>
 
 <div class="no-hay-eventos connectar-bck" *ngIf="agendaConectar?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+  <h2 *ngIf="currentLang === 'es-ES'">#CONNECTAR, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#CONNECTAR, actualment no tenim esdeveniments programats</h2>
 </div>
 
-<h1 class="projectar">{{'#PROJECTAR' | translate}}</h1>
-<div class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
+<!-- <h1 class="projectar">{{'#PROJECTAR' | translate}}</h1> -->
+<section class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
   <div class="row">
-  <div *ngFor="let itemAgendaProyectar of agendaProyectar">
+    <div *ngFor="let itemAgendaProyectar of agendaProyectar">
       <div class="card">
         <div>
           <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
         </div>
-        <div class="card-body" [innerHTML]="itemAgendaProyectar.attributes.text">
-          <a [routerLink]="['/news-agenda-detail', itemAgendaProyectar.attributes.alias, itemAgendaProyectar.id]">
-            <h4 class="card-title">{{itemAgendaProyectar.attributes.title}}</h4>
-          </a>
-        </div>
+        <div class="card-body" [innerHTML]="itemAgendaProyectar.attributes.text"></div>
       </div>
+    </div>
   </div>
-  </div>
-</div>
+</section>
 <div class="no-hay-eventos projectar-bck" *ngIf="agendaProyectar?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">Actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">Actualment no tenim esdeveniments programats</h2>
+  <h2 *ngIf="currentLang === 'es-ES'">#PROJECTAR, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#PROJECTAR, actualment no tenim esdeveniments programats</h2>
 </div>
 
 <div *ngIf="!agendaConectar">

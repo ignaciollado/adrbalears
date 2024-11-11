@@ -1,5 +1,8 @@
+@use '../../../adr-colors';
+@use '../../../utilities.scss';
+
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem!important;
 }
 h2 {
   margin-bottom: 0;
@@ -17,7 +20,7 @@ h2 {
 }
 
 a {
-  color: #ffffff;
+  color: adr-colors.$secondary-adr-bck!important;
 }
 
 .event-list-container{
@@ -40,7 +43,7 @@ a {
   }
   .card-body {
     min-height: 20rem;
-    max-height: 20rem;
+    max-height: 100%;
   }
 }
 
@@ -51,6 +54,6 @@ a {
 
   .card-body {
     min-height: 18rem;
-    max-height: 18rem;
+    max-height: 100%;
   }
 }

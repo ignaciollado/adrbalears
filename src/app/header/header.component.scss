@@ -59,14 +59,13 @@ header {
 }
 .button-header-menu {
   border-radius: 0;
+  color: adr-colors.$primary-adr!important;
 }
  h3, h4, p {
   color: #333333!important;
   font-weight: bold;
 }
-button {
-  color: adr-colors.$primary-adr!important;
-}
+
 button:hover {
   color: #0098CB!important;
 }
