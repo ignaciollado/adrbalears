@@ -64,6 +64,9 @@ header {
   color: #333333!important;
   font-weight: bold;
 }
+button {
+  color: adr-colors.$primary-adr!important;
+}
 button:hover {
   color: #0098CB!important;
 }

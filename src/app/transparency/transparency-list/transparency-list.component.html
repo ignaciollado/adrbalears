@@ -7,19 +7,17 @@
 
 
 
-<div class="transparency-container" *ngIf="childCatMatrixHomeIDI">
-  <div *ngFor="let childCategory of childCatMatrixHomeIDI">
-      <div class='transparency-item'>
+<section class="transparency-container" *ngIf="childCatMatrixHomeIDI">
+  <section *ngFor="let childCategory of childCatMatrixHomeIDI">
+      <article class='transparency-item'>
           <a [routerLink]="['/transparency-detail', childCategory | getAlias, childCategory | categoryID]">
-  
-              <figure> 
-                  <img src="../../assets/images/transparencia-recuadro-off.webp" alt="{{childCategory | categoryTitle:currentLang}}" title="{{childCategory | categoryTitle:currentLang}}" /> 
-                  <figcaption id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</figcaption> 
-              </figure>
-  
+            <figure> 
+                <img src="../../assets/images/transparencia-recuadro-off.webp" alt="{{childCategory | categoryTitle:currentLang}}" title="{{childCategory | categoryTitle:currentLang}}" /> 
+                <figcaption id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</figcaption> 
+            </figure>
           </a>
-      </div>
-  </div>
-</div>
+      </article>
+  </section>
+</section>
 
-<div *ngIf="!childCatMatrixHomeIDI">Getting contents from {{'Transparencia' | translate}} ...</div>
+<section *ngIf="!childCatMatrixHomeIDI">Getting contents from {{'Transparencia' | translate}} ...</section>

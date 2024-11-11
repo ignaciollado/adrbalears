@@ -28,7 +28,7 @@ a:hover {
 
 .localizacion-adr-balears {
   grid-area: localizacionBottom;
-  padding-left: 3rem;
+  padding-left: 7rem;
 }
 
 .bi{
@@ -45,13 +45,14 @@ a:hover {
   grid-area: socialMedia;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding-left: 0;
+  padding-left: 7rem;
 }
 
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
-  padding-left: 5rem;
+  text-align: right;
+  margin-left: 6rem;
 }
 
 @media screen and (max-width: 992px) {

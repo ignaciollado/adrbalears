@@ -2,33 +2,31 @@
   <h1 *ngIf="currentLang === 'es-ES'">Noticias</h1>
   <h1 *ngIf="currentLang === 'ca-ES'">Notícies</h1>
 </a>
-<div *ngIf="noticias">
+<section *ngIf="noticias">
   <div class="row">
   <div *ngFor="let noticia of noticias">
     <div class="col">
-    
-      <div class="card">
-        <div class="card-header">
+      <section class="card">
+        <figure class="card-header">
           <img *ngIf="noticia.attributes.images.image_intro" class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
           <img *ngIf="!noticia.attributes.images.image_intro" class="img-fluid" src="https://picsum.photos/310?grayscale&blur=4" alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
-        </div>
-        <div class="card-body">
+        </figure>
+        <section class="card-body">
           <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
             <h4 *ngIf="faseNewsToDisplay==='11'" class="card-title">{{noticia.attributes.title}}</h4>
             <h6 *ngIf="faseNewsToDisplay!=='11'" class="card-title">{{noticia.attributes.title}}</h6>
           </a>
-        </div>
-      </div>
-    
+        </section>
+      </section>
     </div>
   </div>
   </div>
-</div>
+</section>
 
-<div *ngIf="!listNewsReady">
+<section *ngIf="!listNewsReady">
   <div class="row">
   <div *ngFor="let item of [1,2,3,4]">
-  <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+  <article class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
     <div>
       <img src="https://via.placeholder.com/260x145.png?text=...loading news list" class="card-img-top" alt="loading image">
     </div>
@@ -41,7 +39,7 @@
         <span class="placeholder col-7"></span>
       </p>
     </div>
-  </div> 
+  </article> 
 </div>
 </div> 
-</div>
+</section>

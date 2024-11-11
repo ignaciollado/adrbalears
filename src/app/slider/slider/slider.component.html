@@ -20,17 +20,16 @@
   } -->
   @for (slide of slides; track slide; let i = $index) {
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
+      <section class="picsum-img-wrapper">
        <!--  <img width="1320" height="auto" [src]="slide.projectImg" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/> -->
         <img width="1320" height="auto" src="https://picsum.photos/1320/400?grayscale?blur=2" alt=" {{slide.projectNameCA}}" title=" {{slide.projectLema}}"/>
-
-      </div>
-      <div class="carousel-caption">
+      </section>
+      <section class="carousel-caption">
         <a class={{slide.projectFase}} *ngIf="currentLang === 'es-ES'" class={{slide.projectFase}} href='{{slide.projectDestination}}'>{{slide.projectNameES}}</a>
         <a class={{slide.projectFase}} *ngIf="currentLang === 'ca-ES'" class={{slide.projectFase}} href='{{slide.projectDestination_ca}}'>{{slide.projectNameCA}}</a>
         <h2 *ngIf="currentLang === 'es-ES'" class={{slide.projectFase}}>{{slide.projectLema}}</h2>
         <h2 *ngIf="currentLang === 'ca-ES'" class={{slide.projectFase}}>{{slide.projectLemaCA}}</h2>
-      </div>
+      </section>
     </ng-template> 
   }
   </ngb-carousel>

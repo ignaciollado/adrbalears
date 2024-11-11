@@ -12,9 +12,9 @@
       
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <div ngbDropdown class="d-inline-block">
+            <section ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+              <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Quienes somos' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Qui som' | translate}}</button>
 
@@ -23,19 +23,18 @@
 
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
-                <!-- <button ngbDropdownItem>Buscador de puntos de atención</button> -->
+
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparencia' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparència' | translate}}</button>
-
-              </div>
-            </div>
+              </section>
+            </section>
           </li>
           <li class="nav-item">
-            <div ngbDropdown class="d-inline-block">
+            <section ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Nuestros proyectos</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Els nostres projectes</button>
 
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+              <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <h6 class="emprendre emprender-header"><strong>#EMPRENDRE</strong></h6>
                 <button *ngIf="currentLang === 'es-ES'" class ="emprendre" ngbDropdownItem routerLink="ibemprenjove/es/bienvenidos-a-iemprenjove/">Ibemprėnjove</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="emprendre" ngbDropdownItem routerLink="ibemprenjove">Ibemprėnjove</button>
@@ -77,16 +76,15 @@
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="invest-in-balearics">Invest in Balearics</button>
                 <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow/">PIBS</button>
                 <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow">PIBS</button>
-              </div>
-            </div>
+              </section>
+            </section>
           </li>
           <li class="nav-item">
-            <div ngbDropdown class="d-inline-block">
+            <section ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia el teu projecte</button>
 
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-              <!--   <button ngbDropdownItem>Quiero asesorarme</button> -->
+              <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button *ngIf="currentLang === 'es-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Quiero emprender</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Vull emprendre</button>
 
@@ -95,33 +93,12 @@
 
                 <button *ngIf="currentLang === 'es-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Quiero crecer</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Vull creixer</button>
-
-              <!--   <button ngbDropdownItem>Quiero internacionalizarme</button>
-                <button ngbDropdownItem>Quiero financiarme</button> -->
-               <!--  <li><hr class="dropdown-divider"></li>
-                <button ngbDropdownItem>Buscador de Coworkings</button>
-                <button ngbDropdownItem>Buscador de parcelas y naves</button> -->
-              </div>
-            </div>
+              </section>
+            </section>
           </li>
           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" routerLink="contact-adr-balears">Contacta</button>
-             <!--  <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar asesoramiento</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar assessorament</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar ayudas</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar ajudes</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar formaciones</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar formacions</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Pedir cita</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Demanar cita</button>
-
-              </div> -->
             </div>
           </li>
           <app-search-the-web></app-search-the-web>
@@ -132,28 +109,21 @@
       </ul>
   </nav>
 
-<!--   <div class="language-select">
-    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
-    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
-  </div> -->
-
-  <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
-    <i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i>
-  </button>
+  <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)"><i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i></button>
 </header>
 
 <ng-template #content let-offcanvas>
-	<div class="offcanvas-header">
+	<section class="offcanvas-header">
 		<div class="offcanvas-title"><strong>ADR Balears</strong><hr>
     <small>Agència de desenvolupament regional de les Illes Balears</small></div>
 		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
-	</div>
-	<div class="offcanvas-body">
+	</section>
+	<section class="offcanvas-body">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <div ngbDropdown class="d-inline-block">
+        <section ngbDropdown class="d-inline-block">
           <button class="btn" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
-          <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
+          <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'Quienes somos' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="about-adr-balears">{{'Qui som' | translate}}</button>
 
@@ -165,15 +135,15 @@
 
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparencia' | translate}}</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="transparency-list">{{'Transparència' | translate}}</button>
-          </div>
-        </div>
+          </section>
+        </section>
       </li>
       <li class="nav-item">
-        <div ngbDropdown class="d-inline-block">
+        <section ngbDropdown class="d-inline-block">
           <button *ngIf="currentLang === 'es-ES'" class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Nuestros proyectos</button>
           <button *ngIf="currentLang === 'ca-ES'" class="btn" id="ADRBalearsOurPro" ngbDropdownToggle>Els nostres projectes</button>
 
-          <div ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
+          <section ngbDropdownMenu aria-labelledby="ADRBalearsOurPro">
             <h6 class="emprendre emprender-header"><strong>#EMPRENDRE</strong></h6>
             <button *ngIf="currentLang === 'es-ES'" class ="emprendre" ngbDropdownItem routerLink="ibemprenjove/es/bienvenidos-a-iemprenjove/" (click)="offcanvas.dismiss('Cross click')">Ibemprėnjove</button>
             <button *ngIf="currentLang === 'ca-ES'" class ="emprendre" ngbDropdownItem routerLink="ibemprenjove" (click)="offcanvas.dismiss('Cross click')">Ibemprėnjove</button>
@@ -213,16 +183,15 @@
             <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem routerLink="invest-in-balearics" (click)="offcanvas.dismiss('Cross click')">Invest in Balearics</button>
             <button *ngIf="currentLang === 'es-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow/" (click)="offcanvas.dismiss('Cross click')">PIBS</button>
             <button *ngIf="currentLang === 'ca-ES'" class ="projectar" ngbDropdownItem  routerLink="palmainternationalboatshow" (click)="offcanvas.dismiss('Cross click')">PIBS</button>
-          </div>
-        </div>
+          </section>
+        </section>
       </li>
       <li class="nav-item">
-        <div ngbDropdown class="d-inline-block">
+        <section ngbDropdown class="d-inline-block">
           <button *ngIf="currentLang === 'es-ES'" class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potencia tu proyecto</button>
           <button *ngIf="currentLang === 'ca-ES'" class="btn" id="ADRBalearsPowerPro" ngbDropdownToggle>Potència el teu projecte</button>
 
-          <div ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
-            <!-- <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero asesorarme</button> -->
+          <section ngbDropdownMenu aria-labelledby="ADRBalearsPowerPro">
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem class="emprendre" routerLink="emprender" (click)="offcanvas.dismiss('Cross click')">Quiero emprender</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem class="emprendre" routerLink="emprender" (click)="offcanvas.dismiss('Cross click')">Vull emprendre</button>
 
@@ -231,37 +200,14 @@
 
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Quiero crecer</button>
             <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem class="projectar" routerLink="crecer" (click)="offcanvas.dismiss('Cross click')">Vull creixer</button>
-
-            <!--             <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero internacionalizarme</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Quiero financiarme</button>
-            <li><hr class="dropdown-divider"></li>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de Coworkings</button>
-            <button ngbDropdownItem (click)="offcanvas.dismiss('Cross click')">Buscador de parcelas y naves</button> -->
-          </div>
-        </div>
+          </section>
+        </section>
       </li>
       <li class="nav-item">
-        <div ngbDropdown class="d-inline-block">
-         <!--  <button class="btn" id="ADRBalearsContact" ngbDropdownToggle>Contacta</button> -->
+        <section ngbDropdown class="d-inline-block">
           <button class="btn" routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Contacta</button>
-              <!--           <div ngbDropdownMenu aria-labelledby="ADRBalearsContact">
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar asesoramiento</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar assesdorament</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar ayudas</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar ajudes</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Solicitar formaciones</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Sol·licitar formacions</button>
-
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Pedir cita</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears" (click)="offcanvas.dismiss('Cross click')">Demanar cita</button>
-          </div> -->
-        </div>
+        </section>
       </li>
     </ul>
-		<!-- <div class="text-end">
-			<button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
-		</div> -->
-	</div>
+	</section>
 </ng-template>

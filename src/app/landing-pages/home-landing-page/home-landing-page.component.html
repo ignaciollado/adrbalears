@@ -1,15 +1,16 @@
-<img class="img-top-home" src='../../../assets/images/capcalera-provisional.webp' alt='Agencia de desarrollo regional Baleares'>
-<div class='title-header'>
-  <h1 *ngIf="currentLang === 'es-ES'">Agencia de desarrollo regional <span class="color-adr-sec">Baleares</span></h1>
-  <h1 *ngIf="currentLang === 'ca-ES'">Agència de desenvolupament regional <span class="color-adr-sec">Balears</span></h1>
-  <h2 *ngIf="currentLang === 'es-ES'">Ponemos <span class="color-adr-sec">el desarrollo</span> en el centro</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">Posem <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>  
-</div>
+<main>
+  <img class="img-top-home" src='../../../assets/images/capcalera-provisional.webp' alt='Agencia de desarrollo regional Baleares'>
+  <header class='title-header'>
+    <h1 *ngIf="currentLang === 'es-ES'">Agencia de desarrollo regional <span class="color-adr-sec">Baleares</span></h1>
+    <h1 *ngIf="currentLang === 'ca-ES'">Agència de desenvolupament regional <span class="color-adr-sec">Balears</span></h1>
+    <h2 *ngIf="currentLang === 'es-ES'">Ponemos <span class="color-adr-sec">el desarrollo</span> en el centro</h2>
+    <h2 *ngIf="currentLang === 'ca-ES'">Posem <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>  
+  </header>
 
-<h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">¿ Te ayudamos ?</h2>
-<h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">T'ajudem?</h2>
+  <h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">¿ Te ayudamos ?</h2>
+  <h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">T'ajudem?</h2>
 
-<div class='te-ayudamos-container'>
+  <section class='te-ayudamos-container'>
   <div class='title-container-top-ayudanos'>
     <h4 class="sub-title-emprendedor" *ngIf="currentLang === 'es-ES'">Si eres emprendedor o autónomo</h4>
     <h4 class="sub-title-emprendedor" *ngIf="currentLang === 'ca-ES'">Si ets emprenedor o autònom</h4>
@@ -52,9 +53,9 @@
     <h4 class="sub-title-empresa" *ngIf="currentLang === 'es-ES'">Si eres una empresa</h4>
     <h4 class="sub-title-empresa" *ngIf="currentLang === 'ca-ES'">Si ets una empresa</h4>
   </div>
-</div>
+  </section>
 
-<div class='de-que-sector'>
+  <section class='de-que-sector'>
   <div class='container-sector'>
     <h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">¿De qué sector eres?</h2>
     <h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">De quin sector ets?</h2>
@@ -111,9 +112,9 @@
       </div>
     </div>
   </div>
-</div>
+  </section>
 
-<div class='somos-adr'>
+  <section class='somos-adr'>
   <div class='somos-adr-title'>
     <h1 *ngIf="currentLang === 'es-ES'">Somos Agencia de Desarrollo Regional</h1>
     <h1 *ngIf="currentLang === 'ca-ES'">Som Agència de Desenvolupament Regional</h1>
@@ -157,9 +158,9 @@
       </div>
     </div>
   </div>
-</div>
+  </section>
 
-<div class='somos-miembros-de'>
+  <section class='somos-miembros-de'>
   <div class='somos-adr-title'>
     <h1 *ngIf="currentLang === 'es-ES'">Somos miembros de</h1>
     <h1 *ngIf="currentLang === 'ca-ES'">Som membres de</h1>
@@ -184,10 +185,11 @@
         </a>
       </div>
   </div>
-</div>
+  </section>
 
-<app-agenda-home></app-agenda-home>
-<div class='contador'>
+  <app-agenda-home></app-agenda-home>
+  
+  <section class='contador'>
   <div class='contador-title'>
     <h1 *ngIf="currentLang === 'es-ES'">Contador 2024</h1>
     <h1 *ngIf="currentLang === 'ca-ES'">Comptador 2024</h1>
@@ -210,9 +212,9 @@
       <div class='number'>{{alumnosT+1}}</div>
     </div>
   </div>
-</div>
+  </section>
 
-<div class='nuestros-colaboradores'>
+  <section class='nuestros-colaboradores'>
   <div class='colaboradores-title'>
     <h1 *ngIf="currentLang === 'es-ES'">Nuestros colaboradores</h1>
     <h1 *ngIf="currentLang === 'ca-ES'">Els nostres col·laboradors</h1>
@@ -371,18 +373,19 @@
 		</div>
 	</div>
   </div>
-</div>
+  </section>
 
-<div class='cta' >
+  <section class='cta' >
 	<a *ngIf="currentLang === 'es-ES'" (click)="openHomePopUp(content)"><h1 class="cta-home-area-profile">Nos gustaría ayudarte</h1><h2 class="cta-home-area-profile">Solicita asesoramiento</h2><h3 class="cta-home-area-profile">Ponte en contacto con nosotros</h3></a>
 	<a *ngIf="currentLang === 'ca-ES'"(click)="openHomePopUp(content)" ><h1 class="cta-home-area-profile">Ens agradaria ajudar-te</h1><h2 class="cta-home-area-profile">Sol·licita assessorament</h2><h3 class="cta-home-area-profile">Posa't en contacte amb nosaltres</h3></a>
-</div>
-<app-slider></app-slider>
+  </section>
 
-<h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">Aquí nos encontrarás</h2>
-<h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">Aquí ens trobaràs</h2>
+  <app-slider></app-slider>
 
-<div class='card-container'>
+  <h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">Aquí nos encontrarás</h2>
+  <h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">Aquí ens trobaràs</h2>
+
+  <section class='card-container'>
   <div class="card">
     <img src="../../../assets/images/img-espai-menorca.webp" class="card-img-top" alt="Centre Empresarial Menorca">
     <div class="card-body-home">
@@ -410,16 +413,17 @@
       <h4 class="card-text">ADR Balears</h4>
     </div>
   </div>
-</div>
+  </section>
+</main>
 
 <ng-template #content let-modal>
   <section class="modal-contact-form">
-	<div class="modal-header">
+	<section class="modal-header">
 		<p *ngIf="currentLang === 'es-ES'"><strong>Nos gustaría ayudarte</strong></p>
 		<p *ngIf="currentLang === 'ca-ES'"><strong>Ens agradaria ajudar-te</strong></p>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-	</div>
-	<div class="modal-body">
+	</section>
+	<section class="modal-body">
 			<div class = "pop-up-container">
 					<h4 *ngIf="currentLang === 'es-ES'">Necesitaremos tus datos para ponernos en contacto contigo</h4>
 					<h4 *ngIf="currentLang === 'ca-ES'">Necessitarem les teves dades per a posar-nos en contacte amb tu</h4>
@@ -445,10 +449,10 @@
             </div>
 					</form>
 			</div>
-	</div>
-	<div class="modal-footer">
+	</section>
+	<section class="modal-footer">
     <div class="spinner-border" role="status" *ngIf ="formSendMail.valid && submitted"></div>
     <div role="alert" id="postFeedback"></div>
-	</div>
+	</section>
 </section>  
 </ng-template>

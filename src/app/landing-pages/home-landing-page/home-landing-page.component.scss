@@ -1,7 +1,7 @@
 @use '../../../adr-colors';
 @use '../../../utilities.scss';
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
   text-align: center;
   font-weight: bolder;
   color: adr-colors.$primary-adr;
@@ -12,7 +12,7 @@ h1, h2, h3, h4{
 h1 {
   font-size: 3rem!important;
 }
-h2{
+h2 {
   font-size: 2.5rem!important;
 }
 h3 {
