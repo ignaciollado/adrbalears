@@ -9,7 +9,6 @@ Params:
 
 program_id:
 
-
 1 >>JEP
 2 >>JES
 3 >> JEA
@@ -19,6 +18,7 @@ schoolastic_year_id:
 1 >> 2021
 2 >> 2022
 3 >> 2023
+4 >> 2024
 
 Autentication: Bearer IDI1234 */
 

@@ -82,7 +82,6 @@ const routes: Routes = [
   { path: 'consolidar', component: ConsolidarComponent },
   { path: 'crecer', component: CrecerComponent },
 
-  /* { path: 'contact-adr-balears', component: ContactAdrBalearsComponent}, */
   { path: 'contact-adr-balears', component: ContactFormComponent},
 
   { path: 'accesibilidad/:id', component: SimpleTextViewerComponent },

@@ -25,7 +25,6 @@ export class CommonContentViewerComponent {
     private route: ActivatedRoute,
     private router: Router ) { }
 
-
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
@@ -43,7 +42,7 @@ export class CommonContentViewerComponent {
   
       this.getContent(this.id)
       if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
-        this.getCooperativas ( +this.program_id, 3)
+        this.getCooperativas ( +this.program_id, 4)
       }
       
       window.scroll(0,0)
