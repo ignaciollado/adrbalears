@@ -218,9 +218,9 @@ ol, ul {
     }
   }
 }
-.slider-somos .slide-track {
+.slider-somos, .slide-track {
   display: grid;
-  grid-template-columns: 264px 264px 264px 264px 264px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   :nth-child(5) {
     border-right: 1px solid adr-colors.$secondary-adr;
   }
@@ -411,6 +411,12 @@ button[type='submit']{
 }
 .submit-btn {
   margin-top: .5rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .slider-somos, .slide-track{
+    grid-template-columns: 230px 230px 230px 230px 230px;
+  }
 }
 
 @media screen and (max-width: 992px) {
