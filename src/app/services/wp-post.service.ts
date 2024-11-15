@@ -3,13 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { WpPost } from '../Models/wp-post-data.dto';
 import { Observable } from 'rxjs';
 import { MessageService } from './message.service';
+import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class WPpageService {
+export class WPpostService {
   private postUrl = 'https://app.adrbalears.es/wp-json/wp/v2/posts';
+  private mediaUrl = 'https://app.adrbalears.es/wp-json/wp/v2/media';
 
   headers = new HttpHeaders()
   .set( 'Content-Type', 'application/vnd.api+json' ) 
@@ -44,6 +46,11 @@ export class WPpageService {
 
   findByTitle(title: string): Observable<WpPost[]> {
     return this.httpClient.get<WpPost[]>(`${this.postUrl}?title=${title}`, { headers: this.headers })
+  }
+
+  getOneFeaturedMedia(id: number|null): Observable<WpPageFeaturedMedia> {
+    this.messagesService.add('ArticleService: fetched ONE media')
+    return this.httpClient.get<WpPageFeaturedMedia>(`${this.mediaUrl}/${id}`)
   }
 
 }

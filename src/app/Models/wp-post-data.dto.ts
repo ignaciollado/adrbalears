@@ -23,6 +23,7 @@ export interface WpPost {
   excerpt:        Content;
   author:         number;
   featured_media: number;
+  featured_media_image_link: string;
   comment_status: string;
   ping_status:    string;
   sticky:         boolean;

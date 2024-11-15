@@ -24,6 +24,9 @@ h2, h4 {
 .color-adr-sec {
   color: adr-colors.$secondary-adr;
 }
+.btn-close:focus {
+   border: none;
+}
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -23,6 +23,27 @@
   </div>
 </section>
 
+<section *ngIf="wpPosts">
+  <div class="row">
+  <div *ngFor="let noticia of wpPosts">
+    <div class="col">
+      <section class="card">
+        <figure class="card-header" [innerHTML]="noticia.featured_media_image_link">
+        <!--   <img *ngIf="noticia.rendered." class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
+          <img *ngIf="!noticia.attributes.images.image_intro" class="img-fluid" src="https://picsum.photos/310?grayscale&blur=4" alt={{noticia.attributes.title}} title={{noticia.attributes.title}} /> -->
+        </figure>
+        <section class="card-body">
+          <a [routerLink]="['/news-agenda-detail', noticia.slug]">
+            <h4 *ngIf="faseNewsToDisplay==='11'" class="card-title">{{noticia.title.rendered}}</h4>
+            <h5 *ngIf="faseNewsToDisplay!=='11'" class="card-title">{{noticia.title.rendered}}</h5>
+          </a>
+        </section>
+      </section>
+    </div>
+  </div>
+  </div>
+</section>
+
 <section *ngIf="!listNewsReady">
   <div class="row">
   <div *ngFor="let item of [1,2,3,4]">
