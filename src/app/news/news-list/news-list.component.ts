@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { WPpostService } from '../../services/wp-post.service';
 import { WpPost } from '../../Models/wp-post-data.dto';
 import { WpPageFeaturedMedia } from '../../Models/wp-page-featured-media.dto';
+import { WpTag } from '../../Models/wp-tag.dto';
 
 @Component({
   selector: 'app-news-list',
@@ -18,13 +19,15 @@ export class NewsListComponent implements OnInit {
   public noticias: reqArticle[] = []
   public wpPosts: WpPost[] = []
   public wpFeaturedMedia: string[] = []
+  public wpTags: WpTag[] = []
   public noticiasTemp: reqArticle[] = []
   public wpNoticiasTemp: WpPost[] = []
 
   public noticiasAttributes: attrArticle | undefined
   public currentLang: string | undefined
   public wpCurrentLang: number 
-  public contenidoMedia: WpPageFeaturedMedia
+  public contenidoMedia: WpPageFeaturedMedia[] = []
+  public contenidoTag: WpTag[] = []
   public newsToDisplay: string | null
 	actualProjectName : string = ""
 	actualProjectFase: string = ""
@@ -107,8 +110,9 @@ export class NewsListComponent implements OnInit {
           this.wpPosts = this.wpPosts.filter( (item : WpPost)   => item.categories.includes(currentLanguage))
           this.wpPosts.map((item:WpPost) => {
             this.getFeaturedMedia(item.featured_media)
-            console.log (item.featured_media_image_link)
+            this.getTags(item.featured_media)
           })
+
           if (this.newsToDisplay != '9999') {
             this.wpPosts = this.wpPosts.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
           }
@@ -118,10 +122,18 @@ export class NewsListComponent implements OnInit {
 
   getFeaturedMedia (idMedia: number):any {
    this.articleWPContent.getOneFeaturedMedia(idMedia)
-      .subscribe(
-        (mediaItem: WpPageFeaturedMedia) => {
-          
-        })
+    .subscribe(
+      (mediaItem: WpPageFeaturedMedia) => {
+        this.contenidoMedia.push(mediaItem)
+      })
   }
+
+  getTags (idTag: number):any {
+    this.articleWPContent.getTags(idTag)
+     .subscribe(
+       (tagItem: any) => {
+         this.contenidoTag.push(tagItem)
+       })
+   }
 
 }

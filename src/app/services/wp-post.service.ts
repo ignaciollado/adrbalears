@@ -10,8 +10,9 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 })
 
 export class WPpostService {
-  private postUrl = 'https://app.adrbalears.es/wp-json/wp/v2/posts';
-  private mediaUrl = 'https://app.adrbalears.es/wp-json/wp/v2/media';
+  private postUrl =   'https://app.adrbalears.es/wp-json/wp/v2/posts';
+  private mediaUrl =  'https://app.adrbalears.es/wp-json/wp/v2/media';
+  private tagUrl =    'https://app.adrbalears.es/wp-json/wp/v2/tags';
 
   headers = new HttpHeaders()
   .set( 'Content-Type', 'application/vnd.api+json' ) 
@@ -51,6 +52,11 @@ export class WPpostService {
   getOneFeaturedMedia(id: number|null): Observable<WpPageFeaturedMedia> {
     this.messagesService.add('ArticleService: fetched ONE media')
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.mediaUrl}/${id}`)
+  }
+
+  getTags(id: number|null): Observable<WpPageFeaturedMedia> {
+    this.messagesService.add('ArticleService: fetched ONE media')
+    return this.httpClient.get<WpPageFeaturedMedia>(`${this.tagUrl}/${id}`)
   }
 
 }

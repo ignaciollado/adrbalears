@@ -1,14 +1,14 @@
 <main>
   <img class="img-top-home" src='../../../assets/images/capcalera-provisional.webp' alt='Agencia de desarrollo regional Baleares'>
   <header class='title-header'>
-    <h1 *ngIf="currentLang === 'es-ES'">Agencia de desarrollo regional <span class="color-adr-sec">Baleares</span></h1>
-    <h1 *ngIf="currentLang === 'ca-ES'">Agència de desenvolupament regional <span class="color-adr-sec">Balears</span></h1>
+    <h1 *ngIf="currentLang === 'es-ES'">Agencia de Desarrollo Regional <span class="color-adr-sec">Baleares</span></h1>
+    <h1 *ngIf="currentLang === 'ca-ES'">Agència de Desenvolupament Regional <span class="color-adr-sec">Balears</span></h1>
     <h2 *ngIf="currentLang === 'es-ES'">Ponemos <span class="color-adr-sec">el desarrollo</span> en el centro</h2>
-    <h2 *ngIf="currentLang === 'ca-ES'">Posem <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>  
+    <h2 *ngIf="currentLang === 'ca-ES'">Posam <span class="color-adr-sec">el desenvolupament</span> en el centre</h2>  
   </header>
 
   <h2 class="te-ayudamos" *ngIf="currentLang === 'es-ES'">¿ Te ayudamos ?</h2>
-  <h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">T'ajudem?</h2>
+  <h2 class="te-ayudamos" *ngIf="currentLang === 'ca-ES'">T'ajudam?</h2>
 
   <section class='te-ayudamos-container'>
   <div class='title-container-top-ayudanos'>
@@ -20,16 +20,16 @@
       <img src="../../../assets/images/img-orient.webp" class="card-img-top" alt="...">
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-orient.svg' width="100px" alt=''>
-        <h3 class="card-title"><a routerLink="ibempren/es/iempren-recursos-para-emprender" *ngIf="currentLang === 'es-ES'">Te orientamos<br>Para crear<br>Tu empresa</a></h3>
-        <h3 class="card-title"><a routerLink="ibempren" *ngIf="currentLang === 'ca-ES'">T'orientem<br>Per crear<br>la Teva empresa</a></h3>
+        <h3 class="card-title"><a routerLink="ibempren/es/iempren-recursos-para-emprender" *ngIf="currentLang === 'es-ES'">Te orientamos<br>para crear<br>tu empresa</a></h3>
+        <h3 class="card-title"><a routerLink="ibempren" *ngIf="currentLang === 'ca-ES'">T'orientam<br>per crear<br>la teva empresa</a></h3>
       </div>
     </div>
     <div class="card card-ayuda card-border-emprendedor card-border-empresa" >
       <img src="../../../assets/images/img-form.webp" class="card-img-top" alt="...">
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-form.svg' width="100px" alt=''>
-        <h3 class="card-title"><a routerLink='news-agenda-list-all/9999' *ngIf="currentLang === 'es-ES'">Te formamos<br>(Emprendedores,<br>Directivos,<br>profesionales,<br>relevo,<br>formaciones EOI...)</a></h3>
-        <h3 class="card-title"><a routerLink='' *ngIf="currentLang === 'ca-ES'">Et formem<br>(Emprenedors,<br>Directius,<br>profesionals,<br>relleu,<br>formacions EOI...)</a></h3>
+        <h3 class="card-title"><a routerLink='news-agenda-list-all/9999' *ngIf="currentLang === 'es-ES'">Te formamos</a></h3>
+        <h3 class="card-title"><a routerLink='' *ngIf="currentLang === 'ca-ES'">Et formam</a></h3>
       </div>
     </div>
     <div class="card card-ayuda card-border-emprendedor card-border-empresa" >
@@ -37,7 +37,7 @@
       <div class="card-body-home-ayuda">
         <img src='../../../assets/images/icon-info.svg' width="100px" alt=''>
         <h3 class="card-title"><a routerLink="" *ngIf="currentLang === 'es-ES'">Te informamos<br>y damos ayudas<br>y subvenciones</a></h3>
-        <h3 class="card-title"><a routerLink="" *ngIf="currentLang === 'ca-ES'">T'informem<br>i donem ajudes<br>i subvencions</a></h3>
+        <h3 class="card-title"><a routerLink="" *ngIf="currentLang === 'ca-ES'">T'informam<br>i donem ajudes<br>i subvencions</a></h3>
       </div>
     </div>
     <div class="card card-ayuda card-border-emprendedor-blanco card-border-empresa" >
@@ -70,15 +70,15 @@
         <ul>
           <li>
             <span *ngIf="currentLang === 'es-ES'">Eres comercio histórico o con patrimonio: <br><a routerLink="emblematicsbalears/es/bienvenidos-a-emblematicsbalears" *ngIf="currentLang === 'es-ES'"><strong>Te damos un sello de calidad</strong></a></span>
-            <span *ngIf="currentLang === 'ca-ES'">Ets comerç històric o amb patrimoni: <br><a routerLink="emblematicsbalears"><strong>Et donem un segell de qualitat</strong></a></span>
+            <span *ngIf="currentLang === 'ca-ES'">Ets un comerç històric arrelat amb patrimoni? <br><a routerLink="emblematicsbalears"><strong>Et donam un reconeixement? Emblemàtics</strong></a></span>
           </li>
-          <li>
+          <!-- <li>
             <a routerLink="ibrelleu/es/bienvenidos-a-ibrelleu" *ngIf="currentLang === 'es-ES'"><strong>¿Necesitas relevo para tu negocio?</strong></a>
             <a routerLink="ibrelleu" *ngIf="currentLang === 'ca-ES'"><strong>Necessites relleu per al teu negoci?</strong></a>
-          </li>
+          </li> -->
           <li>
-            <a routerLink="ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que tu colegio te visite?</strong></a>
-            <a routerLink="ibcomerc-a-escola" *ngIf="currentLang === 'ca-ES'"><strong>Vols que el teu col·legi et visiti?</strong></a>
+            <a routerLink="ibcomerc-a-escola/es/bienvenidos-a-ibcomerc-a-escola" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres quieres dar a conocer tu comercio a los colegios del municipio?</strong></a>
+            <a routerLink="ibcomerc-a-escola" *ngIf="currentLang === 'ca-ES'"><strong>Vols donar a coneixer el teu comerç a les escoles del municipi?</strong></a>
           </li>
         </ul>
       </div>
@@ -90,11 +90,7 @@
         <ul>
           <li>
             <span *ngIf="currentLang === 'es-ES'">Eres sensible con el medio ambiente:<br><a routerLink="industria-local-sostenible/es/bienvenidos-a-industria-local-sostenible" *ngIf="currentLang === 'es-ES'"><strong>Te ofrecemos la marca ILS</strong></a></span>
-            <span *ngIf="currentLang === 'ca-ES'">Ets sensible amb el medi ambient:<br><a routerLink="industria-local-sostenible" *ngIf="currentLang === 'ca-ES'"><strong>T'oferim la marca ILS</strong></a></span>
-          </li>
-          <li>
-            <a routerLink="exposabyidi/es/bienvenidos-a-exposabyidi" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que te ayudemos a diseñar tu espacio?</strong></a>
-            <a routerLink="exposabyidi" *ngIf="currentLang === 'ca-ES'"><strong>Vols que t'ajudem a dissenyar el teu espai?</strong></a>
+            <span *ngIf="currentLang === 'ca-ES'">Ets una empresa sostenible?<br><a routerLink="industria-local-sostenible" *ngIf="currentLang === 'ca-ES'"><strong>T'oferim la marca ILS</strong></a></span>
           </li>
           <li>
             <a routerLink="loopdisseny/es/bienvenidos-a-loopdisseny" *ngIf="currentLang === 'es-ES'"><strong>¿Te interesa la circularidad y quieres contactar con otros sectores?</strong></a>
@@ -105,8 +101,16 @@
       <div class="bottom-sector">
         <ul>
           <li>
+            <a routerLink="ibrelleu/es/bienvenidos-a-ibrelleu" *ngIf="currentLang === 'es-ES'"><strong>¿Necesitas relevo para tu negocio?</strong></a>
+            <a routerLink="ibrelleu" *ngIf="currentLang === 'ca-ES'"><strong>Necessites relleu per al teu negoci?</strong></a>
+          </li>
+          <li>
             <span *ngIf="currentLang === 'es-ES'">¿Eres una panadería o un horno? <a routerLink="pa-daqui-forn-i-tradicio/es/bienvenidos-a-pa-daqui-forn-i-tradicio"><strong>Pa d'aquí</strong></a> es tu marca</span>
             <span *ngIf="currentLang === 'ca-ES'">Ets un forn? <a routerLink="pa-daqui-forn-i-tradicio"><strong>Pa d'aquí</strong></a> és la teva marca</span>
+          </li>
+          <li>
+            <a routerLink="exposabyidi/es/bienvenidos-a-exposabyidi" *ngIf="currentLang === 'es-ES'"><strong>¿Quieres que te ayudemos a diseñar tu espacio?</strong></a>
+            <a routerLink="exposabyidi" *ngIf="currentLang === 'ca-ES'"><strong>Vols que t'ajudem a dissenyar el teu espai?</strong></a>
           </li>
         </ul>
       </div>
@@ -160,33 +164,6 @@
   </div>
   </section>
 
-  <section class='somos-miembros-de'>
-  <div class='somos-adr-title'>
-    <h1 *ngIf="currentLang === 'es-ES'">Somos miembros de</h1>
-    <h1 *ngIf="currentLang === 'ca-ES'">Som membres de</h1>
-  </div>
-  <div class="somos-miembros-de-slider">
-      <div class="slide-miembros-de">
-        <a href='https://www.foroadr.es/' target="_blank">
-          <h5>Foro ADR</h5>
-          <img src="../../../assets/images/foroadr.webp" height="auto" width="200" title="ADR -  Asociación Española de Agencias de Desarrollo Regional" alt="ADR -  Asociación Española de Agencias de Desarrollo Regional" />
-        </a>
-      </div>
-      <div class="slide-miembros-de">
-        <a href='https://www.centrosdeexcelencia.com/' target="_blank">
-          <h5>Centros de excelencia</h5>
-          <img src="../../../assets/images/cex.webp" height="auto" width="200" title="Centros Promotores de la Excelencia CEX " alt="Centros Promotores de la Excelencia CEX " />
-        </a>
-      </div>
-      <div class="slide-miembros-de">
-        <a href='#' target="_blank">
-          <h5>Comité Internacional<br>de Internacionalización</h5>
-          <img width="200" height="auto" src="https://picsum.photos/200/100?grayscale?blur=4" title="Comité Internacional de Internacionalización" alt="Comité Internacional de Internacionalización"/>
-        </a>
-      </div>
-  </div>
-  </section>
-
   <app-agenda-home></app-agenda-home>
   
   <section class='contador'>
@@ -213,6 +190,33 @@
     </div>
   </div>
   </section>
+
+  <section class='somos-miembros-de'>
+    <div class='somos-adr-title'>
+      <h1 *ngIf="currentLang === 'es-ES'">Somos miembros de</h1>
+      <h1 *ngIf="currentLang === 'ca-ES'">Som membres de</h1>
+    </div>
+    <div class="somos-miembros-de-slider">
+        <div class="slide-miembros-de">
+          <a href='https://www.foroadr.es/' target="_blank">
+            <h5>Foro ADR</h5>
+            <img src="../../../assets/images/foroadr.webp" height="auto" width="200" title="ADR -  Asociación Española de Agencias de Desarrollo Regional" alt="ADR -  Asociación Española de Agencias de Desarrollo Regional" />
+          </a>
+        </div>
+        <div class="slide-miembros-de">
+          <a href='https://www.centrosdeexcelencia.com/' target="_blank">
+            <h5>Centros de excelencia</h5>
+            <img src="../../../assets/images/cex.webp" height="auto" width="200" title="Centros Promotores de la Excelencia CEX " alt="Centros Promotores de la Excelencia CEX " />
+          </a>
+        </div>
+        <div class="slide-miembros-de">
+          <a href='#' target="_blank">
+            <h5>Comité Internacional<br>de Internacionalización</h5>
+            <img width="200" height="auto" src="https://picsum.photos/200/100?grayscale?blur=4" title="Comité Internacional de Internacionalización" alt="Comité Internacional de Internacionalización"/>
+          </a>
+        </div>
+    </div>
+    </section>
 
   <section class='nuestros-colaboradores'>
   <div class='colaboradores-title'>
