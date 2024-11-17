@@ -31,8 +31,7 @@ export class ArticleContentService {
 
   getEveryThing() {
     this.messagesService.add('ArticleService: fetched ALL articles')
-    return this.httpClient.get<ArticleDTO>( this.apiBaseUrlEverything, { headers: this.headers } )
-  
+    return this.httpClient.get<ArticleDTO>(this.apiBaseUrlEverything, { headers: this.headers })
   }
 
   getLastContent(): Observable<ArticleDTO[]> {

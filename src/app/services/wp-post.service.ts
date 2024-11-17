@@ -54,7 +54,8 @@ export class WPpostService {
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.mediaUrl}/${id}`)
   }
 
-  getTags(id: number|null): Observable<WpPageFeaturedMedia> {
+  getOneTag(id: number[]|null): Observable<WpPageFeaturedMedia> {
+    console.log ("The tag ", id)
     this.messagesService.add('ArticleService: fetched ONE media')
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.tagUrl}/${id}`)
   }

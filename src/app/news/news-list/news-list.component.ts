@@ -62,7 +62,6 @@ export class NewsListComponent implements OnInit {
     }
     this.getNoticias(this.currentLang, ['11', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
     this.getWPNoticias(this.wpCurrentLang, ['27', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
-
   }
 
   getNoticias(currentLanguage:string, currentCategory: string[], articlesNumber: any) {
@@ -103,20 +102,19 @@ export class NewsListComponent implements OnInit {
       articlesNumber = this.totalNewsToDisplay
     }
     this.articleWPContent.getAll()
-        .subscribe( (resp: any) => {
-          this.wpPosts = resp
-          this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.status === 'publish') 
-          this.wpPosts = this.wpPosts.filter((item : WpPost)   => item.categories.includes((+currentCategory[0])))
-          this.wpPosts = this.wpPosts.filter( (item : WpPost)   => item.categories.includes(currentLanguage))
-          this.wpPosts.map((item:WpPost) => {
-            this.getFeaturedMedia(item.featured_media)
-            this.getTags(item.featured_media)
-          })
-
-          if (this.newsToDisplay != '9999') {
-            this.wpPosts = this.wpPosts.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
-          }
-    } ) 
+      .subscribe( (resp: any) => {
+        this.wpPosts = resp
+        this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.status === 'publish') 
+        this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.categories.includes((+currentCategory[0])))
+        this.wpPosts = this.wpPosts.filter( (item : WpPost) => item.categories.includes(currentLanguage))
+        this.wpPosts.map((item:WpPost) => {
+          this.getFeaturedMedia(item.featured_media)
+          this.getTags(item.tags) /* modificar: hay que hacer un map con el array de tags */
+        })
+        if (this.newsToDisplay != '9999') {
+          this.wpPosts = this.wpPosts.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
+        }
+    }) 
     window.scroll(0,0)
   }
 
@@ -128,12 +126,12 @@ export class NewsListComponent implements OnInit {
       })
   }
 
-  getTags (idTag: number):any {
-    this.articleWPContent.getTags(idTag)
+  getTags (idTag: number[]):any {
+    this.articleWPContent.getOneTag(idTag)
      .subscribe(
        (tagItem: any) => {
          this.contenidoTag.push(tagItem)
        })
-   }
+  }
 
 }
