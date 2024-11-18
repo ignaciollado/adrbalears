@@ -54,7 +54,7 @@ export class HomeLandingPageComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-    setInterval(this.incrementValue, 1000);
+    /* setInterval(this.incrementValue, 1000); */
   }
 
   incrementValue() {

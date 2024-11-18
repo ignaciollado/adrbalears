@@ -15,6 +15,16 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.card-emprender:hover {
+  border-color: adr-colors.$emprender;
+}
+.card-connectar:hover {
+  border-color: adr-colors.$conectar;
+}
+.card-proyectar:hover {
+  border-color: adr-colors.$proyectar;
+}
+
 .card-body {
   min-height: 25rem;
 }

@@ -232,7 +232,7 @@ ol, ul {
 }
 .somos-miembros-de-slider{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .slide-miembros-de {
   background-image: url("../../../assets/images/simbol-adr-100.svg");
@@ -252,7 +252,7 @@ ol, ul {
 .slide-miembros-de img:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.slide-miembros-de:nth-child(3){
+.slide-miembros-de:nth-child(4){
   border-right: 1px solid adr-colors.$secondary-adr;
 }
 /* --------------------------------------------------------------------- */

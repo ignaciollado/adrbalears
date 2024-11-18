@@ -1,6 +1,6 @@
 <h1>{{'Agenda' | translate}}</h1>
 
-<section class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
+<!-- <section class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaEmpr of agendaEmprender">
       <div class="card">
@@ -15,9 +15,25 @@
 <div class="no-hay-eventos emprendre-bck" *ngIf="agendaEmprender?.length === 0">
   <h2 *ngIf="currentLang === 'es-ES'">#EMPRENDRE, actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">#EMPRENDRE, actualment no tenim esdeveniments programats</h2>
+</div> -->
+<section class="event-list-container" *ngIf="wpAgendaEmprender?.length !== 0">
+  <div class="row">
+  <div *ngFor="let itemAgendaEmprender of wpAgendaEmprender">
+      <section class="card card-emprender">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-emprender.webp" alt={{itemAgendaEmprender.title.rendered}} title={{itemAgendaEmprender.title.rendered}} />
+        </div>
+        <div class="card-body" [innerHTML]="itemAgendaEmprender.content.rendered"></div>
+      </section>
+  </div>
+  </div>
+</section>
+<div class="no-hay-eventos emprender-bck" *ngIf="!wpAgendaEmprender">
+  <h2 *ngIf="currentLang === 'es-ES'">#EMPRENDRE, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#EMPRENDRE, actualment no tenim esdeveniments programats</h2>
 </div>
 
-<section class="event-list-container" *ngIf="agendaConectar?.length !== 0">
+<!-- <section class="event-list-container" *ngIf="agendaConectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaConectar of agendaConectar">
       <section class="card">
@@ -29,13 +45,29 @@
   </div>
   </div>
 </section>
-
 <div class="no-hay-eventos connectar-bck" *ngIf="agendaConectar?.length === 0">
+  <h2 *ngIf="currentLang === 'es-ES'">#CONNECTAR, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#CONNECTAR, actualment no tenim esdeveniments programats</h2>
+</div> -->
+<section class="event-list-container" *ngIf="wpAgendaConectar?.length !== 0">
+  <div class="row">
+  <div *ngFor="let itemAgendaConectar of wpAgendaConectar">
+      <section class="card card-connectar">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-conectar.webp" alt={{itemAgendaConectar.title.rendered}} title={{itemAgendaConectar.title.rendered}} />
+        </div>
+        <div class="card-body" [innerHTML]="itemAgendaConectar.content.rendered"></div>
+      </section>
+  </div>
+  </div>
+</section>
+<div class="no-hay-eventos connectar-bck" *ngIf="!wpAgendaConectar">
   <h2 *ngIf="currentLang === 'es-ES'">#CONNECTAR, actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">#CONNECTAR, actualment no tenim esdeveniments programats</h2>
 </div>
 
-<section class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
+
+<!-- <section class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
   <div class="row">
     <div *ngFor="let itemAgendaProyectar of agendaProyectar">
       <div class="card">
@@ -48,6 +80,22 @@
   </div>
 </section>
 <div class="no-hay-eventos projectar-bck" *ngIf="agendaProyectar?.length === 0">
+  <h2 *ngIf="currentLang === 'es-ES'">#PROJECTAR, actualmente no tenemos eventos programados</h2>
+  <h2 *ngIf="currentLang === 'ca-ES'">#PROJECTAR, actualment no tenim esdeveniments programats</h2>
+</div> -->
+<section class="event-list-container" *ngIf="wpAgendaProyectar?.length !== 0">
+  <div class="row">
+  <div *ngFor="let itemAgendaProyectar of wpAgendaProyectar">
+      <section class="card card-proyectar">
+        <div>
+          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.title.rendered}} title={{itemAgendaProyectar.title.rendered}} />
+        </div>
+        <div class="card-body" [innerHTML]="itemAgendaProyectar.content.rendered"></div>
+      </section>
+  </div>
+  </div>
+</section>
+<div class="no-hay-eventos proyectar-bck" *ngIf="!wpAgendaProyectar">
   <h2 *ngIf="currentLang === 'es-ES'">#PROJECTAR, actualmente no tenemos eventos programados</h2>
   <h2 *ngIf="currentLang === 'ca-ES'">#PROJECTAR, actualment no tenim esdeveniments programats</h2>
 </div>

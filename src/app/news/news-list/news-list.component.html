@@ -34,7 +34,7 @@
           </div>
         </figure>
         <section class="card-body">
-          <a [routerLink]="['/news-agenda-detail', noticia.slug]">
+          <a [routerLink]="['/news-agenda-detail', noticia.slug, noticia.id]">
             <h5 class="card-title" [innerHTML] = "noticia.title.rendered">{{noticia.title.rendered}}</h5>
           </a>
         </section>

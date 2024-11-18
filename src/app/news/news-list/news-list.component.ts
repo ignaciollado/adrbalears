@@ -27,7 +27,6 @@ export class NewsListComponent implements OnInit {
   public currentLang: string | undefined
   public wpCurrentLang: number 
   public contenidoMedia: WpPageFeaturedMedia[] = []
-  public contenidoTag: WpTag[] = []
   public newsToDisplay: string | null
 	actualProjectName : string = ""
 	actualProjectFase: string = ""
@@ -60,13 +59,12 @@ export class NewsListComponent implements OnInit {
         this.currentLang = 'ca-ES'
         this.wpCurrentLang = 25
     }
-    this.getNoticias(this.currentLang, ['11', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
-    this.getWPNoticias(this.wpCurrentLang, ['27', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+    //this.getNoticias(this.currentLang, ['11', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+    this.getWPNoticias(this.wpCurrentLang, ['27'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
 
-  getNoticias(currentLanguage:string, currentCategory: string[], articlesNumber: any) {
+/*   getNoticias(currentLanguage:string, currentCategory: string[], articlesNumber: any) {
     let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
-    /* Obtiene el perfíl del usuario según el cuestionario 'Personalice su experiencia' */
     interesadoEn = localStorage.getItem("interesadoEn")
     objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
     situacionActual = localStorage.getItem("situacionActual")
@@ -91,25 +89,24 @@ export class NewsListComponent implements OnInit {
             this.noticias = this.noticiasTemp
           }
           if (this.newsToDisplay != '9999') {
-            this.noticias = this.noticias.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
+            this.noticias = this.noticias.slice(0, articlesNumber) 
           }
     } ) 
     window.scroll(0,0)
-  }
+  } */
 
   getWPNoticias(currentLanguage:number, currentCategory: string[], articlesNumber: any) {
     if ( !articlesNumber ) {
       articlesNumber = this.totalNewsToDisplay
     }
     this.articleWPContent.getAll()
-      .subscribe( (resp: any) => {
+      .subscribe( (resp: WpPost[]) => {
         this.wpPosts = resp
         this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.status === 'publish') 
         this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.categories.includes((+currentCategory[0])))
         this.wpPosts = this.wpPosts.filter( (item : WpPost) => item.categories.includes(currentLanguage))
         this.wpPosts.map((item:WpPost) => {
           this.getFeaturedMedia(item.featured_media)
-          this.getTags(item.tags) /* modificar: hay que hacer un map con el array de tags */
         })
         if (this.newsToDisplay != '9999') {
           this.wpPosts = this.wpPosts.slice(0, articlesNumber) /* The last 'articlesNumber' news published */
@@ -126,12 +123,6 @@ export class NewsListComponent implements OnInit {
       })
   }
 
-  getTags (idTag: number[]):any {
-    this.articleWPContent.getOneTag(idTag)
-     .subscribe(
-       (tagItem: any) => {
-         this.contenidoTag.push(tagItem)
-       })
-  }
+ 
 
 }

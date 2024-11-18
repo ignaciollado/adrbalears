@@ -24,7 +24,7 @@ export class WPpostService {
     return this.httpClient.get<WpPost[]>(this.postUrl, { headers: this.headers })
   }
 
-  get(id: string|null): Observable<WpPost> {
+  getOne(id: string|null): Observable<WpPost> {
     this.messagesService.add('ArticleService: fetched ONE article')
     return this.httpClient.get<WpPost>(`${this.postUrl}/${id}`, { headers: this.headers })
   }
@@ -54,8 +54,7 @@ export class WPpostService {
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.mediaUrl}/${id}`)
   }
 
-  getOneTag(id: number[]|null): Observable<WpPageFeaturedMedia> {
-    console.log ("The tag ", id)
+  getOneTag(id: number|null): Observable<WpPageFeaturedMedia> {
     this.messagesService.add('ArticleService: fetched ONE media')
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.tagUrl}/${id}`)
   }

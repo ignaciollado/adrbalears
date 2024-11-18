@@ -58,7 +58,7 @@ export class AgendaListComponent {
     this.getWPAgenda( this.wpCurrentLang, [31, 32, 33, 34], +this.newsToDisplay ) /* 31: agenda, 32: agenda-emprendre, 33: agenda-conectar, 34: agenda-proyectar */
   }
 
-  getAgenda(currentLanguage:string, categies: string[], itemsNumber: string) {
+  getAgenda(currentLanguage:string, categories: string[], itemsNumber: string) {
     if ( !itemsNumber ) {
       itemsNumber = this.totalNewsToDisplay
     }
@@ -70,13 +70,13 @@ export class AgendaListComponent {
           this.agenda = this.agenda.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`)
           this.agenda = this.agenda.filter( (item : reqArticle) => now.getDate() - new Date(item.attributes.publish_down).getDate() <= 0) 
           this.agenda.map((item:reqArticle) => {
-            if (item.relationships.category.data.id === categies[0]) {
+            if (item.relationships.category.data.id === categories[0]) {
               this.agendaEmprender.push(item)
             }
-            if (item.relationships.category.data.id === categies[1]) {
+            if (item.relationships.category.data.id === categories[1]) {
               this.agendaConectar.push(item)
             }
-            if (item.relationships.category.data.id === categies[2]) {
+            if (item.relationships.category.data.id === categories[2]) {
               this.agendaProyectar.push(item)
             }
           })
@@ -85,37 +85,29 @@ export class AgendaListComponent {
     window.scroll(0,0)
   }
 
-  getWPAgenda(currentLanguage:number, categies: number[], itemsNumber: number) {
+  getWPAgenda(currentLanguage:number, categories: number[], itemsNumber: number) {
     if ( !itemsNumber ) {
       itemsNumber = +this.totalNewsToDisplay
     }
     this.agendaWPContent.getAll()
-      .subscribe( (resp:any) => {
+      .subscribe( (agendaItems:WpPost[]) => {
         const now = new Date
-        this.wpAgenda = resp.data
-        console.log(this.wpAgenda)
-        if (this.wpAgenda !== undefined) {
-          this.wpAgenda = this.wpAgenda.filter( (item : WpPost) => item.status === 'publish')
-          this.wpAgenda = this.wpAgenda.filter( (item : WpPost)  => item.categories.includes((categies[0])))
-          this.wpAgenda = this.wpAgenda.filter( (item : WpPost) => item.categories.includes(currentLanguage))
-          this.wpAgenda = this.wpAgenda.filter( (item : WpPost) => now.getDate() - new Date(item.date).getDate() <= 0) 
-          this.wpAgenda.map((item:WpPost) => {
-            if (item.categories.includes(categies[1])) {
-              this.wpAgendaEmprender.push(item)
-            }
-            if (item.categories.includes(categies[2])) {
-              this.wpAgendaConectar.push(item)
-            }
-            if (item.categories.includes(categies[3])) {
-              this.wpAgendaProyectar.push(item)
-            }
-          })
-        } else {
-          console.log ("No agenda items found")
-        }
-
+        this.wpAgenda = agendaItems
+        this.wpAgenda = this.wpAgenda.filter((item : WpPost) => item.status === 'publish')
+        this.wpAgenda = this.wpAgenda.filter((item : WpPost) => item.categories.includes(currentLanguage))
+        console.log ("items in current lang: ", this.wpAgenda, currentLanguage)
+        this.wpAgenda.forEach((item:WpPost) => {
+          if (item.categories.includes(categories[1])) {
+            this.wpAgendaEmprender.push(item)
+          }
+          if (item.categories.includes(categories[2])) {
+            this.wpAgendaConectar.push(item)
+          }
+          if (item.categories.includes(categories[3])) {
+            this.wpAgendaProyectar.push(item)
+          }
+        })
       }) 
     window.scroll(0,0)
   }
-
 }
