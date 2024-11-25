@@ -1,5 +1,6 @@
 @use '../../../adr-colors';
 @use '../../../utilities.scss';
+$animationSpeed: 10s;
 
 h1, h2, h3, h4 {
   text-align: center;
@@ -60,6 +61,33 @@ h2, h4 {
 .card-text {
   font-size: 2rem;
 }
+
+@keyframes scroll-header-home {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-300px * 3))}
+}
+
+.slider-home-header {
+  padding: .5rem;
+	overflow: hidden;
+	.slide-track-home-header {
+		animation: scroll-header-home ($animationSpeed*2) linear infinite;
+		display: flex;
+		width: calc(300px * 9);
+/*     border: 1px solid red; */
+	}
+	.slide {
+    background: #fff;
+    padding: 10px 10px;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+	}
+  .slide:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+
 /* -------------------------------------------------------------- */
 .te-ayudamos-container{
   padding: 0 4rem 0 4rem;
@@ -75,7 +103,7 @@ h2, h4 {
 }
 .te-ayudamos {
   margin-top: 4rem;
-  font-weight: normal;
+  font-weight: 300;
   color: adr-colors.$primary-adr;
 }
 .card-title {
@@ -100,6 +128,7 @@ h2, h4 {
 }
 .card-body-home-ayuda .card-title{
   font-size: 1.5rem;
+  font-weight: 300
 }
 .card-border-emprendedor{
   border-top: 5px solid adr-colors.$primary-adr;
@@ -167,7 +196,7 @@ ol, ul {
   padding: 1rem;
 }
 .title-blanco {
-  color: #fff;
+  color: #fff!important;
   margin-bottom: 0;
 }
 .industria {
@@ -195,7 +224,8 @@ ol, ul {
 .somos-adr-title {
   padding: 2rem 0 6rem 0;
   h1 {
-    font-weight: normal;
+    font-weight: 300;
+
   }
 }
 .slider-somos {
@@ -270,7 +300,7 @@ ol, ul {
 .contador-title {
   margin-bottom: 2rem;
   h1 {
-    font-weight: normal;
+    font-weight: 300;
   }
 }
 .contador-background {
@@ -286,18 +316,27 @@ ol, ul {
   padding: 2rem;
   color: #fff;
   text-align: center;
+  h4 {
+    color: #fff;
+  }
 }
 .asesoramiento{
   background-color: adr-colors.$asesoramiento;
   padding: 2rem;
   color: #fff;
   text-align: center;
+  h4 {
+    color: #fff;
+  }
 }
 .alumnos{
   background-color: adr-colors.$alumnos;
   padding: 2rem;
   color: #fff;
   text-align: center;
+  h4 {
+    color: #fff;
+  }
 }
 .number{
   font-weight: bolder;
@@ -307,7 +346,7 @@ ol, ul {
 .colaboradores-title {
   margin-bottom: 2rem;
   h1 {
-    font-weight: normal;
+    font-weight: 300;
   }
 }
 .colaboradores-container {
@@ -322,7 +361,7 @@ ol, ul {
 }
 
 /* ------------------------------------------------------------------------------------- */
-$animationSpeed: 60s;
+
 
 // Animation
 @keyframes scroll {
