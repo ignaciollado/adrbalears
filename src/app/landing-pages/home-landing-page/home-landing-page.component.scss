@@ -7,6 +7,9 @@ h1, h2, h3, h4 {
   font-weight: bolder;
   color: adr-colors.$primary-adr;
 }
+.gallery-home-header {
+  margin-bottom: 3rem;
+}
 .title-header {
   padding: 0 3rem 0 3rem;
 }
@@ -21,24 +24,6 @@ h3 {
 }
 h2, h4 {
   font-weight: 300;
-}
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
 }
 .color-adr-sec {
   color: adr-colors.$secondary-adr;
@@ -72,7 +57,7 @@ h2, h4 {
 .card-title {
   font-size: 2.25rem;
   padding-bottom: .5rem;
-  :hover{
+  :hover {
     color: adr-colors.$secondary-adr!important;
   }
 }
@@ -88,21 +73,26 @@ h2, h4 {
 .slider-home-header {
   padding: .5rem;
 	overflow: hidden;
+/*   overflow-x: scroll;
+  scrollbar-color: adr-colors.$primary-adr rgb(128, 128, 128, .3);
+  scrollbar-width: thin; */
 	.slide-track-home-header {
-		animation: scroll-header-home ($animationSpeed*2) linear infinite;
+		animation: scroll-header-home ($animationSpeed) linear infinite;
 		display: flex;
 		width: calc(300px * 9);
-/*     border: 1px solid red; */
 	}
 	.slide {
-    background: #fff;
+    /* background: #fff; */
     padding: 10px 10px;
     float: left;
     margin-right: 25px;
     position: relative;
 	}
-  .slide:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  .slide-track-home-header {
+    background-color: adr-colors.$primary-adr;
+  }
+  .slide-track-home-header:hover {
+    animation-play-state: paused;
   }
 }
 
@@ -331,7 +321,7 @@ ol, ul {
 }
 .asistentes{
   background-color: adr-colors.$asistentes;
-  padding: 2rem;
+  padding: 2rem 1rem;
   color: #fff;
   text-align: center;
   h4 {
@@ -340,7 +330,7 @@ ol, ul {
 }
 .asesoramiento{
   background-color: adr-colors.$asesoramiento;
-  padding: 2rem;
+  padding: 2rem 1rem;
   color: #fff;
   text-align: center;
   h4 {
@@ -349,7 +339,7 @@ ol, ul {
 }
 .alumnos{
   background-color: adr-colors.$alumnos;
-  padding: 2rem;
+  padding: 2rem 1rem;
   color: #fff;
   text-align: center;
   h4 {
@@ -390,8 +380,10 @@ ol, ul {
   padding: .5rem;
 	overflow: hidden;
   overflow-x: scroll;
+  scrollbar-color: adr-colors.$primary-adr adr-colors.$secondary-adr;
+  scrollbar-width: thin;
 	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
+		animation: scroll ($animationSpeed*4) linear infinite;
 		display: flex;
 		width: calc(250px * 50);
 	}
