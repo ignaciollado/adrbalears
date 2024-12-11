@@ -59,41 +59,9 @@ export class NewsListComponent implements OnInit {
         this.currentLang = 'ca-ES'
         this.wpCurrentLang = 25
     }
-    //this.getNoticias(this.currentLang, ['11', '420', '421', '422'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
+
     this.getWPNoticias(this.wpCurrentLang, ['27'], this.newsToDisplay) /* 11 id de la categoría NOTICIA */
   }
-
-/*   getNoticias(currentLanguage:string, currentCategory: string[], articlesNumber: any) {
-    let interesadoEn: string | null, objetivoPrincipal: string | null, situacionActual: string | null
-    interesadoEn = localStorage.getItem("interesadoEn")
-    objetivoPrincipal = localStorage.getItem("objetivoPrincipal")
-    situacionActual = localStorage.getItem("situacionActual")
-
-    if ( !articlesNumber ) {
-      articlesNumber = this.totalNewsToDisplay
-    }
-    
-    this.articleContent.getAll()
-        .subscribe( (resp:any) => {
-          this.noticias = resp.data
-          this.noticias = this.noticias.filter( (item : reqArticle)  => item.attributes.state === 1)
-          this.noticias = this.noticias.filter( (item : reqArticle)   => item.attributes.language === `${currentLanguage}`) 
-          this.noticias = this.noticias.filter( (item : reqArticle)   => currentCategory.includes(item.relationships.category.data.id))
-          this.listNewsReady = true
-          if (this.actualProjectFase) {
-            this.noticias.map((item:reqArticle) => {
-              if (Object.values(item.attributes.tags).includes(this.actualProjectFase)) {
-                this.noticiasTemp.push(item)
-              }
-            })
-            this.noticias = this.noticiasTemp
-          }
-          if (this.newsToDisplay != '9999') {
-            this.noticias = this.noticias.slice(0, articlesNumber) 
-          }
-    } ) 
-    window.scroll(0,0)
-  } */
 
   getWPNoticias(currentLanguage:number, currentCategory: string[], articlesNumber: any) {
     if ( !articlesNumber ) {

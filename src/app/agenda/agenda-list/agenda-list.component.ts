@@ -140,5 +140,5 @@ export class AgendaListComponent {
        (mediaItem: WpPageFeaturedMedia) => {
          this.contenidoMedia.push(mediaItem)
        })
-   }
+  }
 }

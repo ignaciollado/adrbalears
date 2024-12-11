@@ -26,7 +26,7 @@ import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component'
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
   { path: 'news-agenda-list/:newsToDisplay', component: ContainerNewsAgendaComponent },
-  { path: 'news-agenda-list-all/:newsToDisplay', component: AgendaListComponent },
+  { path: 'news-list-all/:newsToDisplay', component: NewsListComponent },
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
   { path: 'ayudas-y-subvenciones', component: GrantsSubsidiesComponent},
   { path: 'ajuts-i-subvencions', component: GrantsSubsidiesComponent},

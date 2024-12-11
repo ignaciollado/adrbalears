@@ -1,46 +1,25 @@
-<a [routerLink]="['/news-agenda-list-all', 9999]">
-  <h1 *ngIf="currentLang === 'es-ES'">Noticias</h1>
-  <h1 *ngIf="currentLang === 'ca-ES'">Notícies</h1>
+<a [routerLink]="['/news-list-all', 9999]">
+  <h1 *ngIf="currentLang === 'es-ES'" tooltip="Ver todas las noticias">Noticias</h1>
+  <h1 *ngIf="currentLang === 'ca-ES'" tooltip="Veure totes les notícies">Notícies</h1>
 </a>
-<!-- <section *ngIf="noticias">
-  <div class="row">
-  <div *ngFor="let noticia of noticias">
-    <div class="col">
-      <section class="card">
-        <figure class="card-header">
-          <img *ngIf="noticia.attributes.images.image_intro" class="img-fluid" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
-          <img *ngIf="!noticia.attributes.images.image_intro" class="img-fluid" src="https://picsum.photos/310?grayscale&blur=4" alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
-        </figure>
-        <section class="card-body">
-          <a [routerLink]="['/news-agenda-detail', noticia.attributes.alias, noticia.id]">
-            <h4 *ngIf="faseNewsToDisplay==='11'" class="card-title">{{noticia.attributes.title}}</h4>
-            <h5 *ngIf="faseNewsToDisplay!=='11'" class="card-title">{{noticia.attributes.title}}</h5>
-          </a>
-        </section>
-      </section>
-    </div>
-  </div>
-  </div>
-</section> -->
-
 <section *ngIf="wpPosts">
   <div class="row">
-  <div *ngFor="let noticia of wpPosts">
-    <div class="col">
-      <section class="card">
-        <figure class="card-header">
-          <div *ngFor="let media of contenidoMedia">
-            <img *ngIf="media.id === noticia.featured_media" class="img-fluid" src={{media.guid.rendered}} alt={{noticia.title.rendered}} title={{noticia.title.rendered}} /> 
-          </div>
-        </figure>
-        <section class="card-body">
-          <a [routerLink]="['/news-agenda-detail', noticia.slug, noticia.id]">
-            <h5 class="card-title" [innerHTML] = "noticia.title.rendered">{{noticia.title.rendered}}</h5>
-          </a>
+    <div *ngFor="let noticia of wpPosts">
+      <div class="col">
+        <section class="card">
+          <figure class="card-header">
+            <div *ngFor="let media of contenidoMedia">
+              <img *ngIf="media.id === noticia.featured_media" class="img-fluid" src={{media.guid.rendered}} alt={{noticia.title.rendered}} title={{noticia.title.rendered}} /> 
+            </div>
+          </figure>
+          <section class="card-body">
+            <a [routerLink]="['/news-agenda-detail', noticia.slug, noticia.id]">
+              <h5 class="card-title" [innerHTML] = "noticia.title.rendered">{{noticia.title.rendered}}</h5>
+            </a>
+          </section>
         </section>
-      </section>
+      </div>
     </div>
-  </div>
   </div>
 </section>
 
