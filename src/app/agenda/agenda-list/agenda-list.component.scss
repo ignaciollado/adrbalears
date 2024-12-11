@@ -7,6 +7,9 @@ h1 {
 h2 {
   margin-bottom: 0;
 }
+h5 {
+  color: adr-colors.$primary-adr;
+}
 .row {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -26,7 +29,7 @@ h2 {
 }
 
 .card-body {
-  min-height: 25rem;
+  min-height: 15rem;
 }
 
 a {

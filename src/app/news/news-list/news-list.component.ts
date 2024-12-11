@@ -122,7 +122,4 @@ export class NewsListComponent implements OnInit {
         this.contenidoMedia.push(mediaItem)
       })
   }
-
- 
-
 }

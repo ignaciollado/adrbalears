@@ -1,21 +1,27 @@
-<h1>{{'Agenda' | translate}}</h1>
+<h1>{{'News' | translate}}</h1>
 
-<!-- <section class="event-list-container" *ngIf="agendaEmprender?.length !== 0">
-  <div class="row">
-  <div *ngFor="let itemAgendaEmpr of agendaEmprender">
-      <div class="card">
-        <div>
-          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-emprender.webp" alt={{itemAgendaEmpr.attributes.title}} title={{itemAgendaEmpr.attributes.title}} />
-        </div>
-        <div class="card-body" [innerHTML]="itemAgendaEmpr.attributes.text"></div>
+  <section *ngIf="wpPosts">
+    <div class="row">
+    <div *ngFor="let noticia of wpPosts">
+      <div class="col">
+        <section class="card">
+          <figure class="card-header">
+            <div *ngFor="let media of contenidoMedia">
+              <img *ngIf="media.id === noticia.featured_media" class="img-fluid" src={{media.guid.rendered}} alt={{noticia.title.rendered}} title={{noticia.title.rendered}} /> 
+            </div>
+          </figure>
+          <section class="card-body">
+            <a [routerLink]="['/news-agenda-detail', noticia.slug, noticia.id]">
+              <h5 class="card-title" [innerHTML] = "noticia.title.rendered">{{noticia.title.rendered}}</h5>
+            </a>
+          </section>
+        </section>
       </div>
-  </div>
-  </div>
-</section>
-<div class="no-hay-eventos emprendre-bck" *ngIf="agendaEmprender?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">#EMPRENDRE, actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">#EMPRENDRE, actualment no tenim esdeveniments programats</h2>
-</div> -->
+    </div>
+    </div>
+  </section>
+
+<h1>{{'Agenda' | translate}}</h1>
 <section class="event-list-container" *ngIf="wpAgendaEmprender?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaEmprender of wpAgendaEmprender">
@@ -33,22 +39,6 @@
   <h2 *ngIf="currentLang === 'ca-ES'">#EMPRENDRE, actualment no tenim esdeveniments programats</h2>
 </div>
 
-<!-- <section class="event-list-container" *ngIf="agendaConectar?.length !== 0">
-  <div class="row">
-  <div *ngFor="let itemAgendaConectar of agendaConectar">
-      <section class="card">
-        <div>
-          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-conectar.webp" alt={{itemAgendaConectar.attributes.title}} title={{itemAgendaConectar.attributes.title}} />
-        </div>
-        <div class="card-body" [innerHTML]="itemAgendaConectar.attributes.text"></div>
-      </section>
-  </div>
-  </div>
-</section>
-<div class="no-hay-eventos connectar-bck" *ngIf="agendaConectar?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">#CONNECTAR, actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">#CONNECTAR, actualment no tenim esdeveniments programats</h2>
-</div> -->
 <section class="event-list-container" *ngIf="wpAgendaConectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaConectar of wpAgendaConectar">
@@ -66,23 +56,6 @@
   <h2 *ngIf="currentLang === 'ca-ES'">#CONNECTAR, actualment no tenim esdeveniments programats</h2>
 </div>
 
-
-<!-- <section class="event-list-container" *ngIf="agendaProyectar?.length !== 0">
-  <div class="row">
-    <div *ngFor="let itemAgendaProyectar of agendaProyectar">
-      <div class="card">
-        <div>
-          <img class="img-fluid" src="../../../assets/images/logo-adrbalears-proyectar.webp" alt={{itemAgendaProyectar.attributes.title}} title={{itemAgendaProyectar.attributes.title}} />
-        </div>
-        <div class="card-body" [innerHTML]="itemAgendaProyectar.attributes.text"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="no-hay-eventos projectar-bck" *ngIf="agendaProyectar?.length === 0">
-  <h2 *ngIf="currentLang === 'es-ES'">#PROJECTAR, actualmente no tenemos eventos programados</h2>
-  <h2 *ngIf="currentLang === 'ca-ES'">#PROJECTAR, actualment no tenim esdeveniments programats</h2>
-</div> -->
 <section class="event-list-container" *ngIf="wpAgendaProyectar?.length !== 0">
   <div class="row">
   <div *ngFor="let itemAgendaProyectar of wpAgendaProyectar">

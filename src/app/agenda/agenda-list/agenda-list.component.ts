@@ -6,6 +6,7 @@ import { reqArticle } from '../../Models/article-data.dto';
 import { WpPost } from '../../Models/wp-post-data.dto';
 import { WpTag } from '../../Models/wp-tag.dto';
 import { WPpostService } from '../../services/wp-post.service';
+import { WpPageFeaturedMedia } from '../../Models/wp-page-featured-media.dto';
 
 @Component({
   selector: 'app-agenda-list',
@@ -25,13 +26,19 @@ export class AgendaListComponent {
   public wpAgendaConectar: WpPost[] = []
   public wpAgendaProyectar: WpPost[] = []
   public wpFeaturedMedia: string[] = []
+  public contenidoMedia: WpPageFeaturedMedia[] = []
   public wpTags: WpTag[] = []
+  public wpPosts: WpPost[] = []
 
   listAgendaReady: boolean = false
 
   @Input () totalNewsToDisplay: string = "8"
 
-  constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private agendaWPContent: WPpostService, private route: ActivatedRoute,
+  constructor( public translateService: TranslateService,
+    private articleContent: ArticleContentService,
+    private wpPostsList: WPpostService,
+    private articleWPContent: WPpostService,
+    private route: ActivatedRoute,
     private router: Router ) { 
       this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
   }
@@ -56,6 +63,7 @@ export class AgendaListComponent {
     }
     this.getAgenda( this.currentLang, ['405', '406', '407'], this.newsToDisplay ) /* 405: agenda-emprendre, 406: agenda-conectar, 407: agenda-proyectar */
     this.getWPAgenda( this.wpCurrentLang, [31, 32, 33, 34], +this.newsToDisplay ) /* 31: agenda, 32: agenda-emprendre, 33: agenda-conectar, 34: agenda-proyectar */
+    this.getWPPosts( this.wpCurrentLang, [31, 32, 33, 34], 9999 )
   }
 
   getAgenda(currentLanguage:string, categories: string[], itemsNumber: string) {
@@ -89,7 +97,7 @@ export class AgendaListComponent {
     if ( !itemsNumber ) {
       itemsNumber = +this.totalNewsToDisplay
     }
-    this.agendaWPContent.getAll()
+    this.wpPostsList.getAll()
       .subscribe( (agendaItems:WpPost[]) => {
         const now = new Date
         this.wpAgenda = agendaItems
@@ -110,4 +118,27 @@ export class AgendaListComponent {
       }) 
     window.scroll(0,0)
   }
+
+  getWPPosts(currentLanguage:number, categories: number[], itemsNumber: number) {
+    if (!itemsNumber) {
+      itemsNumber = 9999
+    }
+    this.wpPostsList.getAll()
+      .subscribe((postItems: WpPost[]) => {
+        this.wpPosts = postItems
+        this.wpPosts = this.wpPosts.filter((item : WpPost) => item.status === 'publish')
+        this.wpPosts = this.wpPosts.filter((item : WpPost) => item.categories.includes(currentLanguage))
+        this.wpPosts.map((item:WpPost) => {
+          this.getFeaturedMedia(item.featured_media)
+        })
+    })
+  }
+
+  getFeaturedMedia (idMedia: number):any {
+    this.articleWPContent.getOneFeaturedMedia(idMedia)
+     .subscribe(
+       (mediaItem: WpPageFeaturedMedia) => {
+         this.contenidoMedia.push(mediaItem)
+       })
+   }
 }
