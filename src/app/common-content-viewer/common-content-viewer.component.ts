@@ -14,14 +14,18 @@ import { CooperativaDTO } from '../Models/cooperativa.dto';
 export class CommonContentViewerComponent {
   public id:string | null = this.route.snapshot.paramMap.get('id')
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
-  currentLang: string | undefined;
+  public currentLang: string | undefined;
   public contenido: reqArticle | undefined 
   public cooperativaList: CooperativaDTO[] = []
   public cooperativaListTemp: CooperativaDTO[] = []
+  public isProgramaIbemprenJove: boolean = false
+  public isJES: boolean = false
+  public isJEA: boolean = false
+  public isJEP: boolean = false
 
   constructor( public translateService: TranslateService, 
     private articleService: ArticleContentService, 
-    private cooperativaService: IbemprenjoveService,
+    /* private cooperativaService: IbemprenjoveService, */
     private route: ActivatedRoute,
     private router: Router ) { }
 
@@ -42,7 +46,17 @@ export class CommonContentViewerComponent {
   
       this.getContent(this.id)
       if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
-        this.getCooperativas ( +this.program_id, 4)
+        this.isProgramaIbemprenJove = true
+        if (this.program_id === '2') {
+          this.isJES = true
+        }
+        if (this.program_id === '3') {
+          this.isJEA = true
+        }
+        if (this.program_id === '1') {
+          this.isJEP = true
+        }
+        /* this.getCooperativas ( +this.program_id, 4) */
       }
       
       window.scroll(0,0)
@@ -57,13 +71,13 @@ export class CommonContentViewerComponent {
           })
     }
 
-    getCooperativas(program: number, year: number) {
+/*     getCooperativas(program: number, year: number) {
       this.cooperativaService.getAll(program, year)
         .subscribe((cooperativa:any[]) => {
           this.cooperativaListTemp = cooperativa
           this.cooperativaList = cooperativa['data'].map((item:any) => item)
         })
 
-    }
+    } */
 
 }

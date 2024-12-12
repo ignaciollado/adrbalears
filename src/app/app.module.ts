@@ -59,6 +59,9 @@ import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.co
 import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
 import { HomeLandingPageComponent } from './landing-pages/home-landing-page/home-landing-page.component';
 import { AgendaHomeComponent } from './container-news-agenda/agenda-home/agenda-home.component';
+import { CooperativasComponent } from './ibemprenjove/cooperativas/cooperativas.component';
+import { PremisComponent } from './ibemprenjove/premis/premis.component';
+import { HistoricoComponent } from './ibemprenjove/historico/historico.component';
 
 
 // AoT requires an exported function for factories
@@ -105,7 +108,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     GrantsSubsidiesComponent,
     GuidesAndPublicationsComponent,
     HomeLandingPageComponent,
-    AgendaHomeComponent
+    AgendaHomeComponent,
+    CooperativasComponent,
+    PremisComponent,
+    HistoricoComponent
   ],
   imports: [NgbModule, TooltipModule.forRoot(),
     BrowserModule,

@@ -1,18 +1,23 @@
-<div *ngIf="contenido">
-    <div class="card">
-    
-      <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
-        <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
-      </div>
-          
-      <h2 class="card__title">{{contenido.attributes.title}}</h2>
-            
-      <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></div>
-    
+<section *ngIf="contenido" ngClass="common-container">
+  <div class="card">
+    <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
+      <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
     </div>
-</div>
+          
+    <h2 [ngClass]="{'card__title__jes': isJES, 'card__title__jea': isJEA, 'card__title__jep': isJEP}">{{contenido.attributes.title}}</h2>
+    
+    <section ngClass="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></section>
+  </div>
+  <section *ngIf="isProgramaIbemprenJove">
+    <ul>
+      <li><a [routerLink]="['/ibemprenjove-cooperativas', program_id]">Cooperatives</a></li>
+      <li><a [routerLink]="['/ibemprenjove-premios', program_id]">Premis</a></li>
+      <li><a [routerLink]="['/ibemprenjove-historico', program_id]">Històric</a></li>
+    </ul>
+  </section>
+</section>
 
-<div *ngIf="cooperativaList">
+<section *ngIf="cooperativaList">
   <div class="row">
     <div *ngFor="let cooperativa of cooperativaList">
       <div class="col">
@@ -32,7 +37,7 @@
       </div>
     </div>
     </div>
-</div> 
+</section> 
 
 <div class="loading-data" *ngIf="!contenido">
   <button class="alert alert-info" type="button" disabled>

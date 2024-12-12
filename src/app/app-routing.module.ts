@@ -22,6 +22,9 @@ import { GrantsSubsidiesComponent } from './grants-subsidies/grants-subsidies.co
 import { GuidesAndPublicationsComponent } from './guides-and-publications/guides-and-publications.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
+import { CooperativasComponent } from './ibemprenjove/cooperativas/cooperativas.component';
+import { PremisComponent } from './ibemprenjove/premis/premis.component';
+import { HistoricoComponent } from './ibemprenjove/historico/historico.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
@@ -38,6 +41,9 @@ const routes: Routes = [
 
   { path: 'ibemprenjove', component: LandingPageComponent },
   { path: 'ibemprenjove/es/:projectName', component: LandingPageComponent },
+  { path: 'ibemprenjove-cooperativas/:id', component: CooperativasComponent },
+  { path: 'ibemprenjove-premios/:id', component: PremisComponent },
+  { path: 'ibemprenjove-historico/:id', component: HistoricoComponent },
 
   { path: 'ibempren', component: LandingPageComponent },
   { path: 'ibempren/es/iempren-recursos-para-emprender', component: LandingPageComponent },

@@ -1,0 +1,22 @@
+<h1>Cooperativas {{cooperativaProgram}}</h1>
+<section *ngIf="cooperativaList">
+  <div class="row">
+    <div *ngFor="let cooperativa of cooperativaList">
+      <div class="col">
+        <div class="adr-card">
+          <div class="card-header">
+            <img *ngIf="cooperativa['logo']" src="https://app.iemprenjove.es/storage/{{cooperativa['logo']}}" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
+            <img *ngIf="!cooperativa['logo']" src="https://picsum.photos/id/137/200/200?grayscale&blur=2" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
+          </div>
+          <div class="card-body">
+             <h4>{{cooperativa['name']}}</h4>
+             <h5>{{cooperativa['centre']['name']}}</h5>
+          </div>
+          <div class='card-footer'>
+            <a href="{{cooperativa['video']}}">Video</a> | <a href="{{cooperativa['url']}}">Web</a> | <a href="{{cooperativa['socialnetworks']}}">Xarxes socials</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
