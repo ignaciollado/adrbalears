@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { IbemprenjoveService } from '../../services/ibemprenjove.service';
@@ -7,10 +7,10 @@ import { CooperativaDTO } from '../../Models/cooperativa.dto';
 @Component({
   selector: 'app-cooperativas',
   templateUrl: './cooperativas.component.html',
-  styleUrl: './cooperativas.component.scss'
+  styleUrl: './cooperativas.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class CooperativasComponent {
-
   public program_id: string | null = this.route.snapshot.paramMap.get('id')
   public currentLang: string | undefined;
   public cooperativaList: CooperativaDTO[] = []
@@ -40,23 +40,20 @@ export class CooperativasComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-  
-      if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
-        this.isProgramaIbemprenJove = true
-        if (this.program_id === '2') {
+      if (this.program_id === '2') {
           this.isJES = true
           this.cooperativaProgram = "JES"
         }
-        if (this.program_id === '3') {
+      if (this.program_id === '3') {
           this.isJEA = true
           this.cooperativaProgram = "JEA"
         }
-        if (this.program_id === '1') {
+      if (this.program_id === '1') {
           this.isJEP = true
           this.cooperativaProgram = "JEP"          
         }
-        this.getCooperativas ( +this.program_id, 4)
-      }
+      this.getCooperativas ( +this.program_id, 4)
+   
       window.scroll(0,0)
     }
 

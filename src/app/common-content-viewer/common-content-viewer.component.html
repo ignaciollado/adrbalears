@@ -1,5 +1,5 @@
 <section *ngIf="contenido" ngClass="common-container">
-  <div class="card">
+  <section class="card main-content">
     <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
       <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
     </div>
@@ -7,37 +7,26 @@
     <h2 [ngClass]="{'card__title__jes': isJES, 'card__title__jea': isJEA, 'card__title__jep': isJEP}">{{contenido.attributes.title}}</h2>
     
     <section ngClass="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></section>
-  </div>
-  <section *ngIf="isProgramaIbemprenJove">
+  </section>
+  <section *ngIf="isProgramaIbemprenJove" ngClass="imprenjove-adds">
     <ul>
-      <li><a [routerLink]="['/ibemprenjove-cooperativas', program_id]">Cooperatives</a></li>
-      <li><a [routerLink]="['/ibemprenjove-premios', program_id]">Premis</a></li>
-      <li><a [routerLink]="['/ibemprenjove-historico', program_id]">Històric</a></li>
+      <li><a [routerLink]="['/ibemprenjove-cooperativas', program_id]">
+        <span *ngIf="currentLang === 'es-ES'" role="status">Cooperativas</span>
+        <span *ngIf="currentLang === 'ca-ES'" role="status">Cooperatives</span>
+      </a></li>
+      <li>
+        <a [routerLink]="['/ibemprenjove-premios', program_id]">
+        <span *ngIf="currentLang === 'es-ES'" role="status">Premios</span>
+        <span *ngIf="currentLang === 'ca-ES'" role="status">Premis</span>
+        </a>
+      </li>
+      <li><a [routerLink]="['/ibemprenjove-historico', program_id]">
+        <span *ngIf="currentLang === 'es-ES'" role="status">Histórico</span>
+        <span *ngIf="currentLang === 'ca-ES'" role="status">Històric</span>
+        </a></li>
     </ul>
   </section>
 </section>
-
-<section *ngIf="cooperativaList">
-  <div class="row">
-    <div *ngFor="let cooperativa of cooperativaList">
-      <div class="col">
-        <div class="adr-card">
-          <div class="card-header">
-            <img *ngIf="cooperativa['logo']" src="https://app.iemprenjove.es/storage/{{cooperativa['logo']}}" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
-            <img *ngIf="!cooperativa['logo']" src="https://picsum.photos/id/137/200/200?grayscale&blur=2" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
-          </div>
-          <div class="card-body">
-             <h4>{{cooperativa['name']}}</h4>
-             <h5>{{cooperativa['centre']['name']}}</h5>
-          </div>
-          <div class='card-footer'>
-            <a href="{{cooperativa['video']}}">Video</a> | <a href="{{cooperativa['url']}}">Web</a> | <a href="{{cooperativa['socialnetworks']}}">Xarxes socials</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-</section> 
 
 <div class="loading-data" *ngIf="!contenido">
   <button class="alert alert-info" type="button" disabled>

@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ArticleContentService } from '../services/article-content.service';
-import { IbemprenjoveService } from '../services/ibemprenjove.service';
 import { reqArticle } from '../Models/article-data.dto';
-import { CooperativaDTO } from '../Models/cooperativa.dto';
 
 @Component({
   selector: 'app-common-content-viewer',
@@ -16,8 +14,6 @@ export class CommonContentViewerComponent {
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
   public currentLang: string | undefined;
   public contenido: reqArticle | undefined 
-  public cooperativaList: CooperativaDTO[] = []
-  public cooperativaListTemp: CooperativaDTO[] = []
   public isProgramaIbemprenJove: boolean = false
   public isJES: boolean = false
   public isJEA: boolean = false
@@ -25,7 +21,6 @@ export class CommonContentViewerComponent {
 
   constructor( public translateService: TranslateService, 
     private articleService: ArticleContentService, 
-    /* private cooperativaService: IbemprenjoveService, */
     private route: ActivatedRoute,
     private router: Router ) { }
 
@@ -70,14 +65,4 @@ export class CommonContentViewerComponent {
               this.contenido = resp.data
           })
     }
-
-/*     getCooperativas(program: number, year: number) {
-      this.cooperativaService.getAll(program, year)
-        .subscribe((cooperativa:any[]) => {
-          this.cooperativaListTemp = cooperativa
-          this.cooperativaList = cooperativa['data'].map((item:any) => item)
-        })
-
-    } */
-
 }

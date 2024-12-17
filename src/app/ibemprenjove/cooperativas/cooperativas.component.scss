@@ -1,3 +1,42 @@
 section {
   margin-top: 2rem;
 }
+
+.cooperativa-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card__title__jes {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #418ac9;
+}
+.card__title__jes_underline {
+  font-weight: bolder;
+  color: #418ac9;
+}
+.card__title__jea {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #f49618;
+}
+.card__title__jea_underline {
+  font-weight: bolder;
+  color: #f49618;
+}
+.card__title__jep {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #4aad4d;
+}
+.card__title__jep_underline {
+  font-weight: bolder;
+  color: #4aad4d;
+}
