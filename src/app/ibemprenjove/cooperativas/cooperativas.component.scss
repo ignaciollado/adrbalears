@@ -5,9 +5,14 @@ section {
 .cooperativa-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 4rem;
 }
 
-.card__title__jes {
+.item-cooperativa-header, .item-cooperativa-body, .item-cooperativa-footer {
+  text-align: center;
+}
+
+.item-cooperativa__title__jes {
   grid-area: title;
   padding-right: 0;
   font-size: 3rem;
@@ -15,10 +20,12 @@ section {
   color: #418ac9;
 }
 .card__title__jes_underline {
-  font-weight: bolder;
-  color: #418ac9;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #418ac9;
 }
-.card__title__jea {
+.item-cooperativa__title__jea {
   grid-area: title;
   padding-right: 0;
   font-size: 3rem;
@@ -26,10 +33,12 @@ section {
   color: #f49618;
 }
 .card__title__jea_underline {
-  font-weight: bolder;
-  color: #f49618;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #f49618;
 }
-.card__title__jep {
+.item-cooperativa__title__jep {
   grid-area: title;
   padding-right: 0;
   font-size: 3rem;
@@ -37,6 +46,16 @@ section {
   color: #4aad4d;
 }
 .card__title__jep_underline {
-  font-weight: bolder;
-  color: #4aad4d;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #4aad4d;
+}
+
+@media screen and (max-width: 760px) {
+  .cooperativa-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
 }

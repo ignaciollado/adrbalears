@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ArticleContentService } from '../services/article-content.service';
@@ -7,7 +7,8 @@ import { reqArticle } from '../Models/article-data.dto';
 @Component({
   selector: 'app-common-content-viewer',
   templateUrl: './common-content-viewer.component.html',
-  styleUrl: './common-content-viewer.component.scss'
+  styleUrl: './common-content-viewer.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class CommonContentViewerComponent {
   public id:string | null = this.route.snapshot.paramMap.get('id')

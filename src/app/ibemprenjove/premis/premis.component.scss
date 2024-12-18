@@ -20,8 +20,9 @@ p {
 .has-theme-palette-6-color { /* JES */
   grid-area: title;
   padding-right: 0;
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   color: #418ac9;
 }
 .wp-block-separator {
@@ -33,6 +34,10 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 .has-theme-palette-5-color { /* JEA */
   grid-area: title;
@@ -80,4 +85,21 @@ td {
 }
 a:hover, a:focus, a:active {
   color: #ffcd1c!important;
+}
+
+
+.cooperativa-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+@media screen and (max-width: 760px) {
+  .card{
+    padding-left: .5rem;
+  }
+  .wp-block-columns {
+    grid-template-columns: 1fr;
+  }
+  
 }

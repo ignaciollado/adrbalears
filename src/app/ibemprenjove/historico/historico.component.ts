@@ -13,7 +13,8 @@ import { CooperativaDTO } from '../../Models/cooperativa.dto';
 export class HistoricoComponent {
   public program_id: string | null = this.route.snapshot.paramMap.get('id')
   public currentLang: string | undefined;
-  public cooperativaList: CooperativaDTO[] = []
+  public cooperativaList2324: CooperativaDTO[] = []
+  public cooperativaList2223: CooperativaDTO[] = []
   public cooperativaListTemp: CooperativaDTO[] = []
   public isProgramaIbemprenJove: boolean = false
   public isJES: boolean = false
@@ -52,18 +53,25 @@ export class HistoricoComponent {
           this.isJEP = true
           this.cooperativaProgram = "JEP"          
         }
-      this.getCooperativas ( +this.program_id, [4, 3, 2, 1])
+      this.getCooperativas2324 ( +this.program_id, 3)
+      this.getCooperativas2223 ( +this.program_id, 2)
+
    
       window.scroll(0,0)
     }
 
-    getCooperativas(program: number, year: number[]) {
-
-      this.cooperativaService.getAll(program, year[0])
+    getCooperativas2324(program: number, year: number) {
+      this.cooperativaService.getAll(program, year)
         .subscribe((cooperativa:any[]) => {
         this.cooperativaListTemp = cooperativa
-        this.cooperativaList = cooperativa['data'].map((item:any) => item)
+        this.cooperativaList2324 = cooperativa['data'].map((item:any) => item)
       })
-
+    }
+    getCooperativas2223(program: number, year: number) {
+      this.cooperativaService.getAll(program, year)
+        .subscribe((cooperativa:any[]) => {
+        this.cooperativaListTemp = cooperativa
+        this.cooperativaList2223 = cooperativa['data'].map((item:any) => item)
+      })
     }
 }

@@ -1,13 +1,12 @@
 <section *ngIf="contenido" ngClass="common-container">
-  <section class="card main-content">
+  <section class="main-content">
     <div class='card__head' *ngIf="contenido.attributes.images.image_fulltext">
       <img width="763" height="429" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
-    </div>
-          
+    </div>    
     <h2 [ngClass]="{'card__title__jes': isJES, 'card__title__jea': isJEA, 'card__title__jep': isJEP}">{{contenido.attributes.title}}</h2>
-    
     <section ngClass="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink"></section>
   </section>
+
   <section *ngIf="isProgramaIbemprenJove" ngClass="imprenjove-adds">
     <ul>
       <li><a [routerLink]="['/ibemprenjove-cooperativas', program_id]">

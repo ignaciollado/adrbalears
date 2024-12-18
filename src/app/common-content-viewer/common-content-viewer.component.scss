@@ -1,10 +1,9 @@
 @use '../../adr-colors';
 
-img {
-  width: 100%;
-  height: 200px;
-
+h2 {
+  margin-bottom: 1rem!important;
 }
+
 .loading-data {
   margin-bottom: 25rem;
 }
@@ -14,19 +13,7 @@ img {
   grid-template-areas:  'c_image c_image'
                         'title title'
                         'texto texto';
-  margin-bottom: 2.5rem;
   border: none;
-}
-.main-content {
-  grid-area: maincontent;
-  
-}
-
-.imprenjove-adds {
-  grid-area: imprenjove;
-  align-self: start;
-  background-color: adr-colors.$secondary-adr;
-  padding: 1rem;
 }
 
 h5, h4{
@@ -105,20 +92,30 @@ small {
   margin: 0 .5rem;
 }
 
-.imprenjove-adds a {
-  color: #fff!important;
-  font-size: 1.5rem;
-}
-.iemprenjove-adds ul {
-  list-style: none!important;
+.imprenjove-adds {
+  grid-area: imprenjove;
+  align-self: start;
+  background-color: adr-colors.$primary-adr;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: .5rem;
 }
 
-a:hover, a:active {
-  transition: all .1s linear!important;
-  background-color: transparent!important;
-  text-decoration: underline;
+.imprenjove-adds a {
+  color: #fff!important;
+  font-size: 1.25rem;
 }
-a:hover, a:focus, a:active {
+ul a {
+  color: adr-colors.$primary-adr!important;
+} 
+ul a:hover {
+  text-decoration: underline!important;
+} 
+.imprenjove-adds a:visited {
+  color: #fff!important;
+}
+.imprenjove-adds a:hover {
+  color: #fff!important;
   text-decoration: underline!important;
 }
 
@@ -130,8 +127,10 @@ a:hover, a:focus, a:active {
   color: #418ac9;
 }
 .card__title__jes_underline {
-  font-weight: bolder;
-  color: #418ac9;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #418ac9;
 }
 .card__title__jea {
   grid-area: title;
@@ -141,8 +140,10 @@ a:hover, a:focus, a:active {
   color: #f49618;
 }
 .card__title__jea_underline {
-  font-weight: bolder;
-  color: #f49618;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #f49618;
 }
 .card__title__jep {
   grid-area: title;
@@ -152,12 +153,13 @@ a:hover, a:focus, a:active {
   color: #4aad4d;
 }
 .card__title__jep_underline {
-  font-weight: bolder;
-  color: #4aad4d;
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #4aad4d;
 }
 
-
-@media only screen and (max-width: 795px) {
+@media only screen and (max-width: 760px) {
 
   img {
     width: 100%;
@@ -169,6 +171,7 @@ a:hover, a:focus, a:active {
       height: auto;
   }
   .card {
+    padding-left: .5rem;
     border: none;
     grid-template-columns: 1fr;
     grid-template-areas:    'service'

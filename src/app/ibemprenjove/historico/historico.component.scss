@@ -1,0 +1,65 @@
+
+.cooperativa-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* hr {
+  border: none;
+  height: 12px;
+  background: black;
+  margin: 20px 0;
+}
+ */
+.item-cooperativa-header, .item-cooperativa-body, .item-cooperativa-footer {
+  text-align: center;
+}
+
+.card__title__jes {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #418ac9;
+}
+.card__title__jes_underline {
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #418ac9;
+}
+.card__title__jea {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #f49618;
+}
+.card__title__jea_underline {
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #f49618;
+}
+.card__title__jep {
+  grid-area: title;
+  padding-right: 0;
+  font-size: 3rem;
+  margin-bottom: 2rem!important;
+  color: #4aad4d;
+}
+.card__title__jep_underline {
+  border: none;
+  height: 4px;
+  margin: -2rem 0 2rem 0;
+  background: #4aad4d;
+}
+
+@media screen and (max-width: 760px) {
+  .cooperativa-list {
+    grid-template-columns: 1fr;
+  }
+  
+}
