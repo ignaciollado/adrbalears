@@ -21,7 +21,7 @@ header {
   margin-left: 5rem;
   display: grid;
 }
-.language-select {
+.nav-bar-language {
   grid-area: languageSelect;
   display: grid;
   grid-template-columns: auto auto;
@@ -90,7 +90,7 @@ button:hover {
 
 @media screen and (max-width: 992px) {
   header {
-     grid-template-areas: "navLogo" "mobileMenu" "languageSelect";
+     grid-template-areas: "navLogo" "languageSelect" "mobileMenu";
      grid-template-columns: 100%;
      background-position: 98% 1rem;
      background-size: 100px;
@@ -108,40 +108,10 @@ button:hover {
   }
 }
 
-/* @media screen and (max-width: 760px) {
- header {
-    grid-template-areas: "navLogo mobileMenu" "navLangSede navLangSede";
-  }
-  .nav-bar-top {
-    padding: 0 .5rem;
-  }
-  .mobile-menu-button:hover {
-    background-color: transparent;
-  }
-  .button-header-menu{
-    margin-right: 0;
-  }
-  .nav-bar-bottom {
-    display: none;
-  }
-  .mobile-menu-button {
-    display: block;
-    margin: 0;
-  }
-  div button:hover {
-    color: #000;
-    border-color: #033747;
-  }
-
-a img {
-  width: 450px;
- }
-} */
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 760px) {
   header {
-    grid-template-areas: "navLogo" "mobileMenu" "languageSelect";
-    grid-template-columns: 100%;
+    grid-template-areas: "navLogo" "languageSelect" "mobileMenu";
+    grid-template-columns: 99%;
   }
   .nav-bar-logo {
     margin-left: 0;

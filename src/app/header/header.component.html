@@ -9,7 +9,6 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <section ngbDropdown class="d-inline-block">
@@ -17,13 +16,10 @@
               <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Quienes somos' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Qui som' | translate}}</button>
-
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="news-agenda-list/4">Noticias / Agenda</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="news-agenda-list/4">Notícies / Agenda</button>
-
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="ajuts-i-subvencions">{{'Ajudes i subvencions' | translate}}</button>
-
                 <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparencia' | translate}}</button>
                 <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="transparency-list">{{'Transparència' | translate}}</button>
               </section>
@@ -83,14 +79,11 @@
             <section ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia tu proyecto</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Potencia el teu projecte</button>
-
               <section ngbDropdownMenu aria-labelledby="dropDownADRBalears">
                 <button *ngIf="currentLang === 'es-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Quiero emprender</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="emprendre" ngbDropdownItem routerLink="emprender">Vull emprendre</button>
-
                 <button *ngIf="currentLang === 'es-ES'" class="connectar" ngbDropdownItem routerLink="consolidar">Quiero consolidarme</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="connectar" ngbDropdownItem routerLink="consolidar">Vull consolidar-me</button>
-
                 <button *ngIf="currentLang === 'es-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Quiero crecer</button>
                 <button *ngIf="currentLang === 'ca-ES'" class="projectar" ngbDropdownItem routerLink="crecer">Vull creixer</button>
               </section>
@@ -102,9 +95,9 @@
             </div>
           </li>
           <app-search-the-web></app-search-the-web>
-        <li>
-          <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
-          <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
+        <li class="nav-bar-language">
+            <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
+            <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
         </li>
       </ul>
   </nav>

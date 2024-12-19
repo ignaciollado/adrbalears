@@ -8,13 +8,12 @@
   </div>
   <div *ngIf="true">
   </div>
-
-  <app-slider></app-slider>
-
   <div class="project-link-area">
-    <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
-    <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
-    <ol>
+    <app-slider></app-slider>
+    <section>
+      <h2 *ngIf="currentLang === 'es-ES'">Enlaces de interés</h2>
+      <h2 *ngIf="currentLang === 'ca-ES'">Enllaços d'interès</h2>
+      <ol>
       <li *ngIf="theContentAttributes?.etiquetaenlaceinteresuno">
         <button *ngIf="hasExternalLink1" class='btn {{fasePro}}-bck' (click)="openExternalSite(theContentAttributes!.idcontenidoenlaceinteresuno)">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
         <button *ngIf="!hasExternalLink1" class='btn {{fasePro}}-bck' routerLink="/direct-link/{{theContentAttributes?.idcontenidoenlaceinteresuno}}">{{theContentAttributes?.etiquetaenlaceinteresuno}}</button>
@@ -48,7 +47,8 @@
       <li><button *ngIf="hasExternalSite" class="btn external-site" (click)="openExternalSite(theContentAttributes!.urlportalexterno)">
       <span *ngIf="currentLang === 'es-ES'">Abrir el <strong>portal externo</strong></span>
       <span *ngIf="currentLang === 'ca-ES'">Obrir el <strong>portal extern</strong></span></button></li>
-  </ol>
+      </ol>
+    </section>
   </div>
 </div>
 

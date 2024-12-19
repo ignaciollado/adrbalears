@@ -1,6 +1,6 @@
 .top-landing-page {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 1fr;
   grid-template-areas: "tituloslogan searchtheweb";
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -49,22 +49,24 @@ app-search-the-web {
   grid-area: searchtheweb;
 }
 
-app-slider, .project-link-area{
+/* app-slider, .project-link-area{
   margin-top: 1rem;
-}
+} */
 
-.project-link-area{ 
+.project-link-area { 
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   background-color: #013849;
   color: #ffffff;
   text-align: center;
-  max-height: 500px;
+  max-height: 100%;
 }
 
-.project-link-area ol{
+.project-link-area ol {
   background-color: transparent;
-  margin-top: 3rem;
+  margin-top: 2rem;
   list-style: none;
-  padding-left: 0;
+  padding-left: 2rem;
   border-radius: 0;
 }
 
@@ -243,10 +245,21 @@ button{
 }
 
 @media screen and (max-width: 760px) {
+
   .top-landing-page {
     grid-template-columns: 100%;
     grid-template-areas: "tituloslogan" "searchtheweb";
     margin-bottom: 1rem;
+  }
+
+  .project-link-area { 
+    grid-template-columns: 1fr;
+    max-height: 100%;
+  }
+
+  .project-link-area ol {
+    padding-left: 0;
+    border-radius: 0;
   }
 
   .bottom-landing-page {
@@ -270,6 +283,12 @@ button{
 
   app-news-list {
     margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  .card__body {
+    line-height: 2rem;
+    font-size: 1rem;
   }
 }
 
