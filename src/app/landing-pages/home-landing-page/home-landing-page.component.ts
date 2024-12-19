@@ -16,9 +16,9 @@ export class HomeLandingPageComponent implements OnInit {
   theLeftLema: string = "Nos gustaría ayudarte"
 	theCenterLema: string = "<h1>Solicita asesoramiento</h1>"
 	theRightLema: string = "Ponte en contacto con nosotros"
-  alumnosT: number = 227
-  asesoramientos: number = 121
-  asistentes: number = 227
+  alumnosT: number = 4065
+  asesoramientos: number = 1020
+  asistentes: number = 853
   formSendMail!: FormGroup
   submitted: boolean = false
   successfullySend: boolean = false

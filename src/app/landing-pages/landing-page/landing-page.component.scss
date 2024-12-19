@@ -49,10 +49,6 @@ app-search-the-web {
   grid-area: searchtheweb;
 }
 
-/* app-slider, .project-link-area{
-  margin-top: 1rem;
-} */
-
 .project-link-area { 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -70,9 +66,13 @@ app-search-the-web {
   border-radius: 0;
 }
 
-li {
-  text-align: center;
+ol {
+  padding-left: 0;
 }
+
+/* li {
+  text-align: center;
+} */
 
 h2{
   margin-top: 1rem;
