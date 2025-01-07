@@ -33,6 +33,8 @@ const routes: Routes = [
   { path: 'news-agenda-detail/:alias/:id', component: NewsDetailComponent },
   { path: 'ayudas-y-subvenciones', component: GrantsSubsidiesComponent},
   { path: 'ajuts-i-subvencions', component: GrantsSubsidiesComponent},
+  { path: 'ayudas-y-subvenciones-home', component: LandingPageComponent},
+  { path: 'ajuts-i-subvencions-home', component: LandingPageComponent},
   { path: 'guides-and-publications', component: GuidesAndPublicationsComponent},
   { path: 'transparency-list', component: TransparencyListComponent },
   { path: 'transparency-detail/:alias/:id', component: TransparencyDetailComponent },
@@ -81,6 +83,12 @@ const routes: Routes = [
   { path: 'invest-in-balearics', component: LandingPageComponent },
   { path: 'palmainternationalboatshow/es/bienvenidos-a-palmainternationalboatshow', component: LandingPageComponent },
   { path: 'palmainternationalboatshow', component: LandingPageComponent },
+
+  { path: 'formacion', component: LandingPageComponent},
+  { path: 'formacio', component: LandingPageComponent},
+
+  { path: 'programas-eoi', component: LandingPageComponent},
+  { path: 'programes-eoi', component: LandingPageComponent},
 
   { path: 'direct-link/:id/:idMainCat', component: CommonContentViewerComponent},
 
