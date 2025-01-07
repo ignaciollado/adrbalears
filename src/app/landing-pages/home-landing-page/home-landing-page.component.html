@@ -252,10 +252,14 @@
           </a>
         </div>
         <div class="slide-miembros-de">
-          <a href='https://www.eoi.es/es' target="_blank">
+          <a routerLink="programas-eoi"   *ngIf="currentLang === 'es-ES'">
             <h5>Escuela de Organización<br>Industrial</h5>
             <img width="200" height="auto" src="../../../assets/images/logo-eoi.png" title="Escuela de Organización Industrial" alt="Escuela de Organización Industrial"/>
           </a>
+          <a routerLink="programes-eoi"  *ngIf="currentLang === 'ca-ES'">
+            <h5>Escuela de Organización<br>Industrial</h5>
+            <img width="200" height="auto" src="../../../assets/images/logo-eoi.png" title="Escuela de Organización Industrial" alt="Escuela de Organización Industrial"/>
+          </a>  
         </div>        
     </div>
   </section>
