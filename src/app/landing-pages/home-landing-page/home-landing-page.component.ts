@@ -19,7 +19,7 @@ export class HomeLandingPageComponent implements OnInit {
   alumnosT: number = 4065
   asesoramientos: number = 1020
   asistentes: number = 853
-  ayudas: number = 124
+  ayudas: number = 145
   formSendMail!: FormGroup
   submitted: boolean = false
   successfullySend: boolean = false
