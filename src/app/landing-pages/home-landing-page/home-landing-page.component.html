@@ -224,6 +224,11 @@
       <h4 *ngIf="currentLang === 'ca-ES'">Alumnes participans<br>en els nostres<br>programes</h4>
       <div class='number'>{{alumnosT}}</div>
     </div>
+    <div class='ayudas'>
+      <h4 *ngIf="currentLang === 'es-ES'">Solicitudes de ayudas<br>a empresas</h4>
+      <h4 *ngIf="currentLang === 'ca-ES'">Sol·licituds d'ajuts<br>a empreses</h4>
+      <div class='number' [innerHTML]="ayudas"></div>
+    </div>
   </div>
   </section>
 

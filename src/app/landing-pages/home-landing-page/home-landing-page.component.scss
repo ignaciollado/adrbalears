@@ -313,9 +313,9 @@ ol, ul {
 }
 .contador-background {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 3rem;
-  column-gap: 10rem;
+  column-gap: 6rem;
   margin-left: 3rem;
   margin-right: 3rem;
 }
@@ -339,6 +339,15 @@ ol, ul {
 }
 .alumnos{
   background-color: adr-colors.$alumnos;
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+  h4 {
+    color: #fff;
+  }
+}
+.ayudas{
+  background-color: adr-colors.$primary-adr;
   padding: 2rem 1rem;
   color: #fff;
   text-align: center;
