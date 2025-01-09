@@ -74,7 +74,6 @@ export class NewsListComponent implements OnInit {
         this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.categories.includes((+currentCategory[0])))
         this.wpPosts = this.wpPosts.filter( (item : WpPost) => item.categories.includes(currentLanguage))
         this.wpPosts.map((item:WpPost) => {
-          console.log (item)
           this.getFeaturedMedia(item.featured_media)
         })
         if (this.newsToDisplay != '9999') {

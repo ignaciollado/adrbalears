@@ -26,7 +26,7 @@ export class WPpostService {
     https://app.adrbalears.es/wp-json/wp/v2/posts/?per_page=100&page=2 */
 
     this.messagesService.add('ArticleService: fetched ALL articles')
-    return this.httpClient.get<WpPost[]>(this.postUrl+'/?per_page=100', { headers: this.headers })
+    return this.httpClient.get<WpPost[]>(this.postUrl+'/?per_page=100&page=1', { headers: this.headers })
   }
 
   getOne(id: string|null): Observable<WpPost> {
