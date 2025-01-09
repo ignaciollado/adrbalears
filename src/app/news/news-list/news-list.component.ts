@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { reqArticle, attrArticle } from '../../Models/article-data.dto';
-import { ArticleContentService } from '../../services/article-content.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { WPpostService } from '../../services/wp-post.service';
 import { WpPost } from '../../Models/wp-post-data.dto';
 import { WpPageFeaturedMedia } from '../../Models/wp-page-featured-media.dto';
@@ -35,8 +34,9 @@ export class NewsListComponent implements OnInit {
   @Input () totalNewsToDisplay: string
   @Input () faseNewsToDisplay: string
 
-  constructor( public translateService: TranslateService, private articleContent: ArticleContentService, private articleWPContent: WPpostService, private route: ActivatedRoute ) {
+  constructor( public translateService: TranslateService, private articleWPContent: WPpostService, private route: ActivatedRoute ) {
     this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
+    console.log (this.newsToDisplay)
   }
 
   ngOnInit(): void {
@@ -67,13 +67,14 @@ export class NewsListComponent implements OnInit {
     if ( !articlesNumber ) {
       articlesNumber = this.totalNewsToDisplay
     }
-    this.articleWPContent.getAll()
+    this.articleWPContent.getAllPosts()
       .subscribe( (resp: WpPost[]) => {
         this.wpPosts = resp
         this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.status === 'publish') 
         this.wpPosts = this.wpPosts.filter((item : WpPost)  => item.categories.includes((+currentCategory[0])))
         this.wpPosts = this.wpPosts.filter( (item : WpPost) => item.categories.includes(currentLanguage))
         this.wpPosts.map((item:WpPost) => {
+          console.log (item)
           this.getFeaturedMedia(item.featured_media)
         })
         if (this.newsToDisplay != '9999') {

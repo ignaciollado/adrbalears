@@ -19,9 +19,14 @@ export class WPpostService {
 
   constructor(private httpClient: HttpClient, private messagesService: MessageService) { }
 
-  getAll(): Observable<WpPost[]> {
+  getAllPosts(): Observable<WpPost[]> {
+    /* Por defecto, Wordpress tiene limitado a 10 el número total de posts a devolver */
+    /* Y como máximo admite 100 por página. Para más de 100 hay que ir pidiendo página a página con */
+    /*  https://app.adrbalears.es/wp-json/wp/v2/posts/?per_page=100&page=1
+    https://app.adrbalears.es/wp-json/wp/v2/posts/?per_page=100&page=2 */
+
     this.messagesService.add('ArticleService: fetched ALL articles')
-    return this.httpClient.get<WpPost[]>(this.postUrl, { headers: this.headers })
+    return this.httpClient.get<WpPost[]>(this.postUrl+'/?per_page=100', { headers: this.headers })
   }
 
   getOne(id: string|null): Observable<WpPost> {

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ArticleContentService } from '../../services/article-content.service';
+/* import { ArticleContentService } from '../../services/article-content.service'; */
 import { ActivatedRoute, Router } from '@angular/router';
 import { reqArticle } from '../../Models/article-data.dto';
 import { WpPost } from '../../Models/wp-post-data.dto';
@@ -35,7 +35,7 @@ export class AgendaListComponent {
   @Input () totalNewsToDisplay: string = "8"
 
   constructor( public translateService: TranslateService,
-    private articleContent: ArticleContentService,
+    /* private articleContent: ArticleContentService, */
     private wpPostsList: WPpostService,
     private articleWPContent: WPpostService,
     private route: ActivatedRoute,
@@ -61,12 +61,12 @@ export class AgendaListComponent {
         this.currentLang = 'ca-ES'
         this.wpCurrentLang = 25
     }
-    this.getAgenda( this.currentLang, ['405', '406', '407'], this.newsToDisplay ) /* 405: agenda-emprendre, 406: agenda-conectar, 407: agenda-proyectar */
+    //this.getAgenda( this.currentLang, ['405', '406', '407'], this.newsToDisplay ) /* 405: agenda-emprendre, 406: agenda-conectar, 407: agenda-proyectar */
     this.getWPAgenda( this.wpCurrentLang, [31, 32, 33, 34], +this.newsToDisplay ) /* 31: agenda, 32: agenda-emprendre, 33: agenda-conectar, 34: agenda-proyectar */
     this.getWPPosts( this.wpCurrentLang, [31, 32, 33, 34], 9999 )
   }
 
-  getAgenda(currentLanguage:string, categories: string[], itemsNumber: string) {
+/*   getAgenda(currentLanguage:string, categories: string[], itemsNumber: string) {
     if ( !itemsNumber ) {
       itemsNumber = this.totalNewsToDisplay
     }
@@ -91,13 +91,13 @@ export class AgendaListComponent {
           this.listAgendaReady = true
         } ) 
     window.scroll(0,0)
-  }
+  } */
 
   getWPAgenda(currentLanguage:number, categories: number[], itemsNumber: number) {
     if ( !itemsNumber ) {
       itemsNumber = +this.totalNewsToDisplay
     }
-    this.wpPostsList.getAll()
+    this.wpPostsList.getAllPosts()
       .subscribe( (agendaItems:WpPost[]) => {
         const now = new Date
         this.wpAgenda = agendaItems
@@ -123,7 +123,7 @@ export class AgendaListComponent {
     if (!itemsNumber) {
       itemsNumber = 9999
     }
-    this.wpPostsList.getAll()
+    this.wpPostsList.getAllPosts()
       .subscribe((postItems: WpPost[]) => {
         this.wpPosts = postItems
         this.wpPosts = this.wpPosts.filter((item : WpPost) => item.status === 'publish')
