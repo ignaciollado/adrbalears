@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MessageService } from '../../services/message.service';
 import { SharedService } from '../../services/shared.service';
+import { TramitsService } from '../../services/tramits.service';
 import { finalize } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -19,7 +20,7 @@ export class HomeLandingPageComponent implements OnInit {
   alumnosT: number = 4065
   asesoramientos: number = 1020
   asistentes: number = 853
-  ayudas: number = 145
+  ayudas: number = 0 /* data get from tramits.idi.es in real time */
   formSendMail!: FormGroup
   submitted: boolean = false
   successfullySend: boolean = false
@@ -27,7 +28,8 @@ export class HomeLandingPageComponent implements OnInit {
   private modalService = inject(NgbModal)
 	@ViewChild('content') infoDialog = {} as TemplateRef<string>;
 
-  constructor(private formBuilder: FormBuilder, private sendMail: MessageService, private sharedService: SharedService) {
+  constructor( private formBuilder: FormBuilder, private sendMail: MessageService, 
+    private sharedService: SharedService, private tramits: TramitsService ) {
     this.formSendMail = this.formBuilder.group( {
       contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]],
       contactEmail: ['', [Validators.required, Validators.email]],
@@ -56,6 +58,7 @@ export class HomeLandingPageComponent implements OnInit {
         this.currentLang = 'ca-ES'
     }
     /* setInterval(this.incrementValue, 1000); */
+    this.getTramitsByConvo('2024')
   }
 
   incrementValue() {
@@ -93,4 +96,12 @@ export class HomeLandingPageComponent implements OnInit {
       })
     })
   }
+
+    getTramitsByConvo(convo: string) {
+      this.tramits.getAllXecsTramitsByConvo(convo)
+        .subscribe( (items: any[]) => {
+          console.log ("total solicitudes", items)
+          this.ayudas = +items
+      })
+    }
 }
