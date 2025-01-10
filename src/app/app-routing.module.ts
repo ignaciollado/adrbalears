@@ -25,6 +25,7 @@ import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component'
 import { CooperativasComponent } from './ibemprenjove/cooperativas/cooperativas.component';
 import { PremisComponent } from './ibemprenjove/premis/premis.component';
 import { HistoricoComponent } from './ibemprenjove/historico/historico.component';
+import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 
 const routes: Routes = [
   { path: 'about-adr-balears', component: AboutAdrBalearsComponent },
@@ -98,11 +99,11 @@ const routes: Routes = [
 
   { path: 'contact-adr-balears', component: ContactFormComponent},
 
-  { path: 'accesibilidad/:id', component: SimpleTextViewerComponent },
-  { path: 'aviso-legal/:id', component: SimpleTextViewerComponent },
+  { path: 'accesibilidad/:id', component: ShowLegalInfoComponent },
+  { path: 'aviso-legal/:id', component: ShowLegalInfoComponent },
   { path: 'contacta', component: SimpleTextViewerComponent},
-  { path: 'politica-de-cookies/:id', component: SimpleTextViewerComponent},
-  { path: 'politica-de-privacidad/:id', component: SimpleTextViewerComponent},
+  { path: 'politica-de-cookies/:id', component: ShowLegalInfoComponent},
+  { path: 'politica-de-privacidad/:id', component: ShowLegalInfoComponent},
   { path: 'feder-detail/:id', component: SimpleTextViewerComponent },
 
   { path: '404', component: NotFoundComponent },

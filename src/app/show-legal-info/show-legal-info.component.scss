@@ -1,0 +1,24 @@
+.content-detail {
+  margin: 2rem;
+  border-radius: 0;
+  padding: 1rem;
+  animation: .5s ease-out 0s 1 slideInFromLeft;
+  display: grid;
+  grid-template-areas: "a" "b" "c";
+  gap: 1rem;
+}
+
+p {
+  margin: 2rem;
+}
+
+.detail-title {
+  grid-area: a;
+  font-weight: bolder;
+}
+
+.detail-body {
+  grid-area: b;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}

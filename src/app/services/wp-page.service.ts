@@ -46,4 +46,9 @@ export class WPpageService {
     return this.httpClient.get<WpPage[]>(`${this.pageUrl}?title=${title}`, { headers: this.headers })
   }
 
+  getLegalContent(id: number|null): Observable<WpPage> {
+    this.messagesService.add('ArticleService: fetched ONE article')
+    return this.httpClient.get<WpPage>(`${this.pageUrl}/${id}`)
+  }
+
 }
