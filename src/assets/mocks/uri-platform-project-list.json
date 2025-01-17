@@ -140,6 +140,15 @@
     "data": ["LOOP","3006","415","no","connectar","421","406"]
   },
   {
+    "uri": "re_menorca-es/",
+    "data": ["RECINTO EMPRESARIAL MENORCA","2984","415","no","connectar","421","406"]
+  },
+  {
+    "uri": "re_menorca/",
+    "data": ["RECINTE EMPRESARIAL MENORCA","3020","415","no","connectar","421","406"]
+  },
+
+  {
     "uri": "ibexporta-xecs/es/bienvenidos-a-ibexporta-xecs/",
     "data": ["Ibexporta xecs","3032","416","no","projectar","420","407"]
   },
