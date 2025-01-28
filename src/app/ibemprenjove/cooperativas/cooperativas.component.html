@@ -2,18 +2,18 @@
 <hr [ngClass]="{'card__title__jes_underline': isJES, 'card__title__jea_underline': isJEA, 'card__title__jep_underline': isJEP}">
 <section *ngIf="cooperativaList" ngClass="cooperativa-list">
     <div *ngFor="let cooperativa of cooperativaList">
-      <div class="item-cooperativa">
-        <div class="item-cooperativa-header">
+      <article class="item-cooperativa">
+        <section ngClass="item-cooperativa-header">
           <img *ngIf="cooperativa['logo']" src="https://app.iemprenjove.es/storage/{{cooperativa['logo']}}" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
           <img *ngIf="!cooperativa['logo']" src="../../../assets/images/sense-imatge.jpg" width="187" height="auto" alt="{{cooperativa['name']}}" title="{{cooperativa['name']}}" />
-        </div>
-        <div class="item-cooperativa-body">
+        </section>
+        <section class="item-cooperativa-body">
           <h4>{{cooperativa['name']}}</h4>
           <h5>{{cooperativa['centre']['name']}}</h5>
-        </div>
-        <div class='item-cooperativa-footer'>
+        </section>
+        <section class='item-cooperativa-footer'>
           <a href="{{cooperativa['video']}}">Video</a> | <a href="{{cooperativa['url']}}">Web</a> | <a href="{{cooperativa['socialnetworks']}}">Xarxes socials</a>
-        </div>
-      </div>
+        </section>
+      </article>
     </div>
 </section> 
