@@ -70,10 +70,6 @@ ol {
   padding-left: 0;
 }
 
-/* li {
-  text-align: center;
-} */
-
 h2{
   margin-top: 1rem;
   text-align: center;
@@ -289,6 +285,10 @@ button{
   .card__body {
     line-height: 2rem;
     font-size: 1rem;
+  }
+
+  ol {
+    text-align: center;
   }
 }
 

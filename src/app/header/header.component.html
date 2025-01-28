@@ -1,7 +1,7 @@
 <header>
-  <nav class='nav-bar-logo'>
-    <a class="navbar-brand" href="#">
-      <img src="../../assets/images/logo gov+adr.svg" alt="GOIB+ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="420px" height="auto">
+  <nav ngClass='nav-bar-logo'>
+    <a ngClass="navbar-brand" href="#">
+      <img src="../../assets/images/logo gov+adr.svg" alt="GOIB+ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="280" height="auto">
     </a>
   </nav>
 
@@ -9,7 +9,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <section ngbDropdown class="d-inline-block">
               <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>ADR Balears</button>
@@ -94,13 +94,17 @@
               <button class="btn button-header-menu" routerLink="contact-adr-balears">Contacta</button>
             </div>
           </li>
-          <app-search-the-web></app-search-the-web>
-        <li class="nav-bar-language">
-            <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
-            <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
-        </li>
       </ul>
   </nav>
+
+  <section ngClass="search">
+    <app-search-the-web></app-search-the-web>
+  </section>
+
+  <section class="nav-bar-language">
+    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
+    <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cas')">cas</button>
+  </section>
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)"><i class="bi bi-list" style="font-size: 3rem; color:#053747;"></i></button>
 </header>

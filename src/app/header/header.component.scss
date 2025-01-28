@@ -2,31 +2,43 @@
 
 header {
   display: grid;
-  grid-template-areas:  "navLogo" "navBarMenu";
+  grid-template-areas:  "navLogo navBarMenu search"
+                        "navLogo navBarMenu languageSelect";
+
   background-image: url("../../assets/images/simbol-adr.svg");
   background-repeat: no-repeat;
   background-position: 100% 1rem;
   background-color: rbg(248, 249, 250);
   background-size: 190px;
   max-width: 1160px;
+  margin-top: 1px;
+  margin-bottom: 1rem;
 }
 .nav-bar-logo {
   grid-area: navLogo;
-  margin-left: 5rem;
-  margin-top: 2rem;
+ /*  margin-left: 5rem; */
+  margin-top: 0;
+  /* border: 1px solid orange; */
 }
 .nav-bar-menu {
   grid-area: navBarMenu;
-  margin-top: 2rem;
-  margin-left: 5rem;
+ /*  margin-top: 2rem; */
+  /* margin-left: 5rem; */
   display: grid;
+  /* border: 1px solid green; */
 }
 .nav-bar-language {
   grid-area: languageSelect;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
+  /* border: 1px solid blue; */
 }
+.search {
+  grid-area: search;
+  /* border: 1px solid red; */
+}
+
 .offcanvas-header {
   background-color: adr-colors.$secondary-adr;
   color: #fff!important;
@@ -94,6 +106,7 @@ button:hover {
      grid-template-columns: 100%;
      background-position: 98% 1rem;
      background-size: 100px;
+     margin-bottom: .5rem;
   }
   .nav-bar-logo {
     margin-left: 2rem;
@@ -110,7 +123,7 @@ button:hover {
 
 @media screen and (max-width: 760px) {
   header {
-    grid-template-areas: "navLogo" "languageSelect" "mobileMenu";
+    grid-template-areas: "navLogo" "languageSelect" "search" "mobileMenu";
     grid-template-columns: 99%;
   }
   .nav-bar-logo {
